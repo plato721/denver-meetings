@@ -2,10 +2,22 @@ def url
   url = "http://www.daccaa.org/query.asp"
 end
 
+def set_updated(data)
+  updated = last_updated(data)
+  RawMeetingsMetadata.create(last_update: updated)
+end
+
 def last_updated(data)
   raw = data.find { |e| e.include? "Database Last Updated" }
   raw = raw.slice(22..-1)
   DateTime.strptime(raw, "%m/%d/%Y %I:%M:%S %p")
+end
+
+def update_meetings(data)
+  trimmed = data.slice(13..-67)
+  trimmed.each_slice(7) do |slice|
+    RawMeetings.add_from(slice)
+  end
 end
 
 def get_meetings_raw
@@ -33,14 +45,7 @@ namespace :daccaa do
   task :get_data => :environment do
     page = get_meetings_raw
     data = parse_meetings(page)
-
-    updated = last_updated(data)
-    RawMeetingsMetadata.create(last_update: updated)
-
-    trimmed = data.slice(13..-67)
-    trimmed.each_slice(7) do |slice|
-      # binding.pry
-    end
-
+    set_updated(data)
+    update_meetings(data)
   end
 end
