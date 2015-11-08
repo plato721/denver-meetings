@@ -1,9 +1,15 @@
-
-
-namespace :daccaa do
-
+def url
   url = "http://www.daccaa.org/query.asp"
-  page = RestClient.post(url, {
+end
+
+def last_updated(data)
+  raw = data.find { |e| e.include? "Database Last Updated" }
+  raw = raw.slice(22..-1)
+  DateTime.strptime(raw, "%m/%d/%Y %I:%M:%S %p")
+end
+
+def get_meetings_raw
+  RestClient.post(url, {
   'txtGroup'=>'',
   'cboDay'=>'0',
   'cboStartTime'=>'All',
@@ -15,13 +21,26 @@ namespace :daccaa do
   'cboDistrict'=>'All',
   'cmdFindMeetings'=>'Find Meetings'
   })
+end
 
-  task :get_data => :environment do
+def parse_meetings(page)
     npage = Nokogiri::HTML(page)
     data = npage.search('//text()').map(&:text).delete_if{|x| x !~ /\w/}
     data = data.map {|ugly| ugly.lstrip} #remove leading whitespace
-    binding.pry
+end
 
+namespace :daccaa do
+  task :get_data => :environment do
+    page = get_meetings_raw
+    data = parse_meetings(page)
+
+    updated = last_updated(data)
+    RawMeetingsMetadata.create(last_update: updated)
+
+    trimmed = data.slice(13..-67)
+    trimmed.each_slice(7) do |slice|
+      # binding.pry
+    end
 
   end
 end
