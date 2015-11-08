@@ -19,6 +19,7 @@ gem 'faker'
 gem 'hurley'
 gem 'figaro'
 gem 'rails_12factor'
+gem 'nokogiri'
 
 group :development, :test do
   gem 'better_errors'
