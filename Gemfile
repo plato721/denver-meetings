@@ -20,6 +20,7 @@ gem 'hurley'
 gem 'figaro'
 gem 'rails_12factor'
 gem 'nokogiri'
+gem 'mechanize'
 
 group :development, :test do
   gem 'better_errors'
