@@ -4,7 +4,7 @@ end
 
 def set_updated(data)
   updated = last_updated(data)
-  RawMeetingsMetadata.create(last_update: updated)
+  RawMeetingMetadata.create(last_update: updated)
 end
 
 def last_updated(data)
@@ -16,7 +16,7 @@ end
 def update_meetings(data)
   trimmed = data.slice(13..-67)
   trimmed.each_slice(7) do |slice|
-    RawMeetings.add_from(slice)
+    RawMeeting.add_from(slice)
   end
 end
 
