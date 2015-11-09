@@ -1,0 +1,15 @@
+language: ruby
+rvm:
+- 2.2.1
+script:
+- bundle install
+- bundle exec rake db:create db:schema:load
+- bundle exec rspec spec
+- bundle exec rake daccaa:get_data
+deploy:
+  provider: heroku
+  api_key:
+    secure: JJLvk1Kwk9qsvGyjSlzawg/ae4gEjyPc9zOrpxzjKkx/yRKZ8TcYViOKvlt0yPqCMxY87Z8+JSgI5MYm/SmeAeaNie1ffEV8XIgUUXrJ7e+PpQdLp/2LyvFlXeUwiyhyDyjx3syJJ8ClnmLVbo/+sV9PgQK24rDl9uIVIcLVU6JZ6OQiqROrnjvgBxmgr7Z523R48hrXPlaQq9zB4vHOlUfBHJ/uXk+vblAsvFKBR9X1OFdmvKnxr2+K7P+i/j/b6W0xaQ+TLuL8pSn15DKDJKgI6Xg0IR9rHmTLLnJYmhM+lM3SvbEXjYFo6DRbsbms6Q8UhLHEmhG6p+U3d3aOdR7gF6pcZcsgUOQGyHClVO1ay+RnykomxhQgeZrHfprXcHUH6yKVL60gFAZh7DOhlIXWJxV7LvCFwwBXdTS+OTqyQborQHhXEXPQqjP5uDy95huMP02lcao0ePQymQinUfVfbo7TCFUZTcup1lNe54pQ6xWJyYt1D3kLD44K7wSP1bZb5mI2gIpPz7Bom9PDVdnLjR5lFFniKDi6l80TfRO6qni7rGN77MlUMW3+NdhN/4O7cxEeK226j5BT36LQCQfSb7lJ9Qms43TAkTu6fU94uyvze7wkaMU35exfpB3WTfd8jF7Cnukk1HELHo06imv8tPaNRPdI1pk1Sr1ZdK8=
+  app: denver-meetings
+  on:
+    repo: plato721/denver-meetings
