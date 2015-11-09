@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20151108225412) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "time"
-    t.integer  "checksum"
+    t.string   "checksum"
   end
 
   create_table "raw_meetings_metadata", force: :cascade do |t|
