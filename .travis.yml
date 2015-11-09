@@ -5,7 +5,6 @@ script:
 - bundle install
 - bundle exec rake db:create db:schema:load
 - bundle exec rspec spec
-- bundle exec rake daccaa:get_data
 deploy:
   provider: heroku
   api_key:
