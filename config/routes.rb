@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-
+  root to: 'welcome#index'
+  resources :meetings, only:[:index, :show]
+  
   delete 'logout', to: 'sessions#destroy', as: "logout"
   get "auth/github", as: "login"
   get "auth/github/callback", to: "sessions#create"
