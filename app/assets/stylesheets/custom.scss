@@ -2,7 +2,7 @@
 
 
  // Landscape phones and down
- // @media (max-width: 480px) { ... }
+ // @media (max-width: 480px)
 
   // Landscape phone to portrait tablet
  //  @media (max-width: 768px) { ... }
@@ -11,61 +11,111 @@
   // @media (min-width: 768px) and (max-width: 980px) { ... }
 
   // Large desktop
-  // @media (min-width: 1200px) { .. }
+  // @media (min-width: 1200px) {}
 
+  body {
+    background-color: #263248;
+    margin-bottom: 40px;
+  }
 
+  p {
+    color: $primary-text;
+  }
 
-body {
-  background-color: #263248;
-  margin-bottom: 40px;
+  h1 {
+    color: $primary-text;
+  }
+
+  h3 {
+    color: white;
+    font-weight: lighter;
+  }
+
+  .btn-default {
+    background: none;
+    color: white;
+    border-color: white;
+  }
+
+  .btn-default:hover {
+    background: none;
+    color: $primary-text;
+    border-color: $primary-text;
+  }
+
+@media (min-width: 480px) {
+
+  .find-meetings-button {
+    margin-top: 50px;
+  }
+
+  .welcome-header {
+    margin-top: 150px;
+  }
+
+  footer {
+    margin-top: 150px;
+  }
+
+  h1 {
+    margin-top: 50px;
+    font-size: 5em;
+  }
+
+  h3 {
+    color: white;
+    font-weight: lighter;
+  }
+
+  .btn-default {
+    border-width: 2px;
+    border-color: white;
+  }
+
+  .btn-default:hover {
+    border-width: 2px;
+  }
+
+  input.form-control.post {
+    min-height: 40px;
+  }
+
 }
 
-.find-meetings-button {
-  margin-top: 50px;
-}
+@media (max-width: 480px) {
 
-.welcome-header {
-  margin-top: 150px;
-}
+  .find-meetings-button {
+    margin-top: 20px;
+  }
 
-footer {
-  margin-top: 150px;
-}
+  .welcome-header {
+    margin-top: 50px;
+  }
 
-p {
-  color: $primary-text;
-}
+  footer {
+    margin-top: 50px;
+  }
 
-h1 {
-  margin-top: 50px;
-  color: $primary-text;
-  font-size: 5em;
-}
+  h1 {
+    margin-top: 50px;
+    font-size: 5em;
+  }
 
-h3 {
-  color: white;
-  font-weight: lighter;
-}
+  h3 {
+    color: white;
+    font-weight: lighter;
+  }
 
-.btn-default {
-  background: none;
-  color: white;
-  border-width: 2px;
-  border-color: white;
-}
+  .btn-default {
+    border-width: 2px;
+    border-color: white;
+  }
 
-.btn-default:hover {
-  background: none;
-  color: $primary-text;
-  border-width: 2px;
-  border-color: $primary-text;
-}
+  .btn-default:hover {
+    border-width: 2px;
+  }
 
-input.form-control.post {
-  min-height: 40px;
-}
-
-.post {
-  color: white;
-  margin-top: 30px;
+  input.form-control.post {
+    min-height: 40px;
+  }
 }
