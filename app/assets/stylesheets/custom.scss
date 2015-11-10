@@ -15,7 +15,6 @@
 
   body {
     background-color: #263248;
-    margin-bottom: 40px;
   }
 
   p {
@@ -44,6 +43,10 @@
   }
 
 @media (min-width: 480px) {
+
+  body {
+    margin-bottom: 40px;
+  }
 
   .find-meetings-button {
     margin-top: 50px;
@@ -74,10 +77,6 @@
 
   .btn-default:hover {
     border-width: 2px;
-  }
-
-  input.form-control.post {
-    min-height: 40px;
   }
 
 }
@@ -113,9 +112,5 @@
 
   .btn-default:hover {
     border-width: 2px;
-  }
-
-  input.form-control.post {
-    min-height: 40px;
   }
 }
