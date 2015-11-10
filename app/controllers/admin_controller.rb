@@ -7,7 +7,7 @@ before_action :confirm_admin
 
   def confirm_admin
     if !current_user
-      redirect_to admin_login_path
+      redirect_to login_path
     elsif admin?
       true
     else
