@@ -6,6 +6,11 @@ Rails.application.routes.draw do
   get "auth/github", as: "login"
   get "auth/github/callback", to: "sessions#create"
 
+  namespace :mobile do
+    resources :search, only:[:index]
+    resources :meetings, only:[:index, :show]
+  end
+
   namespace :admin do
     root to: "admin#index"
     resources :meetings, only:[:index]
