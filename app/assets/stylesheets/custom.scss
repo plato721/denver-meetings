@@ -1,0 +1,71 @@
+ $primary-text: #DD9833;
+
+
+ // Landscape phones and down
+ // @media (max-width: 480px) { ... }
+
+  // Landscape phone to portrait tablet
+ //  @media (max-width: 768px) { ... }
+
+  // Portrait tablet to landscape and desktop
+  // @media (min-width: 768px) and (max-width: 980px) { ... }
+
+  // Large desktop
+  // @media (min-width: 1200px) { .. }
+
+
+
+body {
+  background-color: #263248;
+  margin-bottom: 40px;
+}
+
+.find-meetings-button {
+  margin-top: 50px;
+}
+
+.welcome-header {
+  margin-top: 150px;
+}
+
+footer {
+  margin-top: 150px;
+}
+
+p {
+  color: $primary-text;
+}
+
+h1 {
+  margin-top: 50px;
+  color: $primary-text;
+  font-size: 5em;
+}
+
+h3 {
+  color: white;
+  font-weight: lighter;
+}
+
+.btn-default {
+  background: none;
+  color: white;
+  border-width: 2px;
+  border-color: white;
+}
+
+.btn-default:hover {
+  background: none;
+  color: $primary-text;
+  border-width: 2px;
+  border-color: $primary-text;
+}
+
+input.form-control.post {
+  min-height: 40px;
+}
+
+.post {
+  color: white;
+  margin-top: 30px;
+}

@@ -1,0 +1,49 @@
+$secondary: #AA5939;
+$secondary-dark: #551800;
+$tertiary: #4b2d73;
+
+.full {
+  background: url("https://s3.amazonaws.com/turing-denvestments/assets/NiYhojI.png") no-repeat center center fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+* {
+  color: $secondary;
+}
+
+.welcome-header {
+  color: $secondary;
+  font-family: "Tenor Sans", Helvetica, sans-serif;
+  font-size: 5em;
+  text-align: center;
+}
+
+.welcome-text {
+  color: $secondary;
+  font-family: "Tenor Sans", Helvetica, sans-serif;
+  font-size: 2em;
+  text-align: center;
+}
+
+.header-intro {
+  padding-top: 50px;
+  color: $secondary;
+  font-family: "Tenor Sans", Helvetica, sans-serif;
+  text-align: center;
+  font-size: 20px;
+}
+
+.footer {
+  padding-top: 200px;
+  color: $secondary;
+  font-family: "Tenor Sans", Helvetica, sans-serif;
+  text-align: center;
+  font-size: 15px;
+}
+
+#login-button {
+  padding-top: 50px;
+}
