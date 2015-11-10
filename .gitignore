@@ -20,4 +20,6 @@
 /config/application.yml
 
 /coverage
+/ignore
+
 
