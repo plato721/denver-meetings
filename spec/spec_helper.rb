@@ -1,5 +1,6 @@
 require 'database_cleaner'
 require 'simplecov'
+require 'webmock'
 
 SimpleCov.start do
   add_filter "/spec"
@@ -19,10 +20,32 @@ RSpec.configure do |config|
     DatabaseCleaner.start
     DatabaseCleaner.strategy = :transaction
     DatabaseCleaner.clean_with(:truncation)
+    Rails.application.load_seed
   end
 
   config.after(:all) do
     DatabaseCleaner.clean
+  end
+
+  WebMock.stub_request(:any, "www.localhost:3000")
+
+  def login(user)
+    OmniAuth.config.test_mode = true
+    OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new({
+      "uid"         => user.uid,
+      "info"        => {nickname: user.nickname,
+                        email: user.email,
+                        name: user.name,
+                        image: user.image},
+      "credentials" => {token: user.token}
+    })
+  end
+
+  def failed_login
+    OmniAuth.config.test_mode = true
+    OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new ({
+      "uid" => nil
+    })
   end
   
 =begin

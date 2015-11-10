@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151108225412) do
+ActiveRecord::Schema.define(version: 20151110023858) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,18 @@ ActiveRecord::Schema.define(version: 20151108225412) do
 
   create_table "raw_meetings_metadata", force: :cascade do |t|
     t.datetime "last_update"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "uid"
+    t.string   "nickname"
+    t.string   "email"
+    t.string   "name"
+    t.string   "image"
+    t.string   "token"
+    t.integer  "role",       default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
 end
