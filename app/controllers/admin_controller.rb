@@ -11,7 +11,7 @@ before_action :confirm_admin
     elsif admin?
       true
     else
-      # redirect_to 403
+      redirect_to unauthorized_path
     end
   end
 end
