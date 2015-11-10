@@ -21,6 +21,7 @@ gem 'figaro'
 gem 'rails_12factor'
 gem 'nokogiri'
 gem 'rest-client'
+gem 'figaro'
 
 group :development, :test do
   gem 'better_errors'
