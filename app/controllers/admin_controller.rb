@@ -14,4 +14,8 @@ before_action :confirm_admin
       redirect_to unauthorized_path
     end
   end
+
+  def index
+    redirect_to admin_meetings_path
+  end
 end

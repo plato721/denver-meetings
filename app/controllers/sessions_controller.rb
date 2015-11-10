@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
     user = User.from_omniauth(auth)
     if user
       session[:user_id] = user.id
-      redirect_to admin_root_path
+      redirect_to admin_meetings_path
     else
       flash[:danger] = "Unable to authenticate. Please try again."
       redirect_to root_path
