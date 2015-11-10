@@ -14,7 +14,7 @@ def last_updated(data)
 end
 
 def update_meetings(data)
-  trimmed = data.slice(13..-67)
+  trimmed = data.slice(13..-68)
   trimmed.each_slice(7) do |slice|
     RawMeeting.add_from(slice)
   end
@@ -37,7 +37,7 @@ end
 
 def parse_meetings(page)
     npage = Nokogiri::HTML(page)
-    data = npage.search('//text()').map(&:text).delete_if{|x| x !~ /\w/}
+    data = npage.search('//text()').map(&:text).delete_if{|x| x !~ /\w|\*/}
     data = data.map {|ugly| ugly.lstrip} #remove leading whitespace
 end
 
