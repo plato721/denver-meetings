@@ -22,7 +22,7 @@ RSpec.describe MeetingCreator do
       expect(@creator.city).to eq(raw_1[:city])
     end
 
-    xit "determines zip" do
+    it "determines zip" do
       expect(@creator.zip).to eq(80113)
     end
 

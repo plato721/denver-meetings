@@ -5,6 +5,23 @@ class MeetingCreator
     @raw = raw
   end
 
+  def create
+    Meeting.create({
+      group_name: group_name,
+      address_1: address_1,
+      city: city,
+      state: "CO"
+      })
+  end
+
+  def day
+    raw.day
+  end
+
+  def group_name
+    raw.group_name
+  end
+
   def city
     city ||= raw.city
   end
@@ -14,7 +31,7 @@ class MeetingCreator
   end
 
   def raw_notes
-    raw_notes ||= raw.address.match(/\(.+\)/)
+    raw_notes ||= self.raw.address.match(/\(.+\)/)
   end
 
   def address_1
