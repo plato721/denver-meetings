@@ -41,11 +41,21 @@ def parse_meetings(page)
     data = data.map {|ugly| ugly.lstrip} #remove leading whitespace
 end
 
+def create_displayable
+  RawMeeting.all.each do |raw|
+    if !Meeting.joins(:raw_meeting).exists?(raw.id)
+      sleep 0.5
+      MeetingCreator.new(raw).create
+    end
+  end
+end
+
 namespace :daccaa do
   task :get_data => :environment do
     page = get_meetings_raw
     data = parse_meetings(page)
     set_updated(data)
     update_meetings(data)
+    create_displayable
   end
 end
