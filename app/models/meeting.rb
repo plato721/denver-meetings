@@ -20,7 +20,7 @@ class Meeting < ActiveRecord::Base
   end
 
   def calculated_zip
-    zip ||= geocoder[6]["long_name"]
+    zip ||= geocoder.last["long_name"]
   end
 
   def calculated_street_number
