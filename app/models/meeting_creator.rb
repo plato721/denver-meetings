@@ -13,7 +13,8 @@ class MeetingCreator
       notes: notes,
       district: district,
       city: city,
-      state: "CO"
+      state: "CO",
+      raw_meeting: self.raw
       })
   end
 
@@ -37,8 +38,12 @@ class MeetingCreator
     raw_notes ||= self.raw.address.match(/\(.+\)/)
   end
 
+  def codes
+    raw.codes
+  end
+
   def address_1
-    address_1 ||= raw_notes.pre_match.to_s.strip!
+    raw_notes ? raw_notes.pre_match.to_s.strip! : raw.address
   end
 
   def address_2
@@ -52,5 +57,4 @@ class MeetingCreator
   def district
     raw.district
   end
-
 end

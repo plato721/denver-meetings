@@ -2,6 +2,7 @@ class Meeting < ActiveRecord::Base
   geocoded_by :address, :latitude => :lat, :longitude => :lng
   after_validation :geocode
   before_create :address_from_coords
+  belongs_to :raw_meeting
 
   def address
     [address_1, city, state].compact.join(', ')

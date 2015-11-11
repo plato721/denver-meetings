@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151110040835) do
+ActiveRecord::Schema.define(version: 20151111043722) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,11 +28,14 @@ ActiveRecord::Schema.define(version: 20151110040835) do
     t.string   "phone"
     t.string   "district"
     t.string   "codes"
-    t.decimal  "lat",        precision: 10, scale: 6
-    t.decimal  "lng",        precision: 10, scale: 6
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.decimal  "lat",            precision: 10, scale: 6
+    t.decimal  "lng",            precision: 10, scale: 6
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
+    t.integer  "raw_meeting_id"
   end
+
+  add_index "meetings", ["raw_meeting_id"], name: "index_meetings_on_raw_meeting_id", using: :btree
 
   create_table "raw_meetings", force: :cascade do |t|
     t.string   "day"
@@ -63,4 +66,5 @@ ActiveRecord::Schema.define(version: 20151110040835) do
     t.datetime "updated_at",             null: false
   end
 
+  add_foreign_key "meetings", "raw_meetings"
 end
