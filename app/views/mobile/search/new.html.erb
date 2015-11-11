@@ -1,27 +1,22 @@
-
-  <%= stylesheet_link_tag 'mobile/mobile.scss', media: 'all' %>
-  <%= javascript_include_tag 'mobile/mobile.js', media: 'all' %>
-
-  <div data-role="page" id="main">
-    <div data-role="header" data-theme="b">
-      <h1>placeholder</h1>
-    </div>
-    <div data-role="content" data-theme="b">
-
+<div data-role="header" data-theme="b">
+  <h1>placeholder</h1>
+</div>
+<%= form_tag(controller: "mobile/search", action: "create", method: "post") do %>
+  <div data-role="content" data-theme="b">
     <div class="menu-panel">
-
       <div class="inner-header">
-      <span class="menu-element">
-        <select name="cities">
-        <option value="all" selected>
-      </span>
-      <% cities = ["Lakewood", "Denver", "Boulder"] %>
-      <% cities.each do |city| %>
-      <option value="<%= city %>"><%= city %></option>
-      <% end %>
-    </select>
+        <% cities = RawMeeting.pluck(:city).uniq %>
+        <% cities_options = cities.zip(cities) %>
+        <%= select_tag(:city, options_for_select(cities_options), {class: "menu-element"}) %>
+
    </div>
    </div>
     <div class="menu-panel">
     <div class="inner-header">
+
+
+  <% submit_tag("Show Meetings") %>
+<% end %>
+
+
 

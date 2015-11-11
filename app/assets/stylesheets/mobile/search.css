@@ -1,11 +1,7 @@
 // Place all the styles related to the mobile/search controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-    body
-    {
-        font-family:"Arial",Arial, Sans-serif;  /not sure if works
-        background:url("images/logistics.png");  /doesn't work
-    }
+
 
     h4
     {
