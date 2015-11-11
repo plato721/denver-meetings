@@ -8,7 +8,10 @@ class MeetingCreator
   def create
     Meeting.create({
       group_name: group_name,
+      day: day,
       address_1: address_1,
+      notes: notes,
+      district: district,
       city: city,
       state: "CO"
       })
@@ -37,4 +40,17 @@ class MeetingCreator
   def address_1
     address_1 ||= raw_notes.pre_match.to_s.strip!
   end
+
+  def address_2
+    #logic here
+  end
+
+  def phone
+    #logic here
+  end
+
+  def district
+    raw.district
+  end
+
 end

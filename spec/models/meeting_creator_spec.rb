@@ -17,18 +17,13 @@ RSpec.describe MeetingCreator do
       RawMeeting.create(raw_1)
       @creator = MeetingCreator.new(RawMeeting.first)
     end
-    #address_1", "address_2", "city", "codes", "created_at", "day", "district", "group_name", "id", "lat", "lng", "notes", "phone", "state", "updated_at", "zip
+
     it "extracts city" do
       expect(@creator.city).to eq(raw_1[:city])
-    end
-
-    it "determines zip" do
-      expect(@creator.zip).to eq(80113)
     end
 
     it "extracts first line address" do
       expect(@creator.address_1).to eq("3600 S. Clarkson")
     end
-
   end
 end
