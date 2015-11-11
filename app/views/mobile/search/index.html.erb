@@ -1,27 +1,15 @@
-
-  <%= stylesheet_link_tag 'mobile/mobile.scss', media: 'all' %>
-  <%= javascript_include_tag 'mobile/mobile.js', media: 'all' %>
-
-  <div data-role="page" id="main">
-    <div data-role="header" data-theme="b">
-      <h1>placeholder</h1>
+<div data-role="header" data-theme="b">
+  <h1>Meetings Found<span class="ui-li-count">12</span></h1>
+</div>
+<div data-role="content" data-theme="b">
+  <div data-role="collapsible-set" data-theme="b" data-content-theme="d" data-inset="false">
+    <% @meetings.each do |meeting| %>
+    <div data-role="collapsible">
+      <h2><%= "#{meeting.group_name} #{meeting.raw_meeting.time}" %></h2>
+      <ul data-role="listview" data-inset="true">
+        <li><%= link_to "#{meeting.address_1}, #{meeting.city}", ExternalMapLink.new(meeting).url, {"data-icon"=>"map"} %></li>
+      </ul>
     </div>
-    <div data-role="content" data-theme="b">
-
-    <div class="menu-panel">
-
-      <div class="inner-header">
-      <span class="menu-element">
-        <select name="cities">
-        <option value="all" selected>
-      </span>
-      <% cities = ["Lakewood", "Denver", "Boulder"] %>
-      <% cities.each do |city| %>
-      <option value="<%= city %>"><%= city %></option>
-      <% end %>
-    </select>
-   </div>
-   </div>
-    <div class="menu-panel">
-    <div class="inner-header">
-
+    <% end %>
+  </div>
+</div>
