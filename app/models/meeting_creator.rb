@@ -22,6 +22,10 @@ class MeetingCreator
     raw.day
   end
 
+  def time
+    # get time set
+  end
+
   def group_name
     raw.group_name
   end
