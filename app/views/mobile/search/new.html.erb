@@ -3,23 +3,20 @@
 </div>
 <%= form_tag(controller: "mobile/search", action: "create", method: "post") do %>
   <div data-role="content" data-theme="b">
-    <div class="menu-panel">
-      <div class="inner-header">
-        <%= select_tag(:city, options_for_select(@options.cities_select), {class: "menu-element"}) %>
-     </div>
-   </div>
+    <legend>Group or Street Name:</legend>
+    <%= text_field_tag :free_search  %>
 
-  <div class="menu-panel">
-    <div class="inner-header">
-      <%= select_tag(:name, options_for_select(@options.names_select), {class: "menu-element"}) %>
-   </div>
- </div>
+    <legend>City:</legend>
+    <%= select_tag(:city, options_for_select(@options.cities_select), {class: "menu-element"}) %>
 
-  <div class="menu-panel">
-    <div class="inner-header">
-      <%= select_tag(:time, options_for_select(@options.times_select), {class: "menu-element"}) %>
-   </div>
- </div>
+    <legend>Group Name:</legend>
+    <%= select_tag(:name, options_for_select(@options.names_select), {class: "menu-element"}) %>
+
+    <legend>Day:</legend>
+    <%= select_tag(:time, options_for_select(@options.days_select), {class: "menu-element"}) %>
+
+    <legend>Time:</legend>
+    <%= select_tag(:time, options_for_select(@options.times_select), {class: "menu-element"}) %>
 
   <fieldset data-role="controlgroup">
     <legend>Open or Closed:</legend>
@@ -33,7 +30,7 @@
 
 
 
-  <%= submit_tag("Show Meetings") %>
+  <%= button_to "Search", mobile_search_index_path, {:method => "POST", "data-role" => "button", "data-icon" => "arrow-r", "data-iconpos" => "right"} %>
 <% end %>
 
 

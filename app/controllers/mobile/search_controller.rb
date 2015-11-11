@@ -6,6 +6,5 @@ class Mobile::SearchController < ApplicationController
   end
 
   def create
-    # binding.pry
   end
 end
