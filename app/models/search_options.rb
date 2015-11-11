@@ -28,7 +28,7 @@ class SearchOptions
   end
 
   def meeting_names
-    @names ||= Meeting.uniq.pluck(:group_name)
+    @names ||= Meeting.uniq.order(:group_name).pluck(:group_name)
   end
 
   def names_select
