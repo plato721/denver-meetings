@@ -1,0 +1,27 @@
+
+  <%= stylesheet_link_tag 'mobile/mobile.scss', media: 'all' %>
+  <%= javascript_include_tag 'mobile/mobile.js', media: 'all' %>
+
+  <div data-role="page" id="main">
+    <div data-role="header" data-theme="b">
+      <h1>placeholder</h1>
+    </div>
+    <div data-role="content" data-theme="b">
+
+    <div class="menu-panel">
+
+      <div class="inner-header">
+      <span class="menu-element">
+        <select name="cities">
+        <option value="all" selected>
+      </span>
+      <% cities = ["Lakewood", "Denver", "Boulder"] %>
+      <% cities.each do |city| %>
+      <option value="<%= city %>"><%= city %></option>
+      <% end %>
+    </select>
+   </div>
+   </div>
+    <div class="menu-panel">
+    <div class="inner-header">
+
