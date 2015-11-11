@@ -1,0 +1,95 @@
+// Place all the styles related to the mobile/search controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+    h4
+    {
+        margin:0;
+        padding:0;
+    }
+    
+    
+    .ui-block
+    {
+         font-style:bold;
+    }
+    .ui-block-a
+    {
+        border:1px solid black;
+        padding-left:30px;
+        text-align:left;
+        background-color:#none;
+        /*color:#CACACA;*/
+        font-style:bold;
+    }
+
+    .ui-block-b
+    {
+        border:1px solid black;
+        padding-left:30px;
+        text-align:left;
+        background-color:green;
+       /* color:#CACACA;*/
+    }
+
+    .ui-block-c
+    {
+        border:1px solid black;
+        padding-left:30px;
+        text-align:left;
+        background-color:yellow;
+        /*color:#CACACA;*/
+    }
+
+    .ui-block-d
+    {
+        border:1px solid black;
+        padding-left:30px;
+        text-align:left;
+        background-color:red;
+       /* color:#CACACA;*/
+    }
+
+        .ui-block-e
+    {
+        border:1px solid black;
+        padding-left:30px;
+        text-align:left;
+        background-color:green;
+      /*  color:#CACACA;*/
+    }
+
+    .odd
+    {
+        background-color:#CACACA;
+        color:#000000;
+    }
+
+    .even
+    {
+        background-color:#7C7C7C;
+        color:#000000;
+    }
+
+    .odd.blahskis
+    {   
+        font-size:2em;
+    }
+
+    .searchButton
+    {
+        background-color:yellow;
+    }
+
+    li p{
+        padding-top:0px;
+        padding-bottom:0px;
+        padding-right:0px;
+        padding-left:10px;
+    }
+
+    .smaller
+    {
+        font-size: .75em;
+    }

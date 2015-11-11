@@ -21,6 +21,7 @@ gem 'rails_12factor'
 gem 'nokogiri'
 gem 'rest-client'
 gem 'figaro'
+gem 'geocoder'
 
 group :development, :test do
   gem 'better_errors'

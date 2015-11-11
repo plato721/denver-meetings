@@ -1,0 +1,18 @@
+<div data-role="header" data-theme="b">
+  <h1>Find a Meeting</h1>
+</div>
+<%= form_tag(controller: "mobile/search", action: "create", method: "post") do %>
+  <div data-role="content" data-theme="b">
+    <div class="menu-panel">
+      <div class="inner-header">
+        <%= select_tag(:city, options_for_select(@options.cities_select), {class: "menu-element"}) %>
+     </div>
+   </div>
+
+
+
+  <%= submit_tag("Show Meetings") %>
+<% end %>
+
+
+

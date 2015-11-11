@@ -14,7 +14,7 @@ def last_updated(data)
 end
 
 def update_meetings(data)
-  trimmed = data.slice(13..-67)
+  trimmed = data.slice(13..-68)
   trimmed.each_slice(7) do |slice|
     RawMeeting.add_from(slice)
   end
@@ -37,8 +37,17 @@ end
 
 def parse_meetings(page)
     npage = Nokogiri::HTML(page)
-    data = npage.search('//text()').map(&:text).delete_if{|x| x !~ /\w/}
+    data = npage.search('//text()').map(&:text).delete_if{|x| x !~ /\w|\*/}
     data = data.map {|ugly| ugly.lstrip} #remove leading whitespace
+end
+
+def create_displayable
+  RawMeeting.all.each do |raw|
+    if !Meeting.joins(:raw_meeting).exists?(raw.id)
+      sleep 0.5
+      MeetingCreator.new(raw).create
+    end
+  end
 end
 
 namespace :daccaa do
@@ -47,5 +56,6 @@ namespace :daccaa do
     data = parse_meetings(page)
     set_updated(data)
     update_meetings(data)
+    create_displayable
   end
 end
