@@ -9,6 +9,28 @@
      </div>
    </div>
 
+  <div class="menu-panel">
+    <div class="inner-header">
+      <%= select_tag(:name, options_for_select(@options.names_select), {class: "menu-element"}) %>
+   </div>
+ </div>
+
+  <div class="menu-panel">
+    <div class="inner-header">
+      <%= select_tag(:time, options_for_select(@options.times_select), {class: "menu-element"}) %>
+   </div>
+ </div>
+
+  <fieldset data-role="controlgroup">
+    <legend>Open or Closed:</legend>
+    <%= radio_button_tag(:open, "open") %>
+    <%= label_tag(:open_open, "Open (Non-alcoholics Okay)") %>
+    <%= radio_button_tag(:open, "both", :true) %>
+    <%= label_tag(:open_both, "Any (Open or Closed)") %>
+    <%= radio_button_tag(:open, "closed") %>
+    <%= label_tag(:open_closed, "Closed (Alcoholics Only)") %>
+ </fieldset>
+
 
 
   <%= submit_tag("Show Meetings") %>

@@ -21,9 +21,9 @@ class SearchOptions
     end
   end
 
-  def time_select
-    any = ["Any","--Any Time--"]
-    now = ["Now","Now"]
+  def times_select
+    any = ["--Any Time--", "Any"]
+    now = ["Right Now","Now"]
     times.zip(times).prepend(any, now)
   end
 
@@ -31,8 +31,8 @@ class SearchOptions
     @names ||= Meeting.uniq.pluck(:group_name)
   end
 
-  def name_select
-    additional = ["Any", "--All Group Names--"]
+  def names_select
+    additional = ["--All Group Names--", "Any"]
     meeting_names.zip(meeting_names).prepend(additional)
   end
 
@@ -44,7 +44,7 @@ class SearchOptions
   end
 
   def days_select
-    any = ["Any", "--Any Day--"]
+    any = ["--Any Day--", "Any"]
     days.zip(days).prepend(any)
   end
 
@@ -53,8 +53,13 @@ class SearchOptions
   end
 
   def special_select
-    any = ["Any", "--"]
+    any = ["--No Special Focus--", "Any"]
     special.zip(special).prepend(any)
+  end
+
+  def format_select
+    ["Open (Non-alcoholics Okay)", "Closed (Alcoholics Only)"]
+    format.zip(format)
   end
 
   def format
