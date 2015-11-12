@@ -45,7 +45,7 @@ class SearchOptions
   def days
     @days ||= begin
       ["Sunday", "Monday", "Tuesday", "Wednesday",
-      "Thursday", "Friday", "Saturday", "Sunday"]
+      "Thursday", "Friday", "Saturday"]
     end
   end
 
