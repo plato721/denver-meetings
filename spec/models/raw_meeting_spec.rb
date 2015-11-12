@@ -37,9 +37,11 @@ RSpec.describe RawMeeting do
   context "Using #self.add_from" do
     it "will not create another raw meeting with identical data" do
       RawMeeting.add_from(raw_stream)
+      raw_count = RawMeeting.count
+
       RawMeeting.add_from(raw_stream)
 
-      expect(RawMeeting.count).to eq(1)
+      expect(RawMeeting.count).to eq(raw_count)
     end
   end
 
