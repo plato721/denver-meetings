@@ -31,6 +31,7 @@ RSpec.configure do |config|
 
   WebMock.stub_request(:any, "www.localhost:3000")
 
+
   def login(user)
     OmniAuth.config.test_mode = true
     OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new({
