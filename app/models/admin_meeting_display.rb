@@ -45,5 +45,4 @@ class AdminMeetingDisplay
     meeting.phone
   end
 
-
 end
