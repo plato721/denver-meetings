@@ -1,13 +1,13 @@
 <div data-role="header" data-theme="b">
-  <h1>Meetings Found<span class="ui-li-count">12</span></h1>
+  <h1>Meetings Found<span class="ui-li-count"><%= @meetings.length %></span></h1>
 </div>
 <div data-role="content" data-theme="b">
   <div data-role="collapsible-set" data-theme="b" data-content-theme="d" data-inset="false">
     <% @meetings.each do |meeting| %>
     <div data-role="collapsible">
-      <h2><%= "#{meeting.group_name} #{meeting.raw_meeting.time}" %></h2>
+      <h2><%= "#{meeting.group_name} #{meeting.time}" %></h2>
       <ul data-role="listview" data-inset="true">
-        <li><%= link_to "#{meeting.address_1}, #{meeting.city}", ExternalMapLink.new(meeting).url, {"data-icon"=>"map"} %></li>
+        <li><%= link_to raw(meeting.address), meeting.map_url, {"data-icon"=>"map"} %></li>
       </ul>
     </div>
     <% end %>

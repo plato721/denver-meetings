@@ -45,4 +45,7 @@ class AdminMeetingDisplay
     meeting.phone
   end
 
+  def map_url
+    ExternalMapLink.new(meeting).url
+  end
 end
