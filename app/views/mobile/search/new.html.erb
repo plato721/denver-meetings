@@ -28,7 +28,7 @@
     <%= label_tag(:open_closed, "Closed (Alcoholics Only)") %>
  </fieldset>
 
-  <%= button_to "Search", mobile_search_index_path, {:method => :post, "data-role" => "button", "data-icon" => "arrow-r", "data-iconpos" => "right", "data-ajax" => "false", "rel" => "external"} %>
+  <%= button_to "Search", mobile_search_index_path, {:method => :post, :class => "meeting-search-button", "data-role" => "button", "data-icon" => "arrow-r", "data-iconpos" => "right", "data-ajax" => "false", "rel" => "external"} %>
 <% end %>
 </div>
 

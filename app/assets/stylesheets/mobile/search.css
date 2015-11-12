@@ -3,93 +3,84 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-    h4
-    {
-        margin:0;
-        padding:0;
-    }
-    
-    
-    .ui-block
-    {
-         font-style:bold;
-    }
-    .ui-block-a
-    {
-        border:1px solid black;
-        padding-left:30px;
-        text-align:left;
-        background-color:#none;
-        /*color:#CACACA;*/
-        font-style:bold;
-    }
+  h4 {
+      margin:0;
+      padding:0;
+  }
 
-    .ui-block-b
-    {
-        border:1px solid black;
-        padding-left:30px;
-        text-align:left;
-        background-color:green;
-       /* color:#CACACA;*/
-    }
+  .ui-block {
+    font-style:bold;
+  }
 
-    .ui-block-c
-    {
-        border:1px solid black;
-        padding-left:30px;
-        text-align:left;
-        background-color:yellow;
-        /*color:#CACACA;*/
-    }
+  .ui-block-a {
+    border:1px solid black;
+    padding-left:30px;
+    text-align:left;
+    background-color:#none;
+    /*color:#CACACA;*/
+    font-style:bold;
+  }
 
-    .ui-block-d
-    {
-        border:1px solid black;
-        padding-left:30px;
-        text-align:left;
-        background-color:red;
-       /* color:#CACACA;*/
-    }
+  .ui-block-b
+  {
+    border:1px solid black;
+    padding-left:30px;
+    text-align:left;
+    background-color:green;
+   /* color:#CACACA;*/
+  }
 
-        .ui-block-e
-    {
-        border:1px solid black;
-        padding-left:30px;
-        text-align:left;
-        background-color:green;
-      /*  color:#CACACA;*/
-    }
+  .ui-block-c
+  {
+    border:1px solid black;
+    padding-left:30px;
+    text-align:left;
+    background-color:yellow;
+    /*color:#CACACA;*/
+  }
 
-    .odd
-    {
-        background-color:#CACACA;
-        color:#000000;
-    }
+  .ui-block-d
+  {
+    border:1px solid black;
+    padding-left:30px;
+    text-align:left;
+    background-color:red;
+   /* color:#CACACA;*/
+  }
 
-    .even
-    {
-        background-color:#7C7C7C;
-        color:#000000;
-    }
+  .ui-block-e {
+    border:1px solid black;
+    padding-left:30px;
+    text-align:left;
+    background-color:green;
+  /*  color:#CACACA;*/
+  }
 
-    .odd.blahskis
-    {   
-        font-size:2em;
-    }
+  .odd {
+    background-color:#CACACA;
+    color:#000000;
+  }
 
-    .searchButton
-    {
-        background-color:yellow;
-    }
+  .even {
+    background-color:#7C7C7C;
+    color:#000000;
+  }
 
-    li p{
-        padding-top:0px;
-        padding-bottom:0px;
-        padding-right:0px;
-        padding-left:10px;
-    }
+  .odd.blahskis {   
+    font-size:2em;
+  }
 
-    .smaller
-    {
-        font-size: .75em;
-    }
+  input.meeting-search-button {
+    background:green;
+  }
+
+  li p {
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-right:0px;
+    padding-left:10px;
+  }
+
+  .smaller {
+    font-size: .75em;
+  }
