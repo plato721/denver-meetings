@@ -23,7 +23,7 @@ class MeetingCreator
   end
 
   def time
-    # get time set
+    TimeConverter.to_dec(raw.time)
   end
 
   def group_name
