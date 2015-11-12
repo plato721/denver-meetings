@@ -8,6 +8,5 @@ class ExternalMapLink
 
   def url
     "http://maps.google.com/maps?q=loc:#{self.meeting.lat},#{self.meeting.lng}"
-    # "https://www.google.com/maps/?q=#{self.meeting.lat},#{self.meeting.lng},#{zoom}z"
   end
 end
