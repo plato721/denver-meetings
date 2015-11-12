@@ -24,7 +24,11 @@ class TimeConverter
   end
 
   def self.base_convert(raw)
-    am?(raw) ? 0.0 : 12.0
+    if am?(raw) || raw.match(/:/).pre_match == "12"
+      0.0
+    else
+      12.0
+    end
   end
 
   def self.am?(raw)
@@ -44,10 +48,11 @@ class TimeConverter
 
   def self.display_minutes(raw)
     no_hours = raw - raw.floor
-    no_hours.round(0).to_s.rjust(2, "0")
+    (no_hours * 60).round(0).to_i.to_s.rjust(2, "0")
   end
 
   def self.display_hours(raw)
+    raw = raw - 12 if raw.floor >= 13
     raw.floor.to_s
   end
 

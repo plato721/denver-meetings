@@ -50,6 +50,15 @@ RSpec.describe TimeConverter do
 
       expect(actual).to eq(expected)
     end
+
+    it "converts a fractional time" do
+      raw = 17.75
+
+      expected = "5:45pm"
+      actual = TimeConverter.display(raw)
+
+      expect(actual).to eq(expected)
+    end
   end
 
 end

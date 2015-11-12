@@ -27,7 +27,7 @@
               <tr>
                 <th><%= link_to meeting.approved.to_s, edit_admin_meeting_path(meeting) %></th>
                 <th><%= meeting.day %></th>
-                <th><%= meeting.raw_meeting.time %></th>
+                <th><%= TimeConverter.display(meeting.time) %></th>
                 <th><%= meeting.group_name %></th>
                 <td><%= "#{meeting.address_1}, #{meeting.address_2}, #{meeting.city}" %></td>
                 <td><%= meeting.notes %></td>

@@ -14,17 +14,23 @@ class SearchOptions
 
   def times
     @select_times ||= begin
-      times = Meeting.joins(:raw_meeting).uniq.pluck(:time).sort
-      times_am = times.select { |t| t =~ /A/ }
-      times_pm = times.select { |t| t =~ /P/ }
-      times_am.concat(times_pm)
+      times = Meeting.uniq.pluck(:time).sort
+      times.map { |t| TimeConverter.display(t) }
     end
+  end
+
+  def time_ranges
+    am = ["Morning (before 10a)", "am"]
+    noon = ["Midday (10a - 3p)", "noon"]
+    pm = ["Afternoon (3p - 7p)", "pm"]
+    late = ["Evening (7p +)", "late"]
+    [am, noon, pm, late]
   end
 
   def times_select
     any = ["--Any Time--", "Any"]
     now = ["Right Now","Now"]
-    times.zip(times).prepend(any, now)
+    time_ranges.concat(times.zip(times)).prepend(any, now)
   end
 
   def meeting_names
