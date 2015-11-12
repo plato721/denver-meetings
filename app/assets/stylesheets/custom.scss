@@ -60,6 +60,33 @@
     margin-top: 50px;
   }
 
+  h2{
+    font-size: 3.5em;
+  }
+
+  ////////////////////////
+  //  Form
+  ////////////////////////
+  form {
+    font-size: 1.5em;
+    color: $primary-text;
+  }
+
+  .checkbox{
+    border-width: 2px;
+    border-color: white;
+  }
+
+  .edit-header{
+    color: $primary-text;
+    margin-top: 75px;
+  }
+
+  .update-meeting-button{
+    margin-top: 20px;
+  }
+  ////////////////////////
+
   .welcome-header {
     margin-top: 150px;
   }

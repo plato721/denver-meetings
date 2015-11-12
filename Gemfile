@@ -22,6 +22,7 @@ gem 'nokogiri'
 gem 'rest-client'
 gem 'figaro'
 gem 'geocoder'
+gem 'bootstrap_form'
 
 group :development, :test do
   gem 'better_errors'

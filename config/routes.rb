@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root to: "admin#index"
-    resources :meetings, only:[:index, :edit]
+    resources :meetings, only:[:index, :edit, :update]
   end
 
   get '403', to: 'error#unauthorized', as: "unauthorized"
