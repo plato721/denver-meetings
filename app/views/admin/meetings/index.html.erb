@@ -25,14 +25,14 @@
             <tbody>
               <% @meetings.each do |meeting| %>
               <tr>
-                <th><%= link_to meeting.approved.to_s, edit_admin_meeting_path(meeting) %></th>
+                <th><%= link_to meeting.approved, edit_admin_meeting_path(meeting) %></th>
                 <th><%= meeting.day %></th>
-                <th><%= TimeConverter.display(meeting.time) %></th>
+                <th><%= meeting.time %></th>
                 <th><%= meeting.group_name %></th>
-                <td><%= "#{meeting.address_1}, #{meeting.address_2}, #{meeting.city}" %></td>
+                <td><%= raw(meeting.address) %></td>
                 <td><%= meeting.notes %></td>
                 <td><%= meeting.phone %></td>
-                <td><%= "#{meeting.lat}, #{meeting.lng}" %></td>
+                <td><%= meeting.coords %></td>
               </tr>
               <% end %>
             </tbody>

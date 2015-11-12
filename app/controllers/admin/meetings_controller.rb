@@ -1,6 +1,6 @@
 class Admin::MeetingsController < AdminController
   def index
-    @meetings = Meeting.all.to_a
+    @meetings = Meeting.all.map { |m| AdminMeetingDisplay.new(m) }
   end
 
   def edit
