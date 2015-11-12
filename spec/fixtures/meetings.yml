@@ -1,0 +1,17 @@
+one:
+  day: Sunday
+  group_name: Keeping It Simple
+  address_1: 3600 S. Clarkson
+  address_2: 
+  notes: NE of Ch
+  city: Englewood
+  state: CO
+  zip: 80113
+  phone: nil
+  district: 11
+  codes: n
+  lat: 39.650253
+  lng: -104.977313
+  approved: false
+  time: 6.5
+  raw_meeting: one
