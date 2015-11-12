@@ -25,7 +25,7 @@
             <tbody>
               <% @meetings.each do |meeting| %>
               <tr>
-                <th><%= link_to "True", edit_admin_meeting_path(meeting) %></th>
+                <th><%= link_to meeting.approved.to_s, edit_admin_meeting_path(meeting) %></th>
                 <th><%= meeting.day %></th>
                 <th><%= meeting.raw_meeting.time %></th>
                 <th><%= meeting.group_name %></th>
