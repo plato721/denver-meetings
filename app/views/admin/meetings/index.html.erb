@@ -1,1 +1,44 @@
-<h3>Is this displaying anything?</h3>
+<div class="mainline">
+  <div class="container-fluid">
+    <div class="row">
+      <h1 class="page-header">
+        Meetings
+      </h1>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>Approved</th>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Group Name</th>
+                <th>Address</th>
+                <th>Notes</th>
+                <th>Phone</th>
+                <th>Lat/Long</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @meetings.each do |meeting| %>
+              <tr>
+                <th>True</th>
+                <th><%= meeting.day %></th>
+                <th><%= meeting.raw_meeting.time %></th>
+                <th><%= meeting.group_name %></th>
+                <td><%= "#{meeting.address_1}, #{meeting.address_2}, #{meeting.city}" %></td>
+                <td><%= meeting.notes %></td>
+                <td><%= meeting.phone %></td>
+                <td><%= "#{meeting.lat}, #{meeting.lng}" %></td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
