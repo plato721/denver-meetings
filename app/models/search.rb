@@ -7,4 +7,9 @@ class Search < ActiveRecord::Base
               time: params["time"],
               open: params["open"]})
   end
+
+  def results
+    by_name = Meeting.by_group("%#{self.group_name}%")
+
+  end
 end

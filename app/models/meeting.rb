@@ -4,6 +4,10 @@ class Meeting < ActiveRecord::Base
   before_create :address_from_coords
   belongs_to :raw_meeting
 
+  def self.by_group(group_name)
+    where("group_name LIKE ?", group_name)
+  end
+
   def address
     [address_1, city, state].compact.join(', ')
   end

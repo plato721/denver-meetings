@@ -15,3 +15,18 @@ one:
   approved: false
   time: 6.5
   raw_meeting: one
+two:
+  day: Tuesday
+  group_name: Always Hope
+  address_1: 3355 S. Wadsworth Ave.
+  address_2: H-125
+  phone: 989-2816
+  city: Lakewood
+  state: CO
+  zip: 80227
+  district: 30
+  codes: nil
+  lat: 39.654566
+  lng: -105.08218
+  approved: false
+  time: 17.5
