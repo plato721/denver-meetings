@@ -10,11 +10,7 @@
 <body>
   <div data-role="page" id="main">
     <%= yield %>
-    <%= render partial: 'layouts/footer' %>
-  <div data-role="footer" class="ui-bar">
-      <a href="clear" class="ui-btn" cell-width="150" data-theme="b">Frequently Asked Questions</a>
-      <a href="search" class="ui-btn" data-theme="e">Home</a>
-  </div>
+    <%= render partial: 'layouts/mobile/footer' %>
   </div>
 </body>
 </html>
