@@ -6,7 +6,7 @@ class Proximal
     @lng = meeting.lng
   end
 
-  def earth_radius #miles
+  def earth_radius #in miles, at 39.xx degrees latitude
     3961
   end
 
@@ -24,6 +24,8 @@ class Proximal
     end.to_h.sort_by {|_, distance| distance}
   end
 
+  # My thanks to Chris Veness for the javascript implementation of this equation
+  # found on http://www.movable-type.co.uk/scripts/latlong.html.
   def distance_from(coords)
     lat_1_rads = to_rad(self.lat)
     lat_2_rads = to_rad(coords.first)
@@ -31,6 +33,8 @@ class Proximal
     lat_delta_rads = to_rad(self.lat - coords.first)
     lng_delta_rads = to_rad(self.lng - coords.last)
 
+    # "a" and "c" monikers are from the Haversine formula. the return
+    # result would be called "d" in this formula
     a = Math.sin(lat_delta_rads / 2) * Math.sin(lat_delta_rads / 2) +
             Math.cos(lat_1_rads) * Math.cos(lat_2_rads) *
             Math.sin(lng_delta_rads/2) * Math.sin(lng_delta_rads/2)
