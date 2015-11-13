@@ -15,3 +15,19 @@ one:
   approved: false
   time: 6.5
   raw_meeting: one
+
+two:
+  day: Tuesday
+  group_name: Daily Serenity
+  address_1: 1311 York St.
+  address_2: 
+  notes: Oldest still active clubhouse
+  city: Denver
+  state: CO
+  zip: 80206
+  lat: 39.736960
+  lng: -104.959935
+  approved: true
+  time: 20.5
+  raw_meeting:
+  
