@@ -3,7 +3,8 @@
 </div>
 <div data-role="content" data-theme="b">
   <div data-role="collapsible-set" data-theme="b" data-content-theme="d" data-inset="false">
-    <% @meetings.each do |meeting| %>
+    <% @meetings.each_with_index do |meeting, idx| %>
+
     <div data-role="collapsible">
       <h2><%= "#{meeting.group_name} #{meeting.time}" %></h2>
       <ul data-role="listview" data-inset="true">

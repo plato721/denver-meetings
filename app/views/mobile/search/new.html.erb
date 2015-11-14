@@ -1,10 +1,14 @@
 <div data-role="header" data-theme="b">
   <h1>Find a Meeting</h1>
 </div>
-<%= form_tag(controller: "mobile/search", action: "create", method: "post", "data-ajax" => "false") do %>
-<div data-role="content" data-theme="b">
-  <%= button_to "Right Here Right Now", mobile_search_index_path, {:method => :post, :class => "meeting-search-hot-button", "data-role" => "button", "data-icon" => "arrow-r", "data-iconpos" => "right", "data-ajax" => "false", "rel" => "external"} %>
 
+
+<div data-role="content" data-theme="b">
+<%= form_tag(controller: "mobile/search", action: "create", method: "post", "data-ajax" => "false") do %>
+  <%= button_to "Right Here Right Now", mobile_search_index_path, {:method => :post, :class => "meeting-search-hot-button", "data-role" => "button", "data-icon" => "arrow-r", "data-iconpos" => "right", "data-ajax" => "false", "rel" => "external"} %>
+<% end %>
+
+<%= form_tag(controller: "mobile/search", action: "create", method: "post", "data-ajax" => "false") do %>
   <div class="collapsible-set">
     <div data-role="collapsible">
       <h3>Location</h3>
