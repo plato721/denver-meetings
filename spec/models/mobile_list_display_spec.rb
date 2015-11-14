@@ -10,7 +10,7 @@ RSpec.describe MobileListDisplay do
     list = MobileListDisplay.new(@meetings)
 
     list.each do |meeting|
-      expect(days.include?(meeting.first)).to be_truthy
+      expect(days.include?(meeting.first.to_s)).to be_truthy
     end
   end
 

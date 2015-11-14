@@ -26,7 +26,7 @@ class MobileMeetingDisplay
   end
 
   def day
-    meeting.day.capitalize
+    Day.new(meeting.day.capitalize)
   end
 
   def time
