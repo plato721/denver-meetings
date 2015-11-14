@@ -3,7 +3,7 @@ class MobileListDisplay
   attr_reader :meetings
 
   def initialize(meetings)
-    @meetings = meetings
+    @meetings = meetings.map { |m| MobileMeetingDisplay.new(m) }
   end
 
   def list

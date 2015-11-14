@@ -1,16 +1,20 @@
 <div data-role="header" data-theme="b">
-  <h1>Meetings Found<span class="ui-li-count"><%= @meetings.length %></span></h1>
+  <% meeting_count = @meetings.inject(0) {|acc, day_group| acc + day_group.last.length} %>
+  <h1>Meetings Found<span class="ui-li-count"><%= meeting_count %></span></h1>
 </div>
 <div data-role="content" data-theme="b">
-  <div data-role="collapsible-set" data-theme="b" data-content-theme="d" data-inset="false">
-    <% @meetings.each_with_index do |meeting, idx| %>
-
-    <div data-role="collapsible">
-      <h2><%= "#{meeting.group_name} #{meeting.time}" %></h2>
-      <ul data-role="listview" data-inset="true">
-        <li><%= link_to raw(meeting.address), meeting.map_url, {"data-icon"=>"map"} %></li>
-      </ul>
-    </div>
+  <ul data-role="listview">
+    <% @meetings.each do |day_group| %>
+      <li data-role="list-divider"><%= day_group.first %></li>
+      <% day_group.last.each do |meeting| %>
+        <div data-role="collapsible">
+          <h2><%= "#{meeting.group_name} #{meeting.time}" %></h2>
+          <ul data-role="listview" data-inset="true">
+          <li><%= link_to raw(meeting.address), meeting.map_url, {"data-icon"=>"map"} %></li>
+          </ul>
+        </div>
+      <% end %>
     <% end %>
+  </ul>
   </div>
 </div>
