@@ -20,6 +20,15 @@ class SearchOptions
     end
   end
 
+  def self.display_range_to_raw
+    {"am" => [0, 9.99],
+      "noon" => [10, 14.99],
+      "pm" => [15, 18.99],
+      "late" => [19, 23.99],
+      "now" => [TimeConverter.now, TimeConverter.now + 3]
+    }
+  end
+
   def time_ranges
     am = ["Morning (before 10a)", "am"]
     noon = ["Midday (10a - 3p)", "noon"]
@@ -30,7 +39,7 @@ class SearchOptions
 
   def times_select
     any = ["--Any Time--", "Any"]
-    now = ["Right Now","Now"]
+    now = ["Right Now","now"]
     time_ranges.concat(times).prepend(any, now)
   end
 
