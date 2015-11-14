@@ -5,6 +5,10 @@ class MobileMeetingDisplay
     @meeting = meeting
   end
 
+  def raw_time
+    self.meeting.time
+  end
+
   def group_name
     meeting.group_name
   end
@@ -26,7 +30,7 @@ class MobileMeetingDisplay
   end
 
   def day
-    meeting.day.capitalize
+    Day.new(meeting.day.capitalize)
   end
 
   def time
