@@ -9,8 +9,8 @@ class TimeConverter
   end
 
   def self.now
-    hour = Time.now.strftime("%H").to_i
-    min = Time.now.strftime("%M").to_f / 60
+    hour = Time.now.in_time_zone('US/Mountain').strftime("%H").to_i
+    min = Time.now.in_time_zone('US/Mountain').strftime("%M").to_f / 60
     hour + min
   end
 
