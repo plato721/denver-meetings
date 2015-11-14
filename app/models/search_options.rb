@@ -16,6 +16,7 @@ class SearchOptions
     @select_times ||= begin
       times = Meeting.uniq.pluck(:time).sort
       times.map { |t| TimeConverter.display(t) }
+      .zip(times)
     end
   end
 
@@ -30,7 +31,7 @@ class SearchOptions
   def times_select
     any = ["--Any Time--", "Any"]
     now = ["Right Now","Now"]
-    time_ranges.concat(times.zip(times)).prepend(any, now)
+    time_ranges.concat(times).prepend(any, now)
   end
 
   def meeting_names
