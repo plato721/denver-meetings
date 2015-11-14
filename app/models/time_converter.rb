@@ -8,6 +8,12 @@ class TimeConverter
     converted + hours + fraction
   end
 
+  def self.now
+    hour = Time.now.strftime("%H").to_i
+    min = Time.now.strftime("%M").to_f / 60
+    hour + min
+  end
+
   def self.hour(raw)
     colon = raw.match(/:/)
     colon.pre_match.to_f
