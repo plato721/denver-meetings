@@ -3,17 +3,17 @@ class MobileListDisplay
   attr_accessor :meetings
 
   def initialize(meetings)
-    @meetings = meetings.map { |m| MobileMeetingDisplay.new(m) }
+    @meetings = meetings.map { |meeting| MobileMeetingDisplay.new(meeting) }
     sort_by_time
   end
 
   def sort_by_time
-    self.meetings = self.meetings.sort_by { |meeting| meeting.time }
+    self.meetings = self.meetings.sort_by { |meeting| meeting.raw_time }
   end
 
   def list
-    self.meetings.group_by{ |meeting| meeting.day}
-    .sort_by{ |meeting_group| meeting_group.first }
+    self.meetings.group_by{ |meeting| meeting.day.to_s }
+    .sort_by{ |meeting_group| Day.new(meeting_group.first) }
   end
 
   def each
