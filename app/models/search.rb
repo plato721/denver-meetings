@@ -9,9 +9,6 @@ class Search < ActiveRecord::Base
   end
 
   def results
-    # Search.column_names.map do |param|
-    #   Meeting.send("by_#{param}".to_sym)
-    # end
     Meeting.search(self.to_h)
   end
 
