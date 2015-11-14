@@ -8,6 +8,10 @@
       padding:0;
   }
 
+  .group-text{
+    font-style: italic;
+  }
+
   .ui-block {
     font-style:bold;
   }

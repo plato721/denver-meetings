@@ -14,10 +14,10 @@
       <h3>Location</h3>
         <%= select_tag(:city, options_for_select(@options.cities_select), {class: "menu-element"}) %>
         <fieldset data-role="controlgroup">
-          <%= radio_button_tag(:here, "here") %>
-          <%= label_tag(:here_here, "Right Here") %>
+          <%= label_tag(:here, "Right Here") %>
+          <%= check_box_tag(:here, "here") %>
        </fieldset>
-        <%= text_field_tag :city_text, "(Type in city/address here or use dropdown)"  %>
+        <%= text_field_tag :city_text, "(Optional search text)", { class: "city-text" }  %>
     </div>
   </div>
 
@@ -33,7 +33,7 @@
     <div data-role="collapsible">
       <h3>Group Name</h3>
         <%= select_tag(:name, options_for_select(@options.names_select), {class: "menu-element"}) %>
-        <%= text_field_tag :group_text, "(Type in group here or use dropdown)"  %>
+        <%= text_field_tag :group_text, "(Optional search text)", { class: "group-text" }  %>
     </div>
   </div>
 
@@ -84,6 +84,3 @@
 
 <% end %>
 </div>
-
-
-
