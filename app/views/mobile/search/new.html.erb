@@ -5,32 +5,47 @@
 <div data-role="content" data-theme="b">
   <%= button_to "Right Here Right Now", mobile_search_index_path, {:method => :post, :class => "meeting-search-hot-button", "data-role" => "button", "data-icon" => "arrow-r", "data-iconpos" => "right", "data-ajax" => "false", "rel" => "external"} %>
 
-  <legend>City:</legend>
-  <%= select_tag(:city, options_for_select(@options.cities_select), {class: "menu-element"}) %>
+  <div class="collapsible-set">
+    <div data-role="collapsible">
+      <h3>By Location</h3>
+        <%= select_tag(:city, options_for_select(@options.cities_select), {class: "menu-element"}) %>
+    </div>
+  </div>
 
-  <legend>Day:</legend>
-  <%= select_tag(:day, options_for_select(@options.days_select), {class: "menu-element"}) %>
+  <div class="collapsible-set">
+    <div data-role="collapsible">
+      <h3>By Day/Time</h3>
+        <%= select_tag(:day, options_for_select(@options.days_select), {class: "menu-element"}) %>
+        <%= select_tag(:time, options_for_select(@options.times_select), {class: "menu-element"}) %>
+    </div>
+  </div>
 
-  <legend>Time:</legend>
-  <%= select_tag(:time, options_for_select(@options.times_select), {class: "menu-element"}) %>
+  <div class="collapsible-set">
+    <div data-role="collapsible">
+      <h3>By Group Name</h3>
+        <%= select_tag(:name, options_for_select(@options.names_select), {class: "menu-element"}) %>
+    </div>
+  </div>
 
-  <legend>Group Name:</legend>
-  <%= select_tag(:name, options_for_select(@options.names_select), {class: "menu-element"}) %>
+  <div class="collapsible-set">
+    <div data-role="collapsible">
+      <h3>Open or Closed</h3>
+        <fieldset data-role="controlgroup">
+          <legend>Open or Closed:</legend>
+          <%= radio_button_tag(:open, "open") %>
+          <%= label_tag(:open_open, "Open (Non-alcoholics Okay)") %>
+          <%= radio_button_tag(:open, "both", :true) %>
+          <%= label_tag(:open_both, "Any") %>
+          <%= radio_button_tag(:open, "closed") %>
+          <%= label_tag(:open_closed, "Closed (Alcoholics Only)") %>
+       </fieldset>
+    </div>
+  </div>
+
   <legend>Group or Street Name:</legend>
   <%= text_field_tag :free_search, "(Search by text here)"  %>
-  <fieldset data-role="controlgroup">
-    <legend>Open or Closed:</legend>
-    <%= radio_button_tag(:open, "open") %>
-    <%= label_tag(:open_open, "Open (Non-alcoholics Okay)") %>
-    <%= radio_button_tag(:open, "both", :true) %>
-    <%= label_tag(:open_both, "Any") %>
-    <%= radio_button_tag(:open, "closed") %>
-    <%= label_tag(:open_closed, "Closed (Alcoholics Only)") %>
- </fieldset>
 
   <%= button_to "Search", mobile_search_index_path, {:method => :post, :class => "meeting-search-button", "data-role" => "button", "data-icon" => "arrow-r", "data-iconpos" => "right", "data-ajax" => "false", "rel" => "external"} %>
-
-
 
 <% end %>
 </div>
