@@ -8,7 +8,11 @@
       padding:0;
   }
 
-  .group-text{
+  .group-text-default{
+    font-style: italic;
+  }
+
+  .city-text-default{
     font-style: italic;
   }
 
