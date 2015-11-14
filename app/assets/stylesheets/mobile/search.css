@@ -74,6 +74,10 @@
     background:green;
   }
 
+  input.meeting-search-hot-button {
+    background:orange;
+  }
+
   li p {
     padding-top:0px;
     padding-bottom:0px;

@@ -3,14 +3,10 @@
 </div>
 <%= form_tag(controller: "mobile/search", action: "create", method: "post", "data-ajax" => "false") do %>
 <div data-role="content" data-theme="b">
-  <legend>Group or Street Name:</legend>
-  <%= text_field_tag :free_search  %>
+  <%= button_to "Right Here Right Now", mobile_search_index_path, {:method => :post, :class => "meeting-search-hot-button", "data-role" => "button", "data-icon" => "arrow-r", "data-iconpos" => "right", "data-ajax" => "false", "rel" => "external"} %>
 
   <legend>City:</legend>
   <%= select_tag(:city, options_for_select(@options.cities_select), {class: "menu-element"}) %>
-
-  <legend>Group Name:</legend>
-  <%= select_tag(:name, options_for_select(@options.names_select), {class: "menu-element"}) %>
 
   <legend>Day:</legend>
   <%= select_tag(:day, options_for_select(@options.days_select), {class: "menu-element"}) %>
@@ -18,6 +14,10 @@
   <legend>Time:</legend>
   <%= select_tag(:time, options_for_select(@options.times_select), {class: "menu-element"}) %>
 
+  <legend>Group Name:</legend>
+  <%= select_tag(:name, options_for_select(@options.names_select), {class: "menu-element"}) %>
+  <legend>Group or Street Name:</legend>
+  <%= text_field_tag :free_search, "(Search by text here)"  %>
   <fieldset data-role="controlgroup">
     <legend>Open or Closed:</legend>
     <%= radio_button_tag(:open, "open") %>
@@ -29,6 +29,9 @@
  </fieldset>
 
   <%= button_to "Search", mobile_search_index_path, {:method => :post, :class => "meeting-search-button", "data-role" => "button", "data-icon" => "arrow-r", "data-iconpos" => "right", "data-ajax" => "false", "rel" => "external"} %>
+
+
+
 <% end %>
 </div>
 
