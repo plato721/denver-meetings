@@ -55,7 +55,34 @@
   <div class="collapsible-set">
     <div data-role="collapsible">
       <h3>Special Focus</h3>
+        <fieldset data-role="controlgroup" data-type="horizontal">
+          <legend>Men's Meetings:</legend>
+          <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2a" value="hide">
+          <label for="radio-choice-h-2a">Hide</label>
+          <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2b" value="show" checked="checked">
+          <label for="radio-choice-h-2b">Show</label>
+          <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2c" value="show-only">
+          <label for="radio-choice-h-2c">Show Only</label>
+        </fieldset>
+
+        <fieldset data-role="controlgroup" data-type="horizontal">
+          <legend>Women's Meetings:</legend>
+
+            <%= radio_button_tag(:women, "hide") %>
+            <%= label_tag(:women_hide, "Hide") %>
+            <%= radio_button_tag(:women, "show", :true) %>
+            <%= label_tag(:women_show, "Show") %>
+            <%= radio_button_tag(:women, "only") %>
+            <%= label_tag(:women_only, "Show Only") %>
+        </fieldset>
+
+
+
+
+
+
         <fieldset data-role="controlgroup">
+
           <%= label_tag(:women, "Women") %>
           <%= check_box_tag(:women, "women", true) %>
 
@@ -74,7 +101,7 @@
           <%= label_tag(:polish, "Polish") %>
           <%= check_box_tag(:polish, "polish", true) %>
 
-          <%= label_tag(:youth, "Young Peoples") %>
+          <%= label_tag(:youth, "Youth") %>
           <%= check_box_tag(:youth, "youth", true) %>
        </fieldset>
     </div>
