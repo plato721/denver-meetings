@@ -10,9 +10,10 @@
         <div data-role="collapsible">
           <h2><%= "#{meeting.group_name} #{meeting.time}" %></h2>
           <ul data-role="listview" data-inset="true">
-          <li><%= meeting.day %></li>
           <% if distance_display?(group.first) %>
-            <li><%= "Distance: #{pluralize(meeting.distance, "mile")}" %></li>
+            <li><%= meeting_with_distance(meeting) %></li>
+          <% else %>
+            <li><%= meeting_without_distance(meeting) %></li>
           <% end %>
           <li><%= link_to raw(meeting.address), meeting.map_url, {"data-icon"=>"map", :target => "_blank"} %></li>
           </ul>
