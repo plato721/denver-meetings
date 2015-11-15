@@ -1,15 +1,18 @@
 <div data-role="header" data-theme="b">
-  <% meeting_count = @meetings.inject(0) {|acc, day_group| acc + day_group.last.length} %>
+  <% meeting_count = @meetings.inject(0) {|acc, group| acc + group.last.length} %>
   <h1>Meetings Found<span class="ui-li-count"><%= meeting_count %></span></h1>
 </div>
 <div data-role="content" data-theme="b">
   <ul data-role="listview">
-    <% @meetings.each do |day_group| %>
-      <li data-role="list-divider"><%= day_group.first %></li>
-      <% day_group.last.each do |meeting| %>
+    <% @meetings.each do |group| %>
+      <li data-role="list-divider"><%= group.first %></li>
+      <% group.last.each do |meeting| %>
         <div data-role="collapsible">
           <h2><%= "#{meeting.group_name} #{meeting.time}" %></h2>
           <ul data-role="listview" data-inset="true">
+          <% if distance_display?(group.first) %>
+            <li><%= "Distance: #{pluralize(meeting.distance, "mile")}" %></li>
+          <% end %>
           <li><%= link_to raw(meeting.address), meeting.map_url, {"data-icon"=>"map", :target => "_blank"} %></li>
           </ul>
         </div>
