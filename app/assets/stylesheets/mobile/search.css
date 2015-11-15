@@ -82,7 +82,11 @@
     background:green;
   }
 
-  input.meeting-search-hot-button {
+  button.meeting-search-hot-button {
+    background:orange;
+  }
+
+  #one-time{
     background:orange;
   }
 
