@@ -11,19 +11,20 @@ class HereAndNow
   end
 
   def distance_intervals
-    {1 => "1 mile",
-     3 => "3 miles",
-     5 => "5 miles",
-     10 => "10 miles",
-     20 => "20 miles",
-     50 => "50 miles"}
+    {[0.0, 1.0] => "Within 1 mile",
+     [1.0, 3.0] => "Within 3 miles",
+     [3.0, 5.0] => "Within 5 miles",
+     [5.0, 10.0] => "Within 10 miles",
+     [10.0, 20.0] => "Within 20 miles",
+     [20.0, 50.0] => "Within 50 miles"}
   end
 
   def display_grouped_distance(meetings)
     distance_intervals.each_with_object({}) do |distance, meeting_groups|
       meeting_groups[distance.last] = []
       meeting_groups[distance.last].concat(meetings.select do |meeting|
-        meeting.distance < distance.first
+        meeting.distance > distance.first.first &&
+        meeting.distance < distance.first.last
       end)
     end
   end
@@ -44,7 +45,6 @@ class HereAndNow
     now_meetings = Meeting.search(day: today_string, time: "now")
     now_meetings_distance = meetings_with_distance(now_meetings)
     display_meetings = create_distance_displayable(now_meetings_distance)
-    # binding.pry
     display_groups = display_grouped_distance(display_meetings)
   end
 end
