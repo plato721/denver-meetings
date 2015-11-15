@@ -5,7 +5,10 @@ class Search < ActiveRecord::Base
               group_name: params["name"],
               day: params["day"],
               time: params["time"],
-              open: params["open"]})
+              open: params["open"],
+              lat: params["lat"],
+              lng: params["lng"],
+              here_and_now: params["here_and_now"]})
   end
 
   def self.set_defaults(params)
@@ -14,11 +17,12 @@ class Search < ActiveRecord::Base
 
   def self.defaults
     {lat: nil,
-    lng: nil}
+    lng: nil,
+    here_and_now: false}
   end
 
   def results
-    # if 
+    return HereAndNow.new(self.to_h).search if self.here_and_now
     Meeting.search(self.to_h)
   end
 
