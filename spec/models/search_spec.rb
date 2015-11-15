@@ -16,7 +16,6 @@ RSpec.describe Search do
     search = Search.create(@search_params.merge(group_name: "keep"))
 
     expected = "Keeping It Simple"
-    binding.pry
     actual = search.results.first.last.first.group_name
 
     expect(actual).to eq(expected)
