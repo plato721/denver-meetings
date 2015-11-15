@@ -1,9 +1,13 @@
 class MobileMeetingDisplay
-  attr_reader :meeting, :distance
+  attr_reader :meeting, :raw_distance
 
   def initialize(meeting, distance=nil)
     @meeting = meeting
-    @distance = distance
+    @raw_distance = distance
+  end
+
+  def distance
+    "#{raw_distance.round(1)}"
   end
 
   def raw_time
