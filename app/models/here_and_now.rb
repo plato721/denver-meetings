@@ -51,7 +51,7 @@ class HereAndNow
   end
 
   def first_morning_meetings
-    morning_meetings = Meeting.where(day: tomorrow_string, time: "am")
+    morning_meetings = Meeting.search(day: tomorrow_string, time: "am")
     .order(:time)
   end
 
