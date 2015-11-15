@@ -8,7 +8,17 @@ class Search < ActiveRecord::Base
               open: params["open"]})
   end
 
+  def self.set_defaults(params)
+    params.merge(defaults)
+  end
+
+  def self.defaults
+    {lat: nil,
+    lng: nil}
+  end
+
   def results
+    # if 
     Meeting.search(self.to_h)
   end
 
