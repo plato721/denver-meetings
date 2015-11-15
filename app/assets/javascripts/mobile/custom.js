@@ -25,7 +25,7 @@ var main = function(){
       window.location = "/mobile/search/create?lat=" + pos["lat"] + "&lng=" + pos["lng"];
     });
     } else {
-      $(this).val("Geolocation unavailable")
+      $(this).html("Geolocation unavailable")
     // Browser doesn't support Geolocation
      }
   });
@@ -46,6 +46,7 @@ var main = function(){
     // Browser doesn't support Geolocation
     }
 });
+
 
 
 }
