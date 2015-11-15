@@ -8,8 +8,7 @@ class SearchOptions
 
   def cities_select
     any = ["--All Cities--", "Any"]
-    here = ["--Right Here--", "Here"]
-    cities.prepend(here).prepend(any)
+    cities.prepend(any)
   end
 
   def times
@@ -61,7 +60,8 @@ class SearchOptions
 
   def days_select
     any = ["--Any Day--", "Any"]
-    days.zip(days).prepend(any)
+    today = ["Today (#{Day.display_today})", "#{Day.display_today}"]
+    days.zip(days).prepend(any, today)
   end
 
   def special

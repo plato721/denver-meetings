@@ -6,14 +6,6 @@ class HereAndNow
     @lng = params[:lng].to_f
   end
 
-  def today_string
-    Day.int_to_day[TimeConverter.now_raw.wday]
-  end
-
-  def tomorrow_string
-    Day.int_to_day[(TimeConverter.now_raw.wday + 1) % 7]
-  end
-
   def distance_intervals
     {[0.0, 1.0] => "Within 1 mile",
      [1.0, 3.0] => "Within 3 miles",
@@ -45,13 +37,13 @@ class HereAndNow
   end
 
   def upcoming_meetings
-    now_meetings = Meeting.search(day: today_string, time: "now")
+    now_meetings = Meeting.search(day: Day.display_today, time: "now")
     return now_meetings if now_meetings.count > 10
     now_meetings.concat(first_morning_meetings)
   end
 
   def first_morning_meetings
-    morning_meetings = Meeting.search(day: tomorrow_string, time: "am")
+    morning_meetings = Meeting.search(day: Day.display_tomorrow, time: "am")
     .order(:time)
   end
 

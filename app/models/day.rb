@@ -5,6 +5,14 @@ class Day
     @day = day
   end
 
+  def self.display_today
+    int_to_day[TimeConverter.now_raw.wday]
+  end
+
+  def self.display_tomorrow
+    int_to_day[(TimeConverter.now_raw.wday + 1) % 7]
+  end
+
   def self.day_order
     ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
   end
