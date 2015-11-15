@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get "auth/github/callback", to: "sessions#create"
 
   namespace :mobile do
+    get "search/create", to: "search#create"
     resources :search, only:[:new, :create, :index]
     resources :meetings, only:[:index, :show]
   end
