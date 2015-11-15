@@ -22,7 +22,7 @@ var main = function(){
         lat: position.coords.latitude,
         lng: position.coords.longitude
       };
-      window.location.replace("/mobile/search/create?lat=" + pos["lat"] + "&lng=" + pos["lng"]) ;
+      window.location = "/mobile/search/create?lat=" + pos["lat"] + "&lng=" + pos["lng"];
     });
     } else {
     // Browser doesn't support Geolocation
