@@ -47,7 +47,6 @@ class HereAndNow
   def upcoming_meetings
     now_meetings = Meeting.search(day: today_string, time: "now")
     return now_meetings if now_meetings.count > 10
-    binding.pry
     now_meetings.concat(first_morning_meetings)
   end
 
