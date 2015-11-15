@@ -54,7 +54,6 @@ class Meeting < ActiveRecord::Base
     where("address_1 LIKE ?", text)
   end
 
-
   def address
     [address_1, city, state].compact.join(', ')
   end
