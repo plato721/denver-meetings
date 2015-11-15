@@ -7,7 +7,7 @@ class Mobile::SearchController < ApplicationController
 
   def index
     search = Search.find(session[:search]) if session[:search]
-    @meetings = MobileListDisplay.new(search.results)
+    @meetings = search.results
   end
 
   def create

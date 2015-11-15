@@ -1,12 +1,17 @@
 class MobileMeetingDisplay
-  attr_reader :meeting
+  attr_reader :meeting, :distance
 
-  def initialize(meeting)
+  def initialize(meeting, distance=nil)
     @meeting = meeting
+    @distance = distance
   end
 
   def raw_time
     self.meeting.time
+  end
+
+  def raw_day
+    Day.day_to_int[self.meeting.day]
   end
 
   def group_name

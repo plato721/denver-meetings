@@ -5,8 +5,16 @@ class Day
     @day = day
   end
 
-  def day_order
+  def self.day_order
     ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+  end
+
+  def self.day_to_int
+    day_order.zip([*0..6]).to_h
+  end
+
+  def self.int_to_day
+    [*0..6].zip(day_order).to_h
   end
 
   def to_s
@@ -14,6 +22,6 @@ class Day
   end
 
   def <=>(other)
-    day_order.index(self.day) <=> day_order.index(other.day)
+    Day.day_order.index(self.day) <=> Day.day_order.index(other.day)
   end
 end

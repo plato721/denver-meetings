@@ -23,7 +23,8 @@ class Search < ActiveRecord::Base
 
   def results
     return HereAndNow.new(self.to_h).search if self.here_and_now
-    Meeting.search(self.to_h)
+    raw_meetings = Meeting.search(self.to_h)
+    MobileListDisplay.new(raw_meetings)
   end
 
   def to_h
