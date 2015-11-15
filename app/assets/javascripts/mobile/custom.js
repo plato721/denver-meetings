@@ -15,14 +15,14 @@ var main = function(){
       }
   });
 
-  $(".meeting-search-hot-button-box").on("click", function(){
+  $(".meeting-search-hot-button").on("click", function(){
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function(position) {
       var pos = {
         lat: position.coords.latitude,
         lng: position.coords.longitude
       };
-      console.log("lat is: " + pos["lat"] + " lng is: " + pos["lng"]);
+      window.location.replace("/mobile/search/create?lat=" + pos["lat"] + "&lng=" + pos["lng"]) ;
     });
     } else {
     // Browser doesn't support Geolocation
@@ -36,6 +36,8 @@ var main = function(){
         lat: position.coords.latitude,
         lng: position.coords.longitude
       };
+      $(".main-lat").val(pos["lat"]);
+      $(".main-lng").val(pos["lng"]);
       console.log("lat is: " + pos["lat"] + " lng is: " + pos["lng"]);
     });
 
