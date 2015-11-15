@@ -21,8 +21,7 @@ class HereAndNow
 
   def display_grouped_distance(meetings)
     distance_intervals.each_with_object({}) do |distance, meeting_groups|
-      meeting_groups[distance.last] = []
-      meeting_groups[distance.last].concat(meetings.select do |meeting|
+      meeting_groups[distance.last] = [].concat(meetings.select do |meeting|
         meeting.distance > distance.first.first &&
         meeting.distance < distance.first.last
       end)
