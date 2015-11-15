@@ -15,8 +15,34 @@ var main = function(){
       }
   });
 
+  $(".meeting-search-hot-button-box").on("click", function(){
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+      console.log("lat is: " + pos["lat"] + " lng is: " + pos["lng"]);
+    });
+    } else {
+    // Browser doesn't support Geolocation
+     }
+  });
 
+  $(".here-box").on("click", function(){
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+      console.log("lat is: " + pos["lat"] + " lng is: " + pos["lng"]);
+    });
 
+    } else {
+    // Browser doesn't support Geolocation
+    }
+});
 
 
 }
