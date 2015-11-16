@@ -66,23 +66,45 @@ RSpec.describe Feature, type: :model do
       raw_code = "*nFrnSp"
       features = Feature.get_features(raw_code)
       features = features.map { |f| f.name }
-  
+
       expect(features.count).to eq(2)
       expect(features.include?("Accessible")).to be_truthy
     end
 
-    xit "finds polish" do
-      raw_code = "Pol"
+    it "finds non-smoking" do
+      raw_code = "n"
       features = Feature.get_features(raw_code)
 
-      expect(features.first.name).to eq("Polish")
+      expect(features.first.name).to eq("Non-Smoking")
     end
 
-    xit "finds with other codes" do
-      raw_code = "*nFrnSp"
-      features = Feature.get_Features(raw_code)
+    it "does not give non-smoking false positive with Spn" do
+      raw_code = "Spn"
+      features = Feature.get_features(raw_code)
 
-      expect(features.first.name).to eq("French")
+      expect(features.empty?).to be_truthy
+    end
+
+    it "does not give non-smoking false positive with Frn" do
+      raw_code = "Frn"
+      features = Feature.get_features(raw_code)
+
+      expect(features.empty?).to be_truthy
+    end
+
+    it "finds sitter" do
+      raw_code = "Sit"
+      features = Feature.get_features(raw_code)
+
+      expect(features.first.name).to eq("Sitter")
+    end
+
+    it "finds with other codes" do
+      raw_code = "*nFrnSp"
+      features = Feature.get_features(raw_code)
+      features = features.map {|f| f.name }
+
+      expect(features.include?("Accessible")).to be_truthy
     end
 
   end

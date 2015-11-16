@@ -10,8 +10,6 @@ class Feature < ActiveRecord::Base
     elsif !Feature.permitted_features.values.include?(name)
       errors.add(:name,
         "Must use feature name from #{Feature.permitted_features.values}")
-    else
-      true
     end
   end
 
@@ -48,7 +46,7 @@ class Feature < ActiveRecord::Base
   end
 
   def self.match_non_smoking(codes)
-    codes =~ /[^pr]n/
+    codes =~ /(^n.*)|.*[^pr]n.*/
   end
 
   def self.match_sitter(codes)
