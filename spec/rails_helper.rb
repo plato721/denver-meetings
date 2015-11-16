@@ -4,9 +4,13 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 
 require 'spec_helper'
 require 'rspec/rails'
+require 'support/codes'
 require 'simplecov'
 
-SimpleCov.start "rails"
+SimpleCov.start "rails" do
+  add_filter "/spec"
+end
+
 
 ActiveRecord::Migration.maintain_test_schema!
 
