@@ -7,3 +7,12 @@ one:
   codes: "*n"
   time: 06:30 AM
   checksum: d95875de2f16ece7cbb51763f3c0038f7ea69ae0
+
+two:
+  day: Monday
+  group_name: Keeping It Simple
+  address: "3355 S. Wadsworth Bl. #H-127"
+  city: Lakewood
+  district: 30
+  codes: "FrnGOBB"
+  time: 07:30 AM

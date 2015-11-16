@@ -12,6 +12,12 @@ RSpec.describe MeetingCreator do
       checksum: "d95875de2f16ece7cbb51763f3c0038f7ea69ae0"
     }
   end
+  before do
+    WebMock.stub_request(:get,
+      "http://maps.googleapis.com/maps/api/geocode/json?address=3600%20S.%20Clarkson,%20Englewood,%20CO&language=en&sensor=false")
+    allow_any_instance_of(Meeting).to receive(:calculated_zip).and_return("12345")
+  end
+
   context "with parenthetical location description and minimal codes" do
     before do
       RawMeeting.create(raw_1)
@@ -25,5 +31,13 @@ RSpec.describe MeetingCreator do
     it "extracts first line address" do
       expect(@creator.address_1).to eq("3600 S. Clarkson")
     end
+
+    it "is non-smoking" do
+      meeting = @creator.create
+
+
+      expect true
+    end
   end
+
 end
