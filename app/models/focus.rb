@@ -4,14 +4,12 @@ class Focus < ActiveRecord::Base
   validates :name, uniqueness: true
 
   def uses_only_permitted_foci
-    if !focus.permitted_foci.keys.include?(code)
+    if !Focus.permitted_foci.keys.include?(code)
       errors.add(:code,
-        "Must use code from #{focus.permitted_foci.keys}")
-    elsif !focus.permitted_foci.values.include?(name)
+        "Must use code from #{Focus.permitted_foci.keys}")
+    elsif !Focus.permitted_foci.values.include?(name)
       errors.add(:name,
-        "Must use focus name from #{focus.permitted_foci.values}")
-    else
-      true
+        "Must use focus name from #{Focus.permitted_foci.values}")
     end
   end
 
@@ -47,12 +45,12 @@ class Focus < ActiveRecord::Base
 
   def self.get_gay
     self.find_or_create_by(code: "G") do |focus|
-      focus.name = "gay"
+      focus.name = "Gay"
     end
   end
 
   def self.match_gay(codes)
-    codes.include?("G") && (codes.count("G") != 2)
+    codes =~ /(G[^V]|.*G$)/
   end
 
   def self.get_foci(codes)

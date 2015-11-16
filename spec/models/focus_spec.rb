@@ -54,71 +54,42 @@ RSpec.describe Focus, type: :model do
 
   context "parses from aggregate code" do
 
-    xit "finds O" do
-      raw_code = "O"
-      foci = foci.get_foci(raw_code)
+    it "finds men" do
+      raw_code = "M"
+      foci = Focus.get_foci(raw_code)
 
       expect(foci.count).to eq(1)
-      expect(foci.first.name).to eq("Open")
+      expect(foci.first.name).to eq("Men")
     end
 
-    xit "finds closed" do
-      raw_code = "*nC"
-      foci = foci.get_foci(raw_code)
+    it "finds women" do
+      raw_code = "W"
+      foci = Focus.get_foci(raw_code)
       foci = foci.map { |f| f.name }
 
       expect(foci.count).to eq(1)
-      expect(foci.include?("Closed")).to be_truthy
+      expect(foci.include?("Women")).to be_truthy
     end
 
-    xit "finds grapevine" do
+    it "finds gay" do
+      raw_code = "G"
+      foci = Focus.get_foci(raw_code)
+
+      expect(foci.first.name).to eq("Gay")
+    end
+
+    it "does not give gay false positive with GV" do
       raw_code = "GV"
-      foci = foci.get_foci(raw_code)
+      foci = Focus.get_foci(raw_code)
 
-      expect(foci.first.name).to eq("Grapevine")
+      expect(foci.empty?).to be_truthy
     end
 
-    xit "does not give closed false positive with CA" do
-      raw_code = "CA"
-      foci = foci.get_foci(raw_code)
+    it "finds young people" do
+      raw_code = "Y"
+      foci = Focus.get_foci(raw_code)
 
-      expect(foci.first.name).to eq("Candlelight")
-      expect(foci.count).to eq(1)
-    end
-
-    xit "does not give beginner false positive with BB" do
-      raw_code = "BB"
-      foci = foci.get_foci(raw_code)
-
-      expect(foci.count).to eq(1)
-      expect(foci.first.name).to eq("Big Book")
-    end
-
-    xit "finds traditions" do
-      raw_code = "T"
-      foci = foci.get_foci(raw_code)
-
-      expect(foci.first.name).to eq("Traditions")
-    end
-
-    xit "does not find traditions in ST" do
-      raw_code = "ST"
-      foci = foci.get_foci(raw_code)
-
-      expect(foci.count).to eq(1)
-      expect(foci.first.name).to eq("Step")
-    end
-
-    xit "finds with other codes" do
-      raw_code = "BBBSTTC"
-      foci = foci.get_foci(raw_code)
-      foci = foci.map {|f| f.name }
-
-      expected_names = ["Big Book", "Beginners", "Step", "Traditions", "Closed"]
-
-      expected_names.each do |name|
-        expect(foci.include?(name)).to be_truthy
-      end
+      expect(foci.first.name).to eq("Young People")
     end
 
   end
