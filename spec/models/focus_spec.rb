@@ -19,8 +19,8 @@ RSpec.describe Focus, type: :model do
     expect(Focus.count).to eq(count + 1)
   end
 
-  xit "allows only valid foci" do
-    bad_foci = foci.new(code: "G", name: "German")
+  it "allows only valid foci" do
+    bad_foci = Focus.new(code: "G", name: "German")
 
     expect(bad_foci).to_not be_valid
   end
@@ -30,23 +30,23 @@ RSpec.describe Focus, type: :model do
       @code_foci = valid_foci.first
       @attributes = [:code, :name].zip(@code_foci).to_h
 
-      foci.create(@attributes)
+      Focus.create(@attributes)
     end
 
-    xit "code" do
+    it "code" do
       attributes = {code: @code_foci.first,
-        name: valid_foci["C"].last}
+        name: valid_foci["Y"].last}
 
-      dup = foci.new(attributes)
+      dup = Focus.new(attributes)
 
       expect(dup).to_not be_valid
     end
 
-    xit "foci" do
-      attributes = {code: valid_foci["C"].first,
+    it "focus" do
+      attributes = {code: valid_foci["W"].first,
         name: @code_foci.last}
 
-      dup = foci.new(attributes)
+      dup = Focus.new(attributes)
 
       expect(dup).to_not be_valid
     end
