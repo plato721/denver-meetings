@@ -53,13 +53,16 @@ class Feature < ActiveRecord::Base
     codes =~ /.*Sit.*/
   end
 
+  def self.get_feature_methods
+    [:asl, :accessible, :non_smoking, :sitter]
+  end
+
   def self.get_features(codes)
-    features = []
-    features << get_asl if match_asl(codes)
-    features << get_accessible if match_accessible(codes)
-    features << get_non_smoking if match_non_smoking(codes)
-    features << get_sitter if match_sitter(codes)
-    features
+    get_feature_methods.each_with_object([]) do |method, features|
+      if self.send("match_#{method}".to_sym, codes)
+        features << self.send("get_#{method}".to_sym)
+      end
+    end
   end
 
   def self.permitted_features
