@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151116221604) do
+ActiveRecord::Schema.define(version: 20151116224424) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,14 +22,20 @@ ActiveRecord::Schema.define(version: 20151116221604) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "meeting_id"
   end
+
+  add_index "features", ["meeting_id"], name: "index_features_on_meeting_id", using: :btree
 
   create_table "foci", force: :cascade do |t|
     t.string   "code"
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "meeting_id"
   end
+
+  add_index "foci", ["meeting_id"], name: "index_foci_on_meeting_id", using: :btree
 
   create_table "formats", force: :cascade do |t|
     t.string   "code"
@@ -46,7 +52,10 @@ ActiveRecord::Schema.define(version: 20151116221604) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "meeting_id"
   end
+
+  add_index "languages", ["meeting_id"], name: "index_languages_on_meeting_id", using: :btree
 
   create_table "meetings", force: :cascade do |t|
     t.string   "day"
@@ -112,6 +121,9 @@ ActiveRecord::Schema.define(version: 20151116221604) do
     t.datetime "updated_at",             null: false
   end
 
+  add_foreign_key "features", "meetings"
+  add_foreign_key "foci", "meetings"
   add_foreign_key "formats", "meetings"
+  add_foreign_key "languages", "meetings"
   add_foreign_key "meetings", "raw_meetings"
 end
