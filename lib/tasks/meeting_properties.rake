@@ -13,7 +13,7 @@ end
 def load_formats
   formats.each do |code, format|
     Format.new(code: code,
-            format: format)
+            name: format)
   end
 end
 
@@ -27,7 +27,7 @@ end
 def load_features
   features.each do |code, feature|
     Feature.new(code: code,
-            feature: feature)
+            name: feature)
   end
 end
 
@@ -41,7 +41,7 @@ end
 def load_focus
   focus.each do |code, focus|
     Focus.new(code: code,
-            focus: focus)
+            name: focus)
   end
 end
 
@@ -54,7 +54,7 @@ end
 def load_languages
   languages.each do |code, language|
     Language.new(code: code,
-            language: language)
+            name: language)
   end
 end
 
