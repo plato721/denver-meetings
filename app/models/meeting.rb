@@ -18,6 +18,7 @@ class Meeting < ActiveRecord::Base
     .by_city(params[:city])
     .by_day(params[:day])
     .by_time(params[:time])
+    .by_open(params[:open])
     .distinct
   end
 
@@ -31,6 +32,10 @@ class Meeting < ActiveRecord::Base
   end
   def self.by_group_name(group_name)
     group_name == "Any" ? all : where("group_name LIKE ?", "%#{group_name}%")
+  end
+
+  def self.by_open(open)
+    open == "any" ? all : where(closed: true)
   end
 
   def self.by_city(city)
