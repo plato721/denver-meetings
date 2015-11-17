@@ -94,28 +94,78 @@
           <%= radio_button_tag(:gay, "only") %>
           <%= label_tag(:gay_only, "Show Only") %>
       </fieldset>
+    </div>
+  </div>
 
-      <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
-        <legend>Polish Meetings:</legend>
-          <%= radio_button_tag(:polish, "hide") %>
-          <%= label_tag(:polish_hide, "Hide") %>
-          <%= radio_button_tag(:polish, "show", :true) %>
-          <%= label_tag(:polish_show, "Show") %>
-          <%= radio_button_tag(:polish, "only") %>
-          <%= label_tag(:polish_only, "Show Only") %>
+  <div class="collapsible-set">
+    <div data-role="collapsible">
+      <h3>Access/Services</h3>
+            <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+        <legend>Accessible:</legend>
+          <%= radio_button_tag(:access, "hide") %>
+          <%= label_tag(:access_hide, "Hide") %>
+          <%= radio_button_tag(:access, "show", :true) %>
+          <%= label_tag(:access_show, "Show") %>
+          <%= radio_button_tag(:access, "only") %>
+          <%= label_tag(:access_only, "Show Only") %>
       </fieldset>
 
       <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
-        <legend>French Meetings:</legend>
-          <%= radio_button_tag(:french, "hide") %>
-          <%= label_tag(:french_hide, "Hide") %>
-          <%= radio_button_tag(:french, "show", :true) %>
-          <%= label_tag(:french_show, "Show") %>
-          <%= radio_button_tag(:french, "only") %>
-          <%= label_tag(:french_only, "Show Only") %>
+        <legend>Non-Smoking:</legend>
+          <%= radio_button_tag(:non_smoking, "hide") %>
+          <%= label_tag(:non_smoking_hide, "Hide") %>
+          <%= radio_button_tag(:non_smoking, "show", :true) %>
+          <%= label_tag(:non_smoking_show, "Show") %>
+          <%= radio_button_tag(:non_smoking, "only") %>
+          <%= label_tag(:non_smoking_only, "Show Only") %>
+      </fieldset>
+
+      <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+        <legend>Sitter:</legend>
+          <%= radio_button_tag(:sitter, "hide") %>
+          <%= label_tag(:sitter_hide, "Hide") %>
+          <%= radio_button_tag(:sitter, "show", :true) %>
+          <%= label_tag(:sitter_show, "Show") %>
+          <%= radio_button_tag(:sitter, "only") %>
+          <%= label_tag(:sitter_only, "Show Only") %>
       </fieldset>
     </div>
   </div>
+
+  <div class="collapsible-set">
+    <div data-role="collapsible">
+      <h3>Language</h3>
+        <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+          <legend>Spanish:</legend>
+            <%= radio_button_tag(:spanish, "hide") %>
+            <%= label_tag(:spanish_hide, "Hide") %>
+            <%= radio_button_tag(:spanish, "show", :true) %>
+            <%= label_tag(:spanish_show, "Show") %>
+            <%= radio_button_tag(:spanish, "only") %>
+            <%= label_tag(:spanish_only, "Show Only") %>
+        </fieldset>
+
+        <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+          <legend>Polish Meetings:</legend>
+            <%= radio_button_tag(:polish, "hide") %>
+            <%= label_tag(:polish_hide, "Hide") %>
+            <%= radio_button_tag(:polish, "show", :true) %>
+            <%= label_tag(:polish_show, "Show") %>
+            <%= radio_button_tag(:polish, "only") %>
+            <%= label_tag(:polish_only, "Show Only") %>
+          </fieldset>
+
+          <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+            <legend>French Meetings:</legend>
+              <%= radio_button_tag(:french, "hide") %>
+              <%= label_tag(:french_hide, "Hide") %>
+              <%= radio_button_tag(:french, "show", :true) %>
+              <%= label_tag(:french_show, "Show") %>
+              <%= radio_button_tag(:french, "only") %>
+              <%= label_tag(:french_only, "Show Only") %>
+          </fieldset>
+      </div>
+    </div>
 
   <%= button_to "Search", mobile_search_index_path, {:method => :post, :class => "meeting-search-button", "data-role" => "button", "data-icon" => "arrow-r", "data-iconpos" => "right", "data-ajax" => "false", "rel" => "external"} %>
 
