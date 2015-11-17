@@ -2,10 +2,6 @@ require 'database_cleaner'
 require 'simplecov'
 require 'webmock'
 
-SimpleCov.start do
-  add_filter "/spec"
-end
-
 RSpec.configure do |config|
   config.backtrace_exclusion_patterns = []
   config.backtrace_exclusion_patterns << /.*\/gems\/.*/

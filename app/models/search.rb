@@ -1,4 +1,5 @@
 class Search < ActiveRecord::Base
+
   def self.create_search(params)
     self.create({free: params["free_search"],
               city: params["city"],
@@ -8,7 +9,21 @@ class Search < ActiveRecord::Base
               open: params["open"],
               lat: params["lat"],
               lng: params["lng"],
-              here_and_now: params["here_and_now"]})
+              here_and_now: params["here_and_now"],
+              city_text: params["city_text"],
+              group_text: params["group_text"],
+              open: params["open"],
+              men: params["men"],
+              women: params["women"],
+              youth: params["youth"],
+              gay: params["gay"],
+              access: params["access"],
+              non_smoking: params["non_smoking"],
+              sitter: params["sitter"],
+              spanish: params["spanish"],
+              polish: params["polish"],
+              french: params["french"]
+              })
   end
 
   def self.set_defaults(params)
