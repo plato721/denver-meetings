@@ -26,6 +26,9 @@ class Meeting < ActiveRecord::Base
     .by_polish(params[:polish])
     .by_french(params[:french])
     .by_spanish(params[:spanish])
+    .by_sitter(params[:sitter])
+    .by_access(params[:access])
+    .by_non_smoking(params[:non_smoking])
     .distinct
   end
 
@@ -162,6 +165,36 @@ class Meeting < ActiveRecord::Base
       includes(:languages).where(languages: { name: "French" })
     elsif french == "hide"
       includes(:languages).where(languages: { name: ["Polish", "Spanish", nil] })
+    end
+  end
+
+  def self.by_sitter(sitter)
+    return all if sitter == "show"
+    if sitter == "only"
+      includes(:features).where(features: { name: "Sitter" })
+    elsif sitter == "hide"
+      includes(:features)
+      .where(features: { name: ["Accessible", "Non-Smoking", "Sign Language Interpreter", nil] })
+    end
+  end
+
+  def self.by_access(access)
+    return all if access == "show"
+    if access == "only"
+      includes(:features).where(features: { name: "Accessible" })
+    elsif access == "hide"
+      includes(:features)
+      .where(features: { name: ["Sitter", "Non-Smoking", "Sign Language Interpreter", nil] })
+    end
+  end
+
+  def self.by_non_smoking(non_smoking)
+    return all if non_smoking == "show"
+    if non_smoking == "only"
+      includes(:features).where(features: { name: "Non-Smoking" })
+    elsif non_smoking == "hide"
+      includes(:features)
+      .where(features: { name: ["Sitter", "Accessible", "Sign Language Interpreter", nil] })
     end
   end
 

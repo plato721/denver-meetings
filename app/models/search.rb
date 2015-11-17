@@ -18,7 +18,7 @@ class Search < ActiveRecord::Base
               youth: params["youth"],
               gay: params["gay"],
               access: params["access"],
-              non_smoking: params["n"],
+              non_smoking: params["non_smoking"],
               sitter: params["sitter"],
               spanish: params["spanish"],
               polish: params["polish"],
