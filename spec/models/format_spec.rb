@@ -3,9 +3,7 @@ require 'rails_helper'
 RSpec.describe Format, type: :model do
   include_context "codes"
   let(:valid_formats) do
-    { "O" => "Open",
-    "C" => "Closed",
-    "SP" => "Speaker",
+    {"SP" => "Speaker",
     "ST" => "Step",
     "BB" => "Big Book",
     "GV" => "Grapevine",
@@ -40,7 +38,7 @@ RSpec.describe Format, type: :model do
 
     it "code" do
       attributes = {code: @code_format.first,
-        name: valid_formats["C"].last}
+        name: valid_formats["ST"].last}
 
       dup = Format.new(attributes)
 
@@ -48,32 +46,12 @@ RSpec.describe Format, type: :model do
     end
 
     it "format" do
-      attributes = {code: valid_formats["C"].first,
+      attributes = {code: valid_formats["ST"].first,
         name: @code_format.last}
 
       dup = Format.new(attributes)
 
       expect(dup).to_not be_valid
-    end
-  end
-
-  context "parses from aggregate code" do
-
-    it "finds O" do
-      raw_code = "O"
-      formats = Format.get_formats(raw_code)
-
-      expect(formats.count).to eq(1)
-      expect(formats.first.name).to eq("Open")
-    end
-
-    it "finds closed" do
-      raw_code = "*nC"
-      formats = Format.get_formats(raw_code)
-      formats = formats.map { |f| f.name }
-
-      expect(formats.count).to eq(1)
-      expect(formats.include?("Closed")).to be_truthy
     end
 
     it "finds grapevine" do
@@ -81,14 +59,6 @@ RSpec.describe Format, type: :model do
       formats = Format.get_formats(raw_code)
 
       expect(formats.first.name).to eq("Grapevine")
-    end
-
-    it "does not give closed false positive with CA" do
-      raw_code = "CA"
-      formats = Format.get_formats(raw_code)
-
-      expect(formats.first.name).to eq("Candlelight")
-      expect(formats.count).to eq(1)
     end
 
     it "does not give beginner false positive with BB" do
@@ -119,7 +89,7 @@ RSpec.describe Format, type: :model do
       formats = Format.get_formats(raw_code)
       formats = formats.map {|f| f.name }
 
-      expected_names = ["Big Book", "Beginners", "Step", "Traditions", "Closed"]
+      expected_names = ["Big Book", "Beginners", "Step", "Traditions"]
 
       expected_names.each do |name|
         expect(formats.include?(name)).to be_truthy

@@ -17,26 +17,6 @@ class Format < ActiveRecord::Base
     end
   end
 
-  def self.get_open
-    self.find_or_create_by(code: "O") do |format|
-      format.name = "Open"
-    end
-  end
-
-  def self.match_open(codes)
-    codes.include?("O")
-  end
-
-  def self.get_closed
-    self.find_or_create_by(code: "C") do |format|
-      format.name = "Closed"
-    end
-  end
-
-  def self.match_closed(codes)
-    codes =~ /(.*C[^A].*)|(.*C$)/
-  end
-
   def self.get_speaker
     self.find_or_create_by(code: "SP") do |format|
       format.name = "Speaker"
@@ -116,14 +96,12 @@ class Format < ActiveRecord::Base
   end
 
   def self.get_format_methods
-    [:open, :closed, :speaker, :step, :big_book, :grapevine,
+    [:speaker, :step, :big_book, :grapevine,
       :traditions, :candlelight, :beginners]
   end
 
   def self.permitted_formats
-    { "O" => "Open",
-    "C" => "Closed",
-    "SP" => "Speaker",
+    {"SP" => "Speaker",
     "ST" => "Step",
     "BB" => "Big Book",
     "GV" => "Grapevine",

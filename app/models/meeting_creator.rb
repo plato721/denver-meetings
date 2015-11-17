@@ -14,6 +14,7 @@ class MeetingCreator
       district: district,
       city: city,
       state: "CO",
+      closed: closed,
       raw_meeting: self.raw
       })
   end
@@ -24,6 +25,10 @@ class MeetingCreator
 
   def time
     TimeConverter.to_dec(raw.time)
+  end
+
+  def closed
+    codes =~ /(.*C[^A].*)|(.*C$)/ ? true : false
   end
 
   def group_name
