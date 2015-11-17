@@ -10,8 +10,8 @@ class Search < ActiveRecord::Base
               lat: params["lat"],
               lng: params["lng"],
               here_and_now: params["here_and_now"],
-              city_text: params["city_text"],
-              group_text: params["group_text"],
+              # city_text: params["city_text"],
+              # group_text: params["group_text"],
               open: params["open"],
               men: params["men"],
               women: params["women"],
@@ -24,16 +24,6 @@ class Search < ActiveRecord::Base
               polish: params["polish"],
               french: params["french"]
               })
-  end
-
-  def self.set_defaults(params)
-    params.merge(defaults)
-  end
-
-  def self.defaults
-    {lat: nil,
-    lng: nil,
-    here_and_now: false}
   end
 
   def results

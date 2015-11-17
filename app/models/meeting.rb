@@ -14,6 +14,7 @@ class Meeting < ActiveRecord::Base
   has_many :languages, through: :meeting_languages
 
   def self.search(params)
+    params = params.merge(defaults)
     by_group_name(params[:group_name])
     .by_city(params[:city])
     .by_day(params[:day])
@@ -30,6 +31,24 @@ class Meeting < ActiveRecord::Base
     .by_access(params[:access])
     .by_non_smoking(params[:non_smoking])
     .distinct
+  end
+
+  def self.set_defaults(params)
+    params.merge(defaults)
+  end
+
+  def self.defaults
+    {open: "any",
+    men: "show",
+    women: "show",
+    youth: "show",
+    gay: "show",
+    access: "show",
+    non_smoking: "show",
+    sitter: "show",
+    spanish: "show",
+    polish: "show",
+    french: "show"}
   end
 
   def self.by_group_name(group_name)
