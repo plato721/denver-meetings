@@ -1,4 +1,6 @@
 class Meeting < ActiveRecord::Base
+  include SearchFocus
+  
   geocoded_by :address, :latitude => :lat, :longitude => :lng
   after_validation :geocode
   before_create :address_from_coords

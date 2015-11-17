@@ -1,4 +1,5 @@
 class Search < ActiveRecord::Base
+
   def self.create_search(params)
     self.create({free: params["free_search"],
               city: params["city"],
