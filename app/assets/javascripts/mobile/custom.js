@@ -1,4 +1,3 @@
-
 var main = function(){
 
   $(".city-text").on("click", function() {
