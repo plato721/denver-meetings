@@ -47,6 +47,10 @@ def add_properties(meeting)
   end
 end
 
+def add_closed
+  closed = Meeting.joins(:raw_meeting).where("raw_meetings.codes ~* ?", "(.*C[^A].*)|(.*C$)")
+end
+
 namespace :meetings do
   task :load_properties => :environment do
     Meeting.all.each do |meeting|
