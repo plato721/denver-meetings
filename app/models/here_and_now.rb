@@ -6,6 +6,20 @@ class HereAndNow
     @lng = params[:lng].to_f
   end
 
+  def meeting_types
+    {open: "any",
+    men: "show",
+    women: "show",
+    youth: "show",
+    gay: "show",
+    access: "show",
+    non_smoking: "show",
+    sitter: "show",
+    spanish: "show",
+    polish: "show",
+    french: "show"}
+  end
+
   def distance_intervals
     {[0.0, 1.0] => "Within 1 mile",
      [1.0, 3.0] => "Within 3 miles",
@@ -37,7 +51,8 @@ class HereAndNow
   end
 
   def upcoming_meetings
-    now_meetings = Meeting.search(day: Day.display_today, time: "now")
+    criteria = (day: Day.display_today, time: "now").merge(meeting_types)
+    now_meetings = Meeting.search(criteria)
     return now_meetings if now_meetings.count > 10
     now_meetings.concat(first_morning_meetings)
   end
