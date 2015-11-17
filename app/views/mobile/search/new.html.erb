@@ -13,7 +13,7 @@
         <%= select_tag(:city, options_for_select(@options.cities_select), {class: "menu-element"}) %>
         <fieldset data-role="controlgroup">
           <%= label_tag(:here, "Right Here", class: "here-box") %>
-          <%= check_box_tag(:here, "here") %>
+          <%= check_box_tag(:here, "true") %>
        </fieldset>
         <%= hidden_field_tag(:lat, nil, {class: "main-lat"}) %>
         <%= hidden_field_tag(:lng, nil, {class: "main-lng"}) %>

@@ -10,6 +10,7 @@ class Search < ActiveRecord::Base
               lat: params["lat"],
               lng: params["lng"],
               here_and_now: params["here_and_now"],
+              here: params["here"],
               # city_text: params["city_text"],
               # group_text: params["group_text"],
               open: params["open"],
@@ -29,6 +30,7 @@ class Search < ActiveRecord::Base
   def results
     return HereAndNow.new(self.to_h).search if self.here_and_now
     raw_meetings = Meeting.search(self.to_h)
+    # add_distance(raw_meetings) if 
     MobileListDisplay.new(raw_meetings)
   end
 
