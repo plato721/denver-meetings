@@ -2,6 +2,8 @@ class Format < ActiveRecord::Base
   validate :uses_only_permitted_formats
   validates :code, uniqueness: true
   validates :name, uniqueness: true
+  has_many :meeting_formats
+  has_many :meetings, through: :meeting_formats
 
   def uses_only_permitted_formats
     if !Format.permitted_formats.keys.include?(code)

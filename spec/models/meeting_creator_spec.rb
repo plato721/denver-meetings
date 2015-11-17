@@ -32,9 +32,8 @@ RSpec.describe MeetingCreator do
       expect(@creator.address_1).to eq("3600 S. Clarkson")
     end
 
-    it "is non-smoking" do
+    xit "is non-smoking" do
       meeting = @creator.create
-
 
       expect true
     end

@@ -2,6 +2,8 @@ class Focus < ActiveRecord::Base
   validate :uses_only_permitted_foci
   validates :code, uniqueness: true
   validates :name, uniqueness: true
+  has_many :meeting_foci
+  has_many :meetings, through: :meeting_foci
 
   def uses_only_permitted_foci
     if !Focus.permitted_foci.keys.include?(code)

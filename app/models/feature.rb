@@ -2,6 +2,8 @@ class Feature < ActiveRecord::Base
   validate :uses_only_permitted_features
   validates :code, uniqueness: true
   validates :name, uniqueness: true
+  has_many :meeting_features
+  has_many :features, through: :meeting_features
 
   def uses_only_permitted_features
     if !Feature.permitted_features.keys.include?(code)

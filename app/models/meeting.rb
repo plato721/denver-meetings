@@ -3,10 +3,14 @@ class Meeting < ActiveRecord::Base
   after_validation :geocode
   before_create :address_from_coords
   belongs_to :raw_meeting
-  has_many :features
-  has_many :foci
-  has_many :formats
-  has_many :languages
+  has_many :meeting_foci
+  has_many :meeting_formats
+  has_many :meeting_features
+  has_many :meeting_languages
+  has_many :features, through: :meeting_features
+  has_many :foci, through: :meeting_foci
+  has_many :formats, through: :meeting_formats
+  has_many :languages, through: :meeting_languages
 
   def self.search(params)
     # by_free(params[:free])
