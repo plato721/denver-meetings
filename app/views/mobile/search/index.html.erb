@@ -5,19 +5,21 @@
 <div data-role="content" data-theme="b">
   <ul data-role="listview">
     <% @meetings.each do |group| %>
-      <li data-role="list-divider"><%= group.first %></li>
-      <% group.last.each do |meeting| %>
-        <div data-role="collapsible">
-          <h2><%= "#{meeting.group_name} #{meeting.time}" %></h2>
-          <ul data-role="listview" data-inset="true">
-          <% if distance_display?(group.first) %>
-            <li><%= meeting_with_distance(meeting) %></li>
-          <% else %>
-            <li><%= meeting_without_distance(meeting) %></li>
-          <% end %>
-          <li><%= link_to raw(meeting.address), meeting.map_url, {"data-icon"=>"map", :target => "_blank"} %></li>
-          </ul>
-        </div>
+      <% if !group.last.empty? %>
+        <li data-role="list-divider"><%= group.first %></li>
+        <% group.last.each do |meeting| %>
+          <div data-role="collapsible">
+            <h2><%= "#{meeting.group_name} #{meeting.time}" %></h2>
+            <ul data-role="listview" data-inset="true">
+            <% if distance_display?(group.first) %>
+              <li><%= meeting_with_distance(meeting) %></li>
+            <% else %>
+              <li><%= meeting_without_distance(meeting) %></li>
+            <% end %>
+            <li><%= link_to raw(meeting.address), meeting.map_url, {"data-icon"=>"map", :target => "_blank"} %></li>
+            </ul>
+          </div>
+        <% end %>
       <% end %>
     <% end %>
   </ul>
