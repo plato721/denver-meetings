@@ -33,7 +33,7 @@ class Meeting < ActiveRecord::Base
   end
 
   def self.by_group_name(group_name)
-    group_name == "Any" ? all : where("group_name LIKE ?", "%#{group_name}%")
+    group_name == "any" ? all : where("group_name LIKE ?", "%#{group_name}%")
   end
 
   def self.by_open(open)
@@ -46,22 +46,22 @@ class Meeting < ActiveRecord::Base
   end
 
   def self.by_city(city)
-    city == "Any" ? all : where("city LIKE ?", "%#{city}%")
+    city == "any" ? all : where("city LIKE ?", "%#{city}%")
   end
 
   def self.by_day(day)
-    day == "Any" ? all : where("day LIKE ?", "%#{day}%")
+    day == "any" ? all : where("day LIKE ?", "%#{day}%")
   end
 
   def self.by_city(city)
-    city == "Any" ? all : where("city LIKE ?", "%#{city}%")
+    city == "any" ? all : where("city LIKE ?", "%#{city}%")
   end
 
   def self.by_time(time)
     if SearchOptions.display_range_to_raw.keys.include?(time)
       return by_time_range(time)
     else
-      time == "Any" ? all : where(time: time)
+      time == "any" ? all : where(time: time)
     end
   end
 
@@ -173,8 +173,7 @@ class Meeting < ActiveRecord::Base
     if sitter == "only"
       includes(:features).where(features: { name: "Sitter" })
     elsif sitter == "hide"
-      includes(:features)
-      .where(features: { name: ["Accessible", "Non-Smoking", "Sign Language Interpreter", nil] })
+      includes(:features).where(features: { name: ["Accessible", "Non-Smoking", "Sign Language Interpreter", nil] })
     end
   end
 
@@ -193,8 +192,7 @@ class Meeting < ActiveRecord::Base
     if non_smoking == "only"
       includes(:features).where(features: { name: "Non-Smoking" })
     elsif non_smoking == "hide"
-      includes(:features)
-      .where(features: { name: ["Sitter", "Accessible", "Sign Language Interpreter", nil] })
+      includes(:features).where(features: { name: ["Sitter", "Accessible", "Sign Language Interpreter", nil] })
     end
   end
 
