@@ -24,6 +24,8 @@ class Meeting < ActiveRecord::Base
     .by_men(params[:men])
     .by_women(params[:women])
     .by_polish(params[:polish])
+    .by_french(params[:french])
+    .by_spanish(params[:spanish])
     .distinct
   end
 
@@ -139,11 +141,28 @@ class Meeting < ActiveRecord::Base
   def self.by_polish(polish)
     return all if polish == "show"
     if polish == "only"
-      includes(:foci).where(foci: { name: "Polish" })
+      includes(:languages).where(languages: { name: "Polish" })
     elsif polish == "hide"
-      includes(:foci).where(foci: { name: ["Spanish", "French", nil] })
+      includes(:languages).where(languages: { name: ["Spanish", "French", nil] })
     end
   end
 
+  def self.by_spanish(spanish)
+    return all if spanish == "show"
+    if spanish == "only"
+      includes(:languages).where(languages: { name: "Spanish" })
+    elsif spanish == "hide"
+      includes(:languages).where(languages: { name: ["Polish", "French", nil] })
+    end
+  end
+
+  def self.by_french(french)
+    return all if french == "show"
+    if french == "only"
+      includes(:languages).where(languages: { name: "French" })
+    elsif french == "hide"
+      includes(:languages).where(languages: { name: ["Polish", "Spanish", nil] })
+    end
+  end
 
 end
