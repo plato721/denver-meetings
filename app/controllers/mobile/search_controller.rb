@@ -12,7 +12,6 @@ class Mobile::SearchController < ApplicationController
 
   def create
     @search = Search.create_search(search_params)
-    binding.pry
     session[:search] = @search.id
     redirect_to mobile_search_index_path
   end
