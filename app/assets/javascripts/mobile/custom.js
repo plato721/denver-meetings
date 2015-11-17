@@ -33,7 +33,6 @@ var main = function(){
 
   $(".here-box").on("click", function(){
 
-    // $(".meeting-search-button").addClass('hidden');
     $('[type="submit"]').button('disable'); 
 
     if (navigator.geolocation) {
