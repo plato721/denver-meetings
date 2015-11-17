@@ -13,29 +13,26 @@ class Meeting < ActiveRecord::Base
   has_many :languages, through: :meeting_languages
 
   def self.search(params)
-    # by_free(params[:free])
     by_group_name(params[:group_name])
     .by_city(params[:city])
     .by_day(params[:day])
     .by_time(params[:time])
     .by_open(params[:open])
+    .by_youth(params[:youth])
     .distinct
   end
 
-  def self.by_free(text)
-    by_group_name(text)
-    .by_city(text)
-    .by_day(text)
-    .by_address_1(text)
-    .distinct
-    .order(:group_name)
-  end
   def self.by_group_name(group_name)
     group_name == "Any" ? all : where("group_name LIKE ?", "%#{group_name}%")
   end
 
   def self.by_open(open)
-    open == "any" ? all : where(closed: true)
+    return all if open == "any"
+    if open == "closed"
+      where(closed: true)
+    elsif open == "open"
+      where.not(closed: true)
+    end
   end
 
   def self.by_city(city)
@@ -65,6 +62,19 @@ class Meeting < ActiveRecord::Base
 
   def self.by_address_1(text)
     where("address_1 LIKE ?", text)
+  end
+
+  def self.by_gay(gay)
+    # gay == "show" ? all 
+  end
+
+  def self.by_youth(youth)
+    return all if youth == "show"
+    if youth == "only"
+      includes(:foci).where(foci: { name: "Young People" })
+    elsif youth == "hide"
+      includes(:foci).where(foci: { name: ["Gay", "Women", "Men", nil] })
+    end
   end
 
   def address
