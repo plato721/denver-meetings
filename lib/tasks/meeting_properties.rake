@@ -51,6 +51,7 @@ namespace :meetings do
   task :load_properties => :environment do
     Meeting.all.each do |meeting|
       add_properties(meeting)
+      sleep(0.5)
     end
   end
 end
