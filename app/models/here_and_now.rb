@@ -26,7 +26,8 @@ class HereAndNow
      [3.0, 5.0] => "Within 5 miles",
      [5.0, 10.0] => "Within 10 miles",
      [10.0, 20.0] => "Within 20 miles",
-     [20.0, 50.0] => "Within 50 miles"}
+     [20.0, 50.0] => "Within 50 miles",
+     [50.0, 100000] => "Over 50 miles"}
   end
 
   def display_grouped_distance(meetings)
