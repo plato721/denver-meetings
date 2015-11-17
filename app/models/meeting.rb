@@ -19,6 +19,9 @@ class Meeting < ActiveRecord::Base
     .by_time(params[:time])
     .by_open(params[:open])
     .by_youth(params[:youth])
+    .by_gay(params[:gay])
+    .by_men(params[:men])
+    .by_women(params[:women])
     .distinct
   end
 
@@ -65,7 +68,12 @@ class Meeting < ActiveRecord::Base
   end
 
   def self.by_gay(gay)
-    # gay == "show" ? all 
+    return all if gay == "show"
+    if gay == "only"
+      includes(:foci).where(foci: { name: "Gay" })
+    elsif gay == "hide"
+      includes(:foci).where(foci: { name: ["Young People", "Women", "Men", nil] })
+    end
   end
 
   def self.by_youth(youth)
@@ -74,6 +82,24 @@ class Meeting < ActiveRecord::Base
       includes(:foci).where(foci: { name: "Young People" })
     elsif youth == "hide"
       includes(:foci).where(foci: { name: ["Gay", "Women", "Men", nil] })
+    end
+  end
+
+  def self.by_women(women)
+    return all if women == "show"
+    if women == "only"
+      includes(:foci).where(foci: { name: "Women" })
+    elsif women == "hide"
+      includes(:foci).where(foci: { name: ["Gay", "Young People", "Men", nil] })
+    end
+  end
+
+  def self.by_men(men)
+    return all if men == "show"
+    if men == "only"
+      includes(:foci).where(foci: { name: "Men" })
+    elsif men == "hide"
+      includes(:foci).where(foci: { name: ["Gay", "Young People", "Women", nil] })
     end
   end
 
