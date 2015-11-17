@@ -32,6 +32,10 @@ var main = function(){
   });
 
   $(".here-box").on("click", function(){
+
+    // $(".meeting-search-button").addClass('hidden');
+    $('[type="submit"]').button('disable'); 
+
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function(position) {
       var pos = {
@@ -41,14 +45,16 @@ var main = function(){
       $(".main-lat").val(pos["lat"]);
       $(".main-lng").val(pos["lng"]);
       console.log("lat is: " + pos["lat"] + " lng is: " + pos["lng"]);
+    $('[type="submit"]').button('enable'); 
+
     });
 
     } else {
-    // Browser doesn't support Geolocation
+    $('[type="submit"]').button('enable'); 
+
     }
+
 });
-
-
 
 }
 
