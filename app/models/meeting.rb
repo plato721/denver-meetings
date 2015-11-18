@@ -32,7 +32,6 @@ class Meeting < ActiveRecord::Base
     .distinct
   end
 
-
   def address
     [address_1, city, state].compact.join(', ')
   end
@@ -70,11 +69,7 @@ class Meeting < ActiveRecord::Base
 
   def self.by_open(open)
     return all if open == "any"
-    if open == "closed"
-      where(closed: true)
-    elsif open == "open"
-      where.not(closed: true)
-    end
+    open == "closed" ? where(closed: true) : where.not(closed: true)
   end
 
   def self.by_city(city)
