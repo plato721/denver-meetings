@@ -1,0 +1,7 @@
+<div class="collapsible-set">
+  <div data-role="collapsible">
+    <h3>Group Name</h3>
+      <%= select_tag(:group_name, options_for_select(@options.names_select), {class: "menu-element"}) %>
+      <%= text_field_tag :group_text, "(Optional search text)", { class: "group-text group-text-default" }  %>
+  </div>
+</div>

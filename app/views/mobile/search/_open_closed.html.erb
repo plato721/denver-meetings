@@ -1,0 +1,14 @@
+<div class="collapsible-set">
+  <div data-role="collapsible">
+    <h3>Open or Closed</h3>
+      <fieldset data-role="controlgroup">
+        <legend>Open or Closed:</legend>
+        <%= radio_button_tag(:open, "open") %>
+        <%= label_tag(:open_open, "Open (Non-alcoholics Okay)") %>
+        <%= radio_button_tag(:open, "any", :true) %>
+        <%= label_tag(:open_any, "Any") %>
+        <%= radio_button_tag(:open, "closed") %>
+        <%= label_tag(:open_closed, "Closed (Alcoholics Only)") %>
+     </fieldset>
+  </div>
+</div>
