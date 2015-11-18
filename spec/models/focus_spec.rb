@@ -9,16 +9,6 @@ RSpec.describe Focus, type: :model do
     "Y" => "Young People"}
   end
 
-  it "can be created with a valid focus" do
-    code_focus = valid_foci.first
-    attributes = [:code, :name].zip(code_focus).to_h
-
-    count = Focus.count
-    Focus.create(attributes)
-
-    expect(Focus.count).to eq(count + 1)
-  end
-
   it "allows only valid foci" do
     bad_foci = Focus.new(code: "G", name: "German")
 
