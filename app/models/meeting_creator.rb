@@ -15,6 +15,7 @@ class MeetingCreator
       city: city,
       state: "CO",
       closed: closed,
+      time: time,
       raw_meeting: self.raw
       })
   end
