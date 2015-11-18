@@ -11,9 +11,13 @@
             <h2><%= "#{meeting.group_name} #{meeting.time}" %></h2>
             <ul data-role="listview" data-inset="true">
             <% if distance_display?(group.first) %>
-              <li><%= meeting_with_distance(meeting) %></li>
+              <% cache(cache_key_for(Meeting, "distance-accordian")) do %>
+                <li><%= meeting_with_distance(meeting) %></li>
+              <% end %>
             <% else %>
-              <li><%= meeting_without_distance(meeting) %></li>
+              <% cache(cache_key_for(Meeting, "standard-accordian")) do %>
+                <li><%= meeting_without_distance(meeting) %></li>
+              <% end %>
             <% end %>
             <li><%= link_to raw(meeting.address), meeting.map_url, {"data-icon"=>"map", :target => "_blank"} %></li>
             </ul>
