@@ -1,8 +1,16 @@
 class Search < ActiveRecord::Base
   def results
+    self.here | self.here_and_now ? distance_results : weekday_results
+  end
+
+  def distance_results
     return HereAndNow.new(self.to_h).search if self.here_and_now
     raw_meetings = Meeting.search(self.to_h)
-    return distance_with(raw_meetings) if self.here 
+    distance_with(raw_meetings)
+  end
+
+  def weekday_results
+    raw_meetings = Meeting.search(self.to_h)
     MobileListDisplay.new(raw_meetings)
   end
 
