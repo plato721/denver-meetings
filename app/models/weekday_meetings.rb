@@ -1,4 +1,4 @@
-class MobileListDisplay
+class WeekdayMeetings
   include Enumerable
   attr_accessor :meetings
 

@@ -1,13 +1,13 @@
 require 'rails_helper'
 
-RSpec.describe MobileListDisplay do
+RSpec.describe WeekdayMeetings do
   fixtures :meetings
 
   let(:days) { SearchOptions.new.days }
   before(:all) { @meetings = Meeting.all }
 
   it "groups meetings with day" do
-    list = MobileListDisplay.new(@meetings)
+    list = WeekdayMeetings.new(@meetings)
 
     list.each do |meeting|
       expect(days.include?(meeting.first.to_s)).to be_truthy
@@ -15,7 +15,7 @@ RSpec.describe MobileListDisplay do
   end
 
   it "returns displayable meetings in its list" do
-    list = MobileListDisplay.new(@meetings)
+    list = WeekdayMeetings.new(@meetings)
 
     list.each do |meeting|
       expect(meeting.last.all? do |m|
@@ -25,7 +25,7 @@ RSpec.describe MobileListDisplay do
   end
 
   it "returns an enumerable result even if there are no meetings" do
-    list = MobileListDisplay.new([])
+    list = WeekdayMeetings.new([])
 
     expect(list.respond_to?(:each)).to be_truthy
   end

@@ -11,7 +11,7 @@ class Search < ActiveRecord::Base
 
   def weekday_results
     raw_meetings = Meeting.search(self.to_h)
-    MobileListDisplay.new(raw_meetings)
+    WeekdayMeetings.new(raw_meetings)
   end
 
   def distance_with(meetings)
