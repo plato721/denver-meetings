@@ -125,41 +125,26 @@ class Meeting < ActiveRecord::Base
 
   def self.by_women(women)
     return all if women == "show"
-    if women == "only"
-      includes(:foci).where(foci: { name: "Women" })
-    elsif women == "hide"
-      includes(:foci).where(foci: { name: ["Gay", "Young People", "Men", nil] })
-    end
+    only = includes(:foci).where(foci: { name: "Women" })
+    women == "only" ? only : where.not(id: only.map {|m| m.id} )
   end
 
   def self.by_men(men)
     return all if men == "show"
-    if men == "only"
-      includes(:foci).where(foci: { name: "Men" })
-    elsif men == "hide"
-      includes(:foci).where(foci: { name: ["Gay", "Young People", "Women", nil] })
-    end
+    only = includes(:foci).where(foci: { name: "Men" })
+    men == "only" ? only : where.not(id: only.map {|m| m.id} )
   end
 
   def self.by_polish(polish)
     return all if polish == "show"
-    if polish == "only"
-      includes(:languages).where(languages: { name: "Polish" })
-    elsif polish == "hide"
-      includes(:languages).where(languages: { name: ["Spanish", "French", nil] })
-    end
+    only = includes(:languages).where(languages: { name: "Polish" })
+    polish == "only" ? only : where.not(id: only.map {|m| m.id} )
   end
 
   def self.by_spanish(spanish)
     return all if spanish == "show"
     only = includes(:languages).where(languages: { name: "Spanish" })
     spanish == "only" ? only : where.not(id: only.map {|m| m.id} )
- 
-    # if spanish == "only"
-    #   includes(:languages).where(languages: { name: "Spanish" })
-    # elsif spanish == "hide"
-    #   includes(:languages).where(languages: { name: ["Polish", "French", nil] })
-    # end
   end
 
   def self.by_french(french)
