@@ -51,41 +51,7 @@
     </div>
   </div>
   <%= render partial: "special_focus" %>
-  <div class="collapsible-set">
-    <div data-role="collapsible">
-      <h3>Access/Services</h3>
-            <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
-        <legend>Accessible:</legend>
-          <%= radio_button_tag(:access, "hide") %>
-          <%= label_tag(:access_hide, "Hide") %>
-          <%= radio_button_tag(:access, "show", :true) %>
-          <%= label_tag(:access_show, "Show") %>
-          <%= radio_button_tag(:access, "only") %>
-          <%= label_tag(:access_only, "Show Only") %>
-      </fieldset>
-
-      <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
-        <legend>Non-Smoking:</legend>
-          <%= radio_button_tag(:non_smoking, "hide") %>
-          <%= label_tag(:non_smoking_hide, "Hide") %>
-          <%= radio_button_tag(:non_smoking, "show", :true) %>
-          <%= label_tag(:non_smoking_show, "Show") %>
-          <%= radio_button_tag(:non_smoking, "only") %>
-          <%= label_tag(:non_smoking_only, "Show Only") %>
-      </fieldset>
-
-      <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
-        <legend>Sitter:</legend>
-          <%= radio_button_tag(:sitter, "hide") %>
-          <%= label_tag(:sitter_hide, "Hide") %>
-          <%= radio_button_tag(:sitter, "show", :true) %>
-          <%= label_tag(:sitter_show, "Show") %>
-          <%= radio_button_tag(:sitter, "only") %>
-          <%= label_tag(:sitter_only, "Show Only") %>
-      </fieldset>
-    </div>
-  </div>
-
+  <%= render partial: "access" %>
   <div class="collapsible-set">
     <div data-role="collapsible">
       <h3>Language</h3>
