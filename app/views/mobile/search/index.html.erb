@@ -1,6 +1,5 @@
 <div data-role="header" data-theme="b">
-  <% meeting_count = @meetings.inject(0) {|acc, group| acc + group.last.length} %>
-  <h1>Meetings Found<span class="ui-li-count"><%= meeting_count %></span></h1>
+  <h1>Meetings Found<span class="ui-li-count"><%= meeting_count(@meetings) %></span></h1>
 </div>
 <div data-role="content" data-theme="b">
   <ul data-role="listview">
