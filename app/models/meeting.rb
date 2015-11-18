@@ -152,22 +152,20 @@ class Meeting < ActiveRecord::Base
 
   def self.by_spanish(spanish)
     return all if spanish == "show"
-    if spanish == "only"
-      includes(:languages).where(languages: { name: "Spanish" })
-    elsif spanish == "hide"
-      includes(:languages).where(languages: { name: ["Polish", "French", nil] })
-    end
+    only = includes(:languages).where(languages: { name: "Spanish" })
+    spanish == "only" ? only : where.not(id: only.map {|m| m.id} )
+ 
+    # if spanish == "only"
+    #   includes(:languages).where(languages: { name: "Spanish" })
+    # elsif spanish == "hide"
+    #   includes(:languages).where(languages: { name: ["Polish", "French", nil] })
+    # end
   end
 
   def self.by_french(french)
     return all if french == "show"
     only = includes(:languages).where(languages: { name: "French" })
     french == "only" ? only : where.not(id: only.map {|m| m.id} )
-    # if french == "only"
-    #   includes(:languages).where(languages: { name: "French" })
-    # elsif french == "hide"
-    #   includes(:languages).where(languages: { name: ["Polish", "Spanish", nil] })
-    # end
   end
 
   def self.by_sitter(sitter)
