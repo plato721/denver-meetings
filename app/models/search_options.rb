@@ -7,7 +7,7 @@ class SearchOptions
   end
 
   def cities_select
-    any = ["--All Cities--", "Any"]
+    any = ["--All Cities--", "any"]
     cities.prepend(any)
   end
 
@@ -37,7 +37,7 @@ class SearchOptions
   end
 
   def times_select
-    any = ["--Any Time--", "Any"]
+    any = ["--Any Time--", "any"]
     now = ["Right Now","now"]
     time_ranges.concat(times).prepend(any, now)
   end
@@ -47,7 +47,7 @@ class SearchOptions
   end
 
   def names_select
-    additional = ["--All Group Names--", "Any"]
+    additional = ["--All Group Names--", "any"]
     meeting_names.zip(meeting_names).prepend(additional)
   end
 
@@ -59,27 +59,9 @@ class SearchOptions
   end
 
   def days_select
-    any = ["--Any Day--", "Any"]
+    any = ["--Any Day--", "any"]
     today = ["Today (#{Day.display_today})", "#{Day.display_today}"]
     days.zip(days).prepend(any, today)
-  end
-
-  def special
-    ["Beginner", "Women", "Men", "Gay", "Youth"]
-  end
-
-  def special_select
-    any = ["--No Special Focus--", "Any"]
-    special.zip(special).prepend(any)
-  end
-
-  def format_select
-    ["Open (Non-alcoholics Okay)", "Closed (Alcoholics Only)"]
-    format.zip(format)
-  end
-
-  def format
-    ["Open", "Closed"]
   end
 
 end

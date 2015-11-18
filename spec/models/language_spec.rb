@@ -8,16 +8,6 @@ RSpec.describe Language, type: :model do
      "Pol" => "Polish"}
   end
 
-  it "can be created with a valid language" do
-    code_lang = valid_languages.first
-    attributes = [:code, :name].zip(code_lang).to_h
-
-    count = Language.count
-    Language.create(attributes)
-
-    expect(Language.count).to eq(count + 1)
-  end
-
   it "allows only valid languages" do
     bad_lang = Language.new(code: "G", name: "German")
 

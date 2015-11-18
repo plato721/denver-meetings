@@ -9,16 +9,6 @@ RSpec.describe Feature, type: :model do
     "Sit" => "Sitter"}
   end
 
-  it "can be created with a valid feature" do
-    code_lang = valid_features.first
-    attributes = [:code, :name].zip(code_lang).to_h
-
-    count = Feature.count
-    Feature.create(attributes)
-
-    expect(Feature.count).to eq(count + 1)
-  end
-
   it "allows only valid Features" do
     bad_feature = Feature.new(code: "G", name: "German")
 

@@ -33,7 +33,7 @@ class Meeting < ActiveRecord::Base
   end
 
   def self.by_group_name(group_name)
-    group_name == "Any" ? all : where("group_name LIKE ?", "%#{group_name}%")
+    group_name == "any" ? all : where("group_name LIKE ?", "%#{group_name}%")
   end
 
   def self.by_open(open)
@@ -46,22 +46,22 @@ class Meeting < ActiveRecord::Base
   end
 
   def self.by_city(city)
-    city == "Any" ? all : where("city LIKE ?", "%#{city}%")
+    city == "any" ? all : where("city LIKE ?", "%#{city}%")
   end
 
   def self.by_day(day)
-    day == "Any" ? all : where("day LIKE ?", "%#{day}%")
+    day == "any" ? all : where("day LIKE ?", "%#{day}%")
   end
 
   def self.by_city(city)
-    city == "Any" ? all : where("city LIKE ?", "%#{city}%")
+    city == "any" ? all : where("city LIKE ?", "%#{city}%")
   end
 
   def self.by_time(time)
     if SearchOptions.display_range_to_raw.keys.include?(time)
       return by_time_range(time)
     else
-      time == "Any" ? all : where(time: time)
+      time == "any" ? all : where(time: time)
     end
   end
 
@@ -105,97 +105,64 @@ class Meeting < ActiveRecord::Base
     self.zip = calculated_zip
   end
 
-    def self.by_gay(gay)
+  def self.by_gay(gay)
     return all if gay == "show"
-    if gay == "only"
-      includes(:foci).where(foci: { name: "Gay" })
-    elsif gay == "hide"
-      includes(:foci).where(foci: { name: ["Young People", "Women", "Men", nil] })
-    end
+    only = includes(:foci).where(foci: { name: "Gay" })
+    gay == "only" ? only : where.not(id: only.map {|m| m.id} )
   end
 
   def self.by_youth(youth)
     return all if youth == "show"
-    if youth == "only"
-      includes(:foci).where(foci: { name: "Young People" })
-    elsif youth == "hide"
-      includes(:foci).where(foci: { name: ["Gay", "Women", "Men", nil] })
-    end
+    only = includes(:foci).where(foci: { name: "Young People" })
+    youth == "only" ? only : where.not(id: only.map {|m| m.id} )
   end
 
   def self.by_women(women)
     return all if women == "show"
-    if women == "only"
-      includes(:foci).where(foci: { name: "Women" })
-    elsif women == "hide"
-      includes(:foci).where(foci: { name: ["Gay", "Young People", "Men", nil] })
-    end
+    only = includes(:foci).where(foci: { name: "Women" })
+    women == "only" ? only : where.not(id: only.map {|m| m.id} )
   end
 
   def self.by_men(men)
     return all if men == "show"
-    if men == "only"
-      includes(:foci).where(foci: { name: "Men" })
-    elsif men == "hide"
-      includes(:foci).where(foci: { name: ["Gay", "Young People", "Women", nil] })
-    end
+    only = includes(:foci).where(foci: { name: "Men" })
+    men == "only" ? only : where.not(id: only.map {|m| m.id} )
   end
 
   def self.by_polish(polish)
     return all if polish == "show"
-    if polish == "only"
-      includes(:languages).where(languages: { name: "Polish" })
-    elsif polish == "hide"
-      includes(:languages).where(languages: { name: ["Spanish", "French", nil] })
-    end
+    only = includes(:languages).where(languages: { name: "Polish" })
+    polish == "only" ? only : where.not(id: only.map {|m| m.id} )
   end
 
   def self.by_spanish(spanish)
     return all if spanish == "show"
-    if spanish == "only"
-      includes(:languages).where(languages: { name: "Spanish" })
-    elsif spanish == "hide"
-      includes(:languages).where(languages: { name: ["Polish", "French", nil] })
-    end
+    only = includes(:languages).where(languages: { name: "Spanish" })
+    spanish == "only" ? only : where.not(id: only.map {|m| m.id} )
   end
 
   def self.by_french(french)
     return all if french == "show"
-    if french == "only"
-      includes(:languages).where(languages: { name: "French" })
-    elsif french == "hide"
-      includes(:languages).where(languages: { name: ["Polish", "Spanish", nil] })
-    end
+    only = includes(:languages).where(languages: { name: "French" })
+    french == "only" ? only : where.not(id: only.map {|m| m.id} )
   end
 
   def self.by_sitter(sitter)
     return all if sitter == "show"
-    if sitter == "only"
-      includes(:features).where(features: { name: "Sitter" })
-    elsif sitter == "hide"
-      includes(:features)
-      .where(features: { name: ["Accessible", "Non-Smoking", "Sign Language Interpreter", nil] })
-    end
+    only = includes(:features).where(features: { name: "Sitter" })
+    sitter == "only" ? only : where.not(id: only.map {|m| m.id} )
   end
 
   def self.by_access(access)
     return all if access == "show"
-    if access == "only"
-      includes(:features).where(features: { name: "Accessible" })
-    elsif access == "hide"
-      includes(:features)
-      .where(features: { name: ["Sitter", "Non-Smoking", "Sign Language Interpreter", nil] })
-    end
+    only = includes(:features).where(features: { name: "Accessible" })
+    access == "only" ? only : where.not(id: only.map {|m| m.id} )
   end
 
   def self.by_non_smoking(non_smoking)
     return all if non_smoking == "show"
-    if non_smoking == "only"
-      includes(:features).where(features: { name: "Non-Smoking" })
-    elsif non_smoking == "hide"
-      includes(:features)
-      .where(features: { name: ["Sitter", "Accessible", "Sign Language Interpreter", nil] })
-    end
+    only = includes(:features).where(features: { name: "Non-Smoking" })
+    non_smoking == "only" ? only : where.not(id: only.map {|m| m.id} )
   end
 
 end

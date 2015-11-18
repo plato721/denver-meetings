@@ -5,6 +5,7 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'spec_helper'
 require 'rspec/rails'
 require 'support/codes'
+require 'support/search_support'
 require 'simplecov'
 
 SimpleCov.start "rails" do
@@ -18,5 +19,6 @@ RSpec.configure do |config|
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.use_transactional_fixtures = true
   config.infer_spec_type_from_file_location!
+  config.include Mobile::SearchHelper
   config.include Rails.application.routes.url_helpers
 end
