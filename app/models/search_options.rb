@@ -64,13 +64,4 @@ class SearchOptions
     days.zip(days).prepend(any, today)
   end
 
-  def format_select
-    ["Open (Non-alcoholics Okay)", "Closed (Alcoholics Only)"]
-    format.zip(format)
-  end
-
-  def format
-    ["Open", "Closed"]
-  end
-
 end
