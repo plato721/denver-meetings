@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+  .ui-content {
+    background-color: lightblue !important;
+  }
 
   h4 {
       margin:0;
@@ -76,6 +79,11 @@
 
   .odd.blahskis {   
     font-size:2em;
+  }
+
+  /* part of white stripe fix http://jsfiddle.net/ezanker/zKS76/4/ */
+  .ui-content {
+    background-color: lightblue !important;
   }
 
   input.meeting-search-button {

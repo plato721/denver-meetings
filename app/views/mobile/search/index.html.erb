@@ -1,7 +1,7 @@
 <div data-role="header" data-theme="b">
   <h1>Meetings Found<span class="ui-li-count"><%= meeting_count(@meetings) %></span></h1>
 </div>
-<div data-role="content" data-theme="b">
+<div data-role="content" data-theme="b" id="search-results-main">
   <ul data-role="listview">
     <% @meetings.each do |group| %>
       <% if !group.last.empty? %>

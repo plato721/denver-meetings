@@ -1,8 +1,8 @@
-<div data-role="header" data-theme="b">
+<div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">
   <h1>Find a Meeting</h1>
 </div>
 
-<div data-role="content" data-theme="b">
+<div data-role="content" data-theme="b" role="main">
   <button class="meeting-search-hot-button" data-role="button", data-icon="arrow-r", data-iconpos="right" id="one-time">Right Here Right Now</button>
 
 <%= form_tag(controller: "mobile/search", action: "create", method: "post", "data-ajax" => "false") do %>
