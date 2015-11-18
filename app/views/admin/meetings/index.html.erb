@@ -25,10 +25,12 @@
             <tbody>
               <% @meetings.each do |meeting| %>
               <tr>
-                <th><%= link_to meeting.approved, edit_admin_meeting_path(meeting.meeting) %></th>
-                <th><%= meeting.day %></th>
-                <th><%= meeting.time %></th>
-                <th><%= meeting.group_name %></th>
+                <td id="approval-display-<%= meeting.id %>">
+                  <%= link_to meeting.approved, edit_admin_meeting_path(meeting.meeting) %>
+                </td>
+                <td><%= meeting.day %></td>
+                <td><%= meeting.time %></td>
+                <td><%= meeting.group_name %></td>
                 <td><%= raw(meeting.address) %></td>
                 <td><%= meeting.notes %></td>
                 <td><%= meeting.phone %></td>
