@@ -23,6 +23,7 @@ gem 'rest-client'
 gem 'figaro'
 gem 'geocoder'
 gem 'bootstrap_form'
+gem 'skylight'
 
 group :development, :test do
   gem 'better_errors'
