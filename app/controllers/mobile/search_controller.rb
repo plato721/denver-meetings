@@ -11,14 +11,15 @@ class Mobile::SearchController < ApplicationController
   end
 
   def create
-    @search = Search.create_search(search_params)
+    @search = Search.create(search_params)
     session[:search] = @search.id
     redirect_to mobile_search_index_path
   end
 
   private
   def search_params
-    {}.merge(params)
+    {}.merge(params.except("data-ajax", 
+      :method, :controller, :action, :authenticity_token, :utf8))
   end
 
 end
