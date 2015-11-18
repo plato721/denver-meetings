@@ -83,8 +83,8 @@ RSpec.describe "Search by language" do
 
  context "youth" do
     before do
-      Meeting.first.foci.push(@men, @women)
-      Meeting.second.foci.push(@men, @youth)
+      Meeting.first.foci.push(@youth, @women)
+      Meeting.second.foci.push(@men, @women)
     end
 
     it "finds only" do

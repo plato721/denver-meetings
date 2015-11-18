@@ -116,11 +116,8 @@ class Meeting < ActiveRecord::Base
 
   def self.by_youth(youth)
     return all if youth == "show"
-    if youth == "only"
-      includes(:foci).where(foci: { name: "Young People" })
-    elsif youth == "hide"
-      includes(:foci).where(foci: { name: ["Gay", "Women", "Men", nil] })
-    end
+    only = includes(:foci).where(foci: { name: "Young People" })
+    youth == "only" ? only : where.not(id: only.map {|m| m.id} )
   end
 
   def self.by_women(women)
