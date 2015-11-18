@@ -11,9 +11,7 @@
             <h2><%= "#{meeting.group_name} #{meeting.time}" %></h2>
             <ul data-role="listview" data-inset="true">
             <% if distance_display?(group.first) %>
-              <% cache(cache_key_for(Meeting, "distance-accordian")) do %>
-                <li><%= meeting_with_distance(meeting) %></li>
-              <% end %>
+              <li><%= meeting_with_distance(meeting) %></li>
             <% else %>
               <% cache(cache_key_for(Meeting, "standard-accordian")) do %>
                 <li><%= meeting_without_distance(meeting) %></li>
