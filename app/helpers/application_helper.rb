@@ -4,6 +4,6 @@ module ApplicationHelper
     count = model_class.count
     last_updated = model_class.maximum(:updated_at)
 
-    [prefix, count, last_updated].join("-")
+    [prefix, label, count, last_updated].join("-")
   end
 end
