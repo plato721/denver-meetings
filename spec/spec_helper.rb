@@ -26,7 +26,7 @@ RSpec.configure do |config|
   end
 
   WebMock.stub_request(:any, "www.localhost:3000")
-
+  WebMock.stub_request(:get, "http://maps.googleapis.com/maps/api/geocode/json?address=3355%20S.%20Wadsworth%20Ave.,%20Lakewood,%20CO&language=en&sensor=false")
 
   def login(user)
     OmniAuth.config.test_mode = true
