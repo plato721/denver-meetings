@@ -105,13 +105,10 @@ class Meeting < ActiveRecord::Base
     self.zip = calculated_zip
   end
 
-    def self.by_gay(gay)
+  def self.by_gay(gay)
     return all if gay == "show"
-    if gay == "only"
-      includes(:foci).where(foci: { name: "Gay" })
-    elsif gay == "hide"
-      includes(:foci).where(foci: { name: ["Young People", "Women", "Men", nil] })
-    end
+    only = includes(:foci).where(foci: { name: "Gay" })
+    gay == "only" ? only : where.not(id: only.map {|m| m.id} )
   end
 
   def self.by_youth(youth)

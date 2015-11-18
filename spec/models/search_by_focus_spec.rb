@@ -115,4 +115,38 @@ RSpec.describe "Search by language" do
     end
   end
 
+ context "gay" do
+    before do
+      Meeting.first.foci.push(@gay, @women)
+      Meeting.second.foci.push(@men, @women)
+    end
+
+    it "finds only" do
+      params = default_params.merge("gay" => "only")
+
+      meetings = Search.new(params).results
+      count = meeting_count(meetings)
+
+      expect(meetings.count).to eq(1)
+    end
+
+    it "finds both" do
+      params = default_params.merge("gay" => "show")
+
+      meetings = Search.new(params).results
+      count = meeting_count(meetings)
+
+      expect(count).to eq(3)
+    end
+
+    it "hides" do
+      params = default_params.merge("gay" => "hide")
+
+      meetings = Search.new(params).results
+      count = meeting_count(meetings)
+
+      expect(count).to eq(2)
+    end
+  end
+
 end
