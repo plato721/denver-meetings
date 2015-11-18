@@ -189,11 +189,8 @@ class Meeting < ActiveRecord::Base
 
   def self.by_non_smoking(non_smoking)
     return all if non_smoking == "show"
-    if non_smoking == "only"
-      includes(:features).where(features: { name: "Non-Smoking" })
-    elsif non_smoking == "hide"
-      includes(:features).where(features: { name: ["Sitter", "Accessible", "Sign Language Interpreter", nil] })
-    end
+    only = includes(:features).where(features: { name: "Non-Smoking" })
+    non_smoking == "only" ? only : where.not(id: only.map {|m| m.id} )
   end
 
 end

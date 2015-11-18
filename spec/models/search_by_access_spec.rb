@@ -11,12 +11,38 @@ RSpec.describe "Search by access" do
     @sitter = Feature.find_by(name: "Sitter")
   end
 
-  it "finds only non-smoking meetings" do
-    Meeting.first.features << @non_smoking
-    params = default_params.merge("non_smoking" => "only")
+  context "non-smoking" do
+    before do
+      Meeting.first.features.push(@non_smoking, @accessible)
+      Meeting.second.features.push(@accessible, @sitter)
+    end
 
-    meetings = Search.new(params).results
+    it "finds only" do
+      params = default_params.merge("non_smoking" => "only")
 
-    expect(meetings.count).to eq(1)
+      meetings = Search.new(params).results
+      count = meeting_count(meetings)
+
+      expect(meetings.count).to eq(1)
+    end
+
+    it "finds both" do
+      params = default_params.merge("non_smoking" => "show")
+
+      meetings = Search.new(params).results
+      count = meeting_count(meetings)
+
+      expect(count).to eq(3)
+    end
+
+    it "hides" do
+      params = default_params.merge("non_smoking" => "hide")
+
+      meetings = Search.new(params).results
+      count = meeting_count(meetings)
+
+      expect(count).to eq(2)
+    end
+
   end
 end
