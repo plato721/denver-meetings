@@ -18,6 +18,7 @@
 
 # Ignore application configuration
 /config/application.yml
+/config/skylight.yml
 
 /coverage
 /ignore

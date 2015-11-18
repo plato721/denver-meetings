@@ -31,9 +31,7 @@ var main = function(){
   });
 
   $(".here-box").on("click", function(){
-
-    $('[type="submit"]').button('disable'); 
-
+    $('[type="submit"]').button('disable'); //wait for lat and lng
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function(position) {
       var pos = {
@@ -43,28 +41,19 @@ var main = function(){
       $(".main-lat").val(pos["lat"]);
       $(".main-lng").val(pos["lng"]);
       console.log("lat is: " + pos["lat"] + " lng is: " + pos["lng"]);
-    $('[type="submit"]').button('enable'); 
-
+      $('[type="submit"]').button('enable'); 
     });
-
     } else {
     $('[type="submit"]').button('enable'); 
-
     }
-
-});
-
-
+  }); //here-box on click (proximity without here and now)
 }
 
 $(document).ready(main);
 
-
-
-
-
-
-
+// white stripe on short searches fix
+// Credit: ezanker http://stackoverflow.com/questions/21552308/
+//   set-content-height-100-jquery-mobile/27617438#27617438
 $(document).on( "pagecontainershow", function(){
     ScaleContentToDevice();
     
@@ -75,6 +64,10 @@ $(document).on( "pagecontainershow", function(){
 
 function ScaleContentToDevice(){
     scroll(0, 0);
-    var content = $.mobile.getScreenHeight() - $(".ui-header").outerHeight() - $(".ui-footer").outerHeight() - $(".ui-content").outerHeight() + $(".ui-content").height();
+    var content = $.mobile.getScreenHeight()
+      - $(".ui-header").outerHeight()
+      - $(".ui-footer").outerHeight()
+      - $(".ui-content").outerHeight()
+      + $(".ui-content").height();
     $(".ui-content").height(content);
 }
