@@ -1,24 +1,24 @@
 require 'rails_helper'
 
-RSpec.describe "Search by access" do
+RSpec.describe "Search by language" do
   fixtures :meetings
-  fixtures :features
+  fixtures :languages
   include_context "search"
 
   before do
-    @non_smoking = Feature.find_by(name: "Non-Smoking")
-    @accessible = Feature.find_by(name: "Accessible")
-    @sitter = Feature.find_by(name: "Sitter")
+    @polish = Language.find_by(name: "Polish")
+    @french = Language.find_by(name: "French")
+    @spanish = Language.find_by(name: "Spanish")
   end
 
-  context "non-smoking" do
+  context "Polish" do
     before do
-      Meeting.first.features.push(@non_smoking, @accessible)
-      Meeting.second.features.push(@accessible, @sitter)
+      Meeting.first.languages.push(@polish, @french)
+      Meeting.second.languages.push(@french, @spanish)
     end
 
     it "finds only" do
-      params = default_params.merge("non_smoking" => "only")
+      params = default_params.merge("polish" => "only")
 
       meetings = Search.new(params).results
       count = meeting_count(meetings)
@@ -27,7 +27,7 @@ RSpec.describe "Search by access" do
     end
 
     it "finds both" do
-      params = default_params.merge("non_smoking" => "show")
+      params = default_params.merge("polish" => "show")
 
       meetings = Search.new(params).results
       count = meeting_count(meetings)
@@ -36,7 +36,7 @@ RSpec.describe "Search by access" do
     end
 
     it "hides" do
-      params = default_params.merge("non_smoking" => "hide")
+      params = default_params.merge("polish" => "hide")
 
       meetings = Search.new(params).results
       count = meeting_count(meetings)
@@ -45,14 +45,14 @@ RSpec.describe "Search by access" do
     end
   end
 
-  context "accessible" do
+  context "French" do
     before do
-      Meeting.first.features.push(@non_smoking, @accessible)
-      Meeting.second.features.push(@non_smoking, @sitter)
+      Meeting.first.languages.push(@polish, @french)
+      Meeting.second.languages.push(@polish, @spanish)
     end
 
     it "finds only" do
-      params = default_params.merge("access" => "only")
+      params = default_params.merge("french" => "only")
 
       meetings = Search.new(params).results
       count = meeting_count(meetings)
@@ -61,7 +61,7 @@ RSpec.describe "Search by access" do
     end
 
     it "finds both" do
-      params = default_params.merge("access" => "show")
+      params = default_params.merge("french" => "show")
 
       meetings = Search.new(params).results
       count = meeting_count(meetings)
@@ -70,7 +70,7 @@ RSpec.describe "Search by access" do
     end
 
     it "hides" do
-      params = default_params.merge("access" => "hide")
+      params = default_params.merge("french" => "hide")
 
       meetings = Search.new(params).results
       count = meeting_count(meetings)
@@ -80,14 +80,14 @@ RSpec.describe "Search by access" do
 
   end
 
- context "sitter" do
+ context "Spanish" do
     before do
-      Meeting.first.features.push(@non_smoking, @accessible)
-      Meeting.second.features.push(@non_smoking, @sitter)
+      Meeting.first.languages.push(@polish, @french)
+      Meeting.second.languages.push(@polish, @spanish)
     end
 
     it "finds only" do
-      params = default_params.merge("sitter" => "only")
+      params = default_params.merge("spanish" => "only")
 
       meetings = Search.new(params).results
       count = meeting_count(meetings)
@@ -96,7 +96,7 @@ RSpec.describe "Search by access" do
     end
 
     it "finds both" do
-      params = default_params.merge("sitter" => "show")
+      params = default_params.merge("spanish" => "show")
 
       meetings = Search.new(params).results
       count = meeting_count(meetings)
@@ -105,7 +105,7 @@ RSpec.describe "Search by access" do
     end
 
     it "hides" do
-      params = default_params.merge("sitter" => "hide")
+      params = default_params.merge("spanish" => "hide")
 
       meetings = Search.new(params).results
       count = meeting_count(meetings)
