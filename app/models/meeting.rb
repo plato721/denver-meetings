@@ -179,12 +179,8 @@ class Meeting < ActiveRecord::Base
 
   def self.by_access(access)
     return all if access == "show"
-    if access == "only"
-      includes(:features).where(features: { name: "Accessible" })
-    elsif access == "hide"
-      includes(:features)
-      .where(features: { name: ["Sitter", "Non-Smoking", "Sign Language Interpreter", nil] })
-    end
+    only = includes(:features).where(features: { name: "Accessible" })
+    access == "only" ? only : where.not(id: only.map {|m| m.id} )
   end
 
   def self.by_non_smoking(non_smoking)
