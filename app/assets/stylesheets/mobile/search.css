@@ -83,7 +83,7 @@
 
   /* part of white stripe fix http://jsfiddle.net/ezanker/zKS76/4/ */
   .ui-content {
-    background-color: lightblue !important;
+    background-color: black;
   }
 
   input.meeting-search-button {
