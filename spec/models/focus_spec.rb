@@ -9,8 +9,14 @@ RSpec.describe Focus, type: :model do
     "Y" => "Young People"}
   end
 
-  it "allows only valid foci" do
+  it "allows only valid foci value" do
     bad_foci = Focus.new(code: "G", name: "German")
+
+    expect(bad_foci).to_not be_valid
+  end
+
+  it "allows only valid foci key" do
+    bad_foci = Focus.new(code: "X", name: "Gay")
 
     expect(bad_foci).to_not be_valid
   end
