@@ -34,7 +34,7 @@ class MobileMeetingDisplay
     "#{meeting.address_1}<br>#{meeting.address_2}<br>#{meeting.city}, #{meeting.state}"
   end
 
-  def approved
+  def approved?
     meeting.approved ? "True" : "False"
   end
 

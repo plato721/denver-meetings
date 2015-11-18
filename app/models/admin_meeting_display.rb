@@ -5,6 +5,10 @@ class AdminMeetingDisplay
     @meeting = meeting
   end
 
+  def id
+    meeting.id
+  end
+
   def group_name
     meeting.group_name
   end
