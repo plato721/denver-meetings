@@ -15,6 +15,7 @@ class Meeting < ActiveRecord::Base
 
   def self.search(params)
     by_group_name(params[:group_name])
+    .by_group_name(params[:group_text])
     .by_city(params[:city])
     .by_day(params[:day])
     .by_time(params[:time])

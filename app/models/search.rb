@@ -1,6 +1,13 @@
 class Search < ActiveRecord::Base
   def results
+    scrub_text
     self.here | self.here_and_now ? distance_results : weekday_results
+  end
+
+  def scrub_text
+    [:city_text, :group_text].each do |field|
+        self.update_attributes(field => "any") if self.send(field) =~ /^\(.*\)$/
+    end
   end
 
   def distance_results
