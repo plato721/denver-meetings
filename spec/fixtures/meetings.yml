@@ -15,6 +15,7 @@ one:
   approved: false
   time: 6.5
   raw_meeting: one
+  closed: true
 
 two:
   day: Tuesday
@@ -30,6 +31,7 @@ two:
   approved: true
   time: 20.5
   raw_meeting:
+  closed: false
   
 three:
   day: Tuesday
@@ -46,3 +48,5 @@ three:
   lng: -105.08218
   approved: false
   time: 17.5
+  closed: false
+

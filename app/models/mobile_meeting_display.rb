@@ -10,6 +10,10 @@ class MobileMeetingDisplay
     "#{raw_distance.round(1)}"
   end
 
+  def closed?
+    self.meeting.closed == true
+  end
+
   def raw_time
     self.meeting.time
   end

@@ -30,4 +30,32 @@ RSpec.describe Search do
 
     expect(actual).to eq(expected)
   end
+
+  context "open/closed" do
+    before do
+      # Meeting.first.update_attributes(closed: true)
+      # Meeting.second.update_attributes(closed: false)
+      # Meeting.third.update_attributes(closed: nil)
+    end
+
+    it "finds closed only" do
+      search = Search.create(open: "closed")
+
+      search.results.each do |group|
+        group.last.each do |meeting|
+          expect(meeting.closed?).to be_truthy
+        end
+      end
+    end
+
+    it "finds open only" do
+      search = Search.create(open: "open")
+
+      actual_name = search.results.each do |group|
+        group.last.each do |meeting|
+          expect(meeting.closed?).to be_falsey
+        end
+      end
+    end
+  end
 end
