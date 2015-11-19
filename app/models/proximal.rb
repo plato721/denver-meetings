@@ -38,7 +38,7 @@ class Proximal
     a = Math.sin(lat_delta_rads / 2) * Math.sin(lat_delta_rads / 2) +
             Math.cos(lat_1_rads) * Math.cos(lat_2_rads) *
             Math.sin(lng_delta_rads/2) * Math.sin(lng_delta_rads/2)
-    c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a))
 
     earth_radius * c
   end

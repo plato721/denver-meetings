@@ -11,6 +11,10 @@ RSpec.feature "Admin meeting display" do
       allow_any_instance_of(Meeting).to receive(:calculated_zip).and_return("12345")
     end
 
+    after(:each) do
+      page.driver.submit :delete, "/logout", {}
+    end
+
     it "displays a list of meetings" do
       visit admin_root_path
       expect(current_path).to eq(admin_meetings_path)
