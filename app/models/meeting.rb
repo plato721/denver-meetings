@@ -13,27 +13,6 @@ class Meeting < ActiveRecord::Base
   has_many :formats, through: :meeting_formats
   has_many :languages, through: :meeting_languages
 
-  def self.search(params)
-    by_group_name(params[:group_name])
-    .by_group_name(params[:group_text])
-    .by_city(params[:city])
-    .by_city(params[:city_text])
-    .by_day(params[:day])
-    .by_time(params[:time])
-    .by_open(params[:open])
-    .by_youth(params[:youth])
-    .by_gay(params[:gay])
-    .by_men(params[:men])
-    .by_women(params[:women])
-    .by_polish(params[:polish])
-    .by_french(params[:french])
-    .by_spanish(params[:spanish])
-    .by_sitter(params[:sitter])
-    .by_access(params[:access])
-    .by_non_smoking(params[:non_smoking])
-    .distinct
-  end
-
   def address
     [address_1, city, state].compact.join(', ')
   end
@@ -158,6 +137,27 @@ class Meeting < ActiveRecord::Base
     return all if non_smoking == "show"
     only = includes(:features).where(features: { name: "Non-Smoking" })
     non_smoking == "only" ? only : where.not(id: only.map {|m| m.id} )
+  end
+
+  def self.search(params)
+    by_group_name(params[:group_name])
+    .by_group_name(params[:group_text])
+    .by_city(params[:city])
+    .by_city(params[:city_text])
+    .by_day(params[:day])
+    .by_time(params[:time])
+    .by_open(params[:open])
+    .by_youth(params[:youth])
+    .by_gay(params[:gay])
+    .by_men(params[:men])
+    .by_women(params[:women])
+    .by_polish(params[:polish])
+    .by_french(params[:french])
+    .by_spanish(params[:spanish])
+    .by_sitter(params[:sitter])
+    .by_access(params[:access])
+    .by_non_smoking(params[:non_smoking])
+    .distinct
   end
 
 end
