@@ -6,7 +6,9 @@ class Search < ActiveRecord::Base
 
   def scrub_text
     [:city_text, :group_text].each do |field|
-        self.update_attributes(field => "any") if self.send(field) =~ /^\(.*\)$/
+        if self.send(field) =~ /^\(.*\)$/ || self.send(field).empty?
+          self.update_attributes(field => "any")
+        end
     end
   end
 
