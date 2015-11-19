@@ -17,6 +17,7 @@ class Meeting < ActiveRecord::Base
     by_group_name(params[:group_name])
     .by_group_name(params[:group_text])
     .by_city(params[:city])
+    .by_city(params[:city_text])
     .by_day(params[:day])
     .by_time(params[:time])
     .by_open(params[:open])
@@ -68,21 +69,17 @@ class Meeting < ActiveRecord::Base
     group_name == "any" ? all : where("group_name LIKE ?", "%#{group_name}%")
   end
 
+  def self.by_city(city)
+    city == "any" ? all : where("city LIKE ?", "%#{city}%")
+  end
+
   def self.by_open(open)
     return all if open == "any"
     open == "closed" ? where(closed: true) : where.not(closed: true)
   end
 
-  def self.by_city(city)
-    city == "any" ? all : where("city LIKE ?", "%#{city}%")
-  end
-
   def self.by_day(day)
     day == "any" ? all : where("day LIKE ?", "%#{day}%")
-  end
-
-  def self.by_city(city)
-    city == "any" ? all : where("city LIKE ?", "%#{city}%")
   end
 
   def self.by_time(time)

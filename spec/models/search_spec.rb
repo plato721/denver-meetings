@@ -13,10 +13,19 @@ RSpec.describe Search do
     expect(closest_meeting.address.include?("1311 York")).to be_truthy
   end
 
-  it "finds by name" do
+  it "finds by group name free text" do
     search = Search.create(group_text: "daily")
 
     expected = "Daily Serenity"
+    actual = search.results.first.last.first.group_name
+
+    expect(actual).to eq(expected)
+  end
+
+  it "finds by city name free text" do
+    search = Search.create(city_text: "ake")
+
+    expected = "Always Hope"
     actual = search.results.first.last.first.group_name
 
     expect(actual).to eq(expected)
