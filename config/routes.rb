@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: 'welcome#index'
+  get "faq", to: "welcome#faq"
   resources :meetings, only:[:index, :show]
   
   delete 'logout', to: 'sessions#destroy', as: "logout"
