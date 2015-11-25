@@ -25,7 +25,7 @@ class Proximal
   end
 
   # My thanks to Chris Veness for the javascript implementation of this equation
-  # found on http://www.movable-type.co.uk/scripts/latlong.html.
+  # found on http://www.movable-type.co.uk/scripts/latlong.html
   def distance_from(coords)
     lat_1_rads = to_rad(self.lat)
     lat_2_rads = to_rad(coords.first)
