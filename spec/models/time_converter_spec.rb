@@ -62,10 +62,9 @@ RSpec.describe TimeConverter do
   end
 
   it "gives time now in decimal format" do
-    allow(Time).to receive(:current).and_return(Time.new(2008,6,21, 13,30,0))
-    time = Time.now
+    allow(Time).to receive(:now).and_return(Time.new(2008,6,21, 13,30,0))
 
-    expect(TimeConverter.current).to eq(13.5)
+    expect(TimeConverter.now).to eq(13.5)
   end
 
 end
