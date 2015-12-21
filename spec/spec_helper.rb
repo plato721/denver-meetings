@@ -21,7 +21,7 @@ RSpec.configure do |config|
     Rails.application.load_seed
   end
 
-  config.after(:all) do
+  config.after(:suite) do
     DatabaseCleaner.clean
   end
 

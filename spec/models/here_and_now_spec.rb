@@ -9,7 +9,7 @@ RSpec.describe HereAndNow do
   end
 
   it "returns meetings within three hours sorted by distance" do
-    allow(Time).to receive(:now).and_return(Time.new(2015,11,17,19,00,0))
+    allow(TimeConverter).to receive(:now_raw).and_return(Time.new(2015,11,17,19,00,0))
     meetings = HereAndNow.new({lat: @lat, lng: @lng}).search
 
     expect(meetings.first.first).to eq("Within 1 mile")
