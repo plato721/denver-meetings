@@ -6,7 +6,7 @@ class MeetingCreator
   end
 
   def create
-    Meeting.create({
+    meeting = Meeting.create({
       group_name: group_name,
       day: day,
       address_1: address_1,
@@ -18,6 +18,7 @@ class MeetingCreator
       time: time,
       raw_meeting: self.raw
       })
+    add_properties(meeting)
   end
 
   def day
@@ -66,5 +67,25 @@ class MeetingCreator
 
   def district
     raw.district
+  end
+
+  def properties_models
+    {Focus => "foci",
+    Format => "formats",
+    Feature => "features",
+    Language => "languages"}
+  end
+
+  def get_property_set_for(meeting, property)
+    codes = meeting.raw_meeting.codes
+    property.first.send("get_#{property.last}".to_sym, (codes))
+  end
+
+  def add_properties(meeting)
+    properties_models.each do |property|
+      properties = get_property_set_for(meeting, property)
+      meeting.send(property.last.to_sym).concat(properties)
+      meeting.save
+    end
   end
 end
