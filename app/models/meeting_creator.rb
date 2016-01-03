@@ -19,6 +19,7 @@ class MeetingCreator
       raw_meeting: self.raw
       })
     add_properties(meeting)
+    meeting
   end
 
   def day
