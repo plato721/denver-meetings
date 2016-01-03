@@ -44,7 +44,7 @@ end
 def create_displayable
   RawMeeting.all.each do |raw|
     if !Meeting.joins(:raw_meeting).exists?(raw.id)
-      sleep 0.5
+      sleep 1.0
       MeetingCreator.new(raw).create
     end
   end
