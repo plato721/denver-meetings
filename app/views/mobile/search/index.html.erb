@@ -7,7 +7,7 @@
       <% if !group.last.empty? %>
         <li data-role="list-divider"><%= group.first %></li>
         <% group.last.each do |meeting| %>
-          <div data-role="collapsible">
+          <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
             <h2><%= "#{meeting.group_name} #{meeting.time}" %></h2>
             <ul data-role="listview" data-inset="true">
             <% if distance_display?(group.first) %>
@@ -17,7 +17,7 @@
                 <li><%= meeting_without_distance(meeting) %></li>
               <% end %>
             <% end %>
-            <li><%= link_to raw(meeting.address), meeting.map_url, {"data-icon"=>"map", :target => "_blank"} %></li>
+            <li><%= link_to raw(meeting.address), meeting.map_url, {:class => "ui-icon-location", :target => "_blank"} %></li>
             </ul>
           </div>
         <% end %>
