@@ -7,7 +7,7 @@
       <% if !group.last.empty? %>
         <li data-role="list-divider"><%= group.first %></li>
         <% group.last.each do |meeting| %>
-          <div data-role="collapsible">
+          <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
             <h2><%= "#{meeting.group_name} #{meeting.time}" %></h2>
             <ul data-role="listview" data-inset="true">
             <% if distance_display?(group.first) %>
