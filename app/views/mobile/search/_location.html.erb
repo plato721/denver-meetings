@@ -1,9 +1,9 @@
 <div class="collapsible-set">
-  <div data-role="collapsible">
+  <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
     <h3>Location</h3>
       <%= select_tag(:city, options_for_select(@options.cities_select), {class: "menu-element"}) %>
       <fieldset data-role="controlgroup">
-        <%= label_tag(:here, "Right Here", class: "here-box") %>
+        <%= label_tag(:here, "Right Here", class: "here-box ui-icon-location") %>
         <%= check_box_tag(:here, "true") %>
      </fieldset>
       <%= hidden_field_tag(:lat, nil, {class: "main-lat"}) %>
