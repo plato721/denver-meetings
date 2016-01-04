@@ -17,7 +17,7 @@
                 <li><%= meeting_without_distance(meeting) %></li>
               <% end %>
             <% end %>
-            <li><%= link_to raw(meeting.address), meeting.map_url, {"data-icon"=>"map", :target => "_blank"} %></li>
+            <li><%= link_to raw(meeting.address), meeting.map_url, {:class => "ui-icon-location", :target => "_blank"} %></li>
             </ul>
           </div>
         <% end %>
