@@ -1,3 +1,7 @@
+# * * * * * * * * * * * * * * * * * 
+# for legacy migration - do not use
+# * * * * * * * * * * * * * * * * *
+
 def create_formats
   Format.get_format_methods.each do |method|
     Format.send(method)
@@ -36,7 +40,6 @@ end
 def get_property_set_for(meeting, property)
   codes = meeting.raw_meeting.codes
   property.first.send("get_#{property.last}".to_sym, (codes))
-
 end
 
 def add_properties(meeting)
@@ -51,11 +54,14 @@ def add_closed
   closed = Meeting.joins(:raw_meeting).where("raw_meetings.codes ~* ?", "(.*C[^A].*)|(.*C$)")
 end
 
-namespace :meetings do
-  task :load_properties => :environment do
-    Meeting.all.each do |meeting|
-      add_properties(meeting)
-      sleep(0.5)
-    end
-  end
-end
+# - works but commenting to protect against run
+# - this was used to add properties to meetings after the fact
+#   (initial project iteration did not display meeting properties)
+# namespace :meetings do
+#   task :load_properties => :environment do
+#     Meeting.all.each do |meeting|
+#       add_properties(meeting)
+#       sleep(0.5)
+#     end
+#   end
+# end
