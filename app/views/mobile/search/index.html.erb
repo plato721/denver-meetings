@@ -13,7 +13,7 @@
             <% if distance_display?(group.first) %>
               <li><%= meeting_with_distance(meeting) %></li>
             <% else %>
-              <% cache(cache_key_for(Meeting, "standard-accordian")) do %>
+              <% cache(meeting.meeting) do %>
                 <li><%= meeting_without_distance(meeting) %></li>
               <% end %>
             <% end %>
