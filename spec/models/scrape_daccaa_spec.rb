@@ -30,7 +30,10 @@ RSpec.describe ScrapeDaccaa do
     end
 
     it "knows when local (denver meetings) was updated" do
-      expect(@scraper.local_updated).to eq(@tomorrow)
+      result = DateTime.parse(@scraper.local_updated.to_s)
+      compare = DateTime.parse(@tomorrow.to_s)
+
+      expect(result).to eq(compare)
     end
 
     it "wants to update when local updated older than remote" do
