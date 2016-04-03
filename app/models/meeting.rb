@@ -3,6 +3,7 @@ class Meeting < ActiveRecord::Base
   geocoded_by :address, :latitude => :lat, :longitude => :lng
   after_validation :geocode
   before_create :address_from_coords
+  has_one :raw_meeting
   belongs_to :raw_meeting
   has_many :meeting_foci
   has_many :meeting_formats
