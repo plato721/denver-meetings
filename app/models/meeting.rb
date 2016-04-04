@@ -1,11 +1,16 @@
 class Meeting < ActiveRecord::Base
   attr_reader :geocoder
 
+  validate :raw_meeting_unique
+
   geocoded_by :address, :latitude => :lat, :longitude => :lng
-  after_validation :custom_reverse
-  before_create :address_from_coords
+  after_validation :geocode
+
+  before_create :custom_reverse, :address_from_coords
+
   has_one :raw_meeting
   belongs_to :raw_meeting
+
   has_many :meeting_foci
   has_many :meeting_formats
   has_many :meeting_features
@@ -14,6 +19,14 @@ class Meeting < ActiveRecord::Base
   has_many :foci, through: :meeting_foci
   has_many :formats, through: :meeting_formats
   has_many :languages, through: :meeting_languages
+
+  def raw_meeting_unique
+    # this allows a meeting to be created without
+    #   a raw meeting. but if it's passed, must be unique.
+    if Meeting.find_by(raw_meeting_id: raw_meeting_id)
+      errors.add(:raw_meeting_id, "must be unique")
+    end
+  end
 
   def address
     [address_1, city, state].compact.join(', ')

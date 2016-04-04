@@ -19,7 +19,6 @@ class MeetingCreator
       raw_meeting: self.raw
       })
     add_properties(meeting)
-
     meeting.tap{ |m| m.save }
   end
 
@@ -87,7 +86,6 @@ class MeetingCreator
     properties_models.each do |property|
       properties = get_property_set_for(meeting, property)
       meeting.send(property.last.to_sym).concat(properties)
-      # meeting.save
-    end
+  end
   end
 end

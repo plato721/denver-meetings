@@ -73,13 +73,15 @@ class ScrapeDaccaa
     end
   end
 
+  def raw_meetings_with_no_meetings
+    have = Meeting.pluck(:raw_meeting_id)
+    need = RawMeeting.where.not(id: have)
+  end
+
   def create_displayable_meetings
-    new_meetings = []
-    RawMeeting.all.each do |raw|
-      if !Meeting.joins(:raw_meeting).exists?(raw.id)
-        sleep 1.0
-        MeetingCreator.new(raw).create
-      end
+    raw_meetings_with_no_meetings do |raw|
+      MeetingCreator.new(raw).create
+      sleep 1.0
     end
   end
 end
