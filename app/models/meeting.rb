@@ -2,7 +2,7 @@ class Meeting < ActiveRecord::Base
   attr_reader :geocoder
 
   geocoded_by :address, :latitude => :lat, :longitude => :lng
-  after_validation :geocode
+  after_validation :custom_reverse
   before_create :address_from_coords
   has_one :raw_meeting
   belongs_to :raw_meeting
@@ -19,31 +19,15 @@ class Meeting < ActiveRecord::Base
     [address_1, city, state].compact.join(', ')
   end
 
-  def geocoder
-    @geocoder ||= begin
-      if lat && lng
-        Geocoder.search([self.lat, self.lng])
-        .first.data["address_components"]
-      else
-        [][]
-      end
-    end
-  end
-
-  def calculated_zip
-    zip ||= geocoder.last["long_name"]
-  end
-
-  def calculated_street_number
-    num ||= geocoder[0]["long_name"]
-  end
-
-  def calculated_street_name
-    name ||= geocoder[1]["short_name"]
+  def custom_reverse
+    return if (!self.lat.present? || !self.lng.present?)
+    @geocoder ||= Geocoder.search([self.lat, self.lng]).first
   end
 
   def address_from_coords
-    self.zip = calculated_zip
+    return if !self.geocoder.present?
+    self.zip = self.geocoder.postal_code
+    self.address_1 = self.geocoder.street_address
   end
 
   def self.by_group_name(group_name)

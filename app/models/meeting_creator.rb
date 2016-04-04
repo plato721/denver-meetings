@@ -6,7 +6,7 @@ class MeetingCreator
   end
 
   def create
-    meeting = Meeting.create({
+    meeting = Meeting.new({
       group_name: group_name,
       day: day,
       address_1: address_1,
@@ -19,7 +19,8 @@ class MeetingCreator
       raw_meeting: self.raw
       })
     add_properties(meeting)
-    meeting
+
+    meeting.tap{ |m| m.save }
   end
 
   def day
@@ -86,7 +87,7 @@ class MeetingCreator
     properties_models.each do |property|
       properties = get_property_set_for(meeting, property)
       meeting.send(property.last.to_sym).concat(properties)
-      meeting.save
+      # meeting.save
     end
   end
 end

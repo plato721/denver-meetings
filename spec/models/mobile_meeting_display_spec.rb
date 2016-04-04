@@ -15,7 +15,7 @@ RSpec.describe MobileMeetingDisplay do
   end
 
   it "determines integer day of week" do
-    Meeting.first.update_attributes(day: "Sunday")
+    Meeting.first.update_attribute(:day, "Sunday")
 
     mmd = MobileMeetingDisplay.new(Meeting.first)
 
@@ -23,7 +23,7 @@ RSpec.describe MobileMeetingDisplay do
   end
 
   it "knows if a meeting is approved" do
-    Meeting.first.update_attributes(approved: true)
+    Meeting.first.update_attribute(:approved, true)
     mmd = MobileMeetingDisplay.new(Meeting.first)
 
     expect(mmd.approved?).to be_truthy
@@ -31,7 +31,7 @@ RSpec.describe MobileMeetingDisplay do
 
   it "access meeting notes" do
     new_notes = "old cabin"
-    Meeting.first.update_attributes(notes: new_notes)
+    Meeting.first.update_attribute(:notes, new_notes)
     mmd = MobileMeetingDisplay.new(Meeting.first)
 
     expect(mmd.notes).to eq(new_notes)
@@ -39,7 +39,7 @@ RSpec.describe MobileMeetingDisplay do
 
   it "has meeting phone number" do
     phone = "719-528-1021"
-    Meeting.first.update_attributes(phone: phone)
+    Meeting.first.update_attribute(:phone, phone)
     mmd = MobileMeetingDisplay.new(Meeting.first)
 
     expect(mmd.phone).to eq(phone)
