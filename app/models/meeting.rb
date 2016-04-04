@@ -1,4 +1,5 @@
 class Meeting < ActiveRecord::Base
+  attr_reader :geocoder
 
   geocoded_by :address, :latitude => :lat, :longitude => :lng
   after_validation :geocode
@@ -19,7 +20,7 @@ class Meeting < ActiveRecord::Base
   end
 
   def geocoder
-    geocoder ||= begin
+    @geocoder ||= begin
       if lat && lng
         Geocoder.search([self.lat, self.lng])
         .first.data["address_components"]
