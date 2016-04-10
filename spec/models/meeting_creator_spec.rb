@@ -5,7 +5,7 @@ RSpec.describe MeetingCreator do
 
   context "with parenthetical location description and minimal codes" do
     before do
-      allow_any_instance_of(Meeting).to receive(:calculated_zip).and_return("12345")
+      allow_any_instance_of(Meeting).to receive(:address_from_coords).and_return(nil)
       mc = MeetingCreator.new(RawMeeting.first)
       @meeting = mc.create
     end

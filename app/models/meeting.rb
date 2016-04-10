@@ -1,9 +1,16 @@
 class Meeting < ActiveRecord::Base
+  attr_reader :geocoder
+
+  validate :raw_meeting_unique
 
   geocoded_by :address, :latitude => :lat, :longitude => :lng
   after_validation :geocode
-  before_create :address_from_coords
+
+  before_create :custom_reverse, :address_from_coords
+
+  has_one :raw_meeting
   belongs_to :raw_meeting
+
   has_many :meeting_foci
   has_many :meeting_formats
   has_many :meeting_features
@@ -13,35 +20,27 @@ class Meeting < ActiveRecord::Base
   has_many :formats, through: :meeting_formats
   has_many :languages, through: :meeting_languages
 
+  def raw_meeting_unique
+    # this allows a meeting to be created without
+    #   a raw meeting. but if it's passed, must be unique.
+    if Meeting.find_by(raw_meeting_id: raw_meeting_id)
+      errors.add(:raw_meeting_id, "must be unique")
+    end
+  end
+
   def address
     [address_1, city, state].compact.join(', ')
   end
 
-  def geocoder
-    geocoder ||= begin
-      if lat && lng
-        Geocoder.search([self.lat, self.lng])
-        .first.data["address_components"]
-      else
-        [][]
-      end
-    end
-  end
-
-  def calculated_zip
-    zip ||= geocoder.last["long_name"]
-  end
-
-  def calculated_street_number
-    num ||= geocoder[0]["long_name"]
-  end
-
-  def calculated_street_name
-    name ||= geocoder[1]["short_name"]
+  def custom_reverse
+    return if (!self.lat.present? || !self.lng.present?)
+    @geocoder ||= Geocoder.search([self.lat, self.lng]).first
   end
 
   def address_from_coords
-    self.zip = calculated_zip
+    return if !self.geocoder.present?
+    self.zip = self.geocoder.postal_code
+    self.address_1 = self.geocoder.street_address
   end
 
   def self.by_group_name(group_name)
