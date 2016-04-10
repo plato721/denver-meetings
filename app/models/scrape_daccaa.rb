@@ -66,9 +66,16 @@ class ScrapeDaccaa
     local_updated < remote_updated || self.force
   end
 
-  def create_raw_meetings(data)
-    trimmed = data.slice(13..-68)
-    trimmed.each_slice(7) do |slice|
+  def headers_raw_meetings
+    ["Day", "Time", "Group Name", "Address", "City", "District", "Codes"]
+  end
+
+  def rest_raw_meetings(data=self.parsed)
+    data[13..-68]
+  end
+
+  def create_raw_meetings(data=self.parsed)
+    rest_raw_meetings.each_slice(7) do |slice|
       RawMeeting.add_from(slice)
     end
   end
@@ -83,5 +90,15 @@ class ScrapeDaccaa
       MeetingCreator.new(raw).create
       sleep 1.0
     end
+  end
+
+  def to_a
+    set_parsed if @parsed.nil?
+    rest_raw_meetings.each_slice(7).with_object([]) do |slice, array|
+      array << headers_raw_meetings.zip(slice).to_h
+    end
+  end
+
+  def dump_to_yaml
   end
 end
