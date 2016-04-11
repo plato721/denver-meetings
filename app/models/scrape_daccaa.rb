@@ -1,26 +1,23 @@
 class ScrapeDaccaa
-  attr_reader :parsed, :force
+  attr_reader :force
+  attr_accessor :raw_meetings
 
   def initialize(force=false)
     @force = force
-    @parsed = []
   end
 
   def self.scrape(force=false)
     scraper = self.new(force)
-    scraper.set_parsed
-    scraper.update_meetings
+    page = scraper.get_page
+    parsed = scraper.parse_meetings(page)
+    scraper.tap { |s| s.raw_meetings = s.make_meetings(parsed) }
   end
 
-  def set_parsed
-    @parsed = parse_meetings(get_page)
-  end
-
-  def update_meetings
+  def make_meetings(parsed)
     return false if !update_needed?
-    create_raw_meetings(self.parsed)
-    create_displayable_meetings
+    current_raw = create_raw_meetings(parsed)
     set_updated
+    current_raw
   end
 
   def url
@@ -70,35 +67,22 @@ class ScrapeDaccaa
     ["Day", "Time", "Group Name", "Address", "City", "District", "Codes"]
   end
 
-  def rest_raw_meetings(data=self.parsed)
-    data[13..-68]
+  def rest_raw_meetings(parsed)
+    parsed[13..-68]
   end
 
-  def create_raw_meetings(data=self.parsed)
-    rest_raw_meetings.each_slice(7) do |slice|
-      RawMeeting.add_from(slice)
+  def create_raw_meetings(parsed)
+    rest_raw_meetings(parsed)
+      .each_slice(7)
+      .with_object([]) do |slice, meetings|
+        meetings << RawMeeting.add_from(slice)
     end
   end
 
-  def raw_meetings_with_no_meetings
-    have = Meeting.pluck(:raw_meeting_id)
-    need = RawMeeting.where.not(id: have)
-  end
-
-  def create_displayable_meetings
-    raw_meetings_with_no_meetings do |raw|
-      MeetingCreator.new(raw).create
-      sleep 1.0
-    end
-  end
-
-  def to_a
-    set_parsed if @parsed.nil?
-    rest_raw_meetings.each_slice(7).with_object([]) do |slice, array|
-      array << headers_raw_meetings.zip(slice).to_h
-    end
-  end
-
-  def dump_to_yaml
-  end
+  # def to_a
+  #   set_parsed if @parsed.nil?
+  #   rest_raw_meetings.each_slice(7).with_object([]) do |slice, array|
+  #     array << headers_raw_meetings.zip(slice).to_h
+  #   end
+  # end
 end

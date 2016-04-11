@@ -20,9 +20,12 @@ class RawMeeting < ActiveRecord::Base
     self.where(id: ids)
   end
 
+  def self.raw_from_yaml(file)
+    YAML.load(File.read(file))
+  end
+
   def self.from_yaml(file)
-    hash = YAML.load(File.read(file))
-    hash.map do |data|
+    raw_from_yaml(file).map do |data|
       add_from(data.values)
     end
   end

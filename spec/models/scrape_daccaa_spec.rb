@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe ScrapeDaccaa do
+
   before(:all) do
     @scraper = ScrapeDaccaa.new
   end
@@ -65,6 +66,21 @@ RSpec.describe ScrapeDaccaa do
         .and_return(@now)
 
       expect(@scraper.update_needed?).to be_falsey
+    end
+
+    it "collects raw meetings touched/created" do
+      path = Rails.root + "spec/fixtures/raw_meetings.yml"
+      yamls = RawMeeting.raw_from_yaml(path)
+      raw = yamls.map do |id, data|
+        [data["day"], data["time"], data["group_name"], data["address"], data["city"], data["district"], data["codes"]]
+      end.flatten
+
+      allow_any_instance_of(ScrapeDaccaa).to receive(:rest_raw_meetings).and_return(raw)
+      scraper = ScrapeDaccaa.new(true)
+      raw_meetings = scraper.create_raw_meetings(raw)
+
+      expect(raw_meetings.count).to eq(yamls.keys.count)
+      expect(raw_meetings.all? { |o| o.is_a? RawMeeting }).to be_truthy
     end
   end
 end

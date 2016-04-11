@@ -1,0 +1,7995 @@
+---
+- Day: Sunday
+  Time: 06:30 AM
+  Group Name: Keeping It Simple
+  Address: 3600 S. Clarkson (NE of Ch)
+  City: Englewood
+  District: '11'
+  Codes: "*n"
+- Day: Sunday
+  Time: 06:30 AM
+  Group Name: Sunrise Serenity
+  Address: '3355 S. Wadsworth #H125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: "*n"
+- Day: Sunday
+  Time: 06:45 AM
+  Group Name: Upon Awakening
+  Address: 8817 S. Broadway (Ch)
+  City: Highlands Ranch
+  District: '11'
+  Codes: "*n"
+- Day: Sunday
+  Time: 07:00 AM
+  Group Name: Attitude Adjustment
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Sunday
+  Time: 07:00 AM
+  Group Name: Morning Reflection
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: "*n"
+- Day: Sunday
+  Time: 07:00 AM
+  Group Name: Rude Awakening
+  Address: 1117 Kimbark St.
+  City: Longmont
+  District: '34'
+  Codes: "*n"
+- Day: Sunday
+  Time: 07:00 AM
+  Group Name: Rude Rousing
+  Address: 390 Lashley Ave.
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Sunday
+  Time: 07:30 AM
+  Group Name: Early Bird
+  Address: 16732 E. Iliff (Shop. Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Sunday
+  Time: 07:30 AM
+  Group Name: Early Risers
+  Address: 10151 W. 26th Ave.(Restaurant)
+  City: Wheat Ridge
+  District: '31'
+  Codes: "*n"
+- Day: Sunday
+  Time: 07:30 AM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Sunday
+  Time: 07:30 AM
+  Group Name: Morning After
+  Address: 3489 W. 72nd (Rm 104)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Sunday
+  Time: 07:30 AM
+  Group Name: Spiritual Awakening
+  Address: '3355 S. Wadsworth Blvd. #H-125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: "*n"
+- Day: Sunday
+  Time: 08:00 AM
+  Group Name: AA Odrodzenie
+  Address: 2525 W. Evans Ave. (Polish 882-1038)
+  City: Denver
+  District: '19'
+  Codes: nPol
+- Day: Sunday
+  Time: 08:00 AM
+  Group Name: Babble On
+  Address: 7964 S. Depew (Platte Canyon/Chatfield)
+  City: Littleton
+  District: '30'
+  Codes: "*n"
+- Day: Sunday
+  Time: 08:00 AM
+  Group Name: Boulder 11th Step
+  Address: 5375 Western Ave.
+  City: Boulder
+  District: '24'
+  Codes: ST*n
+- Day: Sunday
+  Time: 08:00 AM
+  Group Name: Broomfield Sun. Morning
+  Address: 640 Main St. (Yellow Hs)
+  City: Broomfield
+  District: '32'
+  Codes: "*n"
+- Day: Sunday
+  Time: 08:00 AM
+  Group Name: Dawn Patrol
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '13'
+  Codes: "*n"
+- Day: Sunday
+  Time: 08:00 AM
+  Group Name: Old Town Group
+  Address: 5927 Miller St. (Ch)
+  City: Arvada
+  District: '31'
+  Codes: "*n"
+- Day: Sunday
+  Time: 08:00 AM
+  Group Name: There is a Solution
+  Address: 8081 E. Orchard Rd. (Entr 5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: n
+- Day: Sunday
+  Time: 08:15 AM
+  Group Name: Day By Day
+  Address: 1008 E. Hampden Ave.
+  City: Englewood
+  District: '11'
+  Codes: M*
+- Day: Sunday
+  Time: 08:30 AM
+  Group Name: A New Day
+  Address: 8250 W. 80th Ave. Unit 12, 303-420-6560
+  City: Arvada
+  District: '31'
+  Codes: Cn
+- Day: Sunday
+  Time: 09:00 AM
+  Group Name: 231 Buckley
+  Address: 15210 E 6th Ave, Unit 1, 343-4994
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Sunday
+  Time: 09:00 AM
+  Group Name: Big Book Workshop
+  Address: 10242 E. 16th Ave. (Upstairs) 366-3622
+  City: Aurora
+  District: '16'
+  Codes: BBn
+- Day: Sunday
+  Time: 09:00 AM
+  Group Name: Eye-Openers
+  Address: '5375 Western Ave. #F'
+  City: Boulder
+  District: '24'
+  Codes: "*nSit"
+- Day: Sunday
+  Time: 09:00 AM
+  Group Name: Grupo 3RA Tradicion
+  Address: '6401 E. 72nd Ave. #115'
+  City: Commerce City
+  District: '25'
+  Codes: Spn
+- Day: Sunday
+  Time: 09:00 AM
+  Group Name: Power Hour
+  Address: 194 S. McDonnell St. (Ch)
+  City: Byers
+  District: '10'
+  Codes: "*n"
+- Day: Sunday
+  Time: 09:00 AM
+  Group Name: Sofa Spuds
+  Address: '10576 W. Alameda Ave. #2, 238-1229'
+  City: Lakewood
+  District: '19'
+  Codes: n
+- Day: Sunday
+  Time: 09:15 AM
+  Group Name: Crossroads
+  Address: 2888 S. Heather Gardens (Clubhouse)
+  City: Aurora
+  District: '10'
+  Codes: C*n
+- Day: Sunday
+  Time: 09:15 AM
+  Group Name: Crossroads
+  Address: 2888 S. Heather Gardens (Clubhouse)
+  City: Aurora
+  District: '10'
+  Codes: STB*n
+- Day: Sunday
+  Time: 09:30 AM
+  Group Name: A Vision 4 Today
+  Address: 8081 E. Orchard Rd. (Ent5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: "*n"
+- Day: Sunday
+  Time: 09:30 AM
+  Group Name: Arid Group
+  Address: 1480 Hoyt St.  238-5693
+  City: Lakewood
+  District: '12'
+  Codes: CST*n
+- Day: Sunday
+  Time: 09:30 AM
+  Group Name: Sunday Sobriety
+  Address: 1311 York St., 303-322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Sunday
+  Time: 10:00 AM
+  Group Name: 'Brighton #1'
+  Address: 147 S. 2nd Place, 303-659-9953
+  City: Brighton
+  District: '9'
+  Codes: "*n"
+- Day: Sunday
+  Time: 10:00 AM
+  Group Name: Drunks 'R Us
+  Address: 3600 S. Clarkson (house NE of Ch) 781-5822
+  City: Englewood
+  District: '11'
+  Codes: B*n
+- Day: Sunday
+  Time: 10:00 AM
+  Group Name: Extended Hand
+  Address: 620 Elizabeth St. (Ch sch bsmt cafeteria)
+  City: Denver
+  District: '13'
+  Codes: B*n
+- Day: Sunday
+  Time: 10:00 AM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Sunday
+  Time: 10:00 AM
+  Group Name: Group 1
+  Address: '3355 S. Wadsworth #H-125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: "*n"
+- Day: Sunday
+  Time: 10:00 AM
+  Group Name: Grupo Camino A La Sobried
+  Address: 1400 Joliet St.
+  City: Aurora
+  District: '25'
+  Codes: Spn
+- Day: Sunday
+  Time: 10:00 AM
+  Group Name: Grupo El Principio
+  Address: 2420 S. Federal Bl.
+  City: Denver
+  District: '25'
+  Codes: Spnn
+- Day: Sunday
+  Time: 10:00 AM
+  Group Name: Mountain View
+  Address: 8968 N. Washington (storefront)
+  City: Thornton
+  District: '9'
+  Codes: "*n"
+- Day: Sunday
+  Time: 10:00 AM
+  Group Name: School of Hard Knox
+  Address: 7275 Monaco, 287-9950
+  City: Commerce City
+  District: '9'
+  Codes: n
+- Day: Sunday
+  Time: 10:00 AM
+  Group Name: Sunday Morning
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: "*n"
+- Day: Sunday
+  Time: 10:30 AM
+  Group Name: Bonanza
+  Address: 1663 S. Acoma St.
+  City: Denver
+  District: '11'
+  Codes: "*n"
+- Day: Sunday
+  Time: 10:30 AM
+  Group Name: Sun a.m. Serenity
+  Address: 390 Lashley Ave.
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Sunday
+  Time: 11:00 AM
+  Group Name: A.R.C. Group
+  Address: 3180 Airport Rd. (ARC Rm 5280)
+  City: Boulder
+  District: '24'
+  Codes: "*n"
+- Day: Sunday
+  Time: 11:00 AM
+  Group Name: Conscious Contact
+  Address: 10242 E. 16th Ave., 366-3622
+  City: Aurora
+  District: '16'
+  Codes: n
+- Day: Sunday
+  Time: 11:00 AM
+  Group Name: Happy Way
+  Address: 3885 S. Broadway (Ch bsmt)
+  City: Englewood
+  District: '11'
+  Codes: n
+- Day: Sunday
+  Time: 11:00 AM
+  Group Name: Reality Group
+  Address: 1117 Kimbark St.
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Sunday
+  Time: 11:00 AM
+  Group Name: Sunday 11am
+  Address: '10521 S. Parker Rd. # G'
+  City: Parker
+  District: '10'
+  Codes: n
+- Day: Sunday
+  Time: 11:00 AM
+  Group Name: Sunday Morning High
+  Address: '5375 Western Ave. #F'
+  City: Boulder
+  District: '24'
+  Codes: "*n"
+- Day: Sunday
+  Time: 11:00 AM
+  Group Name: Three for All
+  Address: 12795 Hwy 285, S of Conifer 838-9908
+  City: Conifer
+  District: '29'
+  Codes: "*n"
+- Day: Sunday
+  Time: 11:00 AM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Sunday
+  Time: 11:00 AM
+  Group Name: 'York # 1'
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Sunday
+  Time: 11:30 AM
+  Group Name: Grupo Aurora 97
+  Address: 1408 Del Mar Pkwy. Unit C
+  City: Aurora
+  District: '25'
+  Codes: Spnn
+- Day: Sunday
+  Time: 12:00 PM
+  Group Name: 231 Buckley
+  Address: 15210 E 6th Ave, Unit 1, 343-4994
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Sunday
+  Time: 12:00 PM
+  Group Name: Alano
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: "*n"
+- Day: Sunday
+  Time: 12:00 PM
+  Group Name: Arid Group
+  Address: 1480 Hoyt St.  238-5693
+  City: Lakewood
+  District: '12'
+  Codes: "*n"
+- Day: Sunday
+  Time: 12:00 PM
+  Group Name: AWOL
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '11'
+  Codes: W*n
+- Day: Sunday
+  Time: 12:00 PM
+  Group Name: Bill's Brownbaggers
+  Address: 8250 W. 80th Ave. Unit 12, 303-420-6560
+  City: Arvada
+  District: '31'
+  Codes: "*n"
+- Day: Sunday
+  Time: 12:00 PM
+  Group Name: Buckeye Easy Does It
+  Address: 16732 E Iliff Av (Shop Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Sunday
+  Time: 12:00 PM
+  Group Name: Day By Day
+  Address: 1008 E. Hampden Ave.
+  City: Englewood
+  District: '11'
+  Codes: "*"
+- Day: Sunday
+  Time: 12:00 PM
+  Group Name: Edit Nooners
+  Address: '10576 W. Alameda Ave. #2, 238-1229'
+  City: Lakewood
+  District: '19'
+  Codes: n
+- Day: Sunday
+  Time: 12:00 PM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Sunday
+  Time: 12:00 PM
+  Group Name: Grupo La Ultima Cruda
+  Address: 9357 E. Colfax Ave. Unit E
+  City: Aurora
+  District: '25'
+  Codes: Spn
+- Day: Sunday
+  Time: 12:00 PM
+  Group Name: Grupo Renovacion
+  Address: 3458 1st Ave.
+  City: Denver
+  District: '25'
+  Codes: Spnn
+- Day: Sunday
+  Time: 12:00 PM
+  Group Name: Happy Hour Beginners
+  Address: 6315 S University (Rec Cntr)
+  City: Centennial
+  District: '11'
+  Codes: CB*n
+- Day: Sunday
+  Time: 12:00 PM
+  Group Name: Happy Hour Sunday
+  Address: 6400 S. University (Ch)
+  City: Centennial
+  District: '11'
+  Codes: n
+- Day: Sunday
+  Time: 12:00 PM
+  Group Name: Little Red House
+  Address: 7275 Monaco, 287-9950
+  City: Commerce City
+  District: '9'
+  Codes: n
+- Day: Sunday
+  Time: 12:00 PM
+  Group Name: Mountain View
+  Address: 8968 N. Washington (storefront)
+  City: Thornton
+  District: '9'
+  Codes: "*n"
+- Day: Sunday
+  Time: 12:00 PM
+  Group Name: Newner Meeting
+  Address: '3355 S. Wadsworth Bl. #H-127'
+  City: Lakewood
+  District: '30'
+  Codes: B*n
+- Day: Sunday
+  Time: 12:00 PM
+  Group Name: Noon Workshop
+  Address: 8081 E. Orchard Rd. (Ent 5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: Cn
+- Day: Sunday
+  Time: 12:30 PM
+  Group Name: Grupo Hay Una Solucion
+  Address: 3280 Airpost Rd. (ARC)
+  City: Boulder
+  District: '25'
+  Codes: Spn*n
+- Day: Sunday
+  Time: 12:30 PM
+  Group Name: High Noon
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: Cn
+- Day: Sunday
+  Time: 12:30 PM
+  Group Name: Live and Let Live
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: Gn
+- Day: Sunday
+  Time: 12:30 PM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: Wn
+- Day: Sunday
+  Time: 01:30 PM
+  Group Name: AWOL
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '11'
+  Codes: ST*n
+- Day: Sunday
+  Time: 02:00 PM
+  Group Name: 231 Buckley
+  Address: 15210 E 6th Ave, Unit 1, 343-4994
+  City: Aurora
+  District: '10'
+  Codes: B*n
+- Day: Sunday
+  Time: 03:00 PM
+  Group Name: 3 PM How It Works
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Sunday
+  Time: 03:00 PM
+  Group Name: First Things First
+  Address: 1385 Carr St., Suite 2
+  City: Lakewood
+  District: '12'
+  Codes: "*n"
+- Day: Sunday
+  Time: 04:00 PM
+  Group Name: Abundant Recovery
+  Address: 3600 S. Clarkson (Bldg NE of church)
+  City: Englewood
+  District: '11'
+  Codes: "*n"
+- Day: Sunday
+  Time: 05:00 PM
+  Group Name: Back To Basics
+  Address: 6653 W. Chatfield (Ch annex)
+  City: Littleton
+  District: '30'
+  Codes: CBB*n
+- Day: Sunday
+  Time: 05:00 PM
+  Group Name: Happy Hour Group
+  Address: 1117 Kimbark St.
+  City: Longmont
+  District: '34'
+  Codes: "*n"
+- Day: Sunday
+  Time: 05:00 PM
+  Group Name: Puttin' Sober
+  Address: '3489 W. 72nd Ave. #104'
+  City: Westminster
+  District: '32'
+  Codes: W*n
+- Day: Sunday
+  Time: 05:00 PM
+  Group Name: Sober Solutions
+  Address: 390 Lashley Ave.
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Sunday
+  Time: 05:30 PM
+  Group Name: Always Hope
+  Address: '3355 S. Wadsworth Ave. #H-125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: "*n"
+- Day: Sunday
+  Time: 05:30 PM
+  Group Name: Boulder Happy Hour
+  Address: '5375 Western Ave. #F'
+  City: Boulder
+  District: '24'
+  Codes: "*n"
+- Day: Sunday
+  Time: 05:30 PM
+  Group Name: Day By Day
+  Address: 1008 E. Hampden Ave.
+  City: Englewood
+  District: '11'
+  Codes: B*
+- Day: Sunday
+  Time: 05:30 PM
+  Group Name: Mountain View
+  Address: 8968 N. Washington (storefront)
+  City: Thornton
+  District: '9'
+  Codes: "*n"
+- Day: Sunday
+  Time: 05:30 PM
+  Group Name: SOB Group
+  Address: 6774 W. 66th Ave. (Ch)
+  City: Arvada
+  District: '31'
+  Codes: "*n"
+- Day: Sunday
+  Time: 05:30 PM
+  Group Name: V.S.E.
+  Address: 29823 Troutdale Scenic Dr. (Ch)
+  City: Evergreen
+  District: '29'
+  Codes: n
+- Day: Sunday
+  Time: 05:30 PM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Sunday
+  Time: 05:45 PM
+  Group Name: 5:45 Happy Hour
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Sunday
+  Time: 05:45 PM
+  Group Name: Buckeye Easy Does It
+  Address: 16732 E Iliff Av (Shop Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Sunday
+  Time: 05:45 PM
+  Group Name: DTC Sobriety
+  Address: 8081 E. Orchard Rd. (Entr 5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: ST*n
+- Day: Sunday
+  Time: 05:45 PM
+  Group Name: Women's Real Deal
+  Address: 1311 York St , 322-3674
+  City: Denver
+  District: '13'
+  Codes: CWn
+- Day: Sunday
+  Time: 06:00 PM
+  Group Name: 11th Chapter
+  Address: 4751 N. Broadway (Salv'n Army dining rm)
+  City: Denver
+  District: '9'
+  Codes: n
+- Day: Sunday
+  Time: 06:00 PM
+  Group Name: 231 Buckley
+  Address: 15210 E 6th Ave, Unit 1, 343-4994
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Sunday
+  Time: 06:00 PM
+  Group Name: Arid Group
+  Address: 1480 Hoyt St.  238-5693
+  City: Lakewood
+  District: '12'
+  Codes: CA*n
+- Day: Sunday
+  Time: 06:00 PM
+  Group Name: AWOL
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '11'
+  Codes: "*n"
+- Day: Sunday
+  Time: 06:00 PM
+  Group Name: Chix @ Six
+  Address: 5001 Pennsylvania St. (Ch)
+  City: Boulder
+  District: '24'
+  Codes: W*n
+- Day: Sunday
+  Time: 06:00 PM
+  Group Name: Foundation of Willingness
+  Address: 3120 Irving St (Ch rear,bsmt)
+  City: Denver
+  District: '12'
+  Codes: Cn
+- Day: Sunday
+  Time: 06:00 PM
+  Group Name: Gilpin County H.A.L.T.
+  Address: 226 East High (Ch)
+  City: Central City
+  District: '33'
+  Codes: BBn
+- Day: Sunday
+  Time: 06:00 PM
+  Group Name: 'Golden #1'
+  Address: 1500 Ford St. (Ch)
+  City: Golden
+  District: '33'
+  Codes: BBn
+- Day: Sunday
+  Time: 06:00 PM
+  Group Name: Lilley Gulch
+  Address: 7964 S Depew(Platte Cyn/Chatfield)
+  City: Littleton
+  District: '30'
+  Codes: B*
+- Day: Sunday
+  Time: 06:00 PM
+  Group Name: Little Red House
+  Address: 7275 Monaco, 287-9950
+  City: Commerce City
+  District: '9'
+  Codes: n
+- Day: Sunday
+  Time: 06:00 PM
+  Group Name: Principles b4 Personaliti
+  Address: 3180 Airport Rd. (Rm 5280)
+  City: Boulder
+  District: '24'
+  Codes: Wn
+- Day: Sunday
+  Time: 06:00 PM
+  Group Name: Second Chance
+  Address: 2255 S. 88th St (Hospital)
+  City: Louisville
+  District: '24'
+  Codes: n
+- Day: Sunday
+  Time: 06:00 PM
+  Group Name: Sun Nite Ticket
+  Address: 2180 S. University Bl. (Ch)
+  City: Denver
+  District: '11'
+  Codes: "*n"
+- Day: Sunday
+  Time: 06:00 PM
+  Group Name: Sunday Night Men's
+  Address: 3180 Airport Rd. (ARC Rm 5280)
+  City: Boulder
+  District: '24'
+  Codes: CM*n
+- Day: Sunday
+  Time: 06:00 PM
+  Group Name: Womens Big Book
+  Address: 3700 Baseline Rd. (Ch)
+  City: Boulder
+  District: '24'
+  Codes: BBWn
+- Day: Sunday
+  Time: 06:30 PM
+  Group Name: Bring Your Big Book
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: BB*n
+- Day: Sunday
+  Time: 07:00 PM
+  Group Name: 100 Alibis
+  Address: 1311 York St., 303-322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Sunday
+  Time: 07:00 PM
+  Group Name: Any Lengths
+  Address: 5707 S. Simms St (Ch)
+  City: Littleton
+  District: '30'
+  Codes: "*n"
+- Day: Sunday
+  Time: 07:00 PM
+  Group Name: Buckeye Easy Does It
+  Address: 16732 E Iliff Av (Shop Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: M*n
+- Day: Sunday
+  Time: 07:00 PM
+  Group Name: Buckeye Stag
+  Address: 16732 E. Iliff Ave. (Shop Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: CM*n
+- Day: Sunday
+  Time: 07:00 PM
+  Group Name: Cherry Creek Promises
+  Address: 700 S. Franklin (Ch)
+  City: Denver
+  District: '13'
+  Codes: SP*n
+- Day: Sunday
+  Time: 07:00 PM
+  Group Name: Father of Light
+  Address: 2500 S. Sheridan Bl. (Ch)
+  City: Denver
+  District: '30'
+  Codes: n
+- Day: Sunday
+  Time: 07:00 PM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Sunday
+  Time: 07:00 PM
+  Group Name: Grupo Renovacion
+  Address: 3458 1st Ave.
+  City: Denver
+  District: '25'
+  Codes: Spnn
+- Day: Sunday
+  Time: 07:00 PM
+  Group Name: Happy Way
+  Address: 3885 S. Broadway (Ch bsmt)
+  City: Englewood
+  District: '11'
+  Codes: Cn
+- Day: Sunday
+  Time: 07:00 PM
+  Group Name: Midtowne on the Park
+  Address: '1290 Williams #103 (Community Cntr)'
+  City: Denver
+  District: '13'
+  Codes: G*n
+- Day: Sunday
+  Time: 07:00 PM
+  Group Name: Sobriety First
+  Address: 615 4th St. (Ch at Lewis St)
+  City: Castle Rock
+  District: '10'
+  Codes: n
+- Day: Sunday
+  Time: 07:00 PM
+  Group Name: Sunday Nighters
+  Address: 3600 S. Clarkson (House NE of Ch)
+  City: Englewood
+  District: '11'
+  Codes: "*n"
+- Day: Sunday
+  Time: 07:00 PM
+  Group Name: Sunday's Hope
+  Address: 4001 W. 76th Ave (Ch)
+  City: Westminster
+  District: '32'
+  Codes: "*n"
+- Day: Sunday
+  Time: 07:00 PM
+  Group Name: Trudging Camels
+  Address: 2312 14th St. (Parish cntr)
+  City: Boulder
+  District: '24'
+  Codes: "*n"
+- Day: Sunday
+  Time: 07:00 PM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Sunday
+  Time: 07:15 PM
+  Group Name: No Mental Defense
+  Address: 1385 Carr St. (Ste 2)
+  City: Lakewood
+  District: '12'
+  Codes: "*n"
+- Day: Sunday
+  Time: 07:30 PM
+  Group Name: 'Brighton #1'
+  Address: 147 S. 2nd Place, 303-659-9953
+  City: Brighton
+  District: '9'
+  Codes: "*n"
+- Day: Sunday
+  Time: 07:30 PM
+  Group Name: El Nuevo Amanecer
+  Address: 801 S. Public Road
+  City: Lafayette
+  District: '25'
+  Codes: Spnn
+- Day: Sunday
+  Time: 07:30 PM
+  Group Name: Giving it Back
+  Address: 8997 S. Broadway (Ch)
+  City: Highlands Ranch
+  District: '11'
+  Codes: SP*n
+- Day: Sunday
+  Time: 07:30 PM
+  Group Name: 'Golden #1'
+  Address: 1500 Ford St. (Ch)
+  City: Golden
+  District: '33'
+  Codes: n
+- Day: Sunday
+  Time: 07:30 PM
+  Group Name: Grupo Aurora 97
+  Address: 1408 Del Mar Pkwy. Unit C
+  City: Aurora
+  District: '25'
+  Codes: Spnn
+- Day: Sunday
+  Time: 07:30 PM
+  Group Name: Grupo El Alba
+  Address: '3133 Peoria St. #205'
+  City: Denver
+  District: '25'
+  Codes: Spnn
+- Day: Sunday
+  Time: 07:30 PM
+  Group Name: Grupo El Buen Camino
+  Address: 1679 47th Ave.
+  City: Denver
+  District: '25'
+  Codes: Spn
+- Day: Sunday
+  Time: 07:30 PM
+  Group Name: Grupo El Principio
+  Address: 2420 S. Federal Bl.
+  City: Denver
+  District: '25'
+  Codes: Spnn
+- Day: Sunday
+  Time: 07:30 PM
+  Group Name: Grupo Honestidad
+  Address: 2320 E. 49th Ave.
+  City: Denver
+  District: '25'
+  Codes: Spn
+- Day: Sunday
+  Time: 07:30 PM
+  Group Name: Grupo Latinos Unidos
+  Address: 786 Peoria St. (90 mins)
+  City: Aurora
+  District: '25'
+  Codes: Spn
+- Day: Sunday
+  Time: 07:30 PM
+  Group Name: Grupo Los Buenos Veterano
+  Address: '11000 E. Yale Ave. #80, 303-671-2983'
+  City: Aurora
+  District: '25'
+  Codes: Spnn
+- Day: Sunday
+  Time: 07:30 PM
+  Group Name: I've Had Enough
+  Address: 12099 Lowell Bl. (Ch)
+  City: Broomfield
+  District: '32'
+  Codes: "*n"
+- Day: Sunday
+  Time: 07:30 PM
+  Group Name: Just Do It Group
+  Address: 10242 E. 16th Ave., 366-3622
+  City: Aurora
+  District: '16'
+  Codes: n
+- Day: Sunday
+  Time: 07:30 PM
+  Group Name: Longs Peak Group
+  Address: 803 3rd Ave. (Ch )
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Sunday
+  Time: 07:30 PM
+  Group Name: School of Hard Knox
+  Address: 7275 Monaco, 287-9950
+  City: Commerce City
+  District: '9'
+  Codes: n
+- Day: Sunday
+  Time: 07:30 PM
+  Group Name: Sunday Night Live
+  Address: 10001 W 58th Ave (Ch @Kipling)
+  City: Arvada
+  District: '31'
+  Codes: "*n"
+- Day: Sunday
+  Time: 07:30 PM
+  Group Name: Vive y Deja Vivir
+  Address: 9057 E. Colfax Ave. Unit E
+  City: Aurora
+  District: '25'
+  Codes: Spnn
+- Day: Sunday
+  Time: 08:00 PM
+  Group Name: 11th Chapter
+  Address: 4751 N. Broadway (Salv'n Army dining rm)
+  City: Denver
+  District: '9'
+  Codes: BBn
+- Day: Sunday
+  Time: 08:00 PM
+  Group Name: Grupo La Ultima Cruda
+  Address: 9357 E. Colfax Ave. Unit E
+  City: Aurora
+  District: '25'
+  Codes: Spn
+- Day: Sunday
+  Time: 08:00 PM
+  Group Name: Guardian
+  Address: 2695 S. Franklin St. (Ch)
+  City: Denver
+  District: '11'
+  Codes: C*n
+- Day: Sunday
+  Time: 08:00 PM
+  Group Name: Oasis Group
+  Address: '3355 S. Wadsworth #H-125 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: C*n
+- Day: Sunday
+  Time: 08:00 PM
+  Group Name: Sun. Night Table Mtg
+  Address: 12795 Hwy 285, S of Conifer
+  City: Conifer
+  District: '29'
+  Codes: "*n"
+- Day: Sunday
+  Time: 08:00 PM
+  Group Name: The Way Out
+  Address: 1155 Cherokee (Detox, Rm 103)
+  City: Denver
+  District: '13'
+  Codes: "*n"
+- Day: Sunday
+  Time: 08:00 PM
+  Group Name: Twelve Traditions
+  Address: 3700 Baseline Rd. (Ch.)
+  City: Boulder
+  District: '24'
+  Codes: SPn
+- Day: Sunday
+  Time: 08:30 PM
+  Group Name: Denver Serenity
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: BBn
+- Day: Sunday
+  Time: 08:30 PM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Sunday
+  Time: 10:00 PM
+  Group Name: 10 PM Last Call
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: CAn
+- Day: Monday
+  Time: 05:30 AM
+  Group Name: R U Nutz?
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '13'
+  Codes: "*n"
+- Day: Monday
+  Time: 06:30 AM
+  Group Name: 637 Group
+  Address: 310 Wilcox St. (Restaurant)
+  City: Castle Rock
+  District: '10'
+  Codes: "*n"
+- Day: Monday
+  Time: 06:30 AM
+  Group Name: Early Bird
+  Address: 16732 E. Iliff (Shop. Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Monday
+  Time: 06:30 AM
+  Group Name: First Things First
+  Address: 1385 Carr St., Suite 2
+  City: Lakewood
+  District: '12'
+  Codes: "*n"
+- Day: Monday
+  Time: 06:30 AM
+  Group Name: Rude Rousing
+  Address: 390 Lashley Ave.
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Monday
+  Time: 06:30 AM
+  Group Name: Sunrise Serenity
+  Address: '3355 S. Wadsworth #H125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: "*n"
+- Day: Monday
+  Time: 06:30 AM
+  Group Name: There is a Solution
+  Address: 8081 E. Orchard Rd. (Entr 5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: n
+- Day: Monday
+  Time: 06:45 AM
+  Group Name: Crack of Dawn
+  Address: 3600 S. Clarkson (Ch,NE House) 781-5822
+  City: Englewood
+  District: '11'
+  Codes: "*n"
+- Day: Monday
+  Time: 06:45 AM
+  Group Name: Daily Reflections
+  Address: 8081 E. Orchard Rd. (Ent 5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: "*n"
+- Day: Monday
+  Time: 06:45 AM
+  Group Name: P.P. Workshop
+  Address: 8545 E. Dry Creek Rd. (Ch Bsmt)
+  City: Centennial
+  District: '16'
+  Codes: n
+- Day: Monday
+  Time: 06:45 AM
+  Group Name: Upon Awakening
+  Address: 8817 S. Broadway (Ch)
+  City: Highlands Ranch
+  District: '11'
+  Codes: "*n"
+- Day: Monday
+  Time: 07:00 AM
+  Group Name: Attitude Adjustment
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Monday
+  Time: 07:00 AM
+  Group Name: Bottoms Up
+  Address: 5927 Miller St. (Ch)
+  City: Arvada
+  District: '12'
+  Codes: C*n
+- Day: Monday
+  Time: 07:00 AM
+  Group Name: Dawn Patrol
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '13'
+  Codes: "*n"
+- Day: Monday
+  Time: 07:00 AM
+  Group Name: Degenerates
+  Address: '8250 W. 80th Ave. #12'
+  City: Arvada
+  District: '31'
+  Codes: "*n"
+- Day: Monday
+  Time: 07:00 AM
+  Group Name: Eye-Openers
+  Address: '5375 Western Ave. #F'
+  City: Boulder
+  District: '24'
+  Codes: "*nSit"
+- Day: Monday
+  Time: 07:00 AM
+  Group Name: Golden Sunrise
+  Address: 1320 Arapahoe St. (Ch)
+  City: Golden
+  District: '33'
+  Codes: STn
+- Day: Monday
+  Time: 07:00 AM
+  Group Name: Morning Reflection
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: "*n"
+- Day: Monday
+  Time: 07:00 AM
+  Group Name: Rude Awakening
+  Address: 1117 Kimbark St.
+  City: Longmont
+  District: '34'
+  Codes: "*n"
+- Day: Monday
+  Time: 07:30 AM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Monday
+  Time: 07:30 AM
+  Group Name: Morning After
+  Address: 3489 W. 72nd (Rm 104)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Monday
+  Time: 07:30 AM
+  Group Name: Mountain View
+  Address: 8968 N. Washington (storefront)
+  City: Thornton
+  District: '9'
+  Codes: "*n"
+- Day: Monday
+  Time: 08:15 AM
+  Group Name: Franktown Friends
+  Address: 1959 N. Hwy 83 (Fire Sta)
+  City: Franktown
+  District: '10'
+  Codes: "*n"
+- Day: Monday
+  Time: 09:00 AM
+  Group Name: V.A. Early Birds
+  Address: '1055 Clermont St. (Hosp 3E #115)'
+  City: Denver
+  District: '16'
+  Codes: BB*n
+- Day: Monday
+  Time: 09:30 AM
+  Group Name: A Vision 4 Today
+  Address: 8081 E. Orchard Rd. (Ent5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: "*nSit"
+- Day: Monday
+  Time: 09:30 AM
+  Group Name: Women No Excuses
+  Address: 7520 S. Boulder Rd. (Ch)
+  City: Boulder
+  District: '24'
+  Codes: BBW*n
+- Day: Monday
+  Time: 10:00 AM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Monday
+  Time: 10:00 AM
+  Group Name: Group 1
+  Address: '3355 S. Wadsworth #H-125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: "*n"
+- Day: Monday
+  Time: 10:00 AM
+  Group Name: Grupo El Principio
+  Address: 2420 S. Federal Bl.
+  City: Denver
+  District: '25'
+  Codes: Spnn
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: 231 Buckley
+  Address: 15210 E 6th Ave, Unit 1, 343-4994
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: Alano
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: "*n"
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: Any Lengths
+  Address: 5707 S. Simms St (Ch)
+  City: Littleton
+  District: '30'
+  Codes: CSTW*n
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: Arid Group
+  Address: 1480 Hoyt St.  238-5693
+  City: Lakewood
+  District: '12'
+  Codes: "*n"
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: Aurora Nooners
+  Address: 10242 E. 16th Ave (upstairs), 366-3622
+  City: Aurora
+  District: '16'
+  Codes: Cs
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: AWOL
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '11'
+  Codes: BB*n
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: Bill's Brownbaggers
+  Address: 8250 W. 80th Ave. Unit 12, 303-420-6560
+  City: Arvada
+  District: '31'
+  Codes: "*n"
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: Boulder Nooners
+  Address: '5375 Western Ave. #F'
+  City: Boulder
+  District: '24'
+  Codes: "*n"
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: 'Brighton #1'
+  Address: 147 S. 2nd Place, 303-659-9953
+  City: Brighton
+  District: '9'
+  Codes: C*n
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: Buckeye Easy Does It
+  Address: 16732 E Iliff Av (Shop Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: Came to Believe
+  Address: 1311 York St. 303-322-3674
+  City: Denver
+  District: '13'
+  Codes: C
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: Circle of Friends
+  Address: 4881 Cherokee Dr. (Ch)
+  City: Castle Rock
+  District: '10'
+  Codes: n
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: Day By Day
+  Address: 1008 E. Hampden Ave.
+  City: Englewood
+  District: '11'
+  Codes: "*"
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: Happy Trudgers
+  Address: 1820 Broadway (Ch. Annex bsmt.)
+  City: Denver
+  District: '9'
+  Codes: n
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: High Noon
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: Cn
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: Home Girls
+  Address: 2425 Colorado Ave. (Rm A/B)
+  City: Boulder
+  District: '24'
+  Codes: Wn
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: Little Red House
+  Address: 7275 Monaco, 287-9950
+  City: Commerce City
+  District: '9'
+  Codes: B
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: Liv in the Answer
+  Address: 9650 S. Jordan Rd. (Ch)
+  City: Parker
+  District: '10'
+  Codes: ST*n
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: Mid-day Open
+  Address: '10576 W. Alameda Ave. #2'
+  City: Lakewood
+  District: '19'
+  Codes: "*n"
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: Miracles Happen
+  Address: 10242 E. 16th Ave, 366-3622
+  City: Aurora
+  District: '16'
+  Codes: BBn
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: Mountain Nooners
+  Address: 12795 Hwy 285, S of Conifer
+  City: Conifer
+  District: '29'
+  Codes: Bn
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: Mountain View
+  Address: 8968 N. Washington (storefront)
+  City: Thornton
+  District: '9'
+  Codes: "*n"
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: Newner Meeting
+  Address: '3355 S. Wadsworth Bl. #H-127'
+  City: Lakewood
+  District: '30'
+  Codes: B*n
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: No Half Measures
+  Address: 3600 S. Clarkson (NE of Ch), 781-5822
+  City: Englewood
+  District: '11'
+  Codes: "*n"
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: Noon Beginners
+  Address: '10576 W. Alameda Ave. #2'
+  City: Lakewood
+  District: '19'
+  Codes: Bn
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: Noon Workshop
+  Address: 8081 E. Orchard Rd. (Ent 5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: Cn
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: Other Noon Group
+  Address: 390 Lashley Ave.
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: Pass It On
+  Address: 8035 S. Quebec St. (Ch)
+  City: Centennial
+  District: '16'
+  Codes: Cn
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: Return to Sanity
+  Address: 8300 Pomona Dr. (Ch)
+  City: Arvada
+  District: '31'
+  Codes: "*n"
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: Serenity Seekers
+  Address: 1201 S. Steele St. (ch)
+  City: Denver
+  District: '13'
+  Codes: W*n
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: We Care
+  Address: 3060 S. Monaco Pkwy (Ch)
+  City: Denver
+  District: '16'
+  Codes: W*n
+- Day: Monday
+  Time: 12:00 PM
+  Group Name: Weekday Sobriety
+  Address: 1117 Kimbark St.
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Monday
+  Time: 01:00 PM
+  Group Name: E. Hampden Women
+  Address: 3800 E Hampden  (Ch, rear downstairs)
+  City: Englewood
+  District: '11'
+  Codes: CW*n
+- Day: Monday
+  Time: 02:00 PM
+  Group Name: AWOL
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '11'
+  Codes: "*n"
+- Day: Monday
+  Time: 03:00 PM
+  Group Name: 3 PM How It Works
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Monday
+  Time: 03:00 PM
+  Group Name: First Things First
+  Address: 1385 Carr St., Suite 2
+  City: Lakewood
+  District: '12'
+  Codes: "*n"
+- Day: Monday
+  Time: 04:00 PM
+  Group Name: Clean Livers
+  Address: '5375 Western Ave. #F'
+  City: Boulder
+  District: '24'
+  Codes: ST*n
+- Day: Monday
+  Time: 04:30 PM
+  Group Name: Arid Group
+  Address: 1480 Hoyt St.  238-5693
+  City: Lakewood
+  District: '12'
+  Codes: CST*n
+- Day: Monday
+  Time: 05:00 PM
+  Group Name: Burning Desire
+  Address: 122 E. William St. (McCaslin & Coal Crk)
+  City: Superior
+  District: '34'
+  Codes: n
+- Day: Monday
+  Time: 05:00 PM
+  Group Name: Sober Solutions
+  Address: 390 Lashley Ave.
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Monday
+  Time: 05:15 PM
+  Group Name: People's Meeting
+  Address: 876 14th St. (house)
+  City: Boulder
+  District: '24'
+  Codes: n
+- Day: Monday
+  Time: 05:30 PM
+  Group Name: 5:30 Recharge
+  Address: 10242 E. 16th Ave (366-3622)
+  City: Aurora
+  District: '16'
+  Codes: CBs
+- Day: Monday
+  Time: 05:30 PM
+  Group Name: Always Hope
+  Address: '3355 S. Wadsworth Ave. #H-125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: "*n"
+- Day: Monday
+  Time: 05:30 PM
+  Group Name: AWOL
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '11'
+  Codes: "*n"
+- Day: Monday
+  Time: 05:30 PM
+  Group Name: Bill & Bob's Adventure
+  Address: 3600 S Clarkson (Ch, NE house)
+  City: Englewood
+  District: '11'
+  Codes: B*n
+- Day: Monday
+  Time: 05:30 PM
+  Group Name: Boulder Happy Hour
+  Address: '5375 Western Ave. #F'
+  City: Boulder
+  District: '24'
+  Codes: "*n"
+- Day: Monday
+  Time: 05:30 PM
+  Group Name: Day By Day
+  Address: 1008 E. Hampden Ave.
+  City: Englewood
+  District: '11'
+  Codes: B*
+- Day: Monday
+  Time: 05:30 PM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: CST*n
+- Day: Monday
+  Time: 05:30 PM
+  Group Name: Happy Hour Group
+  Address: 1117 Kimbark St.
+  City: Longmont
+  District: '34'
+  Codes: BB*n
+- Day: Monday
+  Time: 05:30 PM
+  Group Name: Mountain View
+  Address: 8968 N. Washington (storefront)
+  City: Thornton
+  District: '9'
+  Codes: "*n"
+- Day: Monday
+  Time: 05:30 PM
+  Group Name: Recovery Hour
+  Address: 8250 W 80th Ave. Unit 12, 303-420-6560
+  City: Arvada
+  District: '31'
+  Codes: C*n
+- Day: Monday
+  Time: 05:30 PM
+  Group Name: Sisters in Serenity
+  Address: 3600 S. Clarkson (Bldg NE corner)
+  City: Englewood
+  District: '11'
+  Codes: W*n
+- Day: Monday
+  Time: 05:30 PM
+  Group Name: Spirit of Recovery
+  Address: 10576 W. Alameda Ave., 238-1229
+  City: Lakewood
+  District: '19'
+  Codes: n
+- Day: Monday
+  Time: 05:30 PM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Monday
+  Time: 05:45 PM
+  Group Name: 5:45 Happy Hour
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Monday
+  Time: 05:45 PM
+  Group Name: Buckeye Easy Does It
+  Address: 16732 E Iliff Av (Shop Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Monday
+  Time: 05:45 PM
+  Group Name: DTC Sobriety
+  Address: 8081 E. Orchard Rd. (Entr 5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: B*n
+- Day: Monday
+  Time: 05:45 PM
+  Group Name: Lakewood Open
+  Address: 9200 W. 10th Ave (Ch)
+  City: Lakewood
+  District: '12'
+  Codes: B*n
+- Day: Monday
+  Time: 05:45 PM
+  Group Name: S.O.T.S.
+  Address: '3355 S. Wadsworth #H-125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: CBB*n
+- Day: Monday
+  Time: 05:45 PM
+  Group Name: Sunlight
+  Address: 324 S. Sherman St. (Ch)
+  City: Denver
+  District: '13'
+  Codes: "*n"
+- Day: Monday
+  Time: 06:00 PM
+  Group Name: 231 Buckley
+  Address: 15210 E 6th Ave, Unit 1, 343-4994
+  City: Aurora
+  District: '10'
+  Codes: M*n
+- Day: Monday
+  Time: 06:00 PM
+  Group Name: Arid Group
+  Address: 1480 Hoyt St.  238-5693
+  City: Lakewood
+  District: '12'
+  Codes: "*n"
+- Day: Monday
+  Time: 06:00 PM
+  Group Name: Boulder It's in the Book
+  Address: 7520 S. Boulder Rd. (Ch)
+  City: Boulder
+  District: '24'
+  Codes: BBW*n
+- Day: Monday
+  Time: 06:00 PM
+  Group Name: Cherry Creek Promises
+  Address: 700 S. Franklin (Ch)
+  City: Denver
+  District: '13'
+  Codes: C*n
+- Day: Monday
+  Time: 06:00 PM
+  Group Name: Daily Reprieve
+  Address: 17701 W. 16th (Ch)
+  City: Golden
+  District: '33'
+  Codes: "*n"
+- Day: Monday
+  Time: 06:00 PM
+  Group Name: Grupo Unidad
+  Address: 5375 Western Ave. (rear)
+  City: Boulder
+  District: '25'
+  Codes: Spn
+- Day: Monday
+  Time: 06:00 PM
+  Group Name: Intervals Hilarious
+  Address: 6774 W. 66th Ave. (Ch)
+  City: Arvada
+  District: '31'
+  Codes: C*n
+- Day: Monday
+  Time: 06:00 PM
+  Group Name: Lilley Gulch
+  Address: 7964 S Depew(Platte Cyn/Chatfield)
+  City: Littleton
+  District: '30'
+  Codes: C*
+- Day: Monday
+  Time: 06:00 PM
+  Group Name: Little Red House
+  Address: 7275 Monaco, 287-9950
+  City: Commerce City
+  District: '9'
+  Codes: B
+- Day: Monday
+  Time: 06:00 PM
+  Group Name: New Direction
+  Address: 1450 Airport Blvd. (Ch)
+  City: Aurora
+  District: '10'
+  Codes: CBB*n
+- Day: Monday
+  Time: 06:00 PM
+  Group Name: Pathfinder
+  Address: 26349 Hwy 74 (Ch)
+  City: Kittridge
+  District: '29'
+  Codes: "*n"
+- Day: Monday
+  Time: 06:00 PM
+  Group Name: Women Growing
+  Address: 15210 E.6th Ave (Unit 1) 343-4994
+  City: Aurora
+  District: '10'
+  Codes: W*n
+- Day: Monday
+  Time: 06:00 PM
+  Group Name: Womens BB Study
+  Address: 2552 Williams St. (Ch)
+  City: Denver
+  District: '9'
+  Codes: BBW
+- Day: Monday
+  Time: 06:15 PM
+  Group Name: Happy Hour Monday
+  Address: 7691 S. University (Ch Sch Bsmt)
+  City: Centennial
+  District: '11'
+  Codes: Cn
+- Day: Monday
+  Time: 06:30 PM
+  Group Name: Alano Men's Stag
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: CM*n
+- Day: Monday
+  Time: 06:30 PM
+  Group Name: Burning Desire
+  Address: 122 E. William St. (McCaslin & Coal Crk)
+  City: Superior
+  District: '34'
+  Codes: BBn
+- Day: Monday
+  Time: 06:30 PM
+  Group Name: Three for All
+  Address: 12795 Hwy 285, S of Conifer 838-9908
+  City: Conifer
+  District: '29'
+  Codes: BB*n
+- Day: Monday
+  Time: 07:00 PM
+  Group Name: Boulder Men's BB
+  Address: 5375 Western Ave. (Rm A)
+  City: Boulder
+  District: '24'
+  Codes: BBn
+- Day: Monday
+  Time: 07:00 PM
+  Group Name: Boulder Women
+  Address: 3700 Baseline (Ch)
+  City: Boulder
+  District: '24'
+  Codes: Wn
+- Day: Monday
+  Time: 07:00 PM
+  Group Name: Clear Creek Roadrunners
+  Address: 1410 Colorado (Ch, side door)
+  City: Idaho Springs
+  District: '33'
+  Codes: CBB*n
+- Day: Monday
+  Time: 07:00 PM
+  Group Name: Emotional Sobriety
+  Address: 1311 York St.,  322-3674
+  City: Denver
+  District: '13'
+  Codes: Cn
+- Day: Monday
+  Time: 07:00 PM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: CBB*n
+- Day: Monday
+  Time: 07:00 PM
+  Group Name: Happy Way
+  Address: 3885 S. Broadway (Ch bsmt)
+  City: Englewood
+  District: '11'
+  Codes: n
+- Day: Monday
+  Time: 07:00 PM
+  Group Name: It's Come To This
+  Address: 8131 S. Pierce St. (Ch bsmt)
+  City: Littleton
+  District: '30'
+  Codes: ST*n
+- Day: Monday
+  Time: 07:00 PM
+  Group Name: Kiowa Creek AA
+  Address: 231 Cheyenne St. (Ch bsmt)
+  City: Kiowa
+  District: '10'
+  Codes: BBn
+- Day: Monday
+  Time: 07:00 PM
+  Group Name: Midtowne on the Park
+  Address: '1290 Williams #103 (Community Cntr)'
+  City: Denver
+  District: '13'
+  Codes: BG*n
+- Day: Monday
+  Time: 07:00 PM
+  Group Name: Roaming Sisters*
+  Address: 1311 York St. 322-3674
+  City: Denver
+  District: '13'
+  Codes: Wn
+- Day: Monday
+  Time: 07:00 PM
+  Group Name: Sippers
+  Address: Main & Elizabeth (Ch 1st Floor)
+  City: Platteville
+  District: '34'
+  Codes: n
+- Day: Monday
+  Time: 07:00 PM
+  Group Name: Sobriety at Seven
+  Address: '3355 S. Wadsworth #H125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: C*n
+- Day: Monday
+  Time: 07:00 PM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: Bn
+- Day: Monday
+  Time: 07:15 PM
+  Group Name: Beginners
+  Address: 16732 E. Iliff Ave (Shop. Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: CST*n
+- Day: Monday
+  Time: 07:15 PM
+  Group Name: Unity AA Group
+  Address: 1401 Spruce St (Ch)
+  City: Boulder
+  District: '24'
+  Codes: n
+- Day: Monday
+  Time: 07:30 PM
+  Group Name: A N.E.W. in life
+  Address: 13645 E. Bayaud Ave. (Hall)
+  City: Aurora
+  District: '10'
+  Codes: B*n
+- Day: Monday
+  Time: 07:30 PM
+  Group Name: Acceptance Too
+  Address: 12755 W. Cedar Dr. (Ch)
+  City: Lakewood
+  District: '19'
+  Codes: n
+- Day: Monday
+  Time: 07:30 PM
+  Group Name: 'Brighton #1'
+  Address: 147 S. 2nd Place, 303-659-9953
+  City: Brighton
+  District: '9'
+  Codes: CBB*n
+- Day: Monday
+  Time: 07:30 PM
+  Group Name: Broomfield Any Lengths
+  Address: 825 Kohl St (Ch. Bsmt.)
+  City: Broomfield
+  District: '32'
+  Codes: Cn
+- Day: Monday
+  Time: 07:30 PM
+  Group Name: Castle Rock Group
+  Address: 2301 Woodlands Blvd. (Rec Cntr)
+  City: Castle Rock
+  District: '10'
+  Codes: C*n
+- Day: Monday
+  Time: 07:30 PM
+  Group Name: Grupo 3RA Tradicion
+  Address: '6401 E. 72nd Ave. #115'
+  City: Commerce City
+  District: '25'
+  Codes: Spn
+- Day: Monday
+  Time: 07:30 PM
+  Group Name: Grupo Aurora 97
+  Address: 1408 Del Mar Pkwy. Unit C
+  City: Aurora
+  District: '25'
+  Codes: Spnn
+- Day: Monday
+  Time: 07:30 PM
+  Group Name: Grupo Camino A La Sobried
+  Address: 1400 Joliet St.
+  City: Aurora
+  District: '25'
+  Codes: Spn
+- Day: Monday
+  Time: 07:30 PM
+  Group Name: Grupo El Alba
+  Address: '3133 Peoria St. #205'
+  City: Denver
+  District: '25'
+  Codes: Spnn
+- Day: Monday
+  Time: 07:30 PM
+  Group Name: Grupo El Buen Camino
+  Address: 1679 47th Ave.
+  City: Denver
+  District: '25'
+  Codes: Spn
+- Day: Monday
+  Time: 07:30 PM
+  Group Name: Grupo El Principio
+  Address: 2420 S. Federal Bl.
+  City: Denver
+  District: '25'
+  Codes: Spnn
+- Day: Monday
+  Time: 07:30 PM
+  Group Name: Grupo Honestidad
+  Address: 2320 E. 49th Ave.
+  City: Denver
+  District: '25'
+  Codes: Spn
+- Day: Monday
+  Time: 07:30 PM
+  Group Name: Grupo Latinos Unidos
+  Address: 786 Peoria St. (90 mins)
+  City: Aurora
+  District: '25'
+  Codes: Spn
+- Day: Monday
+  Time: 07:30 PM
+  Group Name: Grupo Los Buenos Veterano
+  Address: '11000 E. Yale Ave. #80, 303-671-2983'
+  City: Aurora
+  District: '25'
+  Codes: Spnn
+- Day: Monday
+  Time: 07:30 PM
+  Group Name: Grupo Nuevo Destino
+  Address: 1900 Harlan St.
+  City: Lakewood
+  District: '25'
+  Codes: Spn
+- Day: Monday
+  Time: 07:30 PM
+  Group Name: Grupo Renovacion
+  Address: 3458 1st Ave.
+  City: Denver
+  District: '25'
+  Codes: Spnn
+- Day: Monday
+  Time: 07:30 PM
+  Group Name: Grupo Solo por Hoy
+  Address: '7131 Irving St. #202'
+  City: Denver
+  District: '25'
+  Codes: Spn
+- Day: Monday
+  Time: 07:30 PM
+  Group Name: Longs Peak Group
+  Address: 803 3rd Ave. (Ch )
+  City: Longmont
+  District: '34'
+  Codes: CSTn
+- Day: Monday
+  Time: 07:30 PM
+  Group Name: Lyons/St Vrain Group
+  Address: 4th & High St. (Oddfellows Hall)
+  City: Lyons
+  District: '34'
+  Codes: "*n"
+- Day: Monday
+  Time: 07:30 PM
+  Group Name: School of Hard Knox
+  Address: 7275 Monaco, 287-9950
+  City: Commerce City
+  District: '9'
+  Codes: n
+- Day: Monday
+  Time: 07:30 PM
+  Group Name: Strasburg Sobriety
+  Address: 1656 Main St. (Ch)
+  City: Strasburg
+  District: '10'
+  Codes: C*n
+- Day: Monday
+  Time: 07:30 PM
+  Group Name: Wano Group
+  Address: 1255 Centair Village Dr. (Ch)
+  City: Lafayette
+  District: '24'
+  Codes: Cn
+- Day: Monday
+  Time: 08:00 PM
+  Group Name: Boulder Womens
+  Address: 1237 Pine St. (Ch)
+  City: Boulder
+  District: '24'
+  Codes: Wn
+- Day: Monday
+  Time: 08:00 PM
+  Group Name: Denver Young People
+  Address: 2122 S. Lafayette (Ch rear)
+  City: Denver
+  District: '11'
+  Codes: Y*n
+- Day: Monday
+  Time: 08:00 PM
+  Group Name: Fireside
+  Address: 1899 S. Irving (Ch annex, 2nd fl)
+  City: Denver
+  District: '19'
+  Codes: Cn
+- Day: Monday
+  Time: 08:00 PM
+  Group Name: Friends of Bill W.
+  Address: 700 S. Franklin St. (Ch)
+  City: Denver
+  District: '13'
+  Codes: C*n
+- Day: Monday
+  Time: 08:00 PM
+  Group Name: Great Fact
+  Address: 3350 Chisholm Tr. (Clubhse)
+  City: Boulder
+  District: '24'
+  Codes: CASTn
+- Day: Monday
+  Time: 08:00 PM
+  Group Name: Group 13
+  Address: 2180 S. University Blvd (Ch, E door)
+  City: Denver
+  District: '11'
+  Codes: C*n
+- Day: Monday
+  Time: 08:00 PM
+  Group Name: Grupo La Ultima Cruda
+  Address: 9357 E. Colfax Ave. Unit E
+  City: Aurora
+  District: '25'
+  Codes: Spn
+- Day: Monday
+  Time: 08:00 PM
+  Group Name: H.O.W. Alano
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: "*n"
+- Day: Monday
+  Time: 08:00 PM
+  Group Name: How It Works
+  Address: 7195 Simms (Ch)
+  City: Arvada
+  District: '31'
+  Codes: Cn
+- Day: Monday
+  Time: 08:00 PM
+  Group Name: New Life
+  Address: 3489 W. 72nd (Rm 104)
+  City: Westminster
+  District: '32'
+  Codes: CBBn
+- Day: Monday
+  Time: 08:00 PM
+  Group Name: No Mental Defense
+  Address: 1385 Carr St. (Ste 2)
+  City: Lakewood
+  District: '12'
+  Codes: "*n"
+- Day: Monday
+  Time: 08:00 PM
+  Group Name: Oasis Group
+  Address: '3355 S. Wadsworth #H-125 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: C*n
+- Day: Monday
+  Time: 08:00 PM
+  Group Name: Parker Monday
+  Address: 10521 S. Parker Rd. Ste G
+  City: Parker
+  District: '10'
+  Codes: n
+- Day: Monday
+  Time: 08:00 PM
+  Group Name: Sho-Gro
+  Address: 3701 W. 50th Ave (Ch bsmt, on Meade St.)
+  City: Denver
+  District: '12'
+  Codes: CBBn
+- Day: Monday
+  Time: 08:30 PM
+  Group Name: Men's Group
+  Address: 1117 Kimbark St.
+  City: Longmont
+  District: '34'
+  Codes: CM*n
+- Day: Monday
+  Time: 08:30 PM
+  Group Name: Too Young to Die
+  Address: '8081 E. Orchard Rd. #115'
+  City: Greenwood Village
+  District: '16'
+  Codes: Y*n
+- Day: Monday
+  Time: 08:30 PM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Monday
+  Time: 10:00 PM
+  Group Name: 10 PM Last Call
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: CAn
+- Day: Tuesday
+  Time: 05:30 AM
+  Group Name: R U Nutz?
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '13'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 06:30 AM
+  Group Name: Early Bird
+  Address: 16732 E. Iliff (Shop. Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: ST*n
+- Day: Tuesday
+  Time: 06:30 AM
+  Group Name: Edit Eye Openers
+  Address: '10576 W. Alameda Ave #2 238-1229'
+  City: Lakewood
+  District: '19'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 06:30 AM
+  Group Name: First Things First
+  Address: 1385 Carr St., Suite 2
+  City: Lakewood
+  District: '12'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 06:30 AM
+  Group Name: Rude Rousing
+  Address: 390 Lashley Ave.
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Tuesday
+  Time: 06:30 AM
+  Group Name: Sunrise Serenity
+  Address: '3355 S. Wadsworth #H125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: ST*n
+- Day: Tuesday
+  Time: 06:30 AM
+  Group Name: There is a Solution
+  Address: 8081 E. Orchard Rd. (Entr 5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: n
+- Day: Tuesday
+  Time: 06:45 AM
+  Group Name: Crack of Dawn
+  Address: 3600 S. Clarkson (Ch,NE House) 781-5822
+  City: Englewood
+  District: '11'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 06:45 AM
+  Group Name: Daily Reflections
+  Address: 8081 E. Orchard Rd. (Ent 5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 06:45 AM
+  Group Name: P.P. Workshop
+  Address: 8545 E. Dry Creek Rd. (Ch Bsmt)
+  City: Centennial
+  District: '16'
+  Codes: n
+- Day: Tuesday
+  Time: 06:45 AM
+  Group Name: Upon Awakening
+  Address: 8817 S. Broadway (Ch)
+  City: Highlands Ranch
+  District: '11'
+  Codes: BB*n
+- Day: Tuesday
+  Time: 07:00 AM
+  Group Name: Attitude Adjustment
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Tuesday
+  Time: 07:00 AM
+  Group Name: Bottoms Up
+  Address: 5927 Miller St. (Ch)
+  City: Arvada
+  District: '12'
+  Codes: C*n
+- Day: Tuesday
+  Time: 07:00 AM
+  Group Name: Boulder 11th Step
+  Address: 5375 Western Ave.
+  City: Boulder
+  District: '24'
+  Codes: ST*n
+- Day: Tuesday
+  Time: 07:00 AM
+  Group Name: Dawn Patrol
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '13'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 07:00 AM
+  Group Name: Degenerates
+  Address: '8250 W. 80th Ave. #12'
+  City: Arvada
+  District: '31'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 07:00 AM
+  Group Name: Eye-Openers
+  Address: '5375 Western Ave. #F'
+  City: Boulder
+  District: '24'
+  Codes: "*nSit"
+- Day: Tuesday
+  Time: 07:00 AM
+  Group Name: Morning Reflection
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 07:00 AM
+  Group Name: Rude Awakening
+  Address: 1117 Kimbark St.
+  City: Longmont
+  District: '34'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 07:30 AM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Tuesday
+  Time: 07:30 AM
+  Group Name: Morning After
+  Address: 3489 W. 72nd (Rm 104)
+  City: Westminster
+  District: '32'
+  Codes: STn
+- Day: Tuesday
+  Time: 07:30 AM
+  Group Name: Mountain View
+  Address: 8968 N. Washington (storefront)
+  City: Thornton
+  District: '9'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 08:15 AM
+  Group Name: Franktown Friends
+  Address: 1959 N. Hwy 83 (Fire Sta)
+  City: Franktown
+  District: '10'
+  Codes: BB*n
+- Day: Tuesday
+  Time: 09:30 AM
+  Group Name: A Vision 4 Today
+  Address: 8081 E. Orchard Rd. (Ent5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: "*nSit"
+- Day: Tuesday
+  Time: 10:00 AM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Tuesday
+  Time: 10:00 AM
+  Group Name: Group 1
+  Address: '3355 S. Wadsworth #H-125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 10:00 AM
+  Group Name: Grupo El Principio
+  Address: 2420 S. Federal Bl.
+  City: Denver
+  District: '25'
+  Codes: Spnn
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: 12 at 12
+  Address: 3690 Cherry Creek S. Dr. (Ch)
+  City: Denver
+  District: '13'
+  Codes: "*"
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: 231 Buckley
+  Address: 15210 E 6th Ave, Unit 1, 343-4994
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: Alano
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: Arid Group
+  Address: 1480 Hoyt St.  238-5693
+  City: Lakewood
+  District: '12'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: Aurora Nooners
+  Address: 10242 E. 16th Ave (upstairs), 366-3622
+  City: Aurora
+  District: '16'
+  Codes: Cs
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: AWOL
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '11'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: Between the Tracks
+  Address: 1117 Kimbark St.
+  City: Longmont
+  District: '34'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: Bill's Brownbaggers
+  Address: 8250 W. 80th Ave. Unit 12, 303-420-6560
+  City: Arvada
+  District: '31'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: Boulder Nooners
+  Address: '5375 Western Ave. #F'
+  City: Boulder
+  District: '24'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: 'Brighton #1'
+  Address: 147 S. 2nd Place, 303-659-9953
+  City: Brighton
+  District: '9'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: Buckeye Easy Does It
+  Address: 16732 E Iliff Av (Shop Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: Circle of Friends
+  Address: 4881 Cherokee Dr. (Ch)
+  City: Castle Rock
+  District: '10'
+  Codes: n
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: Day By Day
+  Address: 1008 E. Hampden Ave.
+  City: Englewood
+  District: '11'
+  Codes: "*"
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: Edit Nooners
+  Address: '10576 W. Alameda Ave. #2, 238-1229'
+  City: Lakewood
+  District: '19'
+  Codes: n
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: Happy Trudgers
+  Address: 1820 Broadway (Ch. Annex bsmt.)
+  City: Denver
+  District: '9'
+  Codes: n
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: High Noon
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: Cn
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: Little Red House
+  Address: 7275 Monaco, 287-9950
+  City: Commerce City
+  District: '9'
+  Codes: n
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: Liv in the Answer
+  Address: 9650 S. Jordan Rd. (Ch)
+  City: Parker
+  District: '10'
+  Codes: CST*n
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: Living the Solution
+  Address: 3700 Baseline (Ch)
+  City: Boulder
+  District: '24'
+  Codes: Wn
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: Miracles Happen
+  Address: 10242 E. 16th Ave, 366-3622
+  City: Aurora
+  District: '16'
+  Codes: n
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: Mountain Nooners
+  Address: 12795 Hwy 285, S of Conifer
+  City: Conifer
+  District: '29'
+  Codes: n
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: Mountain View
+  Address: 8968 N. Washington (storefront)
+  City: Thornton
+  District: '9'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: Newner Meeting
+  Address: '3355 S. Wadsworth Bl. #H-127'
+  City: Lakewood
+  District: '30'
+  Codes: B*n
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: No Half Measures
+  Address: 3600 S. Clarkson (NE of Ch), 781-5822
+  City: Englewood
+  District: '11'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: Noon Beginners
+  Address: '10576 W. Alameda Ave. #2'
+  City: Lakewood
+  District: '19'
+  Codes: BBn
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: Noon Workshop
+  Address: 8081 E. Orchard Rd. (Ent 5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: n
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: One Step at a Time
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: Cn
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: Other Noon Group
+  Address: 390 Lashley Ave.
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: Pass It On
+  Address: 8035 S. Quebec St. (Ch)
+  City: Centennial
+  District: '16'
+  Codes: CBBn
+- Day: Tuesday
+  Time: 12:00 PM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Tuesday
+  Time: 12:15 PM
+  Group Name: Joyful Journey
+  Address: 4500 E. Hampden (Ch.)
+  City: Englewood
+  District: '11'
+  Codes: W*n
+- Day: Tuesday
+  Time: 01:30 PM
+  Group Name: Design for Living
+  Address: 1480 Hoyt St.
+  City: Lakewood
+  District: '12'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 02:00 PM
+  Group Name: AWOL
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '11'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 03:00 PM
+  Group Name: 3 PM How It Works
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Tuesday
+  Time: 03:00 PM
+  Group Name: First Things First
+  Address: 1385 Carr St., Suite 2
+  City: Lakewood
+  District: '12'
+  Codes: ST*n
+- Day: Tuesday
+  Time: 05:00 PM
+  Group Name: Sober Solutions
+  Address: 390 Lashley Ave.
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Tuesday
+  Time: 05:30 PM
+  Group Name: 5:30 Recharge
+  Address: 10242 E. 16th Ave (366-3622)
+  City: Aurora
+  District: '16'
+  Codes: CBs
+- Day: Tuesday
+  Time: 05:30 PM
+  Group Name: Always Hope
+  Address: '3355 S. Wadsworth Ave. #H-125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 05:30 PM
+  Group Name: AWOL
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '11'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 05:30 PM
+  Group Name: Bill & Bob's Adventure
+  Address: 3600 S Clarkson (Ch, NE house)
+  City: Englewood
+  District: '11'
+  Codes: B*n
+- Day: Tuesday
+  Time: 05:30 PM
+  Group Name: Boulder Happy Hour
+  Address: '5375 Western Ave. #F'
+  City: Boulder
+  District: '24'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 05:30 PM
+  Group Name: Day By Day
+  Address: 1008 E. Hampden Ave.
+  City: Englewood
+  District: '11'
+  Codes: B*
+- Day: Tuesday
+  Time: 05:30 PM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Tuesday
+  Time: 05:30 PM
+  Group Name: Happy Hour Group
+  Address: 1117 Kimbark St.
+  City: Longmont
+  District: '34'
+  Codes: ST*n
+- Day: Tuesday
+  Time: 05:30 PM
+  Group Name: Mountain View
+  Address: 8968 N. Washington (storefront)
+  City: Thornton
+  District: '9'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 05:30 PM
+  Group Name: Recovery Hour
+  Address: 8250 W 80th Ave. Unit 12, 303-420-6560
+  City: Arvada
+  District: '31'
+  Codes: C*n
+- Day: Tuesday
+  Time: 05:30 PM
+  Group Name: Spirit of Recovery
+  Address: 10576 W. Alameda Ave., 238-1229
+  City: Lakewood
+  District: '19'
+  Codes: n
+- Day: Tuesday
+  Time: 05:30 PM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Tuesday
+  Time: 05:35 PM
+  Group Name: Bills Angels
+  Address: 5600 E Belleview Ave. (Ch)
+  City: Greenwood Village
+  District: '16'
+  Codes: W*n
+- Day: Tuesday
+  Time: 05:45 PM
+  Group Name: 5:45 Happy Hour
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Tuesday
+  Time: 05:45 PM
+  Group Name: Buckeye Easy Does It
+  Address: 16732 E Iliff Av (Shop Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 05:45 PM
+  Group Name: DTC Sobriety
+  Address: 8081 E. Orchard Rd. (Entr 5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 05:45 PM
+  Group Name: S.O.T.S.
+  Address: '3355 S. Wadsworth #H-125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: C*n
+- Day: Tuesday
+  Time: 06:00 PM
+  Group Name: 231 Buckley
+  Address: 15210 E 6th Ave, Unit 1, 343-4994
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 06:00 PM
+  Group Name: Arid Group
+  Address: 1480 Hoyt St.  238-5693
+  City: Lakewood
+  District: '12'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 06:00 PM
+  Group Name: Daily Reprieve
+  Address: 17701 W. 16th (Ch)
+  City: Golden
+  District: '33'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 06:00 PM
+  Group Name: Do the Deal
+  Address: 27772 Iris Dr. (Ch)
+  City: Evergreen
+  District: '29'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 06:00 PM
+  Group Name: Eleventh Steppers
+  Address: 9077 W. Alameda Ave. (Ch)
+  City: Lakewood
+  District: '19'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 06:00 PM
+  Group Name: Grupo Unidad
+  Address: 5375 Western Ave. (rear)
+  City: Boulder
+  District: '25'
+  Codes: Spn
+- Day: Tuesday
+  Time: 06:00 PM
+  Group Name: Hope is Here
+  Address: 3601 S. Sherman St. (Bookstore mtg rm)
+  City: Englewood
+  District: '11'
+  Codes: W*n
+- Day: Tuesday
+  Time: 06:00 PM
+  Group Name: Lilley Gulch
+  Address: 7964 S Depew(Platte Cyn/Chatfield)
+  City: Littleton
+  District: '30'
+  Codes: CBB*n
+- Day: Tuesday
+  Time: 06:00 PM
+  Group Name: Little Red House
+  Address: 7275 Monaco, 287-9950
+  City: Commerce City
+  District: '9'
+  Codes: n
+- Day: Tuesday
+  Time: 06:00 PM
+  Group Name: New Beginnings
+  Address: 12795 Hwy 285, S of Conifer
+  City: Conifer
+  District: '29'
+  Codes: B*n
+- Day: Tuesday
+  Time: 06:00 PM
+  Group Name: Nine to Five
+  Address: 1301 E. Colfax Ave. (The Center)
+  City: Denver
+  District: '13'
+  Codes: G*n
+- Day: Tuesday
+  Time: 06:00 PM
+  Group Name: That's Life
+  Address: 2201 Dexter St. (Ch)
+  City: Denver
+  District: '9'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 06:00 PM
+  Group Name: Tue. Nite Promises Disc.
+  Address: 100 Colo Blvd (Ch)
+  City: Denver
+  District: '16'
+  Codes: n
+- Day: Tuesday
+  Time: 06:30 PM
+  Group Name: A New Life
+  Address: 14099 W. Jewell (Ch)
+  City: Lakewood
+  District: '19'
+  Codes: BB*n
+- Day: Tuesday
+  Time: 06:30 PM
+  Group Name: Burning Desire
+  Address: 122 E. William St. (McCaslin & Coal Crk)
+  City: Superior
+  District: '34'
+  Codes: STn
+- Day: Tuesday
+  Time: 07:00 PM
+  Group Name: 24 hr Reprieve
+  Address: 3290 W. Milan Ave. (Ch Annex)
+  City: Sheridan
+  District: '30'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 07:00 PM
+  Group Name: Any Lengths
+  Address: 5707 S. Simms St (Ch)
+  City: Littleton
+  District: '30'
+  Codes: CBB*n
+- Day: Tuesday
+  Time: 07:00 PM
+  Group Name: Boulder Alcoholism
+  Address: 1421 Spruce St. (Ch 2nd Fl)
+  City: Boulder
+  District: '24'
+  Codes: n
+- Day: Tuesday
+  Time: 07:00 PM
+  Group Name: Campus Group
+  Address: 3545 Madison Ave. (Ch)
+  City: Boulder
+  District: '24'
+  Codes: ST*n
+- Day: Tuesday
+  Time: 07:00 PM
+  Group Name: Clear Creek Roadrunner2
+  Address: 6th & Argentine (Comm Ctr 2nd fl)
+  City: Georgetown
+  District: '33'
+  Codes: n
+- Day: Tuesday
+  Time: 07:00 PM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Tuesday
+  Time: 07:00 PM
+  Group Name: Golden Gates
+  Address: 25201 Golden Gate Canyon Rd.
+  City: Golden
+  District: '33'
+  Codes: n
+- Day: Tuesday
+  Time: 07:00 PM
+  Group Name: Happy Way
+  Address: 3885 S. Broadway (Ch bsmt)
+  City: Englewood
+  District: '11'
+  Codes: Cn
+- Day: Tuesday
+  Time: 07:00 PM
+  Group Name: Keep It Simple
+  Address: 325 So. Banner (Ch bsmt.)
+  City: Elizabeth
+  District: '10'
+  Codes: CSTn
+- Day: Tuesday
+  Time: 07:00 PM
+  Group Name: Ladies Choice
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: W*n
+- Day: Tuesday
+  Time: 07:00 PM
+  Group Name: Men's Meeting
+  Address: '1200 South St.(Ch bsmt #104)'
+  City: Castle Rock
+  District: '10'
+  Codes: CMn
+- Day: Tuesday
+  Time: 07:00 PM
+  Group Name: Parker Big Book
+  Address: 10521 S. Parker Rd. Ste G
+  City: Parker
+  District: '10'
+  Codes: CBBn
+- Day: Tuesday
+  Time: 07:00 PM
+  Group Name: Robbers Roost
+  Address: 404 W. Baseline Rd.
+  City: Lafayette
+  District: '24'
+  Codes: CM*n
+- Day: Tuesday
+  Time: 07:00 PM
+  Group Name: Smoky Hill Promises
+  Address: 21755 E. Smoky Hill Rd. (Ch)
+  City: Centennial
+  District: '10'
+  Codes: "*nSit"
+- Day: Tuesday
+  Time: 07:00 PM
+  Group Name: The Ragamuffins
+  Address: 1101 S. Washington St. (Ch)
+  City: Denver
+  District: '11'
+  Codes: CBB*n
+- Day: Tuesday
+  Time: 07:00 PM
+  Group Name: Tornado Alley
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: Cn
+- Day: Tuesday
+  Time: 07:00 PM
+  Group Name: Tri-Town Thirst Quenchers
+  Address: 5860 Majestic St. (Ch)
+  City: Frederick
+  District: '34'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 07:00 PM
+  Group Name: Tues Nite Big Book
+  Address: 326 Highway 119 (Ch)
+  City: Nederland
+  District: '24'
+  Codes: n
+- Day: Tuesday
+  Time: 07:00 PM
+  Group Name: Tues. Candlelight
+  Address: 390 Lashley Ave.
+  City: Longmont
+  District: '34'
+  Codes: CAn
+- Day: Tuesday
+  Time: 07:00 PM
+  Group Name: Tuesday Men's Group
+  Address: 1237 Pine St. (Ch)
+  City: Boulder
+  District: '24'
+  Codes: M*n
+- Day: Tuesday
+  Time: 07:00 PM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: Cn
+- Day: Tuesday
+  Time: 07:00 PM
+  Group Name: Women in Sobriety
+  Address: '1200 South St (Ch bsmt #102)'
+  City: Castle Rock
+  District: '10'
+  Codes: Wn
+- Day: Tuesday
+  Time: 07:00 PM
+  Group Name: Womens Turning Point
+  Address: 8081 E. Orchard Rd. (Ent5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: W*n
+- Day: Tuesday
+  Time: 07:15 PM
+  Group Name: Buckeye Easy Does It
+  Address: 16732 E Iliff Av (Shop Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: W*n
+- Day: Tuesday
+  Time: 07:15 PM
+  Group Name: High Life for Women
+  Address: 111 Del Mar Circle (Ch)
+  City: Aurora
+  District: '10'
+  Codes: W*n
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: A N.E.W. in life
+  Address: 13645 E. Bayaud Ave. (Hall)
+  City: Aurora
+  District: '10'
+  Codes: B*n
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: Beginners Solution
+  Address: 1117 Kimbark St.
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: 'Brighton #1'
+  Address: 147 S. 2nd Place, 303-659-9953
+  City: Brighton
+  District: '9'
+  Codes: B*n
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: Broomfield Any Lengths
+  Address: 825 Kohl St (Ch. Bsmt.)
+  City: Broomfield
+  District: '32'
+  Codes: STn
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: Clean and Serene
+  Address: 12795 Hwy 285 (4mi S of Conifer)
+  City: Conifer
+  District: '29'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: Conifer Seekers
+  Address: 9444 Eagle Cliff Rd (Ch on Hwy 285)
+  City: Conifer
+  District: '29'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: Edgewater Beginners
+  Address: 8250 W 80th Ave. Unit 12, 303-420-6560
+  City: Arvada
+  District: '31'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: Eureka
+  Address: 4643 Wadsworth (Detox 2nd Fl)
+  City: Wheat Ridge
+  District: '12'
+  Codes: Bn
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: Grateful in Genesee
+  Address: 17 S. Mt. Vernon Country Club Rd. (Ch)
+  City: Golden
+  District: '33'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: Green Light Tuesday
+  Address: 1350 Washington (Ch  Rm 200)
+  City: Denver
+  District: '13'
+  Codes: C*n
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: Grupo 3RA Tradicion
+  Address: '6401 E. 72nd Ave. #115'
+  City: Commerce City
+  District: '25'
+  Codes: Spn
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: Grupo Aurora 97
+  Address: 1408 Del Mar Pkwy. Unit C
+  City: Aurora
+  District: '25'
+  Codes: Spnn
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: Grupo El Buen Camino
+  Address: 1679 47th Ave.
+  City: Denver
+  District: '25'
+  Codes: Spn
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: Grupo El Nuevo Camino
+  Address: 825 3rd Ave. (Ch)
+  City: Longmont
+  District: '25'
+  Codes: Spnn
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: Grupo El Principio
+  Address: 2420 S. Federal Bl.
+  City: Denver
+  District: '25'
+  Codes: Spnn
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: Grupo Honestidad
+  Address: 2320 E. 49th Ave.
+  City: Denver
+  District: '25'
+  Codes: Spn
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: Grupo Latinos Unidos
+  Address: 786 Peoria St. (90 mins)
+  City: Aurora
+  District: '25'
+  Codes: Spn
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: Grupo Los Buenos Veterano
+  Address: '11000 E. Yale Ave. #80, 303-671-2983'
+  City: Aurora
+  District: '25'
+  Codes: Spnn
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: Grupo Nuevo Destino
+  Address: 1900 Harlan St.
+  City: Lakewood
+  District: '25'
+  Codes: Spn
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: Grupo Renovacion
+  Address: 3458 1st Ave.
+  City: Denver
+  District: '25'
+  Codes: Spnn
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: Grupo Solo por Hoy
+  Address: '7131 Irving St. #202'
+  City: Denver
+  District: '25'
+  Codes: Spn
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: Happy Landings
+  Address: '7350 E. 29th Ave. #300 (Stapleton-S door MCA bldg)'
+  City: Denver
+  District: '9'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: Love and Unity
+  Address: 7400 W. 80th Ave. (Ch)
+  City: Arvada
+  District: '31'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: Mile High Speaker
+  Address: 4751 Broadway (Salv Army)
+  City: Denver
+  District: '9'
+  Codes: SP*n
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: Recovery at the Ranch
+  Address: 1401 E Dry Creek Rd. (Ch)
+  City: Centennial
+  District: '11'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: S.S.S. Meeting
+  Address: 910 Longs Peak Ave. (Sr. Ctr.)
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: School of Hard Knox
+  Address: 7275 Monaco, 287-9950
+  City: Commerce City
+  District: '9'
+  Codes: BBn
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: Serene in Evergreen
+  Address: 28628 Buffalo Pk Rd (Ch of Hills)
+  City: Evergreen
+  District: '29'
+  Codes: n
+- Day: Tuesday
+  Time: 07:30 PM
+  Group Name: Southside Sobriety
+  Address: 9203 S. University Ave. (Ch)
+  City: Highlands Ranch
+  District: '11'
+  Codes: C*n
+- Day: Tuesday
+  Time: 08:00 PM
+  Group Name: 3 Legacies Group
+  Address: 541 E. 99th Pl. (Ch)
+  City: Thornton
+  District: '9'
+  Codes: n
+- Day: Tuesday
+  Time: 08:00 PM
+  Group Name: A.R.C. Group
+  Address: 3180 Airport Rd. (ARC Rm 5280)
+  City: Boulder
+  District: '24'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 08:00 PM
+  Group Name: Coming To
+  Address: 1155 Cherokee St (detox dining rm)
+  City: Denver
+  District: '13'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 08:00 PM
+  Group Name: Depth and Weight
+  Address: 7964 S. Depew (Platte Canyon/Chatfield)
+  City: Littleton
+  District: '30'
+  Codes: C*n
+- Day: Tuesday
+  Time: 08:00 PM
+  Group Name: Grupo La Ultima Cruda
+  Address: 9357 E. Colfax Ave. Unit E
+  City: Aurora
+  District: '25'
+  Codes: Spn
+- Day: Tuesday
+  Time: 08:00 PM
+  Group Name: Helpless No More
+  Address: 777 Bannock St. (Detox -4th floor E)
+  City: Denver
+  District: '13'
+  Codes: B*n
+- Day: Tuesday
+  Time: 08:00 PM
+  Group Name: Oasis Group
+  Address: '3355 S. Wadsworth #H-125 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: B*n
+- Day: Tuesday
+  Time: 08:00 PM
+  Group Name: Open Splinter
+  Address: 8085 E. Hampden (Ch bsmt)
+  City: Denver
+  District: '16'
+  Codes: n
+- Day: Tuesday
+  Time: 08:00 PM
+  Group Name: Parker Step Group
+  Address: 11805 S. Pine Dr.(Ch rm 144)
+  City: Parker
+  District: '10'
+  Codes: CST*n
+- Day: Tuesday
+  Time: 08:00 PM
+  Group Name: Sobriety
+  Address: 121 Acoma (Sobriety House bsmt) 722-5746
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Tuesday
+  Time: 08:30 PM
+  Group Name: from40oz2freedom
+  Address: 3600 S. Clarkson (NE bldg)
+  City: Englewood
+  District: '11'
+  Codes: STY*n
+- Day: Tuesday
+  Time: 08:30 PM
+  Group Name: Plug in the Jug
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: "*n"
+- Day: Tuesday
+  Time: 08:30 PM
+  Group Name: Spiritual Kndrgrtn
+  Address: 1311 York St.
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Tuesday
+  Time: 08:30 PM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Tuesday
+  Time: 09:00 PM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: CY*n
+- Day: Tuesday
+  Time: 10:00 PM
+  Group Name: 10 PM Last Call
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: CASPn
+- Day: Wednesday
+  Time: 05:30 AM
+  Group Name: R U Nutz?
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '13'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 06:00 AM
+  Group Name: Wednesday 6am
+  Address: 1100 Fillmore St. (Ch Rm 104)
+  City: Denver
+  District: '13'
+  Codes: BBn
+- Day: Wednesday
+  Time: 06:30 AM
+  Group Name: 637 Group
+  Address: 310 Wilcox St. (Restaurant)
+  City: Castle Rock
+  District: '10'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 06:30 AM
+  Group Name: Early Bird
+  Address: 16732 E. Iliff (Shop. Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 06:30 AM
+  Group Name: First Things First
+  Address: 1385 Carr St., Suite 2
+  City: Lakewood
+  District: '12'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 06:30 AM
+  Group Name: Rude Rousing
+  Address: 390 Lashley Ave.
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Wednesday
+  Time: 06:30 AM
+  Group Name: Sunrise Serenity
+  Address: '3355 S. Wadsworth #H125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 06:30 AM
+  Group Name: There is a Solution
+  Address: 8081 E. Orchard Rd. (Entr 5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: n
+- Day: Wednesday
+  Time: 06:45 AM
+  Group Name: Crack of Dawn
+  Address: 3600 S. Clarkson (Ch,NE House) 781-5822
+  City: Englewood
+  District: '11'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 06:45 AM
+  Group Name: Daily Reflections
+  Address: 8081 E. Orchard Rd. (Ent 5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 06:45 AM
+  Group Name: P.P. Workshop
+  Address: 8545 E. Dry Creek Rd. (Ch Bsmt)
+  City: Centennial
+  District: '16'
+  Codes: STn
+- Day: Wednesday
+  Time: 06:45 AM
+  Group Name: Upon Awakening
+  Address: 8817 S. Broadway (Ch)
+  City: Highlands Ranch
+  District: '11'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 07:00 AM
+  Group Name: Attitude Adjustment
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Wednesday
+  Time: 07:00 AM
+  Group Name: Bottoms Up
+  Address: 5927 Miller St. (Ch)
+  City: Arvada
+  District: '12'
+  Codes: C*n
+- Day: Wednesday
+  Time: 07:00 AM
+  Group Name: Boulder Attitude Adjustme
+  Address: 5375 Western Ave. (Rm B)
+  City: Boulder
+  District: '24'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 07:00 AM
+  Group Name: Dawn Patrol
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '13'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 07:00 AM
+  Group Name: Degenerates
+  Address: '8250 W. 80th Ave. #12'
+  City: Arvada
+  District: '31'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 07:00 AM
+  Group Name: Eye-Openers
+  Address: '5375 Western Ave. #F'
+  City: Boulder
+  District: '24'
+  Codes: "*nSit"
+- Day: Wednesday
+  Time: 07:00 AM
+  Group Name: Golden Sunrise
+  Address: 1320 Arapahoe St. (Ch)
+  City: Golden
+  District: '33'
+  Codes: BBWn
+- Day: Wednesday
+  Time: 07:00 AM
+  Group Name: Morning Reflection
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: n
+- Day: Wednesday
+  Time: 07:00 AM
+  Group Name: Rude Awakening
+  Address: 1117 Kimbark St.
+  City: Longmont
+  District: '34'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 07:00 AM
+  Group Name: Straight up AA
+  Address: 1320 Arapahoe St. (Ch)
+  City: Golden
+  District: '33'
+  Codes: BBWn
+- Day: Wednesday
+  Time: 07:30 AM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Wednesday
+  Time: 07:30 AM
+  Group Name: Morning After
+  Address: 3489 W. 72nd (Rm 104)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Wednesday
+  Time: 07:30 AM
+  Group Name: Mountain View
+  Address: 8968 N. Washington (storefront)
+  City: Thornton
+  District: '9'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 08:15 AM
+  Group Name: Franktown Friends
+  Address: 1959 N. Hwy 83 (Fire Sta)
+  City: Franktown
+  District: '10'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 09:00 AM
+  Group Name: V.A. Early Birds
+  Address: '1055 Clermont St. (Hosp 3E #115)'
+  City: Denver
+  District: '16'
+  Codes: BB*n
+- Day: Wednesday
+  Time: 09:30 AM
+  Group Name: A Vision 4 Today
+  Address: 8081 E. Orchard Rd. (Ent5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: "*nSit"
+- Day: Wednesday
+  Time: 09:30 AM
+  Group Name: Women No Excuses
+  Address: 7520 S. Boulder Rd. (Ch)
+  City: Boulder
+  District: '24'
+  Codes: W*n
+- Day: Wednesday
+  Time: 10:00 AM
+  Group Name: Artists n Recovery
+  Address: 1311 York St. 322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Wednesday
+  Time: 10:00 AM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Wednesday
+  Time: 10:00 AM
+  Group Name: Group 1
+  Address: '3355 S. Wadsworth #H-125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 10:00 AM
+  Group Name: Grupo El Principio
+  Address: 2420 S. Federal Bl.
+  City: Denver
+  District: '25'
+  Codes: Spnn
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: 231 Buckley
+  Address: 15210 E 6th Ave, Unit 1, 343-4994
+  City: Aurora
+  District: '10'
+  Codes: BB*n
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: Alano
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: Arid Group
+  Address: 1480 Hoyt St.  238-5693
+  City: Lakewood
+  District: '12'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: Aurora Nooners
+  Address: 10242 E. 16th Ave (upstairs), 366-3622
+  City: Aurora
+  District: '16'
+  Codes: Cs
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: AWOL
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '11'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: Bill's Brownbaggers
+  Address: 8250 W. 80th Ave. Unit 12, 303-420-6560
+  City: Arvada
+  District: '31'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: Boulder Nooners
+  Address: '5375 Western Ave. #F'
+  City: Boulder
+  District: '24'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: 'Brighton #1'
+  Address: 147 S. 2nd Place, 303-659-9953
+  City: Brighton
+  District: '9'
+  Codes: C*n
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: Broomfield Noontimers
+  Address: 545 W. 10th Ave. (Ch bsmt)
+  City: Broomfield
+  District: '32'
+  Codes: n
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: Buckeye Easy Does It
+  Address: 16732 E Iliff Av (Shop Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: CBB*n
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: Came to Believe
+  Address: 1311 York St. 303-322-3674
+  City: Denver
+  District: '13'
+  Codes: C
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: Circle of Friends
+  Address: 4881 Cherokee Dr. (Ch)
+  City: Castle Rock
+  District: '10'
+  Codes: BBn
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: Day By Day
+  Address: 1008 E. Hampden Ave.
+  City: Englewood
+  District: '11'
+  Codes: "*"
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: Happy Trudgers
+  Address: 1820 Broadway (Ch. Annex bsmt.)
+  City: Denver
+  District: '9'
+  Codes: n
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: High Noon
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: Cn
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: Home Girls
+  Address: 2425 Colorado Ave. (Rm A/B)
+  City: Boulder
+  District: '24'
+  Codes: Wn
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: Little Red House
+  Address: 7275 Monaco, 287-9950
+  City: Commerce City
+  District: '9'
+  Codes: n
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: Liv in the Answer
+  Address: 9650 S. Jordan Rd. (Ch)
+  City: Parker
+  District: '10'
+  Codes: CBB*n
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: Miracles Happen
+  Address: 10242 E. 16th Ave, 366-3622
+  City: Aurora
+  District: '16'
+  Codes: STn
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: Mountain View
+  Address: 8968 N. Washington (storefront)
+  City: Thornton
+  District: '9'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: Mountain Women
+  Address: 5980 Hwy 73 (Ch)
+  City: Evergreen
+  District: '29'
+  Codes: CWn
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: Newner Meeting
+  Address: '3355 S. Wadsworth Bl. #H-127'
+  City: Lakewood
+  District: '30'
+  Codes: B*n
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: No Half Measures
+  Address: 3600 S. Clarkson (NE of Ch), 781-5822
+  City: Englewood
+  District: '11'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: Noon Beginners
+  Address: '10576 W. Alameda Ave. #2'
+  City: Lakewood
+  District: '19'
+  Codes: Bn
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: Noon Workshop
+  Address: 8081 E. Orchard Rd. (Ent 5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: Cn
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: Other Noon Group
+  Address: 390 Lashley Ave.
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: Pass It On
+  Address: 8035 S. Quebec St. (Ch)
+  City: Centennial
+  District: '16'
+  Codes: Cn
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: Weekday Sobriety
+  Address: 1117 Kimbark St.
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Wednesday
+  Time: 12:00 PM
+  Group Name: Yaya Sisterhood
+  Address: 9200 W. 10th Ave. (Ch)
+  City: Lakewood
+  District: '12'
+  Codes: W*n
+- Day: Wednesday
+  Time: 12:30 PM
+  Group Name: Columbine Women
+  Address: 6673 W. Chatfield Ave. (Ch annex)
+  City: Littleton
+  District: '30'
+  Codes: CBBWn
+- Day: Wednesday
+  Time: 02:00 PM
+  Group Name: AWOL
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '11'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 03:00 PM
+  Group Name: 3 PM How It Works
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Wednesday
+  Time: 03:00 PM
+  Group Name: First Things First
+  Address: 1385 Carr St., Suite 2
+  City: Lakewood
+  District: '12'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 04:00 PM
+  Group Name: Clean Livers
+  Address: '5375 Western Ave. #F'
+  City: Boulder
+  District: '24'
+  Codes: BB*n
+- Day: Wednesday
+  Time: 05:00 PM
+  Group Name: Sober Solutions
+  Address: 390 Lashley Ave.
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Wednesday
+  Time: 05:30 PM
+  Group Name: 5:30 Recharge
+  Address: 10242 E. 16th Ave (366-3622)
+  City: Aurora
+  District: '16'
+  Codes: CBs
+- Day: Wednesday
+  Time: 05:30 PM
+  Group Name: Always Hope
+  Address: '3355 S. Wadsworth Ave. #H-125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 05:30 PM
+  Group Name: AWOL
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '11'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 05:30 PM
+  Group Name: Bill & Bob's Adventure
+  Address: 3600 S Clarkson (Ch, NE house)
+  City: Englewood
+  District: '11'
+  Codes: B*n
+- Day: Wednesday
+  Time: 05:30 PM
+  Group Name: Boulder Happy Hour
+  Address: '5375 Western Ave. #F'
+  City: Boulder
+  District: '24'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 05:30 PM
+  Group Name: Davidson Mesa
+  Address: 741 Jefferson & Spuce (Ch)
+  City: Louisville
+  District: '24'
+  Codes: Cn
+- Day: Wednesday
+  Time: 05:30 PM
+  Group Name: Day By Day
+  Address: 1008 E. Hampden Ave.
+  City: Englewood
+  District: '11'
+  Codes: B*
+- Day: Wednesday
+  Time: 05:30 PM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: ST*n
+- Day: Wednesday
+  Time: 05:30 PM
+  Group Name: Happy Hour Group
+  Address: 1117 Kimbark St.
+  City: Longmont
+  District: '34'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 05:30 PM
+  Group Name: Longmont 4 D
+  Address: 1351 Collyer St. (Ch)
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Wednesday
+  Time: 05:30 PM
+  Group Name: Mountain View
+  Address: 8968 N. Washington (storefront)
+  City: Thornton
+  District: '9'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 05:30 PM
+  Group Name: Recovery Hour
+  Address: 8250 W 80th Ave. Unit 12, 303-420-6560
+  City: Arvada
+  District: '31'
+  Codes: BB*n
+- Day: Wednesday
+  Time: 05:30 PM
+  Group Name: Spirit of Recovery
+  Address: 10576 W. Alameda Ave., 238-1229
+  City: Lakewood
+  District: '19'
+  Codes: n
+- Day: Wednesday
+  Time: 05:30 PM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Wednesday
+  Time: 05:45 PM
+  Group Name: 5:45 Happy Hour
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Wednesday
+  Time: 05:45 PM
+  Group Name: Buckeye Easy Does It
+  Address: 16732 E Iliff Av (Shop Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: CBB*n
+- Day: Wednesday
+  Time: 05:45 PM
+  Group Name: DTC Sobriety
+  Address: 8081 E. Orchard Rd. (Entr 5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: B*n
+- Day: Wednesday
+  Time: 05:45 PM
+  Group Name: Lakewood Open
+  Address: 9200 W. 10th Ave (Ch)
+  City: Lakewood
+  District: '12'
+  Codes: B*n
+- Day: Wednesday
+  Time: 05:45 PM
+  Group Name: S.O.T.S.
+  Address: '3355 S. Wadsworth #H-125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: C*n
+- Day: Wednesday
+  Time: 06:00 PM
+  Group Name: 231 Buckley
+  Address: 15210 E 6th Ave, Unit 1, 343-4994
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 06:00 PM
+  Group Name: Arid Group
+  Address: 1480 Hoyt St.  238-5693
+  City: Lakewood
+  District: '12'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 06:00 PM
+  Group Name: Balcony Group
+  Address: 27888 Meadow Dr. (The place)
+  City: Evergreen
+  District: '29'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 06:00 PM
+  Group Name: Big Book Buddies
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: CBB*n
+- Day: Wednesday
+  Time: 06:00 PM
+  Group Name: 'Brighton #1'
+  Address: 147 S. 2nd Place, 303-659-9953
+  City: Brighton
+  District: '9'
+  Codes: CW*n
+- Day: Wednesday
+  Time: 06:00 PM
+  Group Name: Cherry Creek Promises
+  Address: 700 S. Franklin (Ch)
+  City: Denver
+  District: '13'
+  Codes: ST*n
+- Day: Wednesday
+  Time: 06:00 PM
+  Group Name: Gratitude in Action
+  Address: 1237 Pine St. (Ch bsmt)
+  City: Boulder
+  District: '24'
+  Codes: n
+- Day: Wednesday
+  Time: 06:00 PM
+  Group Name: Grupo Unidad
+  Address: 5375 Western Ave. (rear)
+  City: Boulder
+  District: '25'
+  Codes: Spn
+- Day: Wednesday
+  Time: 06:00 PM
+  Group Name: Little Red House
+  Address: 7275 Monaco, 287-9950
+  City: Commerce City
+  District: '9'
+  Codes: n
+- Day: Wednesday
+  Time: 06:00 PM
+  Group Name: New Direction
+  Address: 1450 Airport Blvd. (Ch)
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 06:00 PM
+  Group Name: New Freedom
+  Address: 620 Elizabeth St. (Ch school)
+  City: Denver
+  District: '13'
+  Codes: BBST*n
+- Day: Wednesday
+  Time: 06:00 PM
+  Group Name: Nine to Five
+  Address: 1301 E. Colfax Ave. (The Center)
+  City: Denver
+  District: '13'
+  Codes: BG*n
+- Day: Wednesday
+  Time: 06:00 PM
+  Group Name: Still Willing
+  Address: 3100 S. Sheridan Bl. (Ch)
+  City: Denver
+  District: '30'
+  Codes: C*n
+- Day: Wednesday
+  Time: 06:30 PM
+  Group Name: Four Horsemen
+  Address: 216 S. Grant Ave.
+  City: Denver
+  District: '13'
+  Codes: Cn
+- Day: Wednesday
+  Time: 06:30 PM
+  Group Name: It's In The Book
+  Address: 401 W. Mineral Ave. (Ch rm A3)
+  City: Littleton
+  District: '11'
+  Codes: BB*n
+- Day: Wednesday
+  Time: 06:30 PM
+  Group Name: Three for All
+  Address: 12795 Hwy 285, S of Conifer 838-9908
+  City: Conifer
+  District: '29'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 07:00 PM
+  Group Name: Any Lengths
+  Address: 5707 S. Simms St (Ch)
+  City: Littleton
+  District: '30'
+  Codes: B*n
+- Day: Wednesday
+  Time: 07:00 PM
+  Group Name: Fitzsimons
+  Address: 1693 N. Quentin (TF Cntr)
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 07:00 PM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Wednesday
+  Time: 07:00 PM
+  Group Name: Gilpin County H.A.L.T.
+  Address: 226 East High (Ch)
+  City: Central City
+  District: '33'
+  Codes: n
+- Day: Wednesday
+  Time: 07:00 PM
+  Group Name: Happy Way
+  Address: 3885 S. Broadway (Ch bsmt)
+  City: Englewood
+  District: '11'
+  Codes: Bn
+- Day: Wednesday
+  Time: 07:00 PM
+  Group Name: Mead Group
+  Address: 'County Rd #7 & Welker St. (Guardian Angel Ch)'
+  City: Mead
+  District: '24'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 07:00 PM
+  Group Name: Men's BB Study
+  Address: 6495 S. Colorado Blvd. (Ch)
+  City: Littleton
+  District: '11'
+  Codes: CBBM*n
+- Day: Wednesday
+  Time: 07:00 PM
+  Group Name: Nine Mile Group
+  Address: 1700 Stonehenge (Ch)
+  City: Lafayette
+  District: '24'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 07:00 PM
+  Group Name: Parker Women
+  Address: 10521 S. Parker Rd. Ste G
+  City: Parker
+  District: '10'
+  Codes: Wn
+- Day: Wednesday
+  Time: 07:00 PM
+  Group Name: Power Hour
+  Address: 194 S. McDonnell St. (Ch)
+  City: Byers
+  District: '10'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 07:00 PM
+  Group Name: Renacer
+  Address: 825 3rd Ave. (Ch)
+  City: Longmont
+  District: '25'
+  Codes: Spnn
+- Day: Wednesday
+  Time: 07:00 PM
+  Group Name: Saturday Night Jive
+  Address: 1237 Pine St. (Ch)
+  City: Boulder
+  District: '24'
+  Codes: C*n
+- Day: Wednesday
+  Time: 07:00 PM
+  Group Name: Sobriety Topics
+  Address: 4425 Kipling St. (Ch)
+  City: Wheat Ridge
+  District: '12'
+  Codes: SP*n
+- Day: Wednesday
+  Time: 07:00 PM
+  Group Name: Spin Dry
+  Address: 2255 So. 88th St. (Hospital)
+  City: Louisville
+  District: '24'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 07:00 PM
+  Group Name: There's a Solution
+  Address: 397 S, Perry Park Rd. (Ch)
+  City: Sedalia
+  District: '10'
+  Codes: BB*n
+- Day: Wednesday
+  Time: 07:00 PM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Wednesday
+  Time: 07:00 PM
+  Group Name: Wed Step Meeting
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: STn
+- Day: Wednesday
+  Time: 07:00 PM
+  Group Name: Wed. Night Stag
+  Address: 100 Carr St.(Ch)
+  City: Lakewood
+  District: '19'
+  Codes: CM*n
+- Day: Wednesday
+  Time: 07:15 PM
+  Group Name: Beginners
+  Address: 16732 E. Iliff Ave (Shop. Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 07:15 PM
+  Group Name: Old Farts
+  Address: 10576 W. Alameda Ave., 238-1229
+  City: Lakewood
+  District: '19'
+  Codes: n
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: A N.E.W. in life
+  Address: 13645 E. Bayaud Ave. (Hall)
+  City: Aurora
+  District: '10'
+  Codes: B*n
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Adventures in Sobriety
+  Address: 3400 Lutheran Pkwy, (TF Center)
+  City: Wheat Ridge
+  District: '12'
+  Codes: B*n
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Arid Group
+  Address: 1480 Hoyt St.  238-5693
+  City: Lakewood
+  District: '12'
+  Codes: B*n
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Big Book Study
+  Address: 3600 S Clarkson (Ch, NE house) 781-5822
+  City: Englewood
+  District: '11'
+  Codes: BB*n
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: 'Brighton #1'
+  Address: 147 S. 2nd Place, 303-659-9953
+  City: Brighton
+  District: '9'
+  Codes: C*n
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Broomfield Any Lengths
+  Address: 825 Kohl St (Ch. Bsmt.)
+  City: Broomfield
+  District: '32'
+  Codes: n
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Chapter Five
+  Address: 8801 Lipan St. (Arapahoe Hs)
+  City: Thornton
+  District: '32'
+  Codes: SP*n
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Coal Creek Canyon
+  Address: 5 Gross Dam Rd (United Power Bldg)
+  City: Coal Creek
+  District: '24'
+  Codes: n
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Day By Day
+  Address: 1008 E. Hampden Ave.
+  City: Englewood
+  District: '11'
+  Codes: CBB*
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Evergreen Men
+  Address: 27640 Hwy 74 (Ch bldg)
+  City: Evergreen
+  District: '29'
+  Codes: CBBMn
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: 'Golden #1'
+  Address: 1500 Ford St. (Ch)
+  City: Golden
+  District: '33'
+  Codes: n
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Grupo 3RA Tradicion
+  Address: '6401 E. 72nd Ave. #115'
+  City: Commerce City
+  District: '25'
+  Codes: Spn
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Grupo Aurora 97
+  Address: 1408 Del Mar Pkwy. Unit C
+  City: Aurora
+  District: '25'
+  Codes: Spnn
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Grupo Camino A La Sobried
+  Address: 1400 Joliet St.
+  City: Aurora
+  District: '25'
+  Codes: Spn
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Grupo El Alba
+  Address: '3133 Peoria St. #205'
+  City: Denver
+  District: '25'
+  Codes: Spnn
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Grupo El Buen Camino
+  Address: 1679 47th Ave.
+  City: Denver
+  District: '25'
+  Codes: Spn
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Grupo El Principio
+  Address: 2420 S. Federal Bl.
+  City: Denver
+  District: '25'
+  Codes: Spnn
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Grupo Honestidad
+  Address: 2320 E. 49th Ave.
+  City: Denver
+  District: '25'
+  Codes: Spn
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Grupo Latinos Unidos
+  Address: 786 Peoria St. (90 mins)
+  City: Aurora
+  District: '25'
+  Codes: Spn
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Grupo Los Buenos Veterano
+  Address: '11000 E. Yale Ave. #80, 303-671-2983'
+  City: Aurora
+  District: '25'
+  Codes: Spnn
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Grupo Nuevo Destino
+  Address: 1900 Harlan St.
+  City: Lakewood
+  District: '25'
+  Codes: Spn
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Grupo Paso 12
+  Address: 10242 E. 16th Ave., 303-366-3622
+  City: Aurora
+  District: '25'
+  Codes: Spn
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Grupo Renovacion
+  Address: 3458 1st Ave.
+  City: Denver
+  District: '25'
+  Codes: Spnn
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Grupo Solo por Hoy
+  Address: '7131 Irving St. #202'
+  City: Denver
+  District: '25'
+  Codes: Spn
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Livin Life
+  Address: 6490 Carr St. (Ch)
+  City: Arvada
+  District: '31'
+  Codes: B*n
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Longmont Mens Stag
+  Address: 400 Lashley D-1
+  City: Longmont
+  District: '34'
+  Codes: CMn
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Longs Peak Group
+  Address: 803 3rd Ave. (Ch )
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Midweek Men's Group
+  Address: 1980 Dahlia St. (Ch, bsmt)
+  City: Denver
+  District: '16'
+  Codes: CM*n
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Now H.O.W.
+  Address: 2646 W. 32nd (Ch)
+  City: Denver
+  District: '12'
+  Codes: C*n
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Pomona
+  Address: 8110 Vance Dr.
+  City: Arvada
+  District: '31'
+  Codes: C*n
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Quincy 2
+  Address: 6190 E. Quincy Ave (Ch library)
+  City: Cherry Hills Village
+  District: '16'
+  Codes: Cn
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Return to Sanity
+  Address: 8300 Pomona Dr. (Ch)
+  City: Arvada
+  District: '31'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: School of Hard Knox
+  Address: 7275 Monaco, 287-9950
+  City: Commerce City
+  District: '9'
+  Codes: n
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: The Way In
+  Address: 7964 S. Depew St. (Platte Cyn/Chatfield)
+  City: Littleton
+  District: '30'
+  Codes: BB*
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Wed Nite Beginners
+  Address: 1237 Pine St. (Ch)
+  City: Boulder
+  District: '24'
+  Codes: n
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Wednesday Men's
+  Address: 6774 W. 66th Ave. (Ch)
+  City: Arvada
+  District: '31'
+  Codes: CM*n
+- Day: Wednesday
+  Time: 07:30 PM
+  Group Name: Wonderful Gift
+  Address: 595 S. Clinton  (Auditorium/ Aspen Rm)
+  City: Denver
+  District: '16'
+  Codes: BB*n
+- Day: Wednesday
+  Time: 08:00 PM
+  Group Name: Grupo La Ultima Cruda
+  Address: 9357 E. Colfax Ave. Unit E
+  City: Aurora
+  District: '25'
+  Codes: Spn
+- Day: Wednesday
+  Time: 08:00 PM
+  Group Name: Oasis Group
+  Address: '3355 S. Wadsworth #H-125 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: C*n
+- Day: Wednesday
+  Time: 08:00 PM
+  Group Name: Pathway
+  Address: 1400 S. University (Ch. rear SE door)
+  City: Denver
+  District: '13'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 08:00 PM
+  Group Name: Rock Bottom
+  Address: 10700 E. Evans Ave. (Ch)
+  City: Aurora
+  District: '10'
+  Codes: C*n
+- Day: Wednesday
+  Time: 08:00 PM
+  Group Name: Wed Night Beginners
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: CB*n
+- Day: Wednesday
+  Time: 08:15 PM
+  Group Name: Practice Principles
+  Address: 10521 S. Parker Rd. Ste G
+  City: Parker
+  District: '10'
+  Codes: n
+- Day: Wednesday
+  Time: 08:30 PM
+  Group Name: Gratitude
+  Address: 1311 York St. 322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Wednesday
+  Time: 08:30 PM
+  Group Name: Longmont Group
+  Address: 1117 Kimbark St.
+  City: Longmont
+  District: '34'
+  Codes: CAn
+- Day: Wednesday
+  Time: 08:30 PM
+  Group Name: Only Requirement
+  Address: 1128 Pine St. (Ch)
+  City: Boulder
+  District: '24'
+  Codes: "*n"
+- Day: Wednesday
+  Time: 08:30 PM
+  Group Name: Too Young to Die
+  Address: '8081 E. Orchard Rd. #115'
+  City: Greenwood Village
+  District: '16'
+  Codes: Y*n
+- Day: Wednesday
+  Time: 08:30 PM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Wednesday
+  Time: 10:00 PM
+  Group Name: 10 PM Last Call
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: CAn
+- Day: Thursday
+  Time: 05:30 AM
+  Group Name: R U Nutz?
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '13'
+  Codes: "*n"
+- Day: Thursday
+  Time: 06:30 AM
+  Group Name: Early Bird
+  Address: 16732 E. Iliff (Shop. Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Thursday
+  Time: 06:30 AM
+  Group Name: First Things First
+  Address: 1385 Carr St., Suite 2
+  City: Lakewood
+  District: '12'
+  Codes: BB*n
+- Day: Thursday
+  Time: 06:30 AM
+  Group Name: Friends n Recovry
+  Address: 1693 Quentin St. (TF Cntr)
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Thursday
+  Time: 06:30 AM
+  Group Name: Rude Rousing
+  Address: 390 Lashley Ave.
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Thursday
+  Time: 06:30 AM
+  Group Name: Sunrise Serenity
+  Address: '3355 S. Wadsworth #H125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: "*n"
+- Day: Thursday
+  Time: 06:30 AM
+  Group Name: There is a Solution
+  Address: 8081 E. Orchard Rd. (Entr 5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: n
+- Day: Thursday
+  Time: 06:45 AM
+  Group Name: Crack of Dawn
+  Address: 3600 S. Clarkson (Ch,NE House) 781-5822
+  City: Englewood
+  District: '11'
+  Codes: "*n"
+- Day: Thursday
+  Time: 06:45 AM
+  Group Name: Daily Reflections
+  Address: 8081 E. Orchard Rd. (Ent 5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: "*n"
+- Day: Thursday
+  Time: 06:45 AM
+  Group Name: P.P. Workshop
+  Address: 8545 E. Dry Creek Rd. (Ch Bsmt)
+  City: Centennial
+  District: '16'
+  Codes: n
+- Day: Thursday
+  Time: 06:45 AM
+  Group Name: Upon Awakening
+  Address: 8817 S. Broadway (Ch)
+  City: Highlands Ranch
+  District: '11'
+  Codes: ST*n
+- Day: Thursday
+  Time: 07:00 AM
+  Group Name: Attitude Adjustment
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Thursday
+  Time: 07:00 AM
+  Group Name: Bottoms Up
+  Address: 5927 Miller St. (Ch)
+  City: Arvada
+  District: '12'
+  Codes: C*n
+- Day: Thursday
+  Time: 07:00 AM
+  Group Name: Boulder Attitude Adjustme
+  Address: 5375 Western Ave. (Rm B)
+  City: Boulder
+  District: '24'
+  Codes: n
+- Day: Thursday
+  Time: 07:00 AM
+  Group Name: Dawn Patrol
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '13'
+  Codes: "*n"
+- Day: Thursday
+  Time: 07:00 AM
+  Group Name: Degenerates
+  Address: '8250 W. 80th Ave. #12'
+  City: Arvada
+  District: '31'
+  Codes: "*n"
+- Day: Thursday
+  Time: 07:00 AM
+  Group Name: Eye-Openers
+  Address: '5375 Western Ave. #F'
+  City: Boulder
+  District: '24'
+  Codes: "*nSit"
+- Day: Thursday
+  Time: 07:00 AM
+  Group Name: Morning Reflection
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: "*n"
+- Day: Thursday
+  Time: 07:00 AM
+  Group Name: Rude Awakening
+  Address: 1117 Kimbark St.
+  City: Longmont
+  District: '34'
+  Codes: "*n"
+- Day: Thursday
+  Time: 07:30 AM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Thursday
+  Time: 07:30 AM
+  Group Name: Morning After
+  Address: 3489 W. 72nd (Rm 104)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Thursday
+  Time: 07:30 AM
+  Group Name: Mountain View
+  Address: 8968 N. Washington (storefront)
+  City: Thornton
+  District: '9'
+  Codes: "*n"
+- Day: Thursday
+  Time: 08:00 AM
+  Group Name: Lodo Sobriety
+  Address: 1551 Larimer St. (3rd floor)
+  City: Denver
+  District: '9'
+  Codes: BB*n
+- Day: Thursday
+  Time: 08:15 AM
+  Group Name: Franktown Friends
+  Address: 1959 N. Hwy 83 (Fire Sta)
+  City: Franktown
+  District: '10'
+  Codes: GV*n
+- Day: Thursday
+  Time: 08:30 AM
+  Group Name: Thu. Book Club
+  Address: 1201 S. Steele St. (Ch)
+  City: Denver
+  District: '13'
+  Codes: BBW*n
+- Day: Thursday
+  Time: 09:30 AM
+  Group Name: A Vision 4 Today
+  Address: 8081 E. Orchard Rd. (Ent5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: "*nSit"
+- Day: Thursday
+  Time: 10:00 AM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Thursday
+  Time: 10:00 AM
+  Group Name: Group 1
+  Address: '3355 S. Wadsworth #H-125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: "*n"
+- Day: Thursday
+  Time: 10:00 AM
+  Group Name: Grupo El Principio
+  Address: 2420 S. Federal Bl.
+  City: Denver
+  District: '25'
+  Codes: Spnn
+- Day: Thursday
+  Time: 10:00 AM
+  Group Name: Rocking Chair
+  Address: 4500 Wadsworth Bl. (Ch)
+  City: Wheat Ridge
+  District: '12'
+  Codes: "*n"
+- Day: Thursday
+  Time: 10:00 AM
+  Group Name: Sufficient Sub.
+  Address: '8250 W. 80th Ave. #12'
+  City: Arvada
+  District: '31'
+  Codes: "*n"
+- Day: Thursday
+  Time: 11:00 AM
+  Group Name: Step Sisters
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: CSTW*n
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: 12 at 12
+  Address: 3690 Cherry Creek S. Dr. (Ch)
+  City: Denver
+  District: '13'
+  Codes: ST*
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: 231 Buckley
+  Address: 15210 E 6th Ave, Unit 1, 343-4994
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: Arid Group
+  Address: 1480 Hoyt St.  238-5693
+  City: Lakewood
+  District: '12'
+  Codes: "*n"
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: Aurora Nooners
+  Address: 10242 E. 16th Ave (upstairs), 366-3622
+  City: Aurora
+  District: '16'
+  Codes: Cs
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: AWOL
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '11'
+  Codes: "*n"
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: Back in the Bsmt
+  Address: '10576 W. Alameda Ave. #2  238-1229'
+  City: Lakewood
+  District: '19'
+  Codes: W*n
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: Between the Tracks
+  Address: 1117 Kimbark St.
+  City: Longmont
+  District: '34'
+  Codes: "*n"
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: Bill's Brownbaggers
+  Address: 8250 W. 80th Ave. Unit 12, 303-420-6560
+  City: Arvada
+  District: '31'
+  Codes: "*n"
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: Boulder Nooners
+  Address: '5375 Western Ave. #F'
+  City: Boulder
+  District: '24'
+  Codes: "*n"
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: 'Brighton #1'
+  Address: 147 S. 2nd Place, 303-659-9953
+  City: Brighton
+  District: '9'
+  Codes: C*n
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: Buckeye Easy Does It
+  Address: 16732 E Iliff Av (Shop Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: Circle of Friends
+  Address: 4881 Cherokee Dr. (Ch)
+  City: Castle Rock
+  District: '10'
+  Codes: n
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: Day By Day
+  Address: 1008 E. Hampden Ave.
+  City: Englewood
+  District: '11'
+  Codes: "*"
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: Edit Nooners
+  Address: '10576 W. Alameda Ave. #2, 238-1229'
+  City: Lakewood
+  District: '19'
+  Codes: n
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: Happy Trudgers
+  Address: 1820 Broadway (Ch. Annex bsmt.)
+  City: Denver
+  District: '9'
+  Codes: n
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: High Noon
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: Cn
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: Little Red House
+  Address: 7275 Monaco, 287-9950
+  City: Commerce City
+  District: '9'
+  Codes: n
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: Liv in the Answer
+  Address: 9650 S. Jordan Rd. (Ch)
+  City: Parker
+  District: '10'
+  Codes: C*n
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: Miracles Happen
+  Address: 10242 E. 16th Ave, 366-3622
+  City: Aurora
+  District: '16'
+  Codes: n
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: Mountain Nooners
+  Address: 12795 Hwy 285, S of Conifer
+  City: Conifer
+  District: '29'
+  Codes: n
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: Mountain View
+  Address: 8968 N. Washington (storefront)
+  City: Thornton
+  District: '9'
+  Codes: "*n"
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: Newner Meeting
+  Address: '3355 S. Wadsworth Bl. #H-127'
+  City: Lakewood
+  District: '30'
+  Codes: B*n
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: Next Frontier
+  Address: 8081 E. Orchard Rd. (Ent 5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: C*n
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: No Half Measures
+  Address: 3600 S. Clarkson (NE of Ch), 781-5822
+  City: Englewood
+  District: '11'
+  Codes: "*n"
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: Noon Workshop
+  Address: 8081 E. Orchard Rd. (Ent 5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: Cn
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: One Step at a Time
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: Cn
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: Other Noon Group
+  Address: 390 Lashley Ave.
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: Pass It On
+  Address: 8035 S. Quebec St. (Ch)
+  City: Centennial
+  District: '16'
+  Codes: CSTn
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: V.S.E.
+  Address: 29823 Troutdale Scenic Dr. (Ch)
+  City: Evergreen
+  District: '29'
+  Codes: BBn
+- Day: Thursday
+  Time: 12:00 PM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Thursday
+  Time: 01:00 PM
+  Group Name: Keep It Simple
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: "*n"
+- Day: Thursday
+  Time: 01:30 PM
+  Group Name: Women's Steppers
+  Address: 3600 S Clarkson (Ch, NE bldg), 781-5822
+  City: Englewood
+  District: '11'
+  Codes: CSTW*n
+- Day: Thursday
+  Time: 02:00 PM
+  Group Name: AWOL
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '11'
+  Codes: "*n"
+- Day: Thursday
+  Time: 03:00 PM
+  Group Name: 3 PM How It Works
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Thursday
+  Time: 03:00 PM
+  Group Name: First Things First
+  Address: 1385 Carr St., Suite 2
+  City: Lakewood
+  District: '12'
+  Codes: GV*n
+- Day: Thursday
+  Time: 04:00 PM
+  Group Name: Clean Livers
+  Address: '5375 Western Ave. #F'
+  City: Boulder
+  District: '24'
+  Codes: B*n
+- Day: Thursday
+  Time: 05:00 PM
+  Group Name: Sober Solutions
+  Address: 390 Lashley Ave.
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Thursday
+  Time: 05:30 PM
+  Group Name: 5:30 Recharge
+  Address: 10242 E. 16th Ave (366-3622)
+  City: Aurora
+  District: '16'
+  Codes: CBs
+- Day: Thursday
+  Time: 05:30 PM
+  Group Name: Always Hope
+  Address: '3355 S. Wadsworth Ave. #H-125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: B*n
+- Day: Thursday
+  Time: 05:30 PM
+  Group Name: AWOL
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '11'
+  Codes: "*n"
+- Day: Thursday
+  Time: 05:30 PM
+  Group Name: Bill & Bob's Adventure
+  Address: 3600 S Clarkson (Ch, NE house)
+  City: Englewood
+  District: '11'
+  Codes: B*n
+- Day: Thursday
+  Time: 05:30 PM
+  Group Name: Boulder Happy Hour
+  Address: '5375 Western Ave. #F'
+  City: Boulder
+  District: '24'
+  Codes: "*n"
+- Day: Thursday
+  Time: 05:30 PM
+  Group Name: Day By Day
+  Address: 1008 E. Hampden Ave.
+  City: Englewood
+  District: '11'
+  Codes: B*
+- Day: Thursday
+  Time: 05:30 PM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: CW*n
+- Day: Thursday
+  Time: 05:30 PM
+  Group Name: Happy Hour Group
+  Address: 1117 Kimbark St.
+  City: Longmont
+  District: '34'
+  Codes: "*n"
+- Day: Thursday
+  Time: 05:30 PM
+  Group Name: Mountain View
+  Address: 8968 N. Washington (storefront)
+  City: Thornton
+  District: '9'
+  Codes: "*n"
+- Day: Thursday
+  Time: 05:30 PM
+  Group Name: Recovery Hour
+  Address: 8250 W 80th Ave. Unit 12, 303-420-6560
+  City: Arvada
+  District: '31'
+  Codes: C*n
+- Day: Thursday
+  Time: 05:30 PM
+  Group Name: Spirit of Recovery
+  Address: 10576 W. Alameda Ave., 238-1229
+  City: Lakewood
+  District: '19'
+  Codes: n
+- Day: Thursday
+  Time: 05:30 PM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Thursday
+  Time: 05:35 PM
+  Group Name: Caring and Sharing
+  Address: 6495 S. Colorado Blvd. (Ch)
+  City: Centennial
+  District: '11'
+  Codes: CWn
+- Day: Thursday
+  Time: 05:45 PM
+  Group Name: 5:45 Happy Hour
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Thursday
+  Time: 05:45 PM
+  Group Name: Buckeye Easy Does It
+  Address: 16732 E Iliff Av (Shop Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Thursday
+  Time: 05:45 PM
+  Group Name: DTC Sobriety
+  Address: 8081 E. Orchard Rd. (Entr 5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: "*n"
+- Day: Thursday
+  Time: 05:45 PM
+  Group Name: S.O.T.S.
+  Address: '3355 S. Wadsworth #H-125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: B*n
+- Day: Thursday
+  Time: 06:00 PM
+  Group Name: 11th Step Meeting
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: ST*n
+- Day: Thursday
+  Time: 06:00 PM
+  Group Name: 231 Buckley
+  Address: 15210 E 6th Ave, Unit 1, 343-4994
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Thursday
+  Time: 06:00 PM
+  Group Name: Arid Group
+  Address: 1480 Hoyt St.  238-5693
+  City: Lakewood
+  District: '12'
+  Codes: "*n"
+- Day: Thursday
+  Time: 06:00 PM
+  Group Name: 'Brighton #1'
+  Address: 147 S. 2nd Place, 303-659-9953
+  City: Brighton
+  District: '9'
+  Codes: C*n
+- Day: Thursday
+  Time: 06:00 PM
+  Group Name: Grupo Unidad
+  Address: 5375 Western Ave. (rear)
+  City: Boulder
+  District: '25'
+  Codes: Spn
+- Day: Thursday
+  Time: 06:00 PM
+  Group Name: Lilley Gulch
+  Address: 7964 S Depew(Platte Cyn/Chatfield)
+  City: Littleton
+  District: '30'
+  Codes: "*n"
+- Day: Thursday
+  Time: 06:00 PM
+  Group Name: Little Red House
+  Address: 7275 Monaco, 287-9950
+  City: Commerce City
+  District: '9'
+  Codes: n
+- Day: Thursday
+  Time: 06:00 PM
+  Group Name: Sobriety @ Ranch
+  Address: 4856 Andes Ct. (Library)
+  City: Denver
+  District: '9'
+  Codes: "*n"
+- Day: Thursday
+  Time: 06:00 PM
+  Group Name: The Seed
+  Address: 7125 W. 44th Ave. (Ch)
+  City: Wheat Ridge
+  District: '12'
+  Codes: "*n"
+- Day: Thursday
+  Time: 06:00 PM
+  Group Name: Thurs. Night Women
+  Address: 1100 Filmore St (Ch rm104)
+  City: Denver
+  District: '13'
+  Codes: CSTWn
+- Day: Thursday
+  Time: 06:30 PM
+  Group Name: A.R.C. Group
+  Address: 3180 Airport Rd. (ARC Rm 5280)
+  City: Boulder
+  District: '24'
+  Codes: "*n"
+- Day: Thursday
+  Time: 06:30 PM
+  Group Name: Courage to Change
+  Address: 1615 Ogden St. (Ch)
+  City: Denver
+  District: '9'
+  Codes: BBG*n
+- Day: Thursday
+  Time: 06:30 PM
+  Group Name: Denver Thursday Night
+  Address: 1660 Sherman St (Ch)
+  City: Denver
+  District: '9'
+  Codes: STB*n
+- Day: Thursday
+  Time: 06:30 PM
+  Group Name: Freedom
+  Address: 3265 W. Girard, 761-7685 (ACTC Bldg, bsmt)
+  City: Sheridan
+  District: '30'
+  Codes: "*n"
+- Day: Thursday
+  Time: 06:30 PM
+  Group Name: Freedom thru Sobriety
+  Address: 1500 Ninth Ave. (Ch)
+  City: Longmont
+  District: '34'
+  Codes: Cn
+- Day: Thursday
+  Time: 06:30 PM
+  Group Name: Mixed Nuts
+  Address: 6750 Carr St.  (Ch rm 306)
+  City: Arvada
+  District: '31'
+  Codes: n
+- Day: Thursday
+  Time: 06:30 PM
+  Group Name: The Real Deal
+  Address: 8085 E. Hampden (Ch)
+  City: Denver
+  District: '16'
+  Codes: "*n"
+- Day: Thursday
+  Time: 06:30 PM
+  Group Name: Wano Group
+  Address: 1255 Centair Village Dr. (Ch)
+  City: Lafayette
+  District: '24'
+  Codes: CBBn
+- Day: Thursday
+  Time: 06:45 PM
+  Group Name: Parker Beginners
+  Address: 10521 S. Parker Rd. Ste G
+  City: Parker
+  District: '10'
+  Codes: Bn
+- Day: Thursday
+  Time: 07:00 PM
+  Group Name: A Step Beyond
+  Address: 1500 Ford St.(Ch)
+  City: Golden
+  District: '33'
+  Codes: "*n"
+- Day: Thursday
+  Time: 07:00 PM
+  Group Name: Any Lengths
+  Address: 5707 S. Simms St (Ch)
+  City: Littleton
+  District: '30'
+  Codes: "*n"
+- Day: Thursday
+  Time: 07:00 PM
+  Group Name: Campus Group
+  Address: 3545 Madison Ave. (Ch)
+  City: Boulder
+  District: '24'
+  Codes: n
+- Day: Thursday
+  Time: 07:00 PM
+  Group Name: Clear Creek Roadrunners
+  Address: 1410 Colorado (Ch, side door)
+  City: Idaho Springs
+  District: '33'
+  Codes: ST*n
+- Day: Thursday
+  Time: 07:00 PM
+  Group Name: Conscious Contact 2
+  Address: 3355 S. Wadsworth Bl. H-127
+  City: Lakewood
+  District: '30'
+  Codes: BB*n
+- Day: Thursday
+  Time: 07:00 PM
+  Group Name: Day By Day
+  Address: 1008 E. Hampden Ave.
+  City: Englewood
+  District: '11'
+  Codes: C*
+- Day: Thursday
+  Time: 07:00 PM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Thursday
+  Time: 07:00 PM
+  Group Name: Gilpin County H.A.L.T.
+  Address: 226 East High (Ch)
+  City: Central City
+  District: '33'
+  Codes: STn
+- Day: Thursday
+  Time: 07:00 PM
+  Group Name: Happy Way
+  Address: 3885 S. Broadway (Ch bsmt)
+  City: Englewood
+  District: '11'
+  Codes: Cn
+- Day: Thursday
+  Time: 07:00 PM
+  Group Name: Ladies in the Light
+  Address: 7520 S. Boulder Rd. (Ch)
+  City: Boulder
+  District: '24'
+  Codes: Wn
+- Day: Thursday
+  Time: 07:00 PM
+  Group Name: Longmont Big Book
+  Address: 917 S. Main St. (Ch)
+  City: Longmont
+  District: '34'
+  Codes: BB*n
+- Day: Thursday
+  Time: 07:00 PM
+  Group Name: Mountain View
+  Address: 8968 N. Washington (storefront)
+  City: Thornton
+  District: '9'
+  Codes: BB*n
+- Day: Thursday
+  Time: 07:00 PM
+  Group Name: Real Deal Men's
+  Address: 8081 E. Orchard Rd. (Ent 5 -S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: M*n
+- Day: Thursday
+  Time: 07:00 PM
+  Group Name: Round Tuit
+  Address: 615 4th St. (Ch library)
+  City: Castle Rock
+  District: '10'
+  Codes: C*n
+- Day: Thursday
+  Time: 07:00 PM
+  Group Name: Southland Serenity
+  Address: 25511 E. Smoky Hill Rd. (Ch)
+  City: Aurora
+  District: '10'
+  Codes: BB*nSit
+- Day: Thursday
+  Time: 07:00 PM
+  Group Name: Spearhead
+  Address: 1311 York St.
+  City: Denver
+  District: '13'
+  Codes: Cn
+- Day: Thursday
+  Time: 07:00 PM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: CBBn
+- Day: Thursday
+  Time: 07:15 PM
+  Group Name: Beginners
+  Address: 16732 E. Iliff Ave (Shop. Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: B*n
+- Day: Thursday
+  Time: 07:15 PM
+  Group Name: No Mental Defense
+  Address: 1385 Carr St. (Ste 2)
+  City: Lakewood
+  District: '12'
+  Codes: "*n"
+- Day: Thursday
+  Time: 07:30 PM
+  Group Name: Arid Group
+  Address: 1480 Hoyt St.  238-5693
+  City: Lakewood
+  District: '12'
+  Codes: BB*n
+- Day: Thursday
+  Time: 07:30 PM
+  Group Name: Broomfield Any Lengths
+  Address: 825 Kohl St (Ch. Bsmt.)
+  City: Broomfield
+  District: '32'
+  Codes: Wn
+- Day: Thursday
+  Time: 07:30 PM
+  Group Name: Broomfield Any Lengths
+  Address: 825 Kohl St (Ch. Bsmt.)
+  City: Broomfield
+  District: '32'
+  Codes: Cn
+- Day: Thursday
+  Time: 07:30 PM
+  Group Name: Changing Women
+  Address: '8250 W. 80th Ave. #12,  420-6560'
+  City: Wheat Ridge
+  District: '31'
+  Codes: W*n
+- Day: Thursday
+  Time: 07:30 PM
+  Group Name: El Nuevo Amanecer
+  Address: 801 S. Public Road
+  City: Lafayette
+  District: '25'
+  Codes: Spnn
+- Day: Thursday
+  Time: 07:30 PM
+  Group Name: Evergreen Thursday
+  Address: 3757 Ponderosa Dr. (Ch )
+  City: Evergreen
+  District: '29'
+  Codes: n
+- Day: Thursday
+  Time: 07:30 PM
+  Group Name: Go to Any Lengths
+  Address: 3400 Lutheran Pkwy (Hosp Rec Unit)
+  City: Wheat Ridge
+  District: '12'
+  Codes: "*n"
+- Day: Thursday
+  Time: 07:30 PM
+  Group Name: Grateful 2b here
+  Address: 8700 E. 21st Ave. (Ch / Stapleton)
+  City: Denver
+  District: '9'
+  Codes: ST*n
+- Day: Thursday
+  Time: 07:30 PM
+  Group Name: Grupo 3RA Tradicion
+  Address: '6401 E. 72nd Ave. #115'
+  City: Commerce City
+  District: '25'
+  Codes: Spn
+- Day: Thursday
+  Time: 07:30 PM
+  Group Name: Grupo Aurora 97
+  Address: 1408 Del Mar Pkwy. Unit C
+  City: Aurora
+  District: '25'
+  Codes: Spnn
+- Day: Thursday
+  Time: 07:30 PM
+  Group Name: Grupo Camino A La Sobried
+  Address: 1400 Joliet St.
+  City: Aurora
+  District: '25'
+  Codes: Spn
+- Day: Thursday
+  Time: 07:30 PM
+  Group Name: Grupo El Buen Camino
+  Address: 1679 47th Ave.
+  City: Denver
+  District: '25'
+  Codes: Spn
+- Day: Thursday
+  Time: 07:30 PM
+  Group Name: Grupo El Principio
+  Address: 2420 S. Federal Bl.
+  City: Denver
+  District: '25'
+  Codes: Spnn
+- Day: Thursday
+  Time: 07:30 PM
+  Group Name: Grupo Honestidad
+  Address: 2320 E. 49th Ave.
+  City: Denver
+  District: '25'
+  Codes: Spn
+- Day: Thursday
+  Time: 07:30 PM
+  Group Name: Grupo Latinos Unidos
+  Address: 786 Peoria St. (90 mins)
+  City: Aurora
+  District: '25'
+  Codes: Spn
+- Day: Thursday
+  Time: 07:30 PM
+  Group Name: Grupo Los Buenos Veterano
+  Address: '11000 E. Yale Ave. #80, 303-671-2983'
+  City: Aurora
+  District: '25'
+  Codes: Spnn
+- Day: Thursday
+  Time: 07:30 PM
+  Group Name: Grupo Nuevo Destino
+  Address: 1900 Harlan St.
+  City: Lakewood
+  District: '25'
+  Codes: Spn
+- Day: Thursday
+  Time: 07:30 PM
+  Group Name: Grupo Renovacion
+  Address: 3458 1st Ave.
+  City: Denver
+  District: '25'
+  Codes: Spnn
+- Day: Thursday
+  Time: 07:30 PM
+  Group Name: Grupo Solo por Hoy
+  Address: '7131 Irving St. #202'
+  City: Denver
+  District: '25'
+  Codes: Spn
+- Day: Thursday
+  Time: 07:30 PM
+  Group Name: Lakewood Open
+  Address: 9200 W. 10th Ave (Ch)
+  City: Lakewood
+  District: '12'
+  Codes: ST*n
+- Day: Thursday
+  Time: 07:30 PM
+  Group Name: Longs Peak Group
+  Address: 803 3rd Ave. (Ch )
+  City: Longmont
+  District: '34'
+  Codes: CnSit
+- Day: Thursday
+  Time: 07:30 PM
+  Group Name: Recovery at the Ranch
+  Address: 1401 E Dry Creek Rd. (Ch)
+  City: Centennial
+  District: '11'
+  Codes: "*n"
+- Day: Thursday
+  Time: 07:30 PM
+  Group Name: School of Hard Knox
+  Address: 7275 Monaco, 287-9950
+  City: Commerce City
+  District: '9'
+  Codes: n
+- Day: Thursday
+  Time: 07:30 PM
+  Group Name: Sobriety
+  Address: 121 Acoma (Sobriety House bsmt) 722-5746
+  City: Denver
+  District: '13'
+  Codes: Bn
+- Day: Thursday
+  Time: 07:30 PM
+  Group Name: Strasburg Sobriety
+  Address: 1656 Main St. (Ch)
+  City: Strasburg
+  District: '10'
+  Codes: C*n
+- Day: Thursday
+  Time: 08:00 PM
+  Group Name: Absolutely Insist
+  Address: 1237 Pine St. (Ch)
+  City: Boulder
+  District: '24'
+  Codes: "*n"
+- Day: Thursday
+  Time: 08:00 PM
+  Group Name: Alano
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: ST*n
+- Day: Thursday
+  Time: 08:00 PM
+  Group Name: Big Bookaholics
+  Address: 7195 Simms St. (Ch)
+  City: Arvada
+  District: '31'
+  Codes: CBB*n
+- Day: Thursday
+  Time: 08:00 PM
+  Group Name: Denver Thursday Night
+  Address: 1660 Sherman St (Ch)
+  City: Denver
+  District: '9'
+  Codes: C*n
+- Day: Thursday
+  Time: 08:00 PM
+  Group Name: Depth and Weight
+  Address: 7964 S. Depew (Platte Canyon/Chatfield)
+  City: Littleton
+  District: '30'
+  Codes: "*n"
+- Day: Thursday
+  Time: 08:00 PM
+  Group Name: Grupo La Ultima Cruda
+  Address: 9357 E. Colfax Ave. Unit E
+  City: Aurora
+  District: '25'
+  Codes: Spn
+- Day: Thursday
+  Time: 08:00 PM
+  Group Name: Just Do It Group
+  Address: 10242 E. 16th Ave., 366-3622
+  City: Aurora
+  District: '16'
+  Codes: n
+- Day: Thursday
+  Time: 08:00 PM
+  Group Name: Louisville Group
+  Address: 506 W. Via Appia (Ch)
+  City: Louisville
+  District: '24'
+  Codes: Cn
+- Day: Thursday
+  Time: 08:00 PM
+  Group Name: Oasis Group
+  Address: '3355 S. Wadsworth #H-125 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: C*n
+- Day: Thursday
+  Time: 08:00 PM
+  Group Name: Participation
+  Address: 3701 W. 50th Ave (Ch Bsmt)
+  City: Denver
+  District: '12'
+  Codes: Cn
+- Day: Thursday
+  Time: 08:00 PM
+  Group Name: Sobriety by the Numbers
+  Address: 3700 Baseline Rd. (Ch)
+  City: Boulder
+  District: '24'
+  Codes: n
+- Day: Thursday
+  Time: 08:00 PM
+  Group Name: The Parker Group
+  Address: 10521 S. Parker Rd. Ste G
+  City: Parker
+  District: '10'
+  Codes: Cn
+- Day: Thursday
+  Time: 08:00 PM
+  Group Name: The Way Out
+  Address: 1155 Cherokee (Detox, Rm 103)
+  City: Denver
+  District: '13'
+  Codes: "*n"
+- Day: Thursday
+  Time: 08:30 PM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Thursday
+  Time: 08:30 PM
+  Group Name: 'York # 1'
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: Cn
+- Day: Thursday
+  Time: 10:00 PM
+  Group Name: 10 PM Last Call
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: CAn
+- Day: Friday
+  Time: 05:30 AM
+  Group Name: R U Nutz?
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '13'
+  Codes: "*n"
+- Day: Friday
+  Time: 06:00 AM
+  Group Name: An AA Group
+  Address: 1555 Race St. (2nd Fl)
+  City: Denver
+  District: '9'
+  Codes: n
+- Day: Friday
+  Time: 06:30 AM
+  Group Name: 637 Group
+  Address: 310 Wilcox St. (Restaurant)
+  City: Castle Rock
+  District: '10'
+  Codes: "*n"
+- Day: Friday
+  Time: 06:30 AM
+  Group Name: Early Bird
+  Address: 16732 E. Iliff (Shop. Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: T*n
+- Day: Friday
+  Time: 06:30 AM
+  Group Name: First Things First
+  Address: 1385 Carr St., Suite 2
+  City: Lakewood
+  District: '12'
+  Codes: "*n"
+- Day: Friday
+  Time: 06:30 AM
+  Group Name: Rude Rousing
+  Address: 390 Lashley Ave.
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Friday
+  Time: 06:30 AM
+  Group Name: Sunrise Serenity
+  Address: '3355 S. Wadsworth #H125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: "*n"
+- Day: Friday
+  Time: 06:30 AM
+  Group Name: There is a Solution
+  Address: 8081 E. Orchard Rd. (Entr 5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: n
+- Day: Friday
+  Time: 06:45 AM
+  Group Name: Crack of Dawn
+  Address: 3600 S. Clarkson (Ch,NE House) 781-5822
+  City: Englewood
+  District: '11'
+  Codes: "*n"
+- Day: Friday
+  Time: 06:45 AM
+  Group Name: Daily Reflections
+  Address: 8081 E. Orchard Rd. (Ent 5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: "*n"
+- Day: Friday
+  Time: 06:45 AM
+  Group Name: P.P. Workshop
+  Address: 8545 E. Dry Creek Rd. (Ch Bsmt)
+  City: Centennial
+  District: '16'
+  Codes: n
+- Day: Friday
+  Time: 06:45 AM
+  Group Name: Upon Awakening
+  Address: 8817 S. Broadway (Ch)
+  City: Highlands Ranch
+  District: '11'
+  Codes: "*n"
+- Day: Friday
+  Time: 07:00 AM
+  Group Name: Attitude Adjustment
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Friday
+  Time: 07:00 AM
+  Group Name: Bottoms Up
+  Address: 5927 Miller St. (Ch)
+  City: Arvada
+  District: '12'
+  Codes: C*n
+- Day: Friday
+  Time: 07:00 AM
+  Group Name: Boulder Attitude Adjustme
+  Address: 5375 Western Ave. (Rm B)
+  City: Boulder
+  District: '24'
+  Codes: n
+- Day: Friday
+  Time: 07:00 AM
+  Group Name: Dawn Patrol
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '13'
+  Codes: "*n"
+- Day: Friday
+  Time: 07:00 AM
+  Group Name: Degenerates
+  Address: '8250 W. 80th Ave. #12'
+  City: Arvada
+  District: '31'
+  Codes: "*n"
+- Day: Friday
+  Time: 07:00 AM
+  Group Name: Eye-Openers
+  Address: '5375 Western Ave. #F'
+  City: Boulder
+  District: '24'
+  Codes: "*nSit"
+- Day: Friday
+  Time: 07:00 AM
+  Group Name: Morning Reflection
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: "*n"
+- Day: Friday
+  Time: 07:00 AM
+  Group Name: Rude Awakening
+  Address: 1117 Kimbark St.
+  City: Longmont
+  District: '34'
+  Codes: "*n"
+- Day: Friday
+  Time: 07:30 AM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Friday
+  Time: 07:30 AM
+  Group Name: Morning After
+  Address: 3489 W. 72nd (Rm 104)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Friday
+  Time: 07:30 AM
+  Group Name: Mountain View
+  Address: 8968 N. Washington (storefront)
+  City: Thornton
+  District: '9'
+  Codes: "*n"
+- Day: Friday
+  Time: 07:30 AM
+  Group Name: N.W. Arvada AM
+  Address: 7203 Simms St.
+  City: Arvada
+  District: '31'
+  Codes: "*n"
+- Day: Friday
+  Time: 07:30 AM
+  Group Name: Spiritual Awakening
+  Address: '3355 S. Wadsworth Blvd. #H-125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: "*n"
+- Day: Friday
+  Time: 08:15 AM
+  Group Name: Franktown Friends
+  Address: 1959 N. Hwy 83 (Fire Sta)
+  City: Franktown
+  District: '10'
+  Codes: "*n"
+- Day: Friday
+  Time: 09:00 AM
+  Group Name: V.A. Early Birds
+  Address: '1055 Clermont St. (Hosp 3E #115)'
+  City: Denver
+  District: '16'
+  Codes: "*n"
+- Day: Friday
+  Time: 09:30 AM
+  Group Name: A Vision 4 Today
+  Address: 8081 E. Orchard Rd. (Ent5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: "*nSit"
+- Day: Friday
+  Time: 09:30 AM
+  Group Name: Women No Excuses
+  Address: 7520 S. Boulder Rd. (Ch)
+  City: Boulder
+  District: '24'
+  Codes: W*n
+- Day: Friday
+  Time: 10:00 AM
+  Group Name: 11th Step Meeting
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: ST*n
+- Day: Friday
+  Time: 10:00 AM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Friday
+  Time: 10:00 AM
+  Group Name: Group 1
+  Address: '3355 S. Wadsworth #H-125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: "*n"
+- Day: Friday
+  Time: 10:00 AM
+  Group Name: Grupo El Principio
+  Address: 2420 S. Federal Bl.
+  City: Denver
+  District: '25'
+  Codes: Spnn
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: 231 Buckley
+  Address: 15210 E 6th Ave, Unit 1, 343-4994
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: Alano
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: "*n"
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: Arid Group
+  Address: 1480 Hoyt St.  238-5693
+  City: Lakewood
+  District: '12'
+  Codes: "*n"
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: Aurora Nooners
+  Address: 10242 E. 16th Ave (upstairs), 366-3622
+  City: Aurora
+  District: '16'
+  Codes: Cs
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: AWOL
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '11'
+  Codes: "*n"
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: Beyond Alcohol
+  Address: 1680 S. Chambers Rd. (Ch)
+  City: Aurora
+  District: '10'
+  Codes: Cn
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: Bill's Brownbaggers
+  Address: 8250 W. 80th Ave. Unit 12, 303-420-6560
+  City: Arvada
+  District: '31'
+  Codes: "*n"
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: Boulder Nooners
+  Address: '5375 Western Ave. #F'
+  City: Boulder
+  District: '24'
+  Codes: SP*n
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: 'Brighton #1'
+  Address: 147 S. 2nd Place, 303-659-9953
+  City: Brighton
+  District: '9'
+  Codes: C*n
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: Buckeye Easy Does It
+  Address: 16732 E Iliff Av (Shop Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: Came to Believe
+  Address: 1311 York St. 303-322-3674
+  City: Denver
+  District: '13'
+  Codes: C
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: Circle of Friends
+  Address: 4881 Cherokee Dr. (Ch)
+  City: Castle Rock
+  District: '10'
+  Codes: BBn
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: Day By Day
+  Address: 1008 E. Hampden Ave.
+  City: Englewood
+  District: '11'
+  Codes: "*"
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: Happy Trudgers
+  Address: 1820 Broadway (Ch. Annex bsmt.)
+  City: Denver
+  District: '9'
+  Codes: n
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: High Noon
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: Cn
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: Home Girls
+  Address: 2425 Colorado Ave. (Rm A/B)
+  City: Boulder
+  District: '24'
+  Codes: CWn
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: Little Red House
+  Address: 7275 Monaco, 287-9950
+  City: Commerce City
+  District: '9'
+  Codes: n
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: Liv in the Answer
+  Address: 9650 S. Jordan Rd. (Ch)
+  City: Parker
+  District: '10'
+  Codes: BB*n
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: Mid-day Open
+  Address: '10576 W. Alameda Ave. #2'
+  City: Lakewood
+  District: '19'
+  Codes: "*n"
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: Miracles Happen
+  Address: 10242 E. 16th Ave, 366-3622
+  City: Aurora
+  District: '16'
+  Codes: n
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: Mountain View
+  Address: 8968 N. Washington (storefront)
+  City: Thornton
+  District: '9'
+  Codes: "*n"
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: New Attitudes
+  Address: 9998 Havekost Rd. (Ch)
+  City: Conifer
+  District: '29'
+  Codes: n
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: Newner Meeting
+  Address: '3355 S. Wadsworth Bl. #H-127'
+  City: Lakewood
+  District: '30'
+  Codes: B*n
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: No Half Measures
+  Address: 3600 S. Clarkson (NE of Ch), 781-5822
+  City: Englewood
+  District: '11'
+  Codes: ST*n
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: Noon Beginners
+  Address: '10576 W. Alameda Ave. #2'
+  City: Lakewood
+  District: '19'
+  Codes: Bn
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: Noon Workshop
+  Address: 8081 E. Orchard Rd. (Ent 5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: Cn
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: Other Noon Group
+  Address: 390 Lashley Ave.
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: Pass It On
+  Address: 8035 S. Quebec St. (Ch)
+  City: Centennial
+  District: '16'
+  Codes: Bn
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: Return to Sanity
+  Address: 8300 Pomona Dr. (Ch)
+  City: Arvada
+  District: '31'
+  Codes: BB*n
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Friday
+  Time: 12:00 PM
+  Group Name: Weekday Sobriety
+  Address: 1117 Kimbark St.
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Friday
+  Time: 01:00 PM
+  Group Name: Daytimers
+  Address: 6322 S. Lakeview St. (Ch)
+  City: Littleton
+  District: '11'
+  Codes: C*n
+- Day: Friday
+  Time: 02:00 PM
+  Group Name: AWOL
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '11'
+  Codes: "*n"
+- Day: Friday
+  Time: 02:00 PM
+  Group Name: Little Red House
+  Address: 7275 Monaco, 287-9950
+  City: Commerce City
+  District: '9'
+  Codes: BBWn
+- Day: Friday
+  Time: 03:00 PM
+  Group Name: 3 PM How It Works
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Friday
+  Time: 03:00 PM
+  Group Name: First Things First
+  Address: 1385 Carr St., Suite 2
+  City: Lakewood
+  District: '12'
+  Codes: "*n"
+- Day: Friday
+  Time: 04:00 PM
+  Group Name: Clean Livers
+  Address: '5375 Western Ave. #F'
+  City: Boulder
+  District: '24'
+  Codes: "*n"
+- Day: Friday
+  Time: 05:00 PM
+  Group Name: Sober Solutions
+  Address: 390 Lashley Ave.
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Friday
+  Time: 05:30 PM
+  Group Name: 5:30 Recharge
+  Address: 10242 E. 16th Ave (366-3622)
+  City: Aurora
+  District: '16'
+  Codes: CBs
+- Day: Friday
+  Time: 05:30 PM
+  Group Name: Always Hope
+  Address: '3355 S. Wadsworth Ave. #H-125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: "*n"
+- Day: Friday
+  Time: 05:30 PM
+  Group Name: AWOL
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '11'
+  Codes: "*n"
+- Day: Friday
+  Time: 05:30 PM
+  Group Name: Bill & Bob's Adventure
+  Address: 3600 S Clarkson (Ch, NE house)
+  City: Englewood
+  District: '11'
+  Codes: B*n
+- Day: Friday
+  Time: 05:30 PM
+  Group Name: Boulder Happy Hour
+  Address: '5375 Western Ave. #F'
+  City: Boulder
+  District: '24'
+  Codes: "*n"
+- Day: Friday
+  Time: 05:30 PM
+  Group Name: Davidson Mesa
+  Address: 741 Jefferson & Spuce (Ch)
+  City: Louisville
+  District: '24'
+  Codes: n
+- Day: Friday
+  Time: 05:30 PM
+  Group Name: Day By Day
+  Address: 1008 E. Hampden Ave.
+  City: Englewood
+  District: '11'
+  Codes: B*
+- Day: Friday
+  Time: 05:30 PM
+  Group Name: Evening After
+  Address: '3489 W. 72nd #104'
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Friday
+  Time: 05:30 PM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Friday
+  Time: 05:30 PM
+  Group Name: Happy Hour Group
+  Address: 1117 Kimbark St.
+  City: Longmont
+  District: '34'
+  Codes: "*n"
+- Day: Friday
+  Time: 05:30 PM
+  Group Name: Longmont 4 D
+  Address: 1351 Collyer St. (Ch)
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Friday
+  Time: 05:30 PM
+  Group Name: Mountain View
+  Address: 8968 N. Washington (storefront)
+  City: Thornton
+  District: '9'
+  Codes: "*n"
+- Day: Friday
+  Time: 05:30 PM
+  Group Name: Recovery Hour
+  Address: 8250 W 80th Ave. Unit 12, 303-420-6560
+  City: Arvada
+  District: '31'
+  Codes: C*n
+- Day: Friday
+  Time: 05:30 PM
+  Group Name: Spirit of Recovery
+  Address: 10576 W. Alameda Ave., 238-1229
+  City: Lakewood
+  District: '19'
+  Codes: n
+- Day: Friday
+  Time: 05:30 PM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Friday
+  Time: 05:45 PM
+  Group Name: 5:45 Happy Hour
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Friday
+  Time: 05:45 PM
+  Group Name: Buckeye Easy Does It
+  Address: 16732 E Iliff Av (Shop Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Friday
+  Time: 05:45 PM
+  Group Name: DTC Sobriety
+  Address: 8081 E. Orchard Rd. (Entr 5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: "*n"
+- Day: Friday
+  Time: 05:45 PM
+  Group Name: S.O.T.S.
+  Address: '3355 S. Wadsworth #H-125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: C*n
+- Day: Friday
+  Time: 06:00 PM
+  Group Name: 231 Buckley
+  Address: 15210 E 6th Ave, Unit 1, 343-4994
+  City: Aurora
+  District: '10'
+  Codes: ST*n
+- Day: Friday
+  Time: 06:00 PM
+  Group Name: Arid Group
+  Address: 1480 Hoyt St.  238-5693
+  City: Lakewood
+  District: '12'
+  Codes: "*n"
+- Day: Friday
+  Time: 06:00 PM
+  Group Name: Daily Reprieve
+  Address: 17701 W. 16th (Ch)
+  City: Golden
+  District: '33'
+  Codes: B*n
+- Day: Friday
+  Time: 06:00 PM
+  Group Name: Friday 11 Step Study
+  Address: 10306 W. Bowles Ave. (Ch Annex)
+  City: Littleton
+  District: '30'
+  Codes: CST*n
+- Day: Friday
+  Time: 06:00 PM
+  Group Name: Just Got Paid
+  Address: 19650 E. Main St. (Main St.center)
+  City: Parker
+  District: '10'
+  Codes: n
+- Day: Friday
+  Time: 06:00 PM
+  Group Name: Little Red House
+  Address: 7275 Monaco, 287-9950
+  City: Commerce City
+  District: '9'
+  Codes: n
+- Day: Friday
+  Time: 06:00 PM
+  Group Name: Nine to Five
+  Address: 1301 E. Colfax Ave. (The Center)
+  City: Denver
+  District: '13'
+  Codes: G*n
+- Day: Friday
+  Time: 06:00 PM
+  Group Name: Pathfinder
+  Address: 26349 Hwy 74 (Ch)
+  City: Kittridge
+  District: '29'
+  Codes: "*n"
+- Day: Friday
+  Time: 06:00 PM
+  Group Name: Safe Harbor
+  Address: 9032 W. Ken Caryl (unit A)
+  City: Littleton
+  District: '30'
+  Codes: B*n
+- Day: Friday
+  Time: 06:00 PM
+  Group Name: Simple Solutions
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: B*n
+- Day: Friday
+  Time: 06:30 PM
+  Group Name: Amateur Hour
+  Address: 9203 S. University Bl. (Ch)
+  City: Highlands Ranch
+  District: '11'
+  Codes: "*n"
+- Day: Friday
+  Time: 06:30 PM
+  Group Name: Clean and Serene
+  Address: 12795 Hwy 285 (4mi S of Conifer)
+  City: Conifer
+  District: '29'
+  Codes: "*n"
+- Day: Friday
+  Time: 06:30 PM
+  Group Name: Four Horsemen
+  Address: 216 S. Grant Ave.
+  City: Denver
+  District: '13'
+  Codes: CSTBn
+- Day: Friday
+  Time: 06:30 PM
+  Group Name: Fri Nite Women
+  Address: 400 S. Williams (Ch. SE ramp door)
+  City: Denver
+  District: '13'
+  Codes: W*n
+- Day: Friday
+  Time: 06:30 PM
+  Group Name: RATS Group of AA
+  Address: 23 Lincoln St. (Ch)
+  City: Denver
+  District: '13'
+  Codes: B*n
+- Day: Friday
+  Time: 07:00 PM
+  Group Name: Boulder 4 D
+  Address: 1421 Spruce St. (Ch bsmt)
+  City: Boulder
+  District: '24'
+  Codes: BBn
+- Day: Friday
+  Time: 07:00 PM
+  Group Name: Clear Creek Roadrunners
+  Address: 1410 Colorado (Ch, side door)
+  City: Idaho Springs
+  District: '33'
+  Codes: C*n
+- Day: Friday
+  Time: 07:00 PM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Friday
+  Time: 07:00 PM
+  Group Name: Happy Way
+  Address: 3885 S. Broadway (Ch bsmt)
+  City: Englewood
+  District: '11'
+  Codes: n
+- Day: Friday
+  Time: 07:00 PM
+  Group Name: Hour of Hope
+  Address: 2551 W. 84th Ave. (Hosp Conf Rm)
+  City: Westminster
+  District: '32'
+  Codes: "*n"
+- Day: Friday
+  Time: 07:00 PM
+  Group Name: Keep It Simple
+  Address: 325 So. Banner (Ch bsmt.)
+  City: Elizabeth
+  District: '10'
+  Codes: n
+- Day: Friday
+  Time: 07:00 PM
+  Group Name: Nederland Group
+  Address: 326 Hwy 119 (Catholic Ch.)
+  City: Nederland
+  District: '24'
+  Codes: n
+- Day: Friday
+  Time: 07:00 PM
+  Group Name: Power Hour
+  Address: 194 S. McDonnell St. (Ch)
+  City: Byers
+  District: '10'
+  Codes: "*n"
+- Day: Friday
+  Time: 07:00 PM
+  Group Name: Sobriety
+  Address: 121 Acoma (Sobriety House bsmt) 722-5746
+  City: Denver
+  District: '13'
+  Codes: BBn
+- Day: Friday
+  Time: 07:00 PM
+  Group Name: Sobriety at Seven
+  Address: '3355 S. Wadsworth #H125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: C*n
+- Day: Friday
+  Time: 07:00 PM
+  Group Name: V.A. New Beginnings
+  Address: 1055 Clermont (Hosp bsmt, auditorium)
+  City: Denver
+  District: '16'
+  Codes: "*n"
+- Day: Friday
+  Time: 07:00 PM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Friday
+  Time: 07:00 PM
+  Group Name: Working with Others
+  Address: 1311 York St. 303-322-3674
+  City: Denver
+  District: '13'
+  Codes: Cn
+- Day: Friday
+  Time: 07:15 PM
+  Group Name: Beginners
+  Address: 16732 E. Iliff Ave (Shop. Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: CBB*n
+- Day: Friday
+  Time: 07:15 PM
+  Group Name: No Mental Defense
+  Address: 1385 Carr St. (Ste 2)
+  City: Lakewood
+  District: '12'
+  Codes: "*n"
+- Day: Friday
+  Time: 07:30 PM
+  Group Name: A N.E.W. in life
+  Address: 13645 E. Bayaud Ave. (Hall)
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Friday
+  Time: 07:30 PM
+  Group Name: 'Arvada #1'
+  Address: 5855 Wadsworth Bypass Bldg B
+  City: Arvada
+  District: '31'
+  Codes: SP*n
+- Day: Friday
+  Time: 07:30 PM
+  Group Name: Basic Text
+  Address: 3737 New Hope Way (Ch)
+  City: Castle Rock
+  District: '10'
+  Codes: "*n"
+- Day: Friday
+  Time: 07:30 PM
+  Group Name: 'Brighton #1'
+  Address: 147 S. 2nd Place, 303-659-9953
+  City: Brighton
+  District: '9'
+  Codes: CGV*n
+- Day: Friday
+  Time: 07:30 PM
+  Group Name: Broomfield Any Lengths
+  Address: 825 Kohl St (Ch. Bsmt.)
+  City: Broomfield
+  District: '32'
+  Codes: n
+- Day: Friday
+  Time: 07:30 PM
+  Group Name: Do Or Die
+  Address: 8801 Lipan (Fireside Rm)
+  City: Thornton
+  District: '32'
+  Codes: "*n"
+- Day: Friday
+  Time: 07:30 PM
+  Group Name: El Nuevo Amanecer
+  Address: 801 S. Public Road
+  City: Lafayette
+  District: '25'
+  Codes: Spnn
+- Day: Friday
+  Time: 07:30 PM
+  Group Name: 'Erie Group # 1'
+  Address: 604 Holbrook (Ch Annex)
+  City: Erie
+  District: '24'
+  Codes: "*n"
+- Day: Friday
+  Time: 07:30 PM
+  Group Name: Friday Night Open
+  Address: 14099 W. Jewell Ave. (Ch)
+  City: Lakewood
+  District: '19'
+  Codes: "*n"
+- Day: Friday
+  Time: 07:30 PM
+  Group Name: Grupo 3RA Tradicion
+  Address: '6401 E. 72nd Ave. #115'
+  City: Commerce City
+  District: '25'
+  Codes: Spn
+- Day: Friday
+  Time: 07:30 PM
+  Group Name: Grupo Aurora 97
+  Address: 1408 Del Mar Pkwy. Unit C
+  City: Aurora
+  District: '25'
+  Codes: Spnn
+- Day: Friday
+  Time: 07:30 PM
+  Group Name: Grupo El Alba
+  Address: '3133 Peoria St. #205'
+  City: Denver
+  District: '25'
+  Codes: Spnn
+- Day: Friday
+  Time: 07:30 PM
+  Group Name: Grupo El Buen Camino
+  Address: 1679 47th Ave.
+  City: Denver
+  District: '25'
+  Codes: Spn
+- Day: Friday
+  Time: 07:30 PM
+  Group Name: Grupo El Principio
+  Address: 2420 S. Federal Bl.
+  City: Denver
+  District: '25'
+  Codes: Spnn
+- Day: Friday
+  Time: 07:30 PM
+  Group Name: Grupo Honestidad
+  Address: 2320 E. 49th Ave.
+  City: Denver
+  District: '25'
+  Codes: Spn
+- Day: Friday
+  Time: 07:30 PM
+  Group Name: Grupo Latinos Unidos
+  Address: 786 Peoria St. (90 mins)
+  City: Aurora
+  District: '25'
+  Codes: Spn
+- Day: Friday
+  Time: 07:30 PM
+  Group Name: Grupo Los Buenos Veterano
+  Address: '11000 E. Yale Ave. #80, 303-671-2983'
+  City: Aurora
+  District: '25'
+  Codes: Spnn
+- Day: Friday
+  Time: 07:30 PM
+  Group Name: Grupo Nuevo Destino
+  Address: 1900 Harlan St.
+  City: Lakewood
+  District: '25'
+  Codes: Spn
+- Day: Friday
+  Time: 07:30 PM
+  Group Name: Grupo Paso 12
+  Address: 10242 E. 16th Ave., 303-366-3622
+  City: Aurora
+  District: '25'
+  Codes: Spn
+- Day: Friday
+  Time: 07:30 PM
+  Group Name: Grupo Renovacion
+  Address: 3458 1st Ave.
+  City: Denver
+  District: '25'
+  Codes: Spnn
+- Day: Friday
+  Time: 07:30 PM
+  Group Name: Grupo Solo por Hoy
+  Address: '7131 Irving St. #202'
+  City: Denver
+  District: '25'
+  Codes: Spn
+- Day: Friday
+  Time: 07:30 PM
+  Group Name: Here's HOW
+  Address: 21755 E. Smoky Hill Rd. (Ch)
+  City: Centennial
+  District: '10'
+  Codes: "*n"
+- Day: Friday
+  Time: 07:30 PM
+  Group Name: Keep Coming Back
+  Address: 350 11th Ave. (Ch )
+  City: Longmont
+  District: '34'
+  Codes: "*n"
+- Day: Friday
+  Time: 07:30 PM
+  Group Name: La Nueva Vida
+  Address: 231 S. Osceola St. (Pvt Hs)
+  City: Denver
+  District: '30'
+  Codes: "*n"
+- Day: Friday
+  Time: 07:30 PM
+  Group Name: Language of the Heart
+  Address: 8817 S. Broadway (Ch)
+  City: Highlands Ranch
+  District: '11'
+  Codes: CAGV*n
+- Day: Friday
+  Time: 07:30 PM
+  Group Name: School of Hard Knox
+  Address: 7275 Monaco, 287-9950
+  City: Commerce City
+  District: '9'
+  Codes: n
+- Day: Friday
+  Time: 08:00 PM
+  Group Name: 231 Buckley
+  Address: 15210 E 6th Ave, Unit 1, 343-4994
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Friday
+  Time: 08:00 PM
+  Group Name: As We See It
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: "*n"
+- Day: Friday
+  Time: 08:00 PM
+  Group Name: Bailey Group
+  Address: 106 Rosalie Rd. (Ch)
+  City: Bailey
+  District: '5'
+  Codes: C
+- Day: Friday
+  Time: 08:00 PM
+  Group Name: Denver Young People
+  Address: 2122 S. Lafayette (Ch rear)
+  City: Denver
+  District: '11'
+  Codes: BY*n
+- Day: Friday
+  Time: 08:00 PM
+  Group Name: Detox Beginners
+  Address: 750 Delaware (Hospital 4th Fl. East)
+  City: Denver
+  District: '13'
+  Codes: SPB*n
+- Day: Friday
+  Time: 08:00 PM
+  Group Name: Fri. Night Life
+  Address: 10521 S. Parker Rd. Ste G
+  City: Parker
+  District: '10'
+  Codes: "*n"
+- Day: Friday
+  Time: 08:00 PM
+  Group Name: Grupo La Ultima Cruda
+  Address: 9357 E. Colfax Ave. Unit E
+  City: Aurora
+  District: '25'
+  Codes: Spn
+- Day: Friday
+  Time: 08:00 PM
+  Group Name: Just Do It Group
+  Address: 10242 E. 16th Ave., 366-3622
+  City: Aurora
+  District: '16'
+  Codes: Cn
+- Day: Friday
+  Time: 08:00 PM
+  Group Name: Oasis Group
+  Address: '3355 S. Wadsworth #H-125 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: "*n"
+- Day: Friday
+  Time: 08:00 PM
+  Group Name: Old Kent
+  Address: 1201 S. Steele St. (Ch)
+  City: Denver
+  District: '13'
+  Codes: SPn
+- Day: Friday
+  Time: 08:00 PM
+  Group Name: Puttin' Sober
+  Address: '3489 W. 72nd Ave. #104'
+  City: Westminster
+  District: '32'
+  Codes: "*n"
+- Day: Friday
+  Time: 08:00 PM
+  Group Name: Serenity
+  Address: 6400 S. University Blvd. (Ch)
+  City: Littleton
+  District: '11'
+  Codes: C*n
+- Day: Friday
+  Time: 08:00 PM
+  Group Name: Valmont Victors
+  Address: 3262 N. 61st Rd. (Ch)
+  City: Boulder
+  District: '24'
+  Codes: "*n"
+- Day: Friday
+  Time: 08:30 PM
+  Group Name: Denver Serenity
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Friday
+  Time: 08:30 PM
+  Group Name: Friday Night Live
+  Address: 3180 Airport Rd. (ARC Rm 5280)
+  City: Boulder
+  District: '24'
+  Codes: BB*n
+- Day: Friday
+  Time: 08:30 PM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Friday
+  Time: 09:00 PM
+  Group Name: Stopped in Time
+  Address: 16732 E. Iliff Ave. (Shop Ctr)
+  City: Aurora
+  District: '10'
+  Codes: Y*n
+- Day: Friday
+  Time: 09:15 PM
+  Group Name: 'Brighton #1'
+  Address: 147 S. 2nd Place, 303-659-9953
+  City: Brighton
+  District: '9'
+  Codes: CA*n
+- Day: Friday
+  Time: 09:30 PM
+  Group Name: Wind at My Back
+  Address: 8081 E. Orchard Rd. (Entr 5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: CA*n
+- Day: Friday
+  Time: 10:00 PM
+  Group Name: 10 PM Last Call
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: CAn
+- Day: Friday
+  Time: 10:00 PM
+  Group Name: Ten Or So
+  Address: '3489 W. 72nd Ave. #104'
+  City: Westminster
+  District: '32'
+  Codes: CAn
+- Day: Saturday
+  Time: 06:30 AM
+  Group Name: First Things First
+  Address: 1385 Carr St., Suite 2
+  City: Lakewood
+  District: '12'
+  Codes: "*n"
+- Day: Saturday
+  Time: 06:30 AM
+  Group Name: Rude Rousing
+  Address: 390 Lashley Ave.
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Saturday
+  Time: 06:30 AM
+  Group Name: Sunrise Serenity
+  Address: '3355 S. Wadsworth #H125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: "*n"
+- Day: Saturday
+  Time: 06:30 AM
+  Group Name: Three for All
+  Address: 12795 Hwy 285, S of Conifer 838-9908
+  City: Conifer
+  District: '29'
+  Codes: "*n"
+- Day: Saturday
+  Time: 06:45 AM
+  Group Name: P.P. Workshop
+  Address: 8545 E. Dry Creek Rd. (Ch Bsmt)
+  City: Centennial
+  District: '16'
+  Codes: BBn
+- Day: Saturday
+  Time: 06:45 AM
+  Group Name: Upon Awakening
+  Address: 8817 S. Broadway (Ch)
+  City: Highlands Ranch
+  District: '11'
+  Codes: "*n"
+- Day: Saturday
+  Time: 07:00 AM
+  Group Name: Attitude Adjustment
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Saturday
+  Time: 07:00 AM
+  Group Name: Bottoms Up
+  Address: 5927 Miller St. (Ch)
+  City: Arvada
+  District: '12'
+  Codes: C*n
+- Day: Saturday
+  Time: 07:00 AM
+  Group Name: Morning Reflection
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: "*n"
+- Day: Saturday
+  Time: 07:00 AM
+  Group Name: Rude Awakening
+  Address: 1117 Kimbark St.
+  City: Longmont
+  District: '34'
+  Codes: "*n"
+- Day: Saturday
+  Time: 07:30 AM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Saturday
+  Time: 07:30 AM
+  Group Name: Morning After
+  Address: 3489 W. 72nd (Rm 104)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Saturday
+  Time: 07:30 AM
+  Group Name: Parker Sat. 12X12
+  Address: 7051 E. Parker Hills Ct. (Ch)
+  City: Parker
+  District: '10'
+  Codes: STn
+- Day: Saturday
+  Time: 07:30 AM
+  Group Name: Spiritual Awakening
+  Address: '3355 S. Wadsworth Blvd. #H-125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: "*n"
+- Day: Saturday
+  Time: 08:00 AM
+  Group Name: Dawn Patrol
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '13'
+  Codes: "*n"
+- Day: Saturday
+  Time: 08:00 AM
+  Group Name: Early Bird
+  Address: 16732 E. Iliff (Shop. Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Saturday
+  Time: 08:00 AM
+  Group Name: Eye-Openers
+  Address: '5375 Western Ave. #F'
+  City: Boulder
+  District: '24'
+  Codes: "*n"
+- Day: Saturday
+  Time: 08:00 AM
+  Group Name: Franklin Pierce Men's AA
+  Address: 27640 Hwy 74 (Ch bldg)
+  City: Evergreen
+  District: '29'
+  Codes: CMn
+- Day: Saturday
+  Time: 08:00 AM
+  Group Name: God Power
+  Address: 3601 S. Sherman (bookstore mtg rm)
+  City: Englewood
+  District: '11'
+  Codes: W*n
+- Day: Saturday
+  Time: 08:00 AM
+  Group Name: Men's Acceptance
+  Address: 5707 S. Simms (Ch bsmt)
+  City: Littleton
+  District: '30'
+  Codes: M*n
+- Day: Saturday
+  Time: 08:00 AM
+  Group Name: Morning Gift
+  Address: 3600 S. Clarkson (NE of Ch)  781-5822
+  City: Englewood
+  District: '11'
+  Codes: "*n"
+- Day: Saturday
+  Time: 08:00 AM
+  Group Name: Mountain View
+  Address: 8968 N. Washington (storefront)
+  City: Thornton
+  District: '9'
+  Codes: M*n
+- Day: Saturday
+  Time: 08:00 AM
+  Group Name: S.O.S. Women's
+  Address: 8817 S. Broadway (Ch)
+  City: Highlands Ranch
+  District: '11'
+  Codes: STWn
+- Day: Saturday
+  Time: 08:00 AM
+  Group Name: Six Sixteen
+  Address: 1663 S. Acoma St., 303-785-0394
+  City: Denver
+  District: '11'
+  Codes: "*n"
+- Day: Saturday
+  Time: 08:00 AM
+  Group Name: SOS Men's Meeting
+  Address: Hwy73/Buffalo Pk Rd (Ch)
+  City: Evergreen
+  District: '29'
+  Codes: CMn
+- Day: Saturday
+  Time: 08:00 AM
+  Group Name: The Pluggers
+  Address: 8250 W. 80th Ave. Unit 12 303-420-6560
+  City: Arvada
+  District: '31'
+  Codes: "*n"
+- Day: Saturday
+  Time: 08:00 AM
+  Group Name: There is a Solution
+  Address: 8081 E. Orchard Rd. (Entr 5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: n
+- Day: Saturday
+  Time: 08:30 AM
+  Group Name: Mens Big Book
+  Address: 9203 S. University Bl. (Ch)
+  City: Highlands Ranch
+  District: '11'
+  Codes: BBM*n
+- Day: Saturday
+  Time: 09:00 AM
+  Group Name: 231 Buckley
+  Address: 15210 E 6th Ave, Unit 1, 343-4994
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Saturday
+  Time: 09:00 AM
+  Group Name: Being Convinced
+  Address: 690 Colorado Blvd. (Ch)
+  City: Denver
+  District: '16'
+  Codes: n
+- Day: Saturday
+  Time: 09:00 AM
+  Group Name: Franktown Friends
+  Address: 1959 N. Hwy 83 (Fire Sta)
+  City: Franktown
+  District: '10'
+  Codes: "*n"
+- Day: Saturday
+  Time: 09:00 AM
+  Group Name: Golden Sober Sisters
+  Address: 1500 Ford St. (Ch 2nd Fl, 90 mins)
+  City: Golden
+  District: '33'
+  Codes: STWn
+- Day: Saturday
+  Time: 09:00 AM
+  Group Name: Happy Way
+  Address: 3885 S. Broadway (Ch bsmt)
+  City: Englewood
+  District: '11'
+  Codes: n
+- Day: Saturday
+  Time: 09:00 AM
+  Group Name: Mountain Women
+  Address: 5980 Hwy 73 (Ch)
+  City: Evergreen
+  District: '29'
+  Codes: WnSit
+- Day: Saturday
+  Time: 09:00 AM
+  Group Name: Newcomers Friends
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: Bn
+- Day: Saturday
+  Time: 09:00 AM
+  Group Name: Parker Men
+  Address: 7051 E. Parker Hills Ct. (Ch)
+  City: Parker
+  District: '10'
+  Codes: M*n
+- Day: Saturday
+  Time: 09:00 AM
+  Group Name: Sober Sisters
+  Address: 1300 Park St. (Ch)
+  City: Castle Rock
+  District: '10'
+  Codes: CWn
+- Day: Saturday
+  Time: 09:30 AM
+  Group Name: A Vision 4 Today
+  Address: 8081 E. Orchard Rd. (Ent5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: "*n"
+- Day: Saturday
+  Time: 09:30 AM
+  Group Name: Cracker Factory
+  Address: 19580 E. Pilgrims Pl. (Ch )
+  City: Parker
+  District: '10'
+  Codes: CWn
+- Day: Saturday
+  Time: 09:30 AM
+  Group Name: Four Horsemen*
+  Address: 1311 York St.
+  City: Denver
+  District: '13'
+  Codes: CSTn
+- Day: Saturday
+  Time: 09:30 AM
+  Group Name: Mountain View
+  Address: 8968 N. Washington (storefront)
+  City: Thornton
+  District: '9'
+  Codes: W*n
+- Day: Saturday
+  Time: 09:30 AM
+  Group Name: Women and Solution
+  Address: 803 3rd Ave.
+  City: Longmont
+  District: '34'
+  Codes: W*n
+- Day: Saturday
+  Time: 10:00 AM
+  Group Name: Cherry Creek Promises
+  Address: 700 S. Franklin (Ch)
+  City: Denver
+  District: '13'
+  Codes: "*nSit"
+- Day: Saturday
+  Time: 10:00 AM
+  Group Name: Day By Day
+  Address: 1008 E. Hampden Ave.
+  City: Englewood
+  District: '11'
+  Codes: W*
+- Day: Saturday
+  Time: 10:00 AM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Saturday
+  Time: 10:00 AM
+  Group Name: Group 1
+  Address: '3355 S. Wadsworth #H-125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: "*n"
+- Day: Saturday
+  Time: 10:00 AM
+  Group Name: Grupo El Principio
+  Address: 2420 S. Federal Bl.
+  City: Denver
+  District: '25'
+  Codes: Spnn
+- Day: Saturday
+  Time: 10:00 AM
+  Group Name: Hyannis Seeds
+  Address: 1255 Centaur Village Dr. (Ch)
+  City: Lafayette
+  District: '24'
+  Codes: BBST*n
+- Day: Saturday
+  Time: 10:00 AM
+  Group Name: Park Hill Sobriety
+  Address: 1980 Dahlia (Ch. bsmt)
+  City: Denver
+  District: '16'
+  Codes: "*nSit"
+- Day: Saturday
+  Time: 10:00 AM
+  Group Name: Sat AM Steppers
+  Address: 2029 Larimer St. (Main rm)
+  City: Denver
+  District: '9'
+  Codes: "*n"
+- Day: Saturday
+  Time: 10:00 AM
+  Group Name: Saturday Serenity
+  Address: 1335 Francis St. (Ch)
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Saturday
+  Time: 10:30 AM
+  Group Name: Arid Group
+  Address: 1480 Hoyt St.  238-5693
+  City: Lakewood
+  District: '12'
+  Codes: "*n"
+- Day: Saturday
+  Time: 10:30 AM
+  Group Name: Fire Without Smoke
+  Address: '5375 Western Ave. #F'
+  City: Boulder
+  District: '24'
+  Codes: "*n"
+- Day: Saturday
+  Time: 10:30 AM
+  Group Name: Saturday Step
+  Address: 7275 S. Broadway (Ch bsmt)
+  City: Littleton
+  District: '11'
+  Codes: CST*n
+- Day: Saturday
+  Time: 11:00 AM
+  Group Name: Sisters of Sobriety
+  Address: '3355 S. Wadsworth #H-125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: W*n
+- Day: Saturday
+  Time: 11:00 AM
+  Group Name: Speakeasy Meeting
+  Address: 12795 Hwy 285, S of Conifer
+  City: Conifer
+  District: '29'
+  Codes: n
+- Day: Saturday
+  Time: 11:30 AM
+  Group Name: Grupo Aurora 97
+  Address: 1408 Del Mar Pkwy. Unit C
+  City: Aurora
+  District: '25'
+  Codes: Spnn
+- Day: Saturday
+  Time: 12:00 PM
+  Group Name: 12 O'Clock High
+  Address: 600 Gilpin (Ch N door 2nd Fl.)
+  City: Denver
+  District: '13'
+  Codes: Cn
+- Day: Saturday
+  Time: 12:00 PM
+  Group Name: 231 Buckley
+  Address: 15210 E 6th Ave, Unit 1, 343-4994
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Saturday
+  Time: 12:00 PM
+  Group Name: Alano
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: "*n"
+- Day: Saturday
+  Time: 12:00 PM
+  Group Name: AWOL
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '11'
+  Codes: "*n"
+- Day: Saturday
+  Time: 12:00 PM
+  Group Name: Bill's Brownbaggers
+  Address: 8250 W. 80th Ave. Unit 12, 303-420-6560
+  City: Arvada
+  District: '31'
+  Codes: "*n"
+- Day: Saturday
+  Time: 12:00 PM
+  Group Name: Boulder Nooners
+  Address: '5375 Western Ave. #F'
+  City: Boulder
+  District: '24'
+  Codes: "*n"
+- Day: Saturday
+  Time: 12:00 PM
+  Group Name: 'Brighton #1'
+  Address: 147 S. 2nd Place, 303-659-9953
+  City: Brighton
+  District: '9'
+  Codes: "*n"
+- Day: Saturday
+  Time: 12:00 PM
+  Group Name: Buckeye Easy Does It
+  Address: 16732 E Iliff Av (Shop Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Saturday
+  Time: 12:00 PM
+  Group Name: Clear Creek Roadrunners
+  Address: 1410 Colorado (Ch, side door)
+  City: Idaho Springs
+  District: '33'
+  Codes: "*n"
+- Day: Saturday
+  Time: 12:00 PM
+  Group Name: Day By Day
+  Address: 1008 E. Hampden Ave.
+  City: Englewood
+  District: '11'
+  Codes: "*"
+- Day: Saturday
+  Time: 12:00 PM
+  Group Name: Edit Nooners
+  Address: '10576 W. Alameda Ave. #2, 238-1229'
+  City: Lakewood
+  District: '19'
+  Codes: n
+- Day: Saturday
+  Time: 12:00 PM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Saturday
+  Time: 12:00 PM
+  Group Name: Happy Hour Saturday
+  Address: 6335 So. Holly (Ch)
+  City: Littleton
+  District: '16'
+  Codes: "*n"
+- Day: Saturday
+  Time: 12:00 PM
+  Group Name: High Noon
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Saturday
+  Time: 12:00 PM
+  Group Name: Little Red House
+  Address: 7275 Monaco, 287-9950
+  City: Commerce City
+  District: '9'
+  Codes: n
+- Day: Saturday
+  Time: 12:00 PM
+  Group Name: Miracles Happen
+  Address: 10242 E. 16th Ave, 366-3622
+  City: Aurora
+  District: '16'
+  Codes: Bn
+- Day: Saturday
+  Time: 12:00 PM
+  Group Name: Mountain View
+  Address: 8968 N. Washington (storefront)
+  City: Thornton
+  District: '9'
+  Codes: "*n"
+- Day: Saturday
+  Time: 12:00 PM
+  Group Name: Newner Meeting
+  Address: '3355 S. Wadsworth Bl. #H-127'
+  City: Lakewood
+  District: '30'
+  Codes: B*n
+- Day: Saturday
+  Time: 12:00 PM
+  Group Name: Noon Workshop
+  Address: 8081 E. Orchard Rd. (Ent 5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: Cn
+- Day: Saturday
+  Time: 12:00 PM
+  Group Name: Other Noon Group
+  Address: 390 Lashley Ave.
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Saturday
+  Time: 12:00 PM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Saturday
+  Time: 12:15 PM
+  Group Name: Free To Be Me
+  Address: 6724 S. Webster (Ch)
+  City: Littleton
+  District: '30'
+  Codes: W*n
+- Day: Saturday
+  Time: 02:00 PM
+  Group Name: 231 Buckley
+  Address: 15210 E 6th Ave, Unit 1, 343-4994
+  City: Aurora
+  District: '10'
+  Codes: B*n
+- Day: Saturday
+  Time: 02:00 PM
+  Group Name: AWOL
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '11'
+  Codes: "*n"
+- Day: Saturday
+  Time: 02:00 PM
+  Group Name: Happy Way
+  Address: 3885 S. Broadway (Ch bsmt)
+  City: Englewood
+  District: '11'
+  Codes: Bn
+- Day: Saturday
+  Time: 03:00 PM
+  Group Name: 3 PM How It Works
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Saturday
+  Time: 03:00 PM
+  Group Name: First Things First
+  Address: 1385 Carr St., Suite 2
+  City: Lakewood
+  District: '12'
+  Codes: "*n"
+- Day: Saturday
+  Time: 05:00 PM
+  Group Name: AWOL
+  Address: 1865 S. Pearl St.
+  City: Denver
+  District: '11'
+  Codes: B*n
+- Day: Saturday
+  Time: 05:00 PM
+  Group Name: Sober Solutions
+  Address: 390 Lashley Ave.
+  City: Longmont
+  District: '34'
+  Codes: n
+- Day: Saturday
+  Time: 05:30 PM
+  Group Name: Always Hope
+  Address: '3355 S. Wadsworth Ave. #H-125, 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: "*n"
+- Day: Saturday
+  Time: 05:30 PM
+  Group Name: Boulder Happy Hour
+  Address: '5375 Western Ave. #F'
+  City: Boulder
+  District: '24'
+  Codes: "*n"
+- Day: Saturday
+  Time: 05:30 PM
+  Group Name: Day By Day
+  Address: 1008 E. Hampden Ave.
+  City: Englewood
+  District: '11'
+  Codes: B*
+- Day: Saturday
+  Time: 05:30 PM
+  Group Name: Lilley Gulch
+  Address: 7964 S Depew(Platte Cyn/Chatfield)
+  City: Littleton
+  District: '30'
+  Codes: "*n"
+- Day: Saturday
+  Time: 05:30 PM
+  Group Name: Mountain View
+  Address: 8968 N. Washington (storefront)
+  City: Thornton
+  District: '9'
+  Codes: "*n"
+- Day: Saturday
+  Time: 05:30 PM
+  Group Name: Spirit of Recovery
+  Address: 10576 W. Alameda Ave., 238-1229
+  City: Lakewood
+  District: '19'
+  Codes: n
+- Day: Saturday
+  Time: 05:30 PM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: CSTn
+- Day: Saturday
+  Time: 05:45 PM
+  Group Name: 5:45 Happy Hour
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Saturday
+  Time: 05:45 PM
+  Group Name: Buckeye Easy Does It
+  Address: 16732 E Iliff Av (Shop Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Saturday
+  Time: 05:45 PM
+  Group Name: Courage to Change
+  Address: 1615 Ogden St. (Ch)
+  City: Denver
+  District: '9'
+  Codes: G*n
+- Day: Saturday
+  Time: 05:45 PM
+  Group Name: DTC Sobriety
+  Address: 8081 E. Orchard Rd. (Entr 5 S door)
+  City: Greenwood Village
+  District: '16'
+  Codes: "*n"
+- Day: Saturday
+  Time: 06:00 PM
+  Group Name: 231 Buckley
+  Address: 15210 E 6th Ave, Unit 1, 343-4994
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Saturday
+  Time: 06:00 PM
+  Group Name: Arid Group
+  Address: 1480 Hoyt St.  238-5693
+  City: Lakewood
+  District: '12'
+  Codes: "*n"
+- Day: Saturday
+  Time: 06:00 PM
+  Group Name: Little Red House
+  Address: 7275 Monaco, 287-9950
+  City: Commerce City
+  District: '9'
+  Codes: n
+- Day: Saturday
+  Time: 06:30 PM
+  Group Name: Bridges End
+  Address: 2162 Lawrence St. (HWH)
+  City: Denver
+  District: '9'
+  Codes: SPB*n
+- Day: Saturday
+  Time: 06:30 PM
+  Group Name: Clean and Serene
+  Address: 12795 Hwy 285 (4mi S of Conifer)
+  City: Conifer
+  District: '29'
+  Codes: "*n"
+- Day: Saturday
+  Time: 07:00 PM
+  Group Name: Boiled As An Owl
+  Address: 1311 York St. 322-3674
+  City: Denver
+  District: '13'
+  Codes: n
+- Day: Saturday
+  Time: 07:00 PM
+  Group Name: Castle Rock 12X12
+  Address: 615 4th St. (Ch)
+  City: Castle Rock
+  District: '10'
+  Codes: STn
+- Day: Saturday
+  Time: 07:00 PM
+  Group Name: Davidson Mesa
+  Address: 741 Jefferson & Spuce (Ch)
+  City: Louisville
+  District: '24'
+  Codes: SPn
+- Day: Saturday
+  Time: 07:00 PM
+  Group Name: EDIT Speaker
+  Address: '10576 W. Alameda Ave. #2 238-1229'
+  City: Lakewood
+  District: '19'
+  Codes: SP*n
+- Day: Saturday
+  Time: 07:00 PM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: C*n
+- Day: Saturday
+  Time: 07:00 PM
+  Group Name: Grupo El Nuevo Camino
+  Address: 825 3rd Ave. (Ch)
+  City: Longmont
+  District: '25'
+  Codes: Spnn
+- Day: Saturday
+  Time: 07:00 PM
+  Group Name: Just another 24
+  Address: 10521 S. Parker Rd. Ste G
+  City: Parker
+  District: '10'
+  Codes: "*n"
+- Day: Saturday
+  Time: 07:00 PM
+  Group Name: Pine Street Group
+  Address: 1128 Pine St. (Ch)
+  City: Boulder
+  District: '24'
+  Codes: n
+- Day: Saturday
+  Time: 07:00 PM
+  Group Name: Renacer
+  Address: 825 3rd Ave. (Ch)
+  City: Longmont
+  District: '25'
+  Codes: Spnn
+- Day: Saturday
+  Time: 07:00 PM
+  Group Name: Sat Nite Seekers
+  Address: 3290 S. Tower Rd. (Ch)
+  City: Aurora
+  District: '10'
+  Codes: "*n"
+- Day: Saturday
+  Time: 07:00 PM
+  Group Name: Sat Nite Speakers
+  Address: 8250 W. 80th Ave. Unit 12, 303-420-6560
+  City: Arvada
+  District: '31'
+  Codes: SP*n
+- Day: Saturday
+  Time: 07:00 PM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Saturday
+  Time: 07:15 PM
+  Group Name: Buckeye Easy Does It
+  Address: 16732 E Iliff Av (Shop Ctr) 695-7766
+  City: Aurora
+  District: '10'
+  Codes: SP*n
+- Day: Saturday
+  Time: 07:30 PM
+  Group Name: Back to Basics
+  Address: 3600 S Clarkson (Ch, NE house) 781-5822
+  City: Englewood
+  District: '11'
+  Codes: "*n"
+- Day: Saturday
+  Time: 07:30 PM
+  Group Name: Bright Side
+  Address: 8081 E. Orchard Rd.
+  City: Greenwood Village
+  District: '16'
+  Codes: SP*n
+- Day: Saturday
+  Time: 07:30 PM
+  Group Name: 'Brighton #1'
+  Address: 147 S. 2nd Place, 303-659-9953
+  City: Brighton
+  District: '9'
+  Codes: "*n"
+- Day: Saturday
+  Time: 07:30 PM
+  Group Name: Day By Day
+  Address: 1008 E. Hampden Ave.
+  City: Englewood
+  District: '11'
+  Codes: SP*
+- Day: Saturday
+  Time: 07:30 PM
+  Group Name: El Nuevo Amanecer
+  Address: 801 S. Public Road
+  City: Lafayette
+  District: '25'
+  Codes: Spnn
+- Day: Saturday
+  Time: 07:30 PM
+  Group Name: Fellowship Speakers
+  Address: 10242 E. 16th Ave, 366-3622
+  City: Aurora
+  District: '16'
+  Codes: SPn
+- Day: Saturday
+  Time: 07:30 PM
+  Group Name: Grupo 3RA Tradicion
+  Address: '6401 E. 72nd Ave. #115'
+  City: Commerce City
+  District: '25'
+  Codes: Spn
+- Day: Saturday
+  Time: 07:30 PM
+  Group Name: Grupo Aurora 97
+  Address: 1408 Del Mar Pkwy. Unit C
+  City: Aurora
+  District: '25'
+  Codes: Spnn
+- Day: Saturday
+  Time: 07:30 PM
+  Group Name: Grupo El Alba
+  Address: '3133 Peoria St. #205'
+  City: Denver
+  District: '25'
+  Codes: Spnn
+- Day: Saturday
+  Time: 07:30 PM
+  Group Name: Grupo El Buen Camino
+  Address: 1679 47th Ave.
+  City: Denver
+  District: '25'
+  Codes: Spn
+- Day: Saturday
+  Time: 07:30 PM
+  Group Name: Grupo El Principio
+  Address: 2420 S. Federal Bl.
+  City: Denver
+  District: '25'
+  Codes: Spnn
+- Day: Saturday
+  Time: 07:30 PM
+  Group Name: Grupo Honestidad
+  Address: 2320 E. 49th Ave.
+  City: Denver
+  District: '25'
+  Codes: Spn
+- Day: Saturday
+  Time: 07:30 PM
+  Group Name: Grupo Latinos Unidos
+  Address: 786 Peoria St. (90 mins)
+  City: Aurora
+  District: '25'
+  Codes: Spn
+- Day: Saturday
+  Time: 07:30 PM
+  Group Name: Grupo Los Buenos Veterano
+  Address: '11000 E. Yale Ave. #80, 303-671-2983'
+  City: Aurora
+  District: '25'
+  Codes: Spnn
+- Day: Saturday
+  Time: 07:30 PM
+  Group Name: Grupo Paso 12
+  Address: 10242 E. 16th Ave., 303-366-3622
+  City: Aurora
+  District: '25'
+  Codes: Spn
+- Day: Saturday
+  Time: 07:30 PM
+  Group Name: Grupo Renovacion
+  Address: 3458 1st Ave.
+  City: Denver
+  District: '25'
+  Codes: Spnn
+- Day: Saturday
+  Time: 07:30 PM
+  Group Name: Grupo Solo por Hoy
+  Address: '7131 Irving St. #202'
+  City: Denver
+  District: '25'
+  Codes: Spn
+- Day: Saturday
+  Time: 07:30 PM
+  Group Name: I've Had Enough
+  Address: 12099 Lowell Bl. (Ch)
+  City: Broomfield
+  District: '32'
+  Codes: "*n"
+- Day: Saturday
+  Time: 07:30 PM
+  Group Name: Longs Peak Group
+  Address: 803 3rd Ave. (Ch )
+  City: Longmont
+  District: '34'
+  Codes: CAn
+- Day: Saturday
+  Time: 07:30 PM
+  Group Name: No-Name Group
+  Address: 400 S. Williams (Church, rear, N door)
+  City: Denver
+  District: '13'
+  Codes: "*n"
+- Day: Saturday
+  Time: 07:30 PM
+  Group Name: Saturday Night Jive
+  Address: 1237 Pine St. (Ch)
+  City: Boulder
+  District: '24'
+  Codes: SPB*nSit
+- Day: Saturday
+  Time: 07:30 PM
+  Group Name: School of Hard Knox
+  Address: 7275 Monaco, 287-9950
+  City: Commerce City
+  District: '9'
+  Codes: n
+- Day: Saturday
+  Time: 07:30 PM
+  Group Name: Sweet Sobriety
+  Address: 6673 W Chatfield (Ch upstairs)
+  City: Littleton
+  District: '30'
+  Codes: SPn
+- Day: Saturday
+  Time: 07:30 PM
+  Group Name: Vive y Deja Vivir
+  Address: 9057 E. Colfax Ave. Unit E
+  City: Aurora
+  District: '25'
+  Codes: Spnn
+- Day: Saturday
+  Time: 08:00 PM
+  Group Name: Adventures in Sobriety
+  Address: 3400 Lutheran Pkwy, (TF Center)
+  City: Wheat Ridge
+  District: '12'
+  Codes: B*n
+- Day: Saturday
+  Time: 08:00 PM
+  Group Name: Arid Group
+  Address: 1480 Hoyt St.  238-5693
+  City: Lakewood
+  District: '12'
+  Codes: SP*n
+- Day: Saturday
+  Time: 08:00 PM
+  Group Name: Grupo La Ultima Cruda
+  Address: 9357 E. Colfax Ave. Unit E
+  City: Aurora
+  District: '25'
+  Codes: Spn
+- Day: Saturday
+  Time: 08:00 PM
+  Group Name: Oasis Group
+  Address: '3355 S. Wadsworth #H-125 989-2816'
+  City: Lakewood
+  District: '30'
+  Codes: C*n
+- Day: Saturday
+  Time: 08:00 PM
+  Group Name: Saturday Night South
+  Address: 2290 S. Clayton (Church bsmt.)
+  City: Denver
+  District: '11'
+  Codes: n
+- Day: Saturday
+  Time: 08:00 PM
+  Group Name: Someone Cares
+  Address: 5455 W. 38th Ave. Unit M
+  City: Wheat Ridge
+  District: '12'
+  Codes: SP*n
+- Day: Saturday
+  Time: 08:30 PM
+  Group Name: Denver Serenity
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: SPn
+- Day: Saturday
+  Time: 08:30 PM
+  Group Name: Vie-Tality
+  Address: 7267 N. Lowell Blvd (upstairs)
+  City: Westminster
+  District: '32'
+  Codes: n
+- Day: Saturday
+  Time: 09:00 PM
+  Group Name: Fourth Dimension
+  Address: 10691 Melody Dr (Unit G)
+  City: Northglenn
+  District: '32'
+  Codes: CY*n
+- Day: Saturday
+  Time: 10:00 PM
+  Group Name: 10 PM Last Call
+  Address: 1311 York St., 322-3674
+  City: Denver
+  District: '13'
+  Codes: CAn
+- Day: Saturday
+  Time: 10:00 PM
+  Group Name: The Ten
+  Address: '3355 S. Wadsworth Bl. #H-127'
+  City: Lakewood
+  District: '30'
+  Codes: "*n"
+- Day: Saturday
+  Time: 11:58 PM
+  Group Name: 2 mins 2 Midnight
+  Address: 1663 S. Acoma St. (Storefront)
+  City: Denver
+  District: '13'
+  Codes: "*n"
