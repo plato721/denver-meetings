@@ -4,14 +4,15 @@ RSpec.describe MeetingCreator do
   fixtures :raw_meetings
 
   context "with parenthetical location description and minimal codes" do
-    before do
-      allow_any_instance_of(Meeting).to receive(:address_from_coords).and_return(nil)
-      mc = MeetingCreator.new(RawMeeting.first)
+    before :each do
+      allow_any_instance_of(Meeting).to receive(:geocode).and_return(nil)
+      @rm = RawMeeting.where(RawMeeting.arel_table[:address].matches('%3355 S.%')).first
+      mc = MeetingCreator.new(@rm)
       @meeting = mc.create
     end
 
     it "extracts city" do
-      expect(@meeting.city).to eq(RawMeeting.first[:city])
+      expect(@meeting.city).to eq(@rm.city)
     end
 
     it "extracts first line address" do

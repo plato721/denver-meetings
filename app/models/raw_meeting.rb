@@ -15,6 +15,18 @@ class RawMeeting < ActiveRecord::Base
           codes: raw[6]})
   end
 
+  def self.for_all_visible_meetings
+    ids = Meeting.joins(:raw_meeting).where(visible: true).pluck(:raw_meeting_id)
+    self.where(id: ids)
+  end
+
+  def self.from_yaml(file)
+    hash = YAML.load(File.read(file))
+    hash.map do |data|
+      add_from(data.values)
+    end
+  end
+
   def self.meeting_unique?(raw)
     checksum = compute_checksum(raw)
     RawMeeting.exists?(checksum: checksum) ? false : checksum

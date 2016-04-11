@@ -16,3 +16,12 @@ two:
   district: 30
   codes: "FrnGOBB"
   time: 07:30 AM
+
+three:
+  day: Sunday
+  time: 12:00 PM
+  group_name: Bill's Brownbaggers
+  address: 8250 W. 80th Ave. Unit 12, 303-420-6560
+  city: Arvada
+  district: '31'
+  codes: "*n"

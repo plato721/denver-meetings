@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+
 RSpec.describe RawMeeting do
   before(:all) do
     @raw_attributes =
@@ -59,4 +60,47 @@ RSpec.describe RawMeeting do
 
   end
 
+  it "loads from yaml" do
+    file = Rails.root + 'spec/support/extract.yml'
+    raw_meetings = RawMeeting.from_yaml(file)
+
+    expect(raw_meetings.first.day).to eq("Sunday")
+    expect(raw_meetings.first.time).to eq("12:00 PM")
+    expect(raw_meetings.first.group_name).to eq("Bill's Brownbaggers")
+    expect(raw_meetings.first.address).to eq("8250 W. 80th Ave. Unit 12, 303-420-6560")
+    expect(raw_meetings.first.city).to eq("Arvada")
+    expect(raw_meetings.first.district).to eq("31")
+    expect(raw_meetings.first.codes).to eq("*n")
+
+    expect(raw_meetings.second.group_name).to eq("Buckeye Easy Does It")
+  end
+
+  context "scope" do
+    fixtures :raw_meetings
+    fixtures :meetings
+
+    it "scope - raw meetings for which there is a meeting that points to it" do
+      results = RawMeeting.for_all_visible_meetings
+
+      # 0 - are these raw meetings?
+      expect( results.all? { |o| o.is_a? RawMeeting } ).to be_truthy
+
+      # 1 - are all the associated meetings extant and visible?
+      meetings = results.map(&:id).each_with_object([]) do |raw_meeting_id, meetings|
+        meeting = Meeting.find_by(raw_meeting_id: raw_meeting_id)
+        meetings << meeting.id
+        expect(meeting.visible?).to be_truthy
+      end
+
+      # 2 - are the remaining meetings without a raw meeting or not visible?
+      remainder = Meeting.where.not(id: meetings)
+
+      remainder.each do |meeting|
+        okay = !meeting.visible? || !meeting.raw_meeting_id
+        expect(okay).to be_truthy
+      end
+
+
+    end
+  end
 end
