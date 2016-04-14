@@ -3,16 +3,13 @@ require 'rails_helper'
 RSpec.describe MeetingsCreator do
   fixtures :raw_meetings
 
-  xit "creates meetings" do
+  it "creates meetings" do
     allow_any_instance_of(Meeting).to receive(:geocode).and_return(nil)
 
-    raw_meetings = RawMeeting.all
-    RawMeeting.all(&:destroy)
-    Meeting.all(&:destroy)
+    raw_meetings = RawMeeting.all.to_a
+    RawMeeting.all(&:destroy!)
+    Meeting.all(&:destroy!)
 
-    # not working failing here. yes on eq 0. yes after destroying all.
-    #   i was thinking it would fail due to interdependency betwen
-    #   meeting / raw meeting. didn't see that error but perhaps still is cause
     expect(Meeting.count).to eq(0)
     expect(raw_meetings.count > 0).to be_truthy
 
