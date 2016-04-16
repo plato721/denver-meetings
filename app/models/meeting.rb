@@ -8,7 +8,6 @@ class Meeting < ActiveRecord::Base
 
   before_create :custom_reverse, :address_from_coords
 
-  has_one :raw_meeting
   belongs_to :raw_meeting
 
   has_many :meeting_foci

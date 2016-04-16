@@ -1,6 +1,5 @@
 class RawMeeting < ActiveRecord::Base
   has_one :meeting
-  belongs_to :meeting
 
   def self.add_from(raw)
     checksum = compute_checksum(raw)

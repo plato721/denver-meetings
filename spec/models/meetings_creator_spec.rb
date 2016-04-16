@@ -7,11 +7,9 @@ RSpec.describe MeetingsCreator do
     allow_any_instance_of(Meeting).to receive(:geocode).and_return(nil)
 
     raw_meetings = RawMeeting.all.to_a
-    RawMeeting.all(&:destroy!)
-    Meeting.all(&:destroy!)
+    Meeting.destroy_all
 
     expect(Meeting.count).to eq(0)
-    expect(raw_meetings.count > 0).to be_truthy
 
     creator = MeetingsCreator.new(raw_meetings)
     creator.create_displayable
