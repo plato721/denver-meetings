@@ -19,6 +19,10 @@ class Meeting < ActiveRecord::Base
   has_many :formats, through: :meeting_formats
   has_many :languages, through: :meeting_languages
 
+  def self.visible
+    where(visible: true)
+  end
+
   def raw_meeting_unique
     # this allows a meeting to be created without
     #   a raw meeting. but if it's passed, must be unique.
@@ -138,7 +142,8 @@ class Meeting < ActiveRecord::Base
   end
 
   def self.search(params)
-    by_group_name(params[:group_name])
+     visible
+    .by_group_name(params[:group_name])
     .by_group_name(params[:group_text])
     .by_city(params[:city])
     .by_city(params[:city_text])
