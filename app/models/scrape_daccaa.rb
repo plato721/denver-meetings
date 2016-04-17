@@ -1,6 +1,6 @@
 class ScrapeDaccaa
   attr_reader :force
-  attr_accessor :raw_meetings
+  attr_accessor :raw_meetings, :parsed
 
   def initialize(force=false)
     @force = force
@@ -9,8 +9,8 @@ class ScrapeDaccaa
   def self.scrape(force=false)
     scraper = self.new(force)
     page = scraper.get_page
-    parsed = scraper.parse_meetings(page)
-    scraper.tap { |s| s.raw_meetings = s.make_meetings(parsed) }
+    scraper.parsed = scraper.parse_meetings(page)
+    scraper.tap { |s| s.raw_meetings = s.make_meetings(scraper.parsed) }
   end
 
   def make_meetings(parsed)
@@ -79,10 +79,4 @@ class ScrapeDaccaa
     end
   end
 
-  # def to_a
-  #   set_parsed if @parsed.nil?
-  #   rest_raw_meetings.each_slice(7).with_object([]) do |slice, array|
-  #     array << headers_raw_meetings.zip(slice).to_h
-  #   end
-  # end
 end

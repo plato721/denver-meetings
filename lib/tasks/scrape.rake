@@ -5,7 +5,6 @@ namespace :daccaa do
     scraper = ScrapeDaccaa.scrape(force)
     creator = MeetingsCreator.new(scraper.raw_meetings)
     creator.run_updates
-
   end
 
 
