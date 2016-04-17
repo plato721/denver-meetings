@@ -5,7 +5,7 @@ RSpec.describe Proximal do
   let(:my_coords) {[39.740143, -104.962335]}
 
   it "calculates the distance between a location and a meeting" do
-    meeting = meetings(:two)
+    meeting = Meeting.find_by(group_name: "Daily Serenity")
 
     prox = Proximal.new(meeting)
 

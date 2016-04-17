@@ -47,6 +47,10 @@ RSpec.configure do |config|
       "uid" => nil
     })
   end
+
+  def no_geocode(klass=Meeting)
+    allow_any_instance_of(klass).to receive(:geocode).and_return(nil)
+  end
   
 =begin
   # These two settings work together to allow you to limit a spec run

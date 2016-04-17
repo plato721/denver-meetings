@@ -51,4 +51,9 @@ RSpec.describe Meeting, type: :model do
     expect(meeting.languages.count).to eq(1)
   end
 
+  it "is visible by default" do
+    meeting = Meeting.first
+
+    expect(meeting.visible?).to be_truthy
+  end
 end

@@ -3,5 +3,9 @@ namespace :daccaa do
   task :get_data, [:force] => :environment do |t, args|
     force = args[:force]
     scraper = ScrapeDaccaa.scrape(force)
+    creator = MeetingsCreator.new(scraper.raw_meetings)
+    creator.run_updates
   end
+
+
 end

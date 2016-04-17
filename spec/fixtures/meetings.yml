@@ -1,4 +1,4 @@
-one:
+three:
   day: Sunday
   group_name: Keeping It Simple
   address_1: 3600 S. Clarkson
@@ -17,7 +17,7 @@ one:
   raw_meeting: one
   closed: true
 
-two:
+one:
   day: Tuesday
   group_name: Daily Serenity
   address_1: 1311 York St.
@@ -33,7 +33,7 @@ two:
   raw_meeting:
   closed: false
   
-three:
+two:
   day: Tuesday
   group_name: Always Hope
   address_1: 3355 S. Wadsworth Ave.
