@@ -80,7 +80,7 @@ RSpec.describe RawMeeting do
     fixtures :meetings
 
     it "scope - raw meetings for which there is a meeting that points to it" do
-      results = RawMeeting.for_all_visible_meetings
+      results = RawMeeting.for_all_non_daccaa_deleted
 
       # 0 - are these raw meetings?
       expect( results.all? { |o| o.is_a? RawMeeting } ).to be_truthy

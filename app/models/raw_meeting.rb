@@ -14,8 +14,8 @@ class RawMeeting < ActiveRecord::Base
           codes: raw[6]})
   end
 
-  def self.for_all_visible_meetings
-    ids = Meeting.joins(:raw_meeting).where(visible: true).pluck(:raw_meeting_id)
+  def self.for_all_non_daccaa_deleted
+    ids = Meeting.joins(:raw_meeting).where(deleted: false).pluck(:raw_meeting_id)
     self.where(id: ids)
   end
 

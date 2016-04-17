@@ -14,7 +14,7 @@ class MeetingsCreator
 
   def run_updates
     self.deleted = perform_soft_delete
-    self.untouched = visible_meetings.to_a # must delete first
+    self.untouched = non_daccaa_deleted.to_a # must delete first
     self.created = create_displayable
     log_results
   end
@@ -39,18 +39,18 @@ class MeetingsCreator
   end
 
   def to_be_deleted
-    bad_raw = RawMeeting.for_all_visible_meetings - self.raw_meetings
+    bad_raw = RawMeeting.for_all_non_daccaa_deleted - self.raw_meetings
     displayables_to_hide = Meeting.where(raw_meeting_id: bad_raw)
     # select admin override (have some way to protect meetings
         # manually selected)
   end
 
-  def visible_meetings
-    Meeting.where(visible: true)
+  def non_daccaa_deleted
+    Meeting.where(deleted: false)
   end
 
   def to_be_created
-    have = visible_meetings.pluck(:raw_meeting_id)
+    have = non_daccaa_deleted.pluck(:raw_meeting_id)
     need = raw_meetings.select do |raw_meeting|
       !( have.include?(raw_meeting.id) )
     end
