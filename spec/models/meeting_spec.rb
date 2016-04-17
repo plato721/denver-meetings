@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe Meeting, type: :model do
   include_context "codes"
   fixtures :meetings
+  fixtures :raw_meetings
 
   before do
     create_formats
@@ -55,5 +56,14 @@ RSpec.describe Meeting, type: :model do
     meeting = Meeting.first
 
     expect(meeting.visible?).to be_truthy
+  end
+
+  it "scopes for visible" do
+    meeting = Meeting.first
+    meeting.update_attribute(:visible, false)
+
+    found = Meeting.visible
+    expect(found.all? { |m| m.visible? }).to be_truthy
+    expect(found.count).to eq(Meeting.count - 1)
   end
 end
