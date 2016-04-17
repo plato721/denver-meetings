@@ -18,11 +18,16 @@ class DistanceMeetings
 
   def display_grouped_distance(meetings)
     distance_intervals.each_with_object({}) do |distance, meeting_groups|
-      meeting_groups[distance.last] = [].concat(meetings.select do |meeting|
-        meeting.raw_distance >= distance.first.first &&
-        meeting.raw_distance < distance.first.last
-      end)
+      range = distance.first
+      meeting_groups[distance.last] = meetings_in_range(meetings, range)
     end
+  end
+
+  def meetings_in_range(meetings, range)
+    meetings.select do |meeting|
+      meeting.raw_distance >= range.first &&
+      meeting.raw_distance < range.last
+    end.sort { |a, b| a.raw_distance <=> b.raw_distance }
   end
 
   def create_distance_displayable(meeting_tuples)
