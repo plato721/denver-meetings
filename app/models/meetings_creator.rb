@@ -1,20 +1,33 @@
 class MeetingsCreator
   attr_accessor :deleted, :created, :untouched
-  attr_reader :raw_meetings
+  attr_reader :raw_meetings, :throttle
 
-  def initialize(raw_meetings)
+  def initialize(raw_meetings, throttle=1.0)
     @raw_meetings = raw_meetings
+    @throttle = throttle #geocode delay
   end
 
   def self.update_displayable(raw_meetings)
     creator = new(raw_meetings)
-    creator.tap { |c| c.update_displayable }
+    creator.tap { |c| c.run_updates }
   end
 
-  def update_displayable
-    self.deleted = creator.perform_soft_delete
-    self.untouched = visible_meetings # must delete first
-    self.created = creator.create_displayable
+  def run_updates
+    self.deleted = perform_soft_delete
+    self.untouched = visible_meetings.to_a # must delete first
+    self.created = create_displayable
+    log_results
+  end
+
+  def log_results
+    log_message.each { |msg| Rails.logger.info msg }
+  end
+
+  def log_message
+    ["MeetingsCreator was initialized with #{self.raw_meetings.count} raw meetings.",
+      "#{self.created.count} meetings were created.",
+      "#{self.deleted.count} meetings were deleted.",
+      "#{self.untouched.count} meetings were already present and were left untouched."]
   end
 
   def perform_soft_delete
@@ -38,12 +51,14 @@ class MeetingsCreator
 
   def to_be_created
     have = visible_meetings.pluck(:raw_meeting_id)
-    need = raw_meetings.select { |raw_meeting| !have.include? raw_meeting.id }
+    need = raw_meetings.select do |raw_meeting|
+      !( have.include?(raw_meeting.id) )
+    end
   end
 
   def create_displayable
     to_be_created.map do |raw|
-      sleep 1.0 #geocoder
+      sleep self.throttle
       MeetingCreator.new(raw).create
     end
   end
