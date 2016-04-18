@@ -1,7 +1,7 @@
 class Meeting < ActiveRecord::Base
   attr_reader :geocoder
 
-  validate :raw_meeting_unique
+  validate :raw_meeting_unique, on: :create
 
   geocoded_by :address, :latitude => :lat, :longitude => :lng
   after_validation :geocode
