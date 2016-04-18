@@ -13,7 +13,8 @@ class Admin::MeetingsController < AdminController
       flash[:success] = "Meeting updated successfully"
       redirect_to admin_meetings_path
     else
-      flash[:danger] = "Unable to update meeting"
+      flash[:danger] = "Unable to update meeting: \
+#{@meeting.errors.full_messages.join(", ")}"
       redirect_to edit_admin_meeting_path
     end
   end
