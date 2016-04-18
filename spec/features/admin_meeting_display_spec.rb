@@ -2,13 +2,13 @@ require 'rails_helper'
 
 RSpec.feature "Admin meeting display" do
   fixtures :meetings
+  fixtures :raw_meetings
 
   context "as an admin" do
     let(:admin){ User.find_by(nickname: "plato721") }
+
     before do
       login(admin)
-      allow_any_instance_of(Meeting).to receive(:address_from_coords).and_return(nil)
-      allow_any_instance_of(Meeting).to receive(:custom_reverse).and_return(nil)
     end
 
     after(:each) do
@@ -21,8 +21,9 @@ RSpec.feature "Admin meeting display" do
       expect(page).to have_content(Meeting.first.group_name)
     end
 
-    # need to fix geocoding in testing
-    xit "can edit a meeting" do
+    it "can edit a meeting" do
+      allow_any_instance_of(Meeting).to receive(:geocode).and_return(nil)
+
       meeting = Meeting.first
       id = meeting.id
       group_name = meeting.group_name
