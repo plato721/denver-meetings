@@ -1,5 +1,5 @@
 <div data-role="header" data-theme="b">
-  <h1>Meetings Found<span class="ui-li-count"><%= meeting_count(@meetings) %></span></h1>
+  <h1>Search Results<span class="ui-li-count"><%= meeting_count(@meetings) %> Meetings</span></h1>
 </div>
 <div data-role="content" data-theme="b" id="search-results-main">
   <ul data-role="listview">
@@ -11,11 +11,9 @@
             <h2><%= "#{meeting.group_name} #{meeting.time}" %></h2>
             <ul data-role="listview" data-inset="true">
             <% if distance_display?(group.first) %>
-              <li><%= meeting_with_distance(meeting) %></li>
+              <%= render "proximal_meeting", meeting: meeting %>
             <% else %>
-              <% cache(meeting.meeting) do %>
-                <li><%= meeting_without_distance(meeting) %></li>
-              <% end %>
+              <%= render "meeting", meeting: meeting %>
             <% end %>
             <li><%= link_to raw(meeting.address), meeting.map_url, {:class => "ui-icon-location", :target => "_blank"} %></li>
             </ul>
