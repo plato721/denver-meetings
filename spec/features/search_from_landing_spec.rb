@@ -15,7 +15,6 @@ RSpec.feature "Search from landing" do
       click_link_or_button "meetings-button"
       expect(page).to have_content("Find a Meeting")
       click_link_or_button "Search"
-      expect(page).to have_content("Meetings Found")
       expect(page).to have_content("Tuesday")
     end
   end
