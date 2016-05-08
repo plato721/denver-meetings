@@ -1,5 +1,5 @@
-<div data-role="header" data-theme="b">
-  <h1>Search Results<span class="ui-li-count"><%= meeting_count(@meetings) %> Meetings</span></h1>
+<div data-role="header" data-theme="b" data-add-back-btn="true">
+  <%= link_to "New Search", new_mobile_search_path, {"data-icon" => "back", "data-theme" => "c"} %><h1>Search Results<span class="ui-li-count"><%= pluralize(meeting_count(@meetings), "Meeting") %></span></h1>
 </div>
 <div data-role="content" data-theme="b" id="search-results-main">
   <ul data-role="listview">
