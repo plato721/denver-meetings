@@ -19,6 +19,7 @@ namespace :daccaa do
     props.each do |property|
       initial = meeting.send(property)
       final = initial.uniq
+      meeting.send(property).clear
       meeting.update_attribute(property, final)
     end
   end
