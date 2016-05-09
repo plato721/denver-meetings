@@ -22,6 +22,18 @@ class MobileMeetingDisplay
     Day.day_to_int[self.meeting.day]
   end
 
+  def language
+    self.meeting.languages.to_a.map(&:name).join(", ")
+  end
+
+  def features
+    self.meeting.features.to_a.map(&:name).join(", ")
+  end
+
+  def foci
+    self.meeting.foci.to_a.map(&:name).join(", ")
+  end
+
   def group_name
     meeting.group_name
   end

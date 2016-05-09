@@ -41,7 +41,7 @@
       <div class="panel panel-default">
         <div class="panel-heading">
           <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+          <a data-toggle="collapse" data-parent="#accordion" id="can-i-attend" href="#collapseSix">
           I'm not an alcoholic. Can I attend an AA meeting?
           </a>
           </h4>
@@ -56,12 +56,27 @@
       <div class="panel panel-default">
         <div class="panel-heading">
           <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
-          This information is incorrect. Can you fix it?
+          <a data-toggle="collapse" data-parent="#accordion" id="open-closed" href="#collapseSeven">
+          What's an open meeting? What's a closed meeting?
           </a>
           </h4>
         </div>
         <div id="collapseSeven" class="panel-collapse collapse">
+          <div class="panel-body">
+          Meetings designated as closed are for people with a desire to stop drinking, and only for people with a desire to stop drinking. Sometimes this is interpreted by groups as the necessity to admit you are an alcoholic in order to attend. Meetings designated as "open" are generally open to anyone, although some may restrict sharing to those with a desire to stop drinking.
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapseEight">
+          This information is incorrect. Can you fix it?
+          </a>
+          </h4>
+        </div>
+        <div id="collapseEight" class="panel-collapse collapse">
           <div class="panel-body">
           That is frustrating and we apologize for any inconvenience. The best thing to do would be to check the listing on <%= link_to "Denver AA's site", "http://www.daccaa.org/meetings.htm" %>. If the information is correct there and incorrect on this site, <%= mail_to "admin@denvermeetings.org", "please let us know" %>. If the information with Denver AA is incorrect, please update them, and this site will be updated automatically. As a reminder, this site is not affiliated with AA at any level.
           </div>
@@ -73,3 +88,10 @@
   </div>
 <div class="col-sm-2"></div>
 </div>
+
+<%= javascript_tag do %>
+  $(document).ready(function() {
+    var expand = $( "#<%= params[:expand] %>" );
+    if (expand.length) { expand.click(); }
+  });
+<% end %>
