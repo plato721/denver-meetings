@@ -7,13 +7,16 @@
       <%= link_to "Open to non-alcoholics", faq_path(:expand => "open-closed"), {'data-role' => 'button', 'data-icon' => 'info', "data-iconpos" => "right", "data-ajax" => "false", "rel" => "external"} %>
     <% end %>
   </li>
+  <% if meeting.format.length > 0 %>
+    <li class="ui-li-desc"><strong><%= "Format: " %></strong><%= meeting.format %></li>
+  <% end %>
   <% if meeting.language.length > 0 %>
-    <li><strong><%= "Language: " %></strong><%= meeting.language %></li>
+    <li class="ui-li-desc"><strong><%= "Language: " %></strong><%= meeting.language %></li>
   <% end %>
   <% if meeting.features.length > 0 %>
-    <li><strong><%= "Features: " %></strong><%= meeting.features %></li>
+    <li class="ui-li-desc"><strong><%= "Features: " %></strong><%= meeting.features %></li>
   <% end %>
   <% if meeting.foci.length > 0 %>
-    <li><strong><%= "Special Focus: " %></strong><%= meeting.foci %></li>
+    <li class="ui-li-desc"><strong><%= "Special Focus: " %></strong><%= meeting.foci %></li>
   <% end %> 
 <% end %>

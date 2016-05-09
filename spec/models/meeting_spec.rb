@@ -6,6 +6,7 @@ RSpec.describe Meeting, type: :model do
   fixtures :raw_meetings
 
   before do
+    no_geocode
     create_formats
     create_features
     create_foci
@@ -22,6 +23,17 @@ RSpec.describe Meeting, type: :model do
     expect(meeting.formats.count).to eq(1)
   end
 
+  it "does not have duplicate formats" do
+    meeting = Meeting.first
+    format = Format.first
+
+    expect(meeting).to be_valid
+    meeting.formats << format
+    expect(meeting).to be_valid
+    meeting.formats << format
+    expect(meeting).to_not be_valid
+  end
+
   it "has features" do
     meeting = Meeting.first
 
@@ -30,6 +42,17 @@ RSpec.describe Meeting, type: :model do
 
     meeting.features << feature
     expect(meeting.features.count).to eq(1)
+  end
+
+  it "does not have duplicate features" do
+    meeting = Meeting.first
+
+    feature = Feature.first
+    meeting.features << feature
+    expect(meeting).to be_valid
+
+    meeting.features << feature
+    expect(meeting).to_not be_valid
   end
 
   it "has foci" do
@@ -42,6 +65,16 @@ RSpec.describe Meeting, type: :model do
     expect(meeting.foci.count).to eq(1)
   end
 
+  it "does not have duplicate foci" do
+    meeting = Meeting.first
+
+    focus = Focus.first
+    dup = [focus, focus]
+
+    meeting.foci = dup
+    expect(meeting).to_not be_valid
+  end
+
   it "has languages" do
     meeting = Meeting.first
 
@@ -50,6 +83,19 @@ RSpec.describe Meeting, type: :model do
 
     meeting.languages << language
     expect(meeting.languages.count).to eq(1)
+  end
+
+  it "does not have duplicate languages" do
+    meeting = Meeting.first
+    expect(meeting).to be_valid
+
+    language = Language.first
+    meeting.languages << language
+
+    expect(meeting).to be_valid
+    meeting.languages << language
+
+    expect(meeting).to_not be_valid
   end
 
   it "is visible by default" do

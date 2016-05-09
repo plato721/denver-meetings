@@ -7,5 +7,20 @@ namespace :daccaa do
     creator.run_updates
   end
 
+  desc "uniqueify properties for meetings"
+  task :dedup_props => :environment do |t|
+    props = [:foci, :features, :languages, :formats]
+    Meeting.all.each do |meeting|
+      dedup(meeting, props)
+    end
+  end
+
+  def dedup(meeting, props)
+    props.each do |property|
+      initial = meeting.send(property)
+      final = initial.uniq
+      meeting.update_attribute(property, final)
+    end
+  end
 
 end

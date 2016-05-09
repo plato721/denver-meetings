@@ -22,6 +22,10 @@ class MobileMeetingDisplay
     Day.day_to_int[self.meeting.day]
   end
 
+  def format
+    self.meeting.formats.to_a.map(&:name).join(", ")
+  end
+
   def language
     self.meeting.languages.to_a.map(&:name).join(", ")
   end

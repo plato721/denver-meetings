@@ -2,6 +2,7 @@ class Meeting < ActiveRecord::Base
   attr_reader :geocoder
 
   validate :raw_meeting_unique, on: :create
+  validate :feature_unique, :focus_unique, :language_unique, :format_unique
 
   geocoded_by :address, :latitude => :lat, :longitude => :lng
   after_validation :geocode
@@ -21,6 +22,30 @@ class Meeting < ActiveRecord::Base
 
   def self.visible
     where(visible: true)
+  end
+
+  def feature_unique
+    if self.features.sort.uniq != self.features.sort
+      errors.add(:feature, "must be unique")
+    end
+  end
+
+  def focus_unique
+    if self.foci.sort.uniq != self.foci.sort
+      errors.add(:focus, "must be unique")
+    end
+  end
+
+  def language_unique
+    if self.languages.sort.uniq != self.languages.sort
+      errors.add(:language, "must be unique")
+    end
+  end
+
+  def format_unique
+    if self.formats.sort.uniq != self.formats.sort
+      errors.add(:format, "must be unique")
+    end
   end
 
   def raw_meeting_unique
