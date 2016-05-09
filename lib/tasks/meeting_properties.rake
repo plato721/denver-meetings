@@ -31,10 +31,10 @@ def properties_methods
 end
 
 def properties_models
-  {Focus => "foci",
-    Format => "formats",
-    Feature => "features",
-    Language => "languages"}
+  { Focus    => "foci",
+    Format   => "formats",
+    Feature  => "features",
+    Language => "languages" }
 end
 
 def get_property_set_for(meeting, property)
