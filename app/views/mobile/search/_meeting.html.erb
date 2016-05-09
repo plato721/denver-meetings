@@ -1,4 +1,4 @@
-<%# cache(meeting.meeting) do %>
+<% cache(meeting.meeting) do %>
   <li><%= meeting_without_distance(meeting) %></li>
   <li>
     <% if meeting.closed? %>
@@ -16,4 +16,4 @@
   <% if meeting.foci.length > 0 %>
     <li><strong><%= "Special Focus: " %></strong><%= meeting.foci %></li>
   <% end %> 
-<%# end %>
+<% end %>
