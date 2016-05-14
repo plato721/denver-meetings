@@ -1,5 +1,4 @@
 <% cache(meeting.meeting) do %>
-  <li><%= meeting_without_distance(meeting) %></li>
   <li>
     <% if meeting.closed? %>
       <%= link_to "Closed to alcoholics only", faq_path(:expand => "open-closed"), {'data-role' => 'button', 'data-icon' => 'info'} %>
@@ -18,5 +17,6 @@
   <% end %>
   <% if meeting.foci.length > 0 %>
     <li class="ui-li-desc"><strong><%= "Special Focus: " %></strong><%= meeting.foci %></li>
-  <% end %> 
+  <% end %>
+  <li><%= link_to raw(meeting.address), meeting.map_url, {:class => "ui-icon-location", :target => "_blank"} %></li>
 <% end %>
