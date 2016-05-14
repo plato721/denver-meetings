@@ -11,11 +11,13 @@
             <h2><%= "#{meeting.group_name} #{meeting.time}" %></h2>
             <ul data-role="listview" data-inset="true">
             <% if distance_display?(group.first) %>
-              <%= render "proximal_meeting", meeting: meeting %>
+              <li><%= meeting_with_distance(meeting) %></li>
             <% else %>
-              <%= render "meeting", meeting: meeting %>
+              <li><%= meeting_without_distance(meeting) %></li>
             <% end %>
-            <li><%= link_to raw(meeting.address), meeting.map_url, {:class => "ui-icon-location", :target => "_blank"} %></li>
+
+            <%= render "meeting_detail", meeting: meeting %>
+
             </ul>
           </div>
         <% end %>

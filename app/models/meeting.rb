@@ -167,7 +167,11 @@ class Meeting < ActiveRecord::Base
   end
 
   def self.search(params)
-     visible
+    self.includes(:languages)
+    .includes(:formats)
+    .includes(:foci)
+    .includes(:features)
+    .visible
     .by_group_name(params[:group_name])
     .by_group_name(params[:group_text])
     .by_city(params[:city])
