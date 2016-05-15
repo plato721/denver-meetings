@@ -1,0 +1,11 @@
+.collapsible-set
+  %div{"data-collapsed-icon" => "carat-d", "data-expanded-icon" => "carat-u", "data-role" => "collapsible"}
+    %h3 Open or Closed
+    %fieldset{"data-role" => "controlgroup"}
+      %legend Open or Closed:
+      = radio_button_tag(:open, "open")
+      = label_tag(:open_open, "Open (Non-alcoholics Okay)")
+      = radio_button_tag(:open, "any", :true)
+      = label_tag(:open_any, "Any")
+      = radio_button_tag(:open, "closed")
+      = label_tag(:open_closed, "Closed (Alcoholics Only)")

@@ -1,0 +1,5 @@
+.collapsible-set
+  %div{"data-collapsed-icon" => "carat-d", "data-expanded-icon" => "carat-u", "data-role" => "collapsible"}
+    %h3 Day/Time
+    = select_tag(:day, options_for_select(@options.days_select), {class: "menu-element"})
+    = select_tag(:time, options_for_select(@options.times_select), {class: "menu-element"})

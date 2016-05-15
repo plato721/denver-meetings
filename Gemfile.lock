@@ -87,6 +87,8 @@ GEM
     geocoder (1.2.12)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    haml (4.0.7)
+      tilt
     hashdiff (0.2.2)
     hashie (3.4.3)
     http-cookie (1.0.2)
@@ -260,6 +262,7 @@ DEPENDENCIES
   faker
   figaro
   geocoder
+  haml
   hurley
   jbuilder (~> 2.0)
   jquery-rails
@@ -284,4 +287,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.10.5
+   1.11.2
