@@ -1,8 +1,8 @@
-%footer{"data-role" => "footer", "data-theme" => "b"}
-  .ui-grid-d
-    .ui-block-a
-    .ui-block-b
-    .ui-block-c
-      != "Copyright &copy; 2015"
-    .ui-block-d
-    .ui-clock-e
+%footer.footer.container-fluid
+  .row.center-block
+    .col-lg-4
+    #copyright.col-lg-2
+      %p.text-center Copyright &copy; 2015
+      %p.text-center
+        = link_to "Admin", login_path, { class: "admin-link" }
+    .col-lg-4

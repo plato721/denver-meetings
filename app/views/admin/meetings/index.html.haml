@@ -1,0 +1,31 @@
+.mainline
+  .container-fluid
+    .row
+      %h1.page-header
+        Meetings
+    .row
+      .col-lg-4
+        .table-responsive
+          %table.table.table-bordered.table-hover
+            %thead
+              %tr
+                %th Approved
+                %th Day
+                %th Time
+                %th Group Name
+                %th Address
+                %th Notes
+                %th Phone
+                %th Lat/Long
+            %tbody
+              - @meetings.each do |meeting|
+                %tr
+                  %td{:id => "approval-display-#{meeting.id}"}
+                    = link_to meeting.approved, edit_admin_meeting_path(meeting.meeting)
+                  %td= meeting.day
+                  %td= meeting.time
+                  %td= meeting.group_name
+                  %td= raw(meeting.address)
+                  %td= meeting.notes
+                  %td= meeting.phone
+                  %td= meeting.coords
