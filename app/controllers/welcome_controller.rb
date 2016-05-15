@@ -1,4 +1,6 @@
 class WelcomeController < ApplicationController
+  def index
+  end
 
   def faq
     params[:expand] = params[:expand].presence

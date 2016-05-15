@@ -1,0 +1,35 @@
+.collapsible-set
+  %div{"data-collapsed-icon" => "carat-d", "data-expanded-icon" => "carat-u", "data-role" => "collapsible"}
+    %h3 Special Focus
+    %fieldset{"data-mini" => "true", "data-role" => "controlgroup", "data-type" => "horizontal"}
+      %legend Men's:
+      = radio_button_tag(:men, "hide")
+      = label_tag(:men_hide, "Hide")
+      = radio_button_tag(:men, "show", :true)
+      = label_tag(:men_show, "Show")
+      = radio_button_tag(:men, "only")
+      = label_tag(:men_only, "Show Only")
+    %fieldset{"data-mini" => "true", "data-role" => "controlgroup", "data-type" => "horizontal"}
+      %legend Women's:
+      = radio_button_tag(:women, "hide")
+      = label_tag(:women_hide, "Hide")
+      = radio_button_tag(:women, "show", :true)
+      = label_tag(:women_show, "Show")
+      = radio_button_tag(:women, "only")
+      = label_tag(:women_only, "Show Only")
+    %fieldset{"data-mini" => "true", "data-role" => "controlgroup", "data-type" => "horizontal"}
+      %legend Young People's:
+      = radio_button_tag(:youth, "hide")
+      = label_tag(:youth_hide, "Hide")
+      = radio_button_tag(:youth, "show", :true)
+      = label_tag(:youth_show, "Show")
+      = radio_button_tag(:youth, "only")
+      = label_tag(:youth_only, "Show Only")
+    %fieldset{"data-mini" => "true", "data-role" => "controlgroup", "data-type" => "horizontal"}
+      %legend Gay:
+      = radio_button_tag(:gay, "hide")
+      = label_tag(:gay_hide, "Hide")
+      = radio_button_tag(:gay, "show", :true)
+      = label_tag(:gay_show, "Show")
+      = radio_button_tag(:gay, "only")
+      = label_tag(:gay_only, "Show Only")

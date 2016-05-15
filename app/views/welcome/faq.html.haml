@@ -1,0 +1,54 @@
+.container-fluid.welcome-header
+  .col-sm-2
+  .col-sm-8
+    .row.header-text
+      %h1.text-left FAQ
+    .row.meeting-button-row
+      #accordion.panel-group
+        .panel.panel-default
+          .panel-heading
+            %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne"}
+                Is this an AA site?
+          #collapseOne.panel-collapse.collapse
+            .panel-body
+              No, this site is not affiliated with Alcoholics Anonymous or any 12-step group. This site is not affiliated with Denver Area Central Committee of Alcoholics Anonymous or daccaa.org. These listings are provided as a service only. No warranty is given or implied. Information found here is provided "as is" and is not intended to diagnose, prevent, or treat any disease.
+        .panel.panel-default
+          .panel-heading
+            %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseFive"}
+                Can you do a site for my city/organization?
+          #collapseFive.panel-collapse.collapse
+            .panel-body
+              The creator of this site is employed full time and maintains this site as an avocation. You may contact them at #{mail_to "admin@denvermeetings.org", "admin@denvermeetings.org"}.
+        .panel.panel-default
+          .panel-heading
+            %h4.panel-title
+              %a#can-i-attend{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseSix"}
+                I'm not an alcoholic. Can I attend an AA meeting?
+          #collapseSix.panel-collapse.collapse
+            .panel-body
+              Meetings designated as "open" are generally open to anyone. Some open meetings may welcome anyone but restrict sharing to those with a desire to stop drinking. It may be wise to show up a few minutes early to a meeting you are unsure about. Otherwise, a meeting's "format" (the text read by the chairperson) should clarify who may attend/participate in the meeting.
+        .panel.panel-default
+          .panel-heading
+            %h4.panel-title
+              %a#open-closed{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseSeven"}
+                What's an open meeting? What's a closed meeting?
+          #collapseSeven.panel-collapse.collapse
+            .panel-body
+              Meetings designated as closed are for people with a desire to stop drinking, and only for people with a desire to stop drinking. Sometimes this is interpreted by groups as the necessity to admit you are an alcoholic in order to attend. Meetings designated as "open" are generally open to anyone, although some may restrict sharing to those with a desire to stop drinking.
+        .panel.panel-default
+          .panel-heading
+            %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseEight"}
+                This information is incorrect. Can you fix it?
+          #collapseEight.panel-collapse.collapse
+            .panel-body
+              That is frustrating and we apologize for any inconvenience. The best thing to do would be to check the listing on #{link_to "Denver AA's site", "http://www.daccaa.org/meetings.htm"}. If the information is correct there and incorrect on this site, #{mail_to "admin@denvermeetings.org", "please let us know"}. If the information with Denver AA is incorrect, please update them, and this site will be updated automatically. As a reminder, this site is not affiliated with AA at any level.
+  .col-sm-2
+= javascript_tag do
+  $(document).ready(function() {
+  var expand = $( "##{params[:expand]}" );
+  if (expand.length) { expand.click(); }
+  });
+  

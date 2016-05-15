@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    %title DenverMeetings
+    %meta{:content => "initial-scale = 1.0,maximum-scale = 1.0", :name => "viewport"}/
+    = stylesheet_link_tag 'mobile/mobile', media: 'all'
+    = javascript_include_tag 'mobile/mobile', media: 'all'
+    = csrf_meta_tags
+  %body
+    #p1{"data-role" => "page"}
+      = yield
+      = render partial: 'layouts/mobile/footer'

@@ -1,0 +1,19 @@
+%div{"data-add-back-btn" => "true", "data-role" => "header", "data-theme" => "b"}
+  = link_to "New", new_mobile_search_path, {"data-icon" => "back"}
+  %h1
+    Results
+    %span.ui-li-count= "#{meeting_count(@meetings)}"
+#search-results-main{"data-role" => "content", "data-theme" => "b"}
+  %ul{"data-role" => "listview"}
+    - @meetings.each do |group|
+      - if !group.last.empty?
+        %li{"data-role" => "list-divider"}= group.first
+        - group.last.each do |meeting|
+          %div{"data-collapsed-icon" => "carat-d", "data-expanded-icon" => "carat-u", "data-role" => "collapsible"}
+            %h2= "#{meeting.group_name} #{meeting.time}"
+            %ul{"data-inset" => "true", "data-role" => "listview"}
+              - if distance_display?(group.first)
+                %li= meeting_with_distance(meeting)
+              - else
+                %li= meeting_without_distance(meeting)
+              = render "meeting_detail", meeting: meeting

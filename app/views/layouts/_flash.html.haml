@@ -1,0 +1,6 @@
+- if flash.to_a.length > 0
+  .alert-container
+- flash.each do |type, message|
+  %div{:class => "alert alert-#{type}", :role => "alert"}
+    = raw(message)
+    
