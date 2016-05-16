@@ -45,7 +45,7 @@
         };
 
         var createUrl = '#{here_and_now_mobile_search_index_path(
-          lat: "__LAT__", lon: "__LON__", here_and_now: true)}';
+          lat: "__LAT__", lon: "__LON__", format: :js)}';
         createUrl = createUrl.replace("__LAT__", pos["lat"]).replace("__LON__", pos["lng"]);
 
         $.getScript(createUrl);

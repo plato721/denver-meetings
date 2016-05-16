@@ -1,7 +1,12 @@
 class Search < ActiveRecord::Base
   def results
     scrub_text
-    self.here | self.here_and_now ? distance_results : weekday_results
+    return distance_results if distance_search?
+    weekday_results
+  end
+
+  def distance_search?
+    self.here || self.here_and_now
   end
 
   def scrub_text
