@@ -30,7 +30,6 @@ class Mobile::SearchController < ApplicationController
   end
 
   def here_and_now_params
-    binding.pry
     { lat: params[:lat],
       lng: params[:lon],
       here_and_now: true
