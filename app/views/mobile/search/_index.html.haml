@@ -1,8 +1,8 @@
-%div{"data-role" => "header", "data-theme" => "b"}
+%div{"data-role" => "header"}
   %h1
     = "Search Results"
-#search-results-main{"data-role" => "content", "data-theme" => "b"}
-  %ul{"data-role" => "listview"}
+#search-results-main{"data-role" => "content"}
+  %ul{"data-role" => "listview", "id" => "meeting-list"}
     - @meetings.each do |group|
       - if !group.last.empty?
         %li{"data-role" => "list-divider"}= group.first
@@ -16,3 +16,6 @@
                 %li= meeting_without_distance(meeting)
               = render "meeting_detail", meeting: meeting
 = render "footer"
+
+:javascript
+  history.pushState("searched", "Search Results", "results");

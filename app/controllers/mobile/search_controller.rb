@@ -5,15 +5,13 @@ class Mobile::SearchController < ApplicationController
     @options = SearchOptions.new
   end
 
-  def index
-    search = Search.find(session[:search]) if session[:search]
-    @meetings = search.results
-  end
-
   def create
-    @search = Search.create(search_params)
-    session[:search] = @search.id
-    redirect_to mobile_search_index_path
+    search = Search.create(search_params)
+    @meetings = search.results
+
+    respond_to do |format|
+      format.js { render 'index' }
+    end
   end
 
   private

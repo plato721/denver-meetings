@@ -10,9 +10,14 @@ Rails.application.routes.draw do
   get "auth/github/callback", to: "sessions#create"
 
   namespace :mobile do
-    resources :search, only:[:new, :create, :index]
+    resources :search, only:[:new, :create, :index] do
+      get 'results', on: :collection, to: "search#new"
+    end
+
+    # are these used?
     get "search/create", to: "search#create"
     resources :meetings, only:[:index, :show]
+    ####
   end
 
   namespace :admin do
