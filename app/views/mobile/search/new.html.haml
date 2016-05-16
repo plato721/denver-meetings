@@ -1,4 +1,4 @@
-%div{"data-position" => "fixed", "data-role" => "header", "data-tap-toggle" => "false"}
+%div{"data-role" => "header"}
   %h1 New Search
 %div{"data-role" => "content", :role => "main"}
   %button{ "class" => "meeting-search-hot-button", "data-role" => "button", "data-icon" => "arrow-r", "data-iconpos" => "right", "id" => "one-time" }
@@ -17,3 +17,63 @@
 
 :javascript
   history.pushState("new_search", "New Search", "new");
+
+
+  function main(){
+    var submitButton = $('[type="submit"]');
+
+    $(".city-text").on("click", function() {
+      if ($(this).val() == "(Optional search text)"){
+          $(this).val("")
+          $(this).removeClass("city-text-default")
+        }
+    });
+
+    $(".group-text").on("click", function() {
+      if ($(this).val() == "(Optional search text)"){
+          $(this).val("")
+          $(this).removeClass("group-text-default")
+        }
+    });
+
+    $(".meeting-search-hot-button").on("click", function(){
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+        var pos = {
+          "lat": position.coords.latitude,
+          "lng": position.coords.longitude
+        };
+
+        var createUrl = '#{here_and_now_mobile_search_index_path(
+          lat: "__LAT__", lon: "__LON__", here_and_now: true)}';
+        createUrl = createUrl.replace("__LAT__", pos["lat"]).replace("__LON__", pos["lng"]);
+
+        $.getScript(createUrl);
+        return false;
+      });
+      } else {
+        alert("Geolocation cancelled or unsupported");
+        return false;
+       }
+    });
+
+    $(".here-box").on("click", function(){
+      submitButton.button('disable'); //wait for lat and lng
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+        var pos = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        };
+        $(".main-lat").val(pos["lat"]);
+        $(".main-lng").val(pos["lng"]);
+        console.log("lat is: " + pos["lat"] + " lng is: " + pos["lng"]);
+        submitButton.button('enable');
+      });
+      } else {
+        submitButton.button('enable');
+      }
+    }); //here-box on click (proximity without here and now)
+  }
+
+  $(document).ready( main() );
