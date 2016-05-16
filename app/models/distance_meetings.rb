@@ -27,7 +27,7 @@ class DistanceMeetings
     meetings.select do |meeting|
       meeting.raw_distance >= range.first &&
       meeting.raw_distance < range.last
-    end.sort { |a, b| a.raw_distance <=> b.raw_distance }
+    end.sort { |a, b| a.raw_time <=> b.raw_time }
   end
 
   def create_distance_displayable(meeting_tuples)
