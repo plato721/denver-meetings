@@ -1,6 +1,5 @@
 %div{"data-position" => "fixed", "data-role" => "header", "data-tap-toggle" => "false", "data-theme" => "b"}
-  %a.ui-btn.ui-icon-home.ui-btn-icon-left{:href => root_path} Home
-  %h1 Find a Meeting
+  %h1 New Search
 %div{"data-role" => "content", "data-theme" => "b", :role => "main"}
   %button{ "class" => "meeting-search-hot-button", "data-role" => "button", "data-icon" => "arrow-r", "data-iconpos" => "right", "id" => "one-time" }
     = "Right Here Right Now"
@@ -14,3 +13,4 @@
       = render partial: "access"
       = render partial: "language"
     = button_to "Search", mobile_search_index_path, {:method => :post, :class => "meeting-search-button", "data-role" => "button", "data-icon" => "arrow-r", "data-iconpos" => "right", "data-ajax" => "false", "rel" => "external"}
+= render "footer"
