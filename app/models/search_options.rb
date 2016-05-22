@@ -1,4 +1,11 @@
 class SearchOptions
+  attr_reader :meetings
+
+  def initialize(meetings=nil)
+    @meetings = meetings
+    @meetings ||= Meeting.all
+  end
+
   def cities
     @cities ||= Meeting.uniq.pluck(:city).sort
   end
@@ -10,7 +17,7 @@ class SearchOptions
 
   def times
     @select_times ||= begin
-      times = Meeting.uniq.pluck(:time).sort
+      times = self.meetings.pluck(:time).uniq.sort
       times.map { |t| TimeConverter.display(t) }
       .zip(times)
     end
@@ -49,10 +56,7 @@ class SearchOptions
   end
 
   def days
-    @days ||= begin
-      ["Sunday", "Monday", "Tuesday", "Wednesday",
-      "Thursday", "Friday", "Saturday"]
-    end
+    @days ||= self.meetings.pluck(:day).uniq
   end
 
   def days_select
