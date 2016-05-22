@@ -4,16 +4,11 @@ RSpec.describe SearchOptions do
   include_context "codes"
 
   before :all do
-    @features = ["formats", "features", "foci", "languages"]
-    @features.each do |feature|
-      self.send("create_#{feature}".to_sym)
-    end
+    create_all_meeting_features
   end
 
   after :all do
-    @features.each do |f|
-      f.singularize.capitalize.constantize.destroy_all
-    end
+    destroy_all_meeting_features
   end
 
   before :each do
