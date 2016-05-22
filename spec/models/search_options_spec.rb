@@ -59,8 +59,22 @@ RSpec.describe SearchOptions do
         display_pair.last.to_i == t
       end).to be_truthy
     end
+
   end
 
+  it "dynamically returns available cities" do
+    cities = ["Aurora", "Denver", "Boulder", "Westminster", "Broomfield"]
+    cities_fewer = cities[0..1]
+    cities.each { |c| FactoryGirl.create :meeting, city: c }
+
+    options_all = SearchOptions.new
+    options_fewer = SearchOptions.new(Meeting.where(city: cities_fewer))
+
+    expect(options_all.cities.length).to eq(cities.length)
+    expect(options_fewer.cities.length).to eq(cities_fewer.length)
+    expect(options_all.cities.sort).to eq(cities.sort)
+    expect(options_fewer.cities.sort).to eq(cities_fewer.sort)
+  end
 
 
 

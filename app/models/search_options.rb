@@ -7,7 +7,7 @@ class SearchOptions
   end
 
   def cities
-    @cities ||= Meeting.uniq.pluck(:city).sort
+    @cities ||= self.meetings.pluck(:city).uniq.sort
   end
 
   def cities_select
