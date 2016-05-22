@@ -2,6 +2,7 @@ FactoryGirl.define do
   sequence(:group_name){ |i| "Group Name #{i}" }
 
   factory :meeting do
+    _skip_geocoder { true }
     day { ["Sunday", "Monday", "Tuesday", "Wednesday",
       "Thursday", "Friday", "Saturday"].sample }
     group_name
@@ -14,7 +15,7 @@ FactoryGirl.define do
     codes "n"
     # approximately denver/boulder metro
     lat { rand(39.504698..40.081013) }
-    lng { rand(-104.761446..-104.977313) }
+    lng { rand(-104.977313..-104.761446) }
     approved true
     time { [7, 12, 17.5].select }
     closed false

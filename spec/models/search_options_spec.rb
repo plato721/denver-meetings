@@ -4,20 +4,8 @@ RSpec.describe SearchOptions do
   fixtures :foci, :languages
 
   before :each do
+    Meeting.destroy_all
     allow_any_instance_of(Meeting).to receive(:geocode).and_return(nil)
-  end
-
-  it "is initialized with meetings or not" do
-    FactoryGirl.create_list :meeting, 5
-    meetings = Meeting.all
-
-    options = SearchOptions.new
-    options_narrowed = SearchOptions.new(meetings)
-
-    ids = options.meetings.pluck(:id).sort
-    ids_narrowed = options_narrowed.meetings.pluck(:id).sort
-
-    expect(ids).to eq(ids_narrowed)
   end
 
   it "is narrowed when initialized with meetings" do

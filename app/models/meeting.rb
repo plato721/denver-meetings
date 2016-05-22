@@ -1,13 +1,15 @@
 class Meeting < ActiveRecord::Base
   attr_reader :geocoder
+  attr_accessor :_skip_geocoder
 
   validate :raw_meeting_unique, on: :create
   validate :feature_unique, :focus_unique, :language_unique, :format_unique
 
+  # geocoder dependent callbacks
   geocoded_by :address, :latitude => :lat, :longitude => :lng
-  after_validation :geocode
-
-  before_create :custom_reverse, :address_from_coords
+  after_validation :geocode, :unless => :_skip_geocoder
+  before_create :custom_reverse, :address_from_coords, :unless => :_skip_geocoder
+  # end geocoder depened callbacks
 
   belongs_to :raw_meeting
 
