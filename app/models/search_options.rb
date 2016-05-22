@@ -32,7 +32,15 @@ class SearchOptions
     }
   end
 
-  def time_ranges
+  def now_time_range
+    now = ["Right Now","now"]
+  end
+
+  def any_time_range
+    any = ["--Any Time--", "any"]
+  end
+
+  def possible_time_ranges
     am = ["Morning (before 10a)", "am"]
     noon = ["Midday (10a - 3p)", "noon"]
     pm = ["Afternoon (3p - 7p)", "pm"]
@@ -40,10 +48,18 @@ class SearchOptions
     [am, noon, pm, late]
   end
 
+  def time_ranges
+    possible_time_ranges.select do |range|
+      range_values = self.class.display_range_to_raw[range.last]
+      self.times.find do |display_pair|
+        display_pair.last >= range_values.first &&
+        display_pair.last <= range_values.last
+      end
+    end
+  end
+
   def times_select
-    any = ["--Any Time--", "any"]
-    now = ["Right Now","now"]
-    time_ranges.concat(times).prepend(any, now)
+    [any_time_range, now_time_range] + time_ranges
   end
 
   def meeting_names

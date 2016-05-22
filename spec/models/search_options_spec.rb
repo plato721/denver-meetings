@@ -76,6 +76,30 @@ RSpec.describe SearchOptions do
     expect(options_fewer.cities.sort).to eq(cities_fewer.sort)
   end
 
+  it "dynamically returns time ranges" do
+    times = [*5..23]
+    times.each { |t| FactoryGirl.create :meeting, time: t }
 
+    ["any", "now"].each do |range|
+      expect(SearchOptions.new.times_select.to_a.flatten.include? range)
+      .to be_truthy
+    end
+
+    no_morning = Meeting.where("time > ? ", 11.0)
+    actual_times = SearchOptions.new(no_morning).times_select
+    expect(actual_times.to_a.flatten.include? "am").to be_falsey
+
+    no_noon = Meeting.where("time < ? OR time > ?", 10.0, 16.0)
+    actual_times = SearchOptions.new(no_noon).times_select
+    expect(actual_times.to_a.flatten.include? "noon").to be_falsey
+    expect(actual_times.to_a.flatten.include? "am")
+
+    # i could test the rest of these, but i don't want it to be more brittle
+    # than it already is. meaning, who says i'm going to keep the number and
+    # definition of ranges the way they are today? this will break. i'm
+    # not going to break it any harder than it will already in such a case.
+  end
+
+  
 
 end
