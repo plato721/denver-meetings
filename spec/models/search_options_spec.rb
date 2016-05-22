@@ -103,7 +103,6 @@ RSpec.describe SearchOptions do
   end
 
   it "dynamically returns mens" do
-
     meeting = FactoryGirl.create :meeting
     focus = Focus.where(name: "Men").first
     meeting.update_attribute(:foci, [focus])
