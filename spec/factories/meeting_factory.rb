@@ -6,7 +6,7 @@ FactoryGirl.define do
       "Thursday", "Friday", "Saturday"].sample }
     group_name
     address_1 { FFaker::AddressUS.street_address }
-    notes { FFaker::DizzleIpsum.words }
+    notes { FFaker::DizzleIpsum.words.join.capitalize }
     city { FFaker::AddressUS.city }
     state { FFaker::AddressUS.state }
     zip { FFaker::AddressUS.zip_code }
@@ -18,5 +18,6 @@ FactoryGirl.define do
     approved true
     time { [7, 12, 17.5].select }
     closed false
+    raw_meeting
   end
 end
