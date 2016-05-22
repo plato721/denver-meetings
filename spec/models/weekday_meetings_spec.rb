@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe WeekdayMeetings do
   fixtures :meetings
 
-  let(:days) { SearchOptions.new.days }
+  let(:days) { Day.day_order }
   before(:all) { @meetings = Meeting.all }
 
   it "groups meetings with day" do
