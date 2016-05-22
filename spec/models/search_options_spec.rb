@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe SearchOptions do
+  fixtures :foci, :languages
+
   before :each do
     allow_any_instance_of(Meeting).to receive(:geocode).and_return(nil)
   end
@@ -100,6 +102,36 @@ RSpec.describe SearchOptions do
     # not going to break it any harder than it will already in such a case.
   end
 
-  
+  it "dynamically returns mens" do
+
+    meeting = FactoryGirl.create :meeting
+    focus = Focus.where(name: "Men").first
+    meeting.update_attribute(:foci, [focus])
+
+    FactoryGirl.create_list :meeting, 3
+    expect(Meeting.includes(:foci).where(foci: { name: "Men" }).count).to eq(1)
+
+    options = SearchOptions.new
+    expect(options.focus_select.include? "Men").to be_truthy
+
+    options = SearchOptions.new(Meeting.where.not(foci: { name: "Men"}))
+    expect(options.focus_select.include? "Men").to be_falsey
+  end
+
+  it "dynamically returns language" do
+    meeting = FactoryGirl.create :meeting
+    language = Language.where(name: "Spanish")
+    meeting.update_attribute(:languages, language)
+
+    FactoryGirl.create_list :meeting, 3
+    expect(Meeting.includes(:languages)
+      .where(languages: { name: "Spanish" }).count).to eq(1)
+
+    options = SearchOptions.new
+    expect(options.language_select.include? "Spanish").to be_truthy
+
+    options = SearchOptions.new(Meeting.where.not(languages: { name: "Spanish"}))
+    expect(options.language_select.include? "Spanish").to be_falsey
+  end
 
 end

@@ -58,6 +58,14 @@ class SearchOptions
     end
   end
 
+  def focus_select
+    self.meetings.includes(:foci).pluck('foci.name').uniq.compact
+  end
+
+  def language_select
+    self.meetings.includes(:languages).pluck('languages.name').uniq.compact
+  end
+
   def times_select
     [any_time_range, now_time_range] + time_ranges
   end
