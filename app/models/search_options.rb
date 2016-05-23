@@ -6,6 +6,14 @@ class SearchOptions
     @meetings ||= Meeting.all
   end
 
+  def open?
+    @open ||= self.meetings.exists?(closed: false)
+  end
+
+  def closed?
+    @closed ||= self.meetings.exists?(closed: true)
+  end
+
   def cities_found
     self.meetings.pluck(:city).uniq.sort
   end
