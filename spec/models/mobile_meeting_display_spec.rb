@@ -1,7 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe MobileMeetingDisplay do
-  fixtures :meetings
+  before :all do
+    FactoryGirl.create_list :meeting, 3
+  end
+
+  after :all do
+    Meeting.destroy_all
+  end
 
   it "rounds numbers" do
     distance = 5.23892342

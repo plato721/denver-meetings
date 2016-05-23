@@ -1,14 +1,25 @@
 require 'rails_helper'
 
 RSpec.describe "Search by language" do
-  fixtures :meetings
-  fixtures :languages
   include_context "search"
+  include_context "codes"
 
-  before do
+  before :all do
+    Meeting.destroy_all
+    create_languages
+    FactoryGirl.create_list :meeting, 3
+  end
+
+  after :all do
+    destroy_all_meeting_features
+    Meeting.destroy_all
+  end
+
+  before :each do
     @polish = Language.find_by(name: "Polish")
     @french = Language.find_by(name: "French")
     @spanish = Language.find_by(name: "Spanish")
+    no_geocode
   end
 
   context "Polish" do

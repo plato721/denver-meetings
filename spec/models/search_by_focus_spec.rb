@@ -1,9 +1,18 @@
 require 'rails_helper'
 
 RSpec.describe "Search by language" do
-  fixtures :meetings
-  fixtures :foci
   include_context "search"
+  include_context "codes"
+
+  before :all do
+    Meeting.destroy_all
+    FactoryGirl.create_list :meeting, 3
+    create_foci
+  end
+
+  after :all do
+    destroy_all_meeting_features
+  end
 
   before do
     @men = Focus.find_by(name: "Men")

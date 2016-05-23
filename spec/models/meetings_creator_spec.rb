@@ -1,16 +1,24 @@
 require 'rails_helper'
 
 RSpec.describe MeetingsCreator do
-  fixtures :raw_meetings
-
-  before(:each) do
+  before :all do
     Meeting.destroy_all
+    RawMeeting.destroy_all
+    FactoryGirl.create_list :raw_meeting, 3
+  end
+
+  before :each do
+    no_geocode
     @raw_meetings = RawMeeting.all
     @creator = MeetingsCreator.new(@raw_meetings, 0.0)
   end
 
+  after :all do
+    Meeting.destroy_all
+    RawMeeting.destroy_all
+  end
+
   it "creates meetings" do
-    no_geocode
     expect(Meeting.count).to eq(0)
 
     @creator.run_updates
@@ -19,7 +27,6 @@ RSpec.describe MeetingsCreator do
   end
 
   it "flags meetings for deletion" do
-    no_geocode
     @creator.run_updates
     initial_count = Meeting.where(visible: true).count
 
@@ -36,8 +43,6 @@ RSpec.describe MeetingsCreator do
   end
 
   it "logs create" do
-    no_geocode
-
     #initialized with 3, 3 created, 0 deleted, 0 untouched
     expect(Rails.logger).to receive(:info).with(/.*3 raw meetings.*/)
     expect(Rails.logger).to receive(:info).with(/.*3.*created.*/)
@@ -47,7 +52,6 @@ RSpec.describe MeetingsCreator do
   end
 
   it "logs delete" do
-    no_geocode
     @creator.run_updates
     expect(Meeting.count).to eq(RawMeeting.count)
 
@@ -60,7 +64,6 @@ RSpec.describe MeetingsCreator do
   end
 
   it "logs combo" do
-    no_geocode
     rm = RawMeeting.all.to_a
     @creator.run_updates
 

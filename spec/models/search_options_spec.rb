@@ -128,12 +128,22 @@ RSpec.describe SearchOptions do
     expect(options.languages.include? "Spanish").to be_falsey
   end
 
-  it "dynamically return accessibility" do
+  it "dynamically returns feature features" do
+    features = Feature.where.not('name LIKE ?', "%Sign%")
+    FactoryGirl.create_list :meeting, 3
+    features.each do |feature|
+      FactoryGirl.create :meeting, features: [feature]
+    end
 
-    # features.each do |name|
-    # expect(Meeting.includes(:features)
-    #   .where(features: { name: name }).count).to eq(1)
-    # end
+    options_all = SearchOptions.new
+    actual_all = options_all.features
+
+    expect(actual_all.sort).to eq(features.pluck(:name).sort)
+    ["access", "non_smoking", "sitter"].each do |feature|
+      meetings = Meeting.send("by_#{feature}".to_sym, "hide")
+      options = SearchOptions.new(meetings)
+      expect(options.features.include? feature).to be_falsey
+    end
   end
 
 end
