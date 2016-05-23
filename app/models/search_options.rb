@@ -6,6 +6,10 @@ class SearchOptions
     @meetings ||= Meeting.all
   end
 
+  def count
+    self.meetings.count
+  end
+
   def open?
     @open ||= self.meetings.exists?(closed: false)
   end

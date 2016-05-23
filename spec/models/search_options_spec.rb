@@ -163,4 +163,9 @@ RSpec.describe SearchOptions do
     expect(SearchOptions.new.closed?).to be_falsey
   end
 
+  it "has a meeting count" do
+    FactoryGirl.create_list :meeting, 2
+    expect(SearchOptions.new.count).to eq(Meeting.count)
+  end
+
 end
