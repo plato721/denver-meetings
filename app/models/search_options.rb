@@ -64,11 +64,19 @@ class SearchOptions
   end
 
   def foci
-    @foci = self.meetings.includes(:foci).pluck('foci.name').uniq.compact
+    @foci ||= self.meetings.includes(:foci).pluck('foci.name').uniq.compact
   end
 
   def languages
-    @languages = self.meetings.includes(:languages).pluck('languages.name').uniq.compact
+    @languages ||= self.meetings.includes(:languages).pluck('languages.name').uniq.compact
+  end
+
+  def formats
+    @formats ||= self.meetings.includes(:formats).pluck('formats.name').uniq.compact
+  end
+
+  def features
+    @features ||= self.meetings.includes(:features).pluck('features.name').uniq.compact
   end
 
   def times

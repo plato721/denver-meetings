@@ -4,8 +4,9 @@ RSpec.describe Meeting, type: :model do
   include_context "codes"
 
   before :all do
+    Meeting.destroy_all
     create_all_meeting_features
-    FactoryGirl.create :meeting
+    FactoryGirl.create_list :meeting, 3
   end
 
   after :all do
@@ -117,7 +118,12 @@ RSpec.describe Meeting, type: :model do
     expect(found.count).to eq(Meeting.count - 1)
   end
 
-  it "scopes for open" do
+  it "scopes for open/closed" do
+    expect(Meeting.open.count).to eq(Meeting.count)
+    expect(Meeting.closed.count).to eq(0)
 
+    Meeting.first.update_attribute(:closed, true)
+    expect(Meeting.closed.count).to eq(1)
+    expect(Meeting.open.count).to eq(Meeting.count - 1)
   end
 end

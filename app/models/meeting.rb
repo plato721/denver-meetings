@@ -26,6 +26,14 @@ class Meeting < ActiveRecord::Base
     where(visible: true)
   end
 
+  def self.open
+    where(closed: false)
+  end
+
+  def self.closed
+    where(closed: true)
+  end
+
   def feature_unique
     if self.features.sort.uniq != self.features.sort
       errors.add(:feature, "must be unique")
