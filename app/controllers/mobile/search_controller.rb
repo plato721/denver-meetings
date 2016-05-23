@@ -14,6 +14,15 @@ class Mobile::SearchController < ApplicationController
     end
   end
 
+  def get_new_options
+    search = Search.create(search_params)
+    meetings = search.raw_meetings
+    @options = SearchOptions.new(meetings)
+    respond_to do |format|
+      format.js { render 'options' }
+    end
+  end
+
   def create
     search = Search.create(search_params)
     @meetings = search.results
@@ -26,7 +35,8 @@ class Mobile::SearchController < ApplicationController
   private
   def search_params
     {}.merge(params.except("data-ajax", 
-      :method, :controller, :action, :authenticity_token, :utf8))
+      :method, :controller, :action, :authenticity_token, :utf8,
+      :_, :format))
   end
 
   def here_and_now_params
