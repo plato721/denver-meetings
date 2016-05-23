@@ -11,7 +11,7 @@ RSpec.describe "Search by access" do
   end
 
   after :all do
-    destory_all_meeting_features
+    destroy_all_meeting_features
     Meeting.destroy_all
   end
 

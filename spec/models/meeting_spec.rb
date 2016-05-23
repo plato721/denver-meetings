@@ -11,7 +11,7 @@ RSpec.describe Meeting, type: :model do
 
   after :all do
     destroy_all_meeting_features
-    Meeting.destory_all
+    Meeting.destroy_all
   end
 
   before :each do
