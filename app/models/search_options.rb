@@ -1,9 +1,14 @@
 class SearchOptions
-  attr_reader :meetings
+  attr_reader :meetings, :selection_defaults
 
-  def initialize(meetings=nil)
-    @meetings = meetings
-    @meetings ||= Meeting.all
+  def initialize(args={})
+    args = default_args.merge(args)
+    @meetings = args[:meetings]
+    @selection_defaults = args[:selection_defaults]
+  end
+
+  def default_args
+    {meetings: Meeting.all, selection_defaults: Search.new.to_h}
   end
 
   def count

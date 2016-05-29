@@ -19,7 +19,7 @@ RSpec.describe SearchOptions do
     FactoryGirl.create_list :meeting, 5
 
     meetings = Meeting.where(id: Meeting.first.id)
-    options_narrowed = SearchOptions.new(meetings)
+    options_narrowed = SearchOptions.new(meetings: meetings)
 
     expect(options_narrowed.meetings.count < Meeting.count).to be_truthy
   end
@@ -29,7 +29,7 @@ RSpec.describe SearchOptions do
     days.each { |d| FactoryGirl.create :meeting, day: d }
 
     options_all = SearchOptions.new
-    options_narrowed = SearchOptions.new(Meeting.where(day: ["Tuesday", "Thursday"]))
+    options_narrowed = SearchOptions.new(meetings: Meeting.where(day: ["Tuesday", "Thursday"]))
 
     expect(options_all.days_found_sorted).to eq(days)
     expect(options_narrowed.days_found_sorted).to eq(["Tuesday", "Thursday"])
@@ -41,7 +41,7 @@ RSpec.describe SearchOptions do
 
     fewer_times = [19, 20]
     options_all = SearchOptions.new
-    options_fewer = SearchOptions.new(Meeting.where(time: fewer_times))
+    options_fewer = SearchOptions.new(meetings: Meeting.where(time: fewer_times))
 
     expect(options_all.times_found.length).to eq(times.length)
     expect(options_fewer.times_found.length).to eq(fewer_times.length)
@@ -65,7 +65,7 @@ RSpec.describe SearchOptions do
     cities.each { |c| FactoryGirl.create :meeting, city: c }
 
     options_all = SearchOptions.new
-    options_fewer = SearchOptions.new(Meeting.where(city: cities_fewer))
+    options_fewer = SearchOptions.new(meetings: Meeting.where(city: cities_fewer))
 
     expect(options_all.cities_found.length).to eq(cities.length)
     expect(options_fewer.cities_found.length).to eq(cities_fewer.length)
@@ -83,11 +83,11 @@ RSpec.describe SearchOptions do
     end
 
     no_morning = Meeting.where("time > ? ", 11.0)
-    actual_times = SearchOptions.new(no_morning).time_ranges
+    actual_times = SearchOptions.new(meetings: no_morning).time_ranges
     expect(actual_times.to_a.flatten.include? "am").to be_falsey
 
     no_noon = Meeting.where("time < ? OR time > ?", 10.0, 16.0)
-    actual_times = SearchOptions.new(no_noon).time_ranges
+    actual_times = SearchOptions.new(meetings: no_noon).time_ranges
     expect(actual_times.to_a.flatten.include? "noon").to be_falsey
     expect(actual_times.to_a.flatten.include? "am")
 
@@ -108,7 +108,7 @@ RSpec.describe SearchOptions do
     options = SearchOptions.new
     expect(options.foci.include? "Men").to be_truthy
 
-    options = SearchOptions.new(Meeting.where.not(foci: { name: "Men"}))
+    options = SearchOptions.new(meetings: (Meeting.where.not(foci: { name: "Men"})))
     expect(options.foci.include? "Men").to be_falsey
   end
 
@@ -124,7 +124,7 @@ RSpec.describe SearchOptions do
     options = SearchOptions.new
     expect(options.languages.include? "Spanish").to be_truthy
 
-    options = SearchOptions.new(Meeting.where.not(languages: { name: "Spanish"}))
+    options = SearchOptions.new(meetings: (Meeting.where.not(languages: { name: "Spanish"})))
     expect(options.languages.include? "Spanish").to be_falsey
   end
 
@@ -141,7 +141,7 @@ RSpec.describe SearchOptions do
     expect(actual_all.sort).to eq(features.pluck(:name).sort)
     ["access", "non_smoking", "sitter"].each do |feature|
       meetings = Meeting.send("by_#{feature}".to_sym, "hide")
-      options = SearchOptions.new(meetings)
+      options = SearchOptions.new(meetings: meetings)
       expect(options.features.include? feature).to be_falsey
     end
   end
@@ -166,6 +166,12 @@ RSpec.describe SearchOptions do
   it "has a meeting count" do
     FactoryGirl.create_list :meeting, 2
     expect(SearchOptions.new.count).to eq(Meeting.count)
+  end
+
+  it "has hash of selections currently made" do
+    options = SearchOptions.new
+
+    expect(options.selection_defaults.class).to eq(Hash)
   end
 
 end
