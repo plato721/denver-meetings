@@ -19,9 +19,10 @@ class SearchOptions
       "options" => {
         "open" => self.open?,
         "closed" => self.closed?,
-        "cities" => self.cities,
-        "times" => self.times,
-        "days" => self.days.map { |_, val| val}.flatten.compact,
+        "city" => self.cities.map { |_, val| val}.flatten.compact,
+        "group_name" => self.meeting_names { |_, val| val}.flatten.compact,
+        "time" => self.times.map { |_, val| val}.flatten.compact,
+        "day" => self.days.map { |_, val| val}.flatten.compact,
         "foci" => self.foci,
         "languages" => self.languages,
         "formats" => self.formats,

@@ -110,34 +110,31 @@
       this.menuElements.push(element);
     }
 
-
-    function DaysMenu(args){
-      this.elementName = "day";
+    function MenuElement(args){
+      this.elementName = args["elementName"];
       this.hook = $('#' + this.elementName);
-      this.allSelections = args["selections"];
-      this.defaultSelection = args["defaultSelection"];
       this.setListener();
       this.controller = args["controller"];
       this.controller.registerElement(this);
     }
 
-    DaysMenu.prototype.processUpdate = function(data){
-      var availableDays = data.options.days;
+    MenuElement.prototype.processUpdate = function(data){
+      var selections = data.options[this.elementName];
       var optionsSelector = $(this.hook.find('option'));
 
       _.each(optionsSelector, function(option){
-        if( availableDays.indexOf( $(option).val() ) < 0 ){
+        if( selections.indexOf( $(option).val() ) < 0 ){
           $(option).attr('disabled', 'disabled');
         }
       });
     };
 
-    DaysMenu.prototype.setDefault = function(defaultSelection){
+    MenuElement.prototype.setDefault = function(defaultSelection){
       this.hook.val(defaultSelection);
       this.hook.selectmenu('refresh');
     };
 
-    DaysMenu.prototype.setListener = function(){
+    MenuElement.prototype.setListener = function(){
       this.hook.change(function() {
         var data = { 
           "source"    : this.elementName,
@@ -148,43 +145,17 @@
       }.bind(this));
     };
 
-    DaysMenu.prototype.currentSelection = function(){
+    MenuElement.prototype.currentSelection = function(){
       return this.hook.val();
     }.bind(this);
 
     menuController = new MenuController();
     var daysInitializer = {
-      'hook' : '#day',
-      'defaultSelection' : '--Any Day--',
+      'elementName' : 'day',
       'controller' : menuController
     }
 
-    daysMenu = new DaysMenu(daysInitializer);
-    // daysMenu.setDefault('Wednesday');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    daysMenu = new MenuElement(daysInitializer);
 
 
 
