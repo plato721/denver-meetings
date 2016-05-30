@@ -4,11 +4,30 @@ class SearchOptions
   def initialize(args={})
     args = default_args.merge(args)
     @meetings = args[:meetings]
-    @source = args[:source] # who is updating the options, nil if new options
+    @source = args[:source] # who is updating the options, false if new options
   end
 
   def default_args
-    {meetings: Meeting.all, selection_defaults: Search.new.to_h}
+    {meetings: Meeting.all, source: false}
+  end
+
+  def as_json(options={})
+    {
+      "count" => self.count,
+      "source" => self.source,
+      "meetings" => self.meetings,
+      "options" => {
+        "open" => self.open?,
+        "closed" => self.closed?,
+        "cities" => self.cities,
+        "times" => self.times,
+        "days" => self.days.map { |_, val| val}.flatten.compact,
+        "foci" => self.foci,
+        "languages" => self.languages,
+        "formats" => self.formats,
+        "features" => self.features
+      }
+    }
   end
 
   def count

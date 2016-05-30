@@ -22,6 +22,7 @@ class Mobile::SearchController < ApplicationController
                                    source: params[:source])
     respond_to do |format|
       format.js { render 'options' }
+      format.json { render :json => @options }
     end
   end
 

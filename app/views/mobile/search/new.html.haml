@@ -83,7 +83,7 @@
     }
 
     MenuController.prototype.updateSelection = function(data) {
-      var optionsUrl = '#{get_new_options_mobile_search_index_path(format: :js)}';
+      var optionsUrl = '#{get_new_options_mobile_search_index_path(format: :json)}';
       // var data = { source : value };
       // optionsUrl = optionsUrl.replace(__PARAMS__, data);
 
@@ -98,8 +98,9 @@
 
     MenuController.prototype.notifyChange = function(data){
       console.log("in notify change");
-        debugger;
+      var sendData = {};
       _.each(this.menuElements, function(element){
+
         element.processUpdate(data);
       }.bind(this));
 
@@ -121,12 +122,14 @@
     }
 
     DaysMenu.prototype.processUpdate = function(data){
-      console.log("in process update");
-      debugger;
-      debugger;
-      debugger;
-      debugger;
-      debugger;
+      var availableDays = data.options.days;
+      var optionsSelector = $(this.hook.find('option'));
+
+      _.each(optionsSelector, function(option){
+        if( availableDays.indexOf( $(option).val() ) < 0 ){
+          $(option).attr('disabled', 'disabled');
+        }
+      });
     };
 
     DaysMenu.prototype.setDefault = function(defaultSelection){
