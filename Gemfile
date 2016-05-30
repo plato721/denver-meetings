@@ -24,6 +24,7 @@ gem 'figaro'
 gem 'geocoder'
 gem 'bootstrap_form'
 gem 'skylight'
+gem 'lodash-rails'
 
 group :production do
   gem 'rails_12factor'
