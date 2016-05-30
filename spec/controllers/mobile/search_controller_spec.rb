@@ -14,18 +14,20 @@ RSpec.describe Mobile::SearchController, type: :controller do
   end
 
   context "#get_new_options" do
-    it "gets new options" do
-      xhr :get, :get_new_options
+    it "responds" do
+      get :get_new_options, { source: "day", options: "Monday", format: :json }
 
       expect(response).to have_http_status(200)
     end
 
-    it "does search" do
-      text = Meeting.first.group_name
-      xhr :get, :get_new_options, group_text: text
+    it "get new json-ready options" do
+      get :get_new_options, { source: "day", options: "Monday", format: :json }
 
-      options = assigns(:options)
-      expect(options.count).to eq(1)
+      result = assigns(:options).as_json.with_indifferent_access
+
+      expect(result[:count] > 0).to be_truthy
+      expect(result[:source]).to eq("day")
+      expect(result[:options]).to be_truthy
     end
   end
 end
