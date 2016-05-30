@@ -28,6 +28,9 @@
       return;
     });
 
+    var citiesMenu = $('#cities');
+
+
     var submitButton = $('[type="submit"]');
     $(".city-text").on("click", function() {
       if ($(this).val() == "(Optional search text)"){
@@ -81,6 +84,44 @@
         submitButton.button('enable');
       }
     }); //here-box on click (proximity without here and now)
+
+
+
+
+    // function DropDownMenu(args) {
+    //   this.name = args["name"];
+    //   this.originalSelections = args["choices"];
+    //   this.defaultChoice = args["defaultChoice"];
+    //   this.hook = args["hook"];
+    // }
+
+    // D
+
+    // DropDownMenu.prototype.
+
+
+
+    %h3 Day/Time
+    = select_tag(:day, options_for_select(@options.days), {class: "menu-element"})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   }
 
   $(document).ready( main() );

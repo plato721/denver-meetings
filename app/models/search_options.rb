@@ -1,10 +1,10 @@
 class SearchOptions
-  attr_reader :meetings, :selection_defaults
+  attr_reader :meetings, :source
 
   def initialize(args={})
     args = default_args.merge(args)
     @meetings = args[:meetings]
-    @selection_defaults = args[:selection_defaults]
+    @source = args[:source] # who is updating the options, nil if new options
   end
 
   def default_args
@@ -117,10 +117,18 @@ class SearchOptions
     @days_found_sorted ||= Day.day_order.keep_if { |day| days_found.include? day }
   end
 
+  def today_included?
+    self.days_found_sorted.include? self.today
+  end
+
+  def today
+    Day.display_today
+  end
+
   def days
     @days ||= begin
       any = ["--Any Day--", "any"]
-      today = ["Today (#{Day.display_today})", "#{Day.display_today}"]
+      today = ["Today (#{self.today})", "#{self.today}"] if self.today_included?
       days_found_sorted.zip(days_found_sorted).prepend(any, today)
     end
   end
