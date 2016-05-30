@@ -21,7 +21,6 @@ class Mobile::SearchController < ApplicationController
     @options = SearchOptions.new(meetings: search.raw_meetings,
                                    source: params[:source])
     respond_to do |format|
-      format.js { render 'options' }
       format.json { render :json => @options }
     end
   end
