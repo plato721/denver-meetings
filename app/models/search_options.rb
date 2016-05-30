@@ -19,7 +19,7 @@ class SearchOptions
       "options" => {
         "open" => self.open?,
         "closed" => self.closed?,
-        "city" => self.cities.map { |_, val| val}.flatten.compact,
+        "city" => ["any"].concat( self.cities[1..-1] ),
         "group_name" => self.meeting_names { |_, val| val}.flatten.compact,
         "time" => self.times.map { |_, val| val}.flatten.compact,
         "day" => self.days.map { |_, val| val}.flatten.compact,

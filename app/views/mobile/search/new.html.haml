@@ -119,6 +119,10 @@
     }
 
     MenuElement.prototype.processUpdate = function(data){
+      if ( data.source === this.elementName ){
+        return;
+      }
+
       var selections = data.options[this.elementName];
       var optionsSelector = $(this.hook.find('option'));
 
@@ -150,12 +154,14 @@
     }.bind(this);
 
     menuController = new MenuController();
-    var daysInitializer = {
+    var menuInitializer = {
       'elementName' : 'day',
       'controller' : menuController
     }
+    daysMenu = new MenuElement(menuInitializer);
 
-    daysMenu = new MenuElement(daysInitializer);
+    menuInitializer['elementName'] = "city";
+    cityMenu = new MenuElement(menuInitializer);
 
 
 
