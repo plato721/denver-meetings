@@ -1,7 +1,7 @@
 .collapsible-set
   %div{"data-collapsed-icon" => "carat-d", "data-expanded-icon" => "carat-u", "data-role" => "collapsible"}
     %h3 Access/Services
-    %fieldset{"data-mini" => "true", "data-role" => "controlgroup", "data-type" => "horizontal"}
+    %fieldset{"data-mini" => "true", "data-role" => "controlgroup", "data-type" => "horizontal", class: "accessible"}
       %legend Accessible:
       = radio_button_tag(:access, "hide")
       = label_tag(:access_hide, "Hide")
@@ -9,7 +9,7 @@
       = label_tag(:access_show, "Show")
       = radio_button_tag(:access, "only")
       = label_tag(:access_only, "Show Only")
-    %fieldset{"data-mini" => "true", "data-role" => "controlgroup", "data-type" => "horizontal"}
+    %fieldset{"data-mini" => "true", "data-role" => "controlgroup", "data-type" => "horizontal", class: "non_smoking" }
       %legend Non-Smoking:
       = radio_button_tag(:non_smoking, "hide")
       = label_tag(:non_smoking_hide, "Hide")
@@ -17,7 +17,7 @@
       = label_tag(:non_smoking_show, "Show")
       = radio_button_tag(:non_smoking, "only")
       = label_tag(:non_smoking_only, "Show Only")
-    %fieldset{"data-mini" => "true", "data-role" => "controlgroup", "data-type" => "horizontal"}
+    %fieldset{"data-mini" => "true", "data-role" => "controlgroup", "data-type" => "horizontal", class: "sitter"}
       %legend Sitter:
       = radio_button_tag(:sitter, "hide")
       = label_tag(:sitter_hide, "Hide")

@@ -1,7 +1,7 @@
 .collapsible-set
   %div{"data-collapsed-icon" => "carat-d", "data-expanded-icon" => "carat-u", "data-role" => "collapsible"}
     %h3 Special Focus
-    %fieldset{"data-mini" => "true", "data-role" => "controlgroup", "data-type" => "horizontal"}
+    %fieldset{"data-mini" => "true", "data-role" => "controlgroup", "data-type" => "horizontal", class: "men"}
       %legend Men's:
       = radio_button_tag(:men, "hide")
       = label_tag(:men_hide, "Hide")
@@ -9,7 +9,7 @@
       = label_tag(:men_show, "Show")
       = radio_button_tag(:men, "only")
       = label_tag(:men_only, "Show Only")
-    %fieldset{"data-mini" => "true", "data-role" => "controlgroup", "data-type" => "horizontal"}
+    %fieldset{"data-mini" => "true", "data-role" => "controlgroup", "data-type" => "horizontal", class: "women"}
       %legend Women's:
       = radio_button_tag(:women, "hide")
       = label_tag(:women_hide, "Hide")
@@ -17,7 +17,7 @@
       = label_tag(:women_show, "Show")
       = radio_button_tag(:women, "only")
       = label_tag(:women_only, "Show Only")
-    %fieldset{"data-mini" => "true", "data-role" => "controlgroup", "data-type" => "horizontal"}
+    %fieldset{"data-mini" => "true", "data-role" => "controlgroup", "data-type" => "horizontal", class: "youth"}
       %legend Young People's:
       = radio_button_tag(:youth, "hide")
       = label_tag(:youth_hide, "Hide")
@@ -25,7 +25,7 @@
       = label_tag(:youth_show, "Show")
       = radio_button_tag(:youth, "only")
       = label_tag(:youth_only, "Show Only")
-    %fieldset{"data-mini" => "true", "data-role" => "controlgroup", "data-type" => "horizontal"}
+    %fieldset{"data-mini" => "true", "data-role" => "controlgroup", "data-type" => "horizontal", class: "gay"}
       %legend Gay:
       = radio_button_tag(:gay, "hide")
       = label_tag(:gay_hide, "Hide")

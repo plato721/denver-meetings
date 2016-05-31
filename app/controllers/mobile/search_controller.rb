@@ -17,7 +17,6 @@ class Mobile::SearchController < ApplicationController
   def get_new_options
     search_params = { params[:source] => params[:selection] }
     search = Search.create(search_params)
-
     @options = SearchOptions.new(meetings: search.raw_meetings,
                                    source: params[:source])
     respond_to do |format|
