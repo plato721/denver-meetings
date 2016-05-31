@@ -168,10 +168,10 @@ RSpec.describe SearchOptions do
     expect(SearchOptions.new.count).to eq(Meeting.count)
   end
 
-  it "has hash of selections currently made" do
-    options = SearchOptions.new
+  it "has a source if you gave it one" do
+    options = SearchOptions.new(source: "city")
 
-    expect(options.selection_defaults.class).to eq(Hash)
+    expect(options.source).to eq("city")
   end
 
 end
