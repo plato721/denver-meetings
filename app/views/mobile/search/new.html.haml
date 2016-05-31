@@ -21,20 +21,30 @@
 
   function main(){
 
-
     var submitButton = $('[type="submit"]');
-    $(".city-text").on("click", function() {
+    $(".city-text, .group-text").on("click", function() {
       if ($(this).val() == "(Optional search text)"){
           $(this).val("")
-          $(this).removeClass("city-text-default")
         }
     });
 
-    $(".group-text").on("click", function() {
-      if ($(this).val() == "(Optional search text)"){
-          $(this).val("")
-          $(this).removeClass("group-text-default")
+    $('.group-text').on("blur", function(){
+      if ( $(this).val().length > 0 ){
+        if ( $('#group_name').parent().css('display') !== 'none' ){
+          $('#group_name').parent().toggle('hidden');
         }
+      }
+    });
+
+    $('.city-text').on("blur", function(){
+      if ( $(this).val().length > 0 ){
+        if( $('.here-box').parent().css('display') !== 'none' ){
+          $('.here-box').parent().toggle('hidden');
+        }
+        if( $('#city-button').parent().css('display') !== 'none' ){
+          $('#city-button').parent().toggle('hidden');
+        }
+      }
     });
 
     $(".meeting-search-hot-button").on("click", function(){
@@ -58,8 +68,29 @@
        }
     });
 
+    $('#city').change(function(){
+      if( $('#city').val() !== "any" ){
+        if( $('.here-box').parent().css('display') !== 'none' ){
+          $('.here-box').parent().toggle('hidden');
+        }
+        if( $('#city_text').parent().css('display') !== 'none' ){
+          $('#city_text').parent().toggle('hidden');
+        }
+      } else {
+        if( $('.here-box').parent().css('display') === 'none' ){
+          $('.here-box').parent().toggle('hidden');
+        }
+        if( $('#city_text').parent().css('display') === 'none' ){
+          $('#city_text').parent().toggle('hidden');
+        }
+      }
+    });
+
     $(".here-box").on("click", function(){
       submitButton.button('disable'); //wait for lat and lng
+      $('#city-button').toggle('hidden');
+      $('#city_text').parent().toggle('hidden');
+
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
         var pos = {
