@@ -3,8 +3,8 @@
     %h3 Location
     = select_tag(:city, options_for_select(@options.cities), {class: "menu-element"})
     %fieldset{"data-role" => "controlgroup"}
-      = label_tag(:here, "Right Here", class: "here-box ui-icon-location")
+      = label_tag(:here, "Use My Location", class: "here-box ui-icon-location")
       = check_box_tag(:here, "true")
     = hidden_field_tag(:lat, nil, {class: "main-lat"})
     = hidden_field_tag(:lng, nil, {class: "main-lng"})
-    = text_field_tag :city_text, "(Optional search text)", { class: "city-text city-text-default" }
+    = text_field_tag :city_text, "(Optional search text)", { class: "city-text" }
