@@ -160,6 +160,8 @@
       _.each(optionsSelector, function(option){
         if( selections.indexOf( $(option).val() ) < 0 ){
           $(option).attr('disabled', 'disabled');
+        } else {
+          $(option).attr('disabled', null);
         }
       });
     };
