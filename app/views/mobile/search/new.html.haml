@@ -107,7 +107,9 @@
       }
     }); //here-box on click (proximity without here and now)
 
-
+    ////////////////////////////////
+    //      Menu Controller        //
+    ////////////////////////////////
     function MenuController(args){
       this.menuElements = [];
       $('.controller').attr('data', this);
@@ -115,8 +117,6 @@
 
     MenuController.prototype.updateSelection = function(data) {
       var optionsUrl = '#{get_new_options_mobile_search_index_path(format: :json)}';
-      // var data = { source : value };
-      // optionsUrl = optionsUrl.replace(__PARAMS__, data);
 
       $.ajax({
         url: optionsUrl,
@@ -124,11 +124,11 @@
         success: function(data){
           this.notifyChange(data);
         }.bind(this)
-      });//.done(this.notifyChange(data)).bind(this);
+      });
     }
 
     MenuController.prototype.notifyChange = function(data){
-      console.log("in notify change");
+      // console.log("in notify change");
       var sendData = {};
       _.each(this.menuElements, function(element){
 
@@ -140,7 +140,12 @@
     MenuController.prototype.registerElement = function(element){
       this.menuElements.push(element);
     }
+    // end menu controller
+    ////////////////////////
 
+    ///////////////////
+    // Menu Element  //
+    ///////////////////
     function MenuElement(args){
       this.elementName = args["elementName"];
       this.hook = $('#' + this.elementName);
@@ -173,7 +178,7 @@
 
     MenuElement.prototype.setListener = function(){
       this.hook.change(function() {
-        var data = { 
+        var data = {
           "source"    : this.elementName,
           "selection" : this.hook.val()
         };
@@ -185,16 +190,84 @@
     MenuElement.prototype.currentSelection = function(){
       return this.hook.val();
     }.bind(this);
+    // end menu element
+    ////////////////////
 
-    menuController = new MenuController();
-    var menuInitializer = {
-      'elementName' : 'day',
-      'controller' : menuController
+
+    function initializeMenu() {
+      menuController = new MenuController();
+
+      var dropDowns = ['day', 'city', 'time', 'group_name']
+
+      _.each(dropDowns, function(name){
+        var menuInitializer = { 'controller' : menuController }
+        menuInitializer['elementName'] = name;
+        new MenuElement(menuInitializer);
+      });
     }
-    daysMenu = new MenuElement(menuInitializer);
 
-    menuInitializer['elementName'] = "city";
-    cityMenu = new MenuElement(menuInitializer);
+    initializeMenu();
+
+
+    function RadioGroup(args){
+      this.secondary = args["secondary"];
+      this.primary = args["primary"];
+      this.elementGroup = this.getElements();
+      this.setListeners();
+      this.controller = args["controller"];
+      this.controller.registerElement(this);
+    }
+
+    RadioGroup.prototype.getElements = function(){
+      return _.map(this.secondary, function(label){
+        return this.primary + "_" + label;
+      }.bind(this));
+    }
+
+    RadioGroup.prototype.processUpdate = function(data){
+      if ( data.source === this.primary ){
+        return;
+      }
+
+      var closedSelector = $('#open_closed');
+      var openSelector = $('#open_open');
+      _.each([closedSelector, openSelector], function(selector){
+        if ( !data.options[selector.val()] ){
+          if ( selector.attr('disabled') !== 'disabled' ) {
+            selector.attr('disabled', 'disabled').checkboxradio('refresh');
+          }
+        } else if ( data.options[selector.val()] ){
+          if ( selector.attr('disabled') === 'disabled' ) {
+            selector.attr('disabled', null).checkboxradio('refresh');
+          }
+        }
+      });
+
+    };
+
+    RadioGroup.prototype.setListeners = function(){
+      var self = this;
+      _.each(self.elementGroup, function(element){
+        $('#' + element).change(function() {
+          var data = { 
+            "source"    : self.primary,
+            "selection" : $('#' + element).val()
+          };
+          self.controller.updateSelection(data);
+        });
+      }.bind(this));
+    };
+    // end radio element
+    ////////////////////
+
+    openClosedRadios = new RadioGroup({
+      "controller" : menuController,
+      "primary"    : "open",
+      "secondary"  : ["open", "any", "closed"]
+    });
+
+
+
 
 
 
