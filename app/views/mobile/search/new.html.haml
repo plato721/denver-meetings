@@ -382,25 +382,42 @@
       this.groupName = args["groupName"]
       this.displayName = args["displayName"]
       this.setListeners();
+      this.updates = {};
       this.controller = args["controller"];
       this.controller.registerElement(this);
     }
 
+    FeatureRadio.prototype.getEnabled = function(data){
+      var self = this;
+      self.updates[data.source] =
+        data.options[self.groupName].indexOf(self.displayName) > 0
+
+      var enabled = _.chain(self.updates)
+                     .values()
+                     .reduce(function(memo, bool){
+                      return memo && bool;
+                    }, true)
+                     .value();
+
+      return enabled;
+    }
+
     FeatureRadio.prototype.processUpdate = function(data){
-      var selector = this.element;
-      var elementName = this.displayName;
-      var groupName = this.groupName;
+      var self = this;
 
       if ( data.source === this.elementName ){
         return;
       }
 
-      if ( data.options[groupName].indexOf(elementName) < 0 ){
+      var selector = self.element;
+      var enabled = self.getEnabled(data);
+
+      if ( !enabled ){
         if ( selector.attr('disabled') !== 'disabled' ) {
           selector.toggle('disabled');
         }
-      } else if ( data.options[groupName].indexOf(elementName) > 0 ){
-        if ( selector.attr('disabled') === 'disabled' ) {
+      } else if ( enabled ){
+        if ( selector.attr('style') == "display: none;") {
           selector.toggle('disabled');
         }
       }
@@ -420,22 +437,50 @@
     // end feature radio element
     ////////////////////
 
+    var featureGroup = {
+      "foci" : [ { "name" : "men",
+                   "displayName" : "Men" },
+                 { "name" : "women",
+                   "displayName" : "Women" },
+                 { "name" : "youth",
+                   "displayName" : "Youth" },
+                 { "name" : "gay",
+                   "displayName" : "Gay" } ],
+      "languages" : [ { "name" : "spanish",
+                   "displayName" : "Spanish" },
+                 { "name" : "french",
+                   "displayName" : "French" },
+                 { "name" : "polish",
+                   "displayName" : "Polish" } ],
+      "formats" : [
 
-    var featureSpecs = {
-      "controller" : menuController,
-      "name" : "non_smoking",
-      "groupName" : "features",
-      "displayName" : "Non-Smoking",
-
+      ],
+      "features" : [ { "name" : "access",
+                       "displayName" : "Accessible" },
+                     { "name" : "non_smoking",
+                       "displayName" : "Non-Smoking" },
+                     { "name" : "sitter",
+                       "displayName" : "Sitter" } ]
     }
 
-    featureTest = new FeatureRadio(featureSpecs);
+    _.each(_.keys(featureGroup), function(groupName){
+      _.each(featureGroup[groupName], function(feature){
+        var featureSpecs = {
+          "controller" : menuController,
+          "name" : feature["name"],
+          "groupName" : groupName,
+          "displayName" : feature["displayName"],
+        }
+        featureTest = new FeatureRadio(featureSpecs);
+      });
+    });
 
-    featureSpecs["name"] = "gay";
-    featureSpecs["displayName"] = "Gay";
-    featureSpecs["groupName"] = "foci";
 
-    featureTest = new FeatureRadio(featureSpecs);
+    // featureSpecs["name"] = "gay";
+    // featureSpecs["displayName"] = "Gay";
+    // featureSpecs["groupName"] = "foci";
+
+    // featureTest = new FeatureRadio(featureSpecs);
 
     //////////////////////////////////
     //   feature group             //
