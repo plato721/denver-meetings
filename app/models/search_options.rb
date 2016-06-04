@@ -101,19 +101,23 @@ class SearchOptions
   end
 
   def foci
-    @foci ||= self.meetings.includes(:foci).pluck('foci.name').uniq.compact
+    @foci ||= Meeting.where(id: self.meetings.map(&:id))
+                     .joins(:foci).pluck('foci.name').uniq.compact
   end
 
   def languages
-    @languages ||= self.meetings.includes(:languages).pluck('languages.name').uniq.compact
+    @languages ||= Meeting.where(id: self.meetings.map(&:id))
+                          .joins(:languages).pluck('languages.name').uniq.compact
   end
 
   def formats
-    @formats ||= self.meetings.includes(:formats).pluck('formats.name').uniq.compact
+    @formats ||= Meeting.where(id: self.meetings.map(&:id))
+                        .joins(:formats).pluck('formats.name').uniq.compact
   end
 
   def features
-    @features ||= self.meetings.includes(:features).pluck('features.name').uniq.compact
+    @features ||= Meeting.where(id: self.meetings.map(&:id))
+                         .joins(:features).pluck('features.name').uniq.compact
   end
 
   def times
