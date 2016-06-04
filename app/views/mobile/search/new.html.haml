@@ -152,14 +152,31 @@
       this.setListener();
       this.controller = args["controller"];
       this.controller.registerElement(this);
+      this.updates = {};
     }
 
+    MenuElement.prototype.getSelections = function(data){
+      var self = this;
+
+      self.updates[data.source] = data.options[self.elementName];
+      var selections = _.chain(self.updates)
+                        .values()
+                        .intersection()
+                        .flatten()
+                        .value();
+
+      return selections;
+    };
+
+
     MenuElement.prototype.processUpdate = function(data){
+      var self = this;
+
       if ( data.source === this.elementName ){
         return;
       }
 
-      var selections = data.options[this.elementName];
+      var selections = self.getSelections(data);
       var optionsSelector = $(this.hook.find('option'));
 
       _.each(optionsSelector, function(option){
@@ -328,7 +345,7 @@
 
 
     //////////////////////////////////
-    //   feature radio group //
+    //   feature radio group       //
     /////////////////////////////////
 
     function FeatureRadio(args){
@@ -396,55 +413,6 @@
     //   feature group             //
     /////////////////////////////////
 
-    function Feature(args){
-      this.members = args["members"];
-      this.secondary = args["secondary"];
-      this.primary = args["primary"];
-      this.elementGroup = this.getElements();
-      this.setListeners();
-      this.controller = args["controller"];
-      this.controller.registerElement(this);
-    }
-
-    RadioGroup.prototype.getElements = function(){
-      return _.map(this.secondary, function(label){
-        return this.primary + "_" + label;
-      }.bind(this));
-    }
-
-    RadioGroup.prototype.processUpdate = function(data){
-      if ( data.source === this.primary ){
-        return;
-      }
-
-      var closedSelector = $('#open_closed');
-      var openSelector = $('#open_open');
-      _.each([closedSelector, openSelector], function(selector){
-        if ( !data.options[selector.val()] ){
-          if ( selector.attr('disabled') !== 'disabled' ) {
-            selector.attr('disabled', 'disabled').checkboxradio('refresh');
-          }
-        } else if ( data.options[selector.val()] ){
-          if ( selector.attr('disabled') === 'disabled' ) {
-            selector.attr('disabled', null).checkboxradio('refresh');
-          }
-        }
-      });
-
-    };
-
-    RadioGroup.prototype.setListeners = function(){
-      var self = this;
-      _.each(self.elementGroup, function(element){
-        $('#' + element).change(function() {
-          var data = { 
-            "source"    : self.primary,
-            "selection" : $('#' + element).val()
-          };
-          self.controller.updateSelection(data);
-        });
-      }.bind(this));
-    };
     // end feature group
     ////////////////////
 
