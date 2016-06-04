@@ -108,7 +108,8 @@ RSpec.describe SearchOptions do
     options = SearchOptions.new
     expect(options.foci.include? "Men").to be_truthy
 
-    options = SearchOptions.new(meetings: (Meeting.where.not(foci: { name: "Men"})))
+    options = SearchOptions.new(meetings: (Meeting.joins(:foci)
+      .where.not(foci: { name: "Men"})))
     expect(options.foci.include? "Men").to be_falsey
   end
 
@@ -124,7 +125,8 @@ RSpec.describe SearchOptions do
     options = SearchOptions.new
     expect(options.languages.include? "Spanish").to be_truthy
 
-    options = SearchOptions.new(meetings: (Meeting.where.not(languages: { name: "Spanish"})))
+    options = SearchOptions.new(meetings: (Meeting.joins(:languages)
+      .where.not(languages: { name: "Spanish"})))
     expect(options.languages.include? "Spanish").to be_falsey
   end
 
