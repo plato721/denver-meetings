@@ -118,69 +118,66 @@ class Meeting < ActiveRecord::Base
 
   def self.by_gay(gay)
     return all if gay == "show"
-    only = includes(:foci).where(foci: { name: "Gay" })
+    only = joins(:foci).where(foci: { name: "Gay" })
     gay == "only" ? only : where.not(id: only.map {|m| m.id} )
   end
 
   def self.by_youth(youth)
     return all if youth == "show"
-    only = includes(:foci).where(foci: { name: "Young People" })
+    only = joins(:foci).where(foci: { name: "Young People" })
     youth == "only" ? only : where.not(id: only.map {|m| m.id} )
   end
 
   def self.by_women(women)
     return all if women == "show"
-    only = includes(:foci).where(foci: { name: "Women" })
+    only = joins(:foci).where(foci: { name: "Women" })
     women == "only" ? only : where.not(id: only.map {|m| m.id} )
   end
 
   def self.by_men(men)
     return all if men == "show"
-    only = includes(:foci).where(foci: { name: "Men" })
+    only = joins(:foci).where(foci: { name: "Men" })
     men == "only" ? only : where.not(id: only.map {|m| m.id} )
   end
 
   def self.by_polish(polish)
     return all if polish == "show"
-    only = includes(:languages).where(languages: { name: "Polish" })
+    only = joins(:languages).where(languages: { name: "Polish" })
     polish == "only" ? only : where.not(id: only.map {|m| m.id} )
   end
 
   def self.by_spanish(spanish)
     return all if spanish == "show"
-    only = includes(:languages).where(languages: { name: "Spanish" })
+    only = joins(:languages).where(languages: { name: "Spanish" })
     spanish == "only" ? only : where.not(id: only.map {|m| m.id} )
   end
 
   def self.by_french(french)
     return all if french == "show"
-    only = includes(:languages).where(languages: { name: "French" })
+    only = joins(:languages).where(languages: { name: "French" })
     french == "only" ? only : where.not(id: only.map {|m| m.id} )
   end
 
   def self.by_sitter(sitter)
     return all if sitter == "show"
-    only = includes(:features).where(features: { name: "Sitter" })
+    only = joins(:features).where(features: { name: "Sitter" })
     sitter == "only" ? only : where.not(id: only.map {|m| m.id} )
   end
 
   def self.by_access(access)
     return all if access == "show"
-    only = includes(:features).where(features: { name: "Accessible" })
+    only = joins(:features).where(features: { name: "Accessible" })
     access == "only" ? only : where.not(id: only.map {|m| m.id} )
   end
 
   def self.by_non_smoking(non_smoking)
     return all if non_smoking == "show"
-    only = includes(:features).where(features: { name: "Non-Smoking" })
+    only = joins(:features).where(features: { name: "Non-Smoking" })
     non_smoking == "only" ? only : where.not(id: only.map {|m| m.id} )
   end
 
   def self.search(params)
-    self.includes(:languages)
-    .includes(:formats)
-    .includes(:foci)
-    .includes(:features)
+    self
     .visible
     .by_group_name(params[:group_name])
     .by_group_name(params[:group_text])
