@@ -233,6 +233,7 @@
       this.secondary = args["secondary"];
       this.primary = args["primary"];
       this.elementGroup = this.getElements();
+      this.updates = {};
       this.setListeners();
       this.controller = args["controller"];
       this.controller.registerElement(this);
@@ -244,19 +245,46 @@
       }.bind(this));
     }
 
+    RadioGroup.prototype.getSelections = function(data){
+      var self = this;
+
+      self.updates[data.source] = {};
+      var selections = {};
+
+      _.each(["open", "closed"], function(open_closed){
+        self.updates[data.source[open_closed]] = data.options[open_closed];
+        selections[open_closed] = _.chain(self.updates)
+                                   .values()
+                                   .map(function(optObj){
+                                      return optObj[open_closed];
+                                    })
+                                   .flatten()
+                                   .reduce(function(memo, bool){
+                                      return memo && bool;
+                                    }, true)
+                                  .value();
+        });
+
+       return selections;
+    }
+
     RadioGroup.prototype.processUpdate = function(data){
+      var self = this;
+
       if ( data.source === this.primary ){
         return;
       }
 
+      var selections = self.getSelections(data);
+
       var closedSelector = $('#open_closed');
       var openSelector = $('#open_open');
       _.each([closedSelector, openSelector], function(selector){
-        if ( !data.options[selector.val()] ){
+        if ( !selections[selector.val()] ){
           if ( selector.attr('disabled') !== 'disabled' ) {
             selector.attr('disabled', 'disabled').checkboxradio('refresh');
           }
-        } else if ( data.options[selector.val()] ){
+        } else if ( selections[selector.val()] ){
           if ( selector.attr('disabled') === 'disabled' ) {
             selector.attr('disabled', null).checkboxradio('refresh');
           }
