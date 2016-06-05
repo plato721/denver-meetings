@@ -202,7 +202,9 @@
       self.updates[data.source] = data.options[self.elementName];
       var selections = _.chain(self.updates)
                         .values()
-                        .intersection()
+                        .reduce(function(memo, choiceSet){
+                          return _.intersection(memo, choiceSet);
+                        })
                         .flatten()
                         .value();
 
@@ -458,10 +460,10 @@
     function initializeMenu() {
       menuController = new MenuController();
 
-      var dropDowns = ['day', 'city', 'time', 'group_name']
+      var dropDowns = ['day', 'city', 'time', 'group_name'];
 
       _.each(dropDowns, function(name){
-        var menuInitializer = { 'controller' : menuController }
+        var menuInitializer = { 'controller' : menuController };
         menuInitializer['elementName'] = name;
         new MenuElement(menuInitializer);
       });
@@ -515,24 +517,6 @@
     }
 
     initializeMenu();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   }
 
