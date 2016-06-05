@@ -3,8 +3,12 @@ class SearchOptions
 
   def initialize(args={})
     args = default_args.merge(args)
-    @meetings = args[:meetings]
+    @meetings = cleanse_meetings(args[:meetings])
     @source = args[:source] # who is updating the options, false if new options
+  end
+
+  def cleanse_meetings(meetings)
+    Meeting.where(id: meetings.map(&:id))
   end
 
   def default_args
@@ -20,7 +24,7 @@ class SearchOptions
       "options" => {
         "open" => self.open?,
         "closed" => self.closed?,
-        "city" => ["any"].concat( self.cities[1..-1] ),
+        "city" => self.cities_json,
         "group_name" => self.meeting_names { |_, val| val}.flatten.compact,
         "time" => self.times.map { |_, val| val}.flatten.compact,
         "day" => self.days.map { |_, val| val}.flatten.compact,
@@ -45,7 +49,13 @@ class SearchOptions
   end
 
   def cities_found
-    self.meetings.pluck(:city).uniq.sort
+    @cities_found ||= begin
+      self.meetings.pluck(:city).uniq.sort
+    end
+  end
+
+  def cities_json
+    ["any"] + cities_found
   end
 
   def cities
@@ -102,22 +112,22 @@ class SearchOptions
   end
 
   def foci
-    @foci ||= Meeting.where(id: self.meetings.map(&:id))
+    @foci ||= self.meetings
                      .joins(:foci).pluck('foci.name').uniq.compact
   end
 
   def languages
-    @languages ||= Meeting.where(id: self.meetings.map(&:id))
+    @languages ||= self.meetings
                           .joins(:languages).pluck('languages.name').uniq.compact
   end
 
   def formats
-    @formats ||= Meeting.where(id: self.meetings.map(&:id))
+    @formats ||= self.meetings
                         .joins(:formats).pluck('formats.name').uniq.compact
   end
 
   def features
-    @features ||= Meeting.where(id: self.meetings.map(&:id))
+    @features ||= self.meetings
                          .joins(:features).pluck('features.name').uniq.compact
   end
 
