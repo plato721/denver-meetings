@@ -22,6 +22,10 @@ class Meeting < ActiveRecord::Base
   has_many :formats, through: :meeting_formats
   has_many :languages, through: :meeting_languages
 
+  def self.geocoded
+    where.not(lat: nil).where.not(lng: nil)
+  end
+
   def self.visible
     where(visible: true)
   end

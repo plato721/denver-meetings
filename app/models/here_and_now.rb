@@ -28,14 +28,14 @@ class HereAndNow
 
   def upcoming_meetings
     criteria = {day: Day.display_today, time: "now"}.merge(meeting_types)
-    now_meetings = Meeting.search(criteria)
+    now_meetings = Meeting.search(criteria).geocoded
     return now_meetings if (now_meetings.count > 10 || TimeConverter.now < 19)
     now_meetings.concat(first_morning_meetings)
   end
 
   def first_morning_meetings
     criteria = {day: Day.display_tomorrow, time: "am"}.merge(meeting_types)
-    morning_meetings = Meeting.search(criteria)
+    morning_meetings = Meeting.search(criteria).geocoded
     .order(:time)
   end
 
