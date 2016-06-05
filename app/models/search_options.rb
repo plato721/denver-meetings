@@ -25,7 +25,8 @@ class SearchOptions
         "open" => self.open?,
         "closed" => self.closed?,
         "city" => self.cities_json,
-        "group_name" => self.meeting_names { |_, val| val}.flatten.compact,
+        "group_name" => self.meetings_json,
+        # self.meeting_names { |_, val| val}.flatten.compact,
         "time" => self.times.map { |_, val| val}.flatten.compact,
         "day" => self.days.map { |_, val| val}.flatten.compact,
         "foci" => self.foci,
@@ -137,6 +138,12 @@ class SearchOptions
 
   def meeting_names
     @names ||= self.meetings.uniq.order(:group_name).pluck(:group_name)
+  end
+
+  def meetings_json
+    @meetings_json ||= begin
+      ["any"] + self.meetings.pluck(:group_name).uniq.sort
+    end
   end
 
   def names_select
