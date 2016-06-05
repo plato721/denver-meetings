@@ -58,6 +58,16 @@ RSpec.describe RawMeeting do
       end
     end
 
+    it "will not add nil codes" do
+      attributes = @raw_stream
+      attributes.pop
+
+      meeting = RawMeeting.add_from(attributes)
+
+      expect(meeting.is_a? RawMeeting).to be_truthy
+      expect(meeting.codes.is_a? String).to be_truthy
+    end
+
   end
 
   it "loads from yaml" do

@@ -1,5 +1,16 @@
 class RawMeeting < ActiveRecord::Base
   has_one :meeting
+  validate :codes_is_a_string
+
+  before_validation :check_codes
+
+  def check_codes
+    self.codes = "" if codes.nil?
+  end
+
+  def codes_is_a_string
+    self.codes.is_a? String
+  end
 
   def self.add_from(raw)
     checksum = compute_checksum(raw)
