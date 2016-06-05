@@ -68,7 +68,11 @@
        }
     });
 
-    $('.here-box').closest('[data-role="controlgroup"]').on("click", function(){
+    var hereBox = $('input[name="here"]');
+    // $('.here-box').closest('[data-role="controlgroup"]').on("click", function(){
+    hereBox.change(function(){
+      if ( !hereBox.val()){ return; }
+
       submitButton.button('disable'); //wait for lat and lng
       $('#city-button').toggle('hidden');
       $('#city_text').parent().toggle('hidden');
@@ -81,7 +85,7 @@
         };
         $(".main-lat").val(pos["lat"]);
         $(".main-lng").val(pos["lng"]);
-        console.log("lat is: " + pos["lat"] + " lng is: " + pos["lng"]);
+        // console.log("lat is: " + pos["lat"] + " lng is: " + pos["lng"]);
         submitButton.button('enable');
       });
       } else {
