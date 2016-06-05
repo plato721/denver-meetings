@@ -80,7 +80,7 @@ class ScrapeDaccaa
       end
       current_set << cell
     end
-    sets[1..-1]
+    sets[1..-1] << current_set
   end
 
   def create_raw_meetings(parsed)
