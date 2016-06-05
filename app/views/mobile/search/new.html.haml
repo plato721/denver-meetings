@@ -68,6 +68,27 @@
        }
     });
 
+    $(".here-box").on("click", function(){
+      submitButton.button('disable'); //wait for lat and lng
+      $('#city-button').toggle('hidden');
+      $('#city_text').parent().toggle('hidden');
+
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+        var pos = {
+          "lat": position.coords.latitude,
+          "lng": position.coords.longitude
+        };
+        $(".main-lat").val(pos["lat"]);
+        $(".main-lng").val(pos["lng"]);
+        console.log("lat is: " + pos["lat"] + " lng is: " + pos["lng"]);
+        submitButton.button('enable');
+      });
+      } else {
+        submitButton.button('enable');
+      }
+    }); //here-box on click (proximity without here and now)
+
     $('#city').change(function(){
       if( $('#city').val() !== "any" ){
         if( $('.here-box').parent().css('display') !== 'none' ){
@@ -85,28 +106,6 @@
         }
       }
     });
-
-    $(".here-box").on("click", function(){
-      submitButton.button('disable'); //wait for lat and lng
-      $('#city-button').toggle('hidden');
-      $('#city_text').parent().toggle('hidden');
-
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-        var pos = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude
-        };
-        $(".main-lat").val(pos["lat"]);
-        $(".main-lng").val(pos["lng"]);
-        console.log("lat is: " + pos["lat"] + " lng is: " + pos["lng"]);
-        submitButton.button('enable');
-      });
-      } else {
-        submitButton.button('enable');
-      }
-    }); //here-box on click (proximity without here and now)
-
 
     ////////////////////////////////
     //      Menu Controller        //
