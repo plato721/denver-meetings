@@ -71,11 +71,23 @@ class ScrapeDaccaa
     parsed[13..-68]
   end
 
+  def create_attributes(flat_attrs)
+    current_set = []
+    sets = flat_attrs.each_with_object([]) do |cell, attributes|
+      if Day.day_order.include? cell
+        attributes << current_set.clone
+        current_set.clear
+      end
+      current_set << cell
+    end
+    sets[1..-1] << current_set
+  end
+
   def create_raw_meetings(parsed)
-    rest_raw_meetings(parsed)
-      .each_slice(7)
-      .with_object([]) do |slice, meetings|
-        meetings << RawMeeting.add_from(slice)
+    flat_attrs = rest_raw_meetings(parsed)
+    sets = create_attributes(flat_attrs)
+    sets.each_with_object([]) do |slice, meetings|
+      meetings << RawMeeting.add_from(slice)
     end
   end
 
