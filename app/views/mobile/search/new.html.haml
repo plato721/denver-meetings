@@ -107,6 +107,7 @@
       }
     }); //here-box on click (proximity without here and now)
 
+
     ////////////////////////////////
     //      Menu Controller        //
     ////////////////////////////////
@@ -143,6 +144,46 @@
     // end menu controller
     ////////////////////////
 
+
+    /////////////////////
+    // Submit Button   //
+    /////////////////////
+    function SubmitElement(args){
+      this.elementName = "Submit";
+      this.hook = $('[type="submit"]');
+      this.controller = args["controller"];
+      this.controller.registerElement(this);
+      this.updates = {};
+    }
+
+    SubmitElement.prototype.getSelections = function(data){
+      var self = this;
+
+      self.updates[data.source] = data.meetingIds;
+
+      var selections = _.chain(self.updates)
+                        .values()
+                        .reduce(function(memo, idSet){
+                          return _.intersection(memo, idSet);
+                        })
+                        .flatten()
+                        .value();
+
+      return selections;
+    }
+
+    SubmitElement.prototype.processUpdate = function(data){
+      var self = this;
+      var selections = self.getSelections(data);
+
+      var buttonText = 'Show ' + selections.length + ' Meetings';
+
+      self.hook.val(buttonText).button('refresh');
+    }
+    // end submit element
+    ////////////////////////
+
+
     ///////////////////
     // Menu Element  //
     ///////////////////
@@ -167,7 +208,6 @@
 
       return selections;
     };
-
 
     MenuElement.prototype.processUpdate = function(data){
       var self = this;
@@ -210,20 +250,6 @@
     // end menu element
     ////////////////////
 
-
-    function initializeMenu() {
-      menuController = new MenuController();
-
-      var dropDowns = ['day', 'city', 'time', 'group_name']
-
-      _.each(dropDowns, function(name){
-        var menuInitializer = { 'controller' : menuController }
-        menuInitializer['elementName'] = name;
-        new MenuElement(menuInitializer);
-      });
-    }
-
-    initializeMenu();
 
     //////////////////////////////////
     //   open/closed radio group   //
@@ -308,13 +334,6 @@
     // end open/closed radio element
     ////////////////////
 
-    openClosedRadios = new RadioGroup({
-      "controller" : menuController,
-      "primary"    : "open",
-      "secondary"  : ["open", "any", "closed"]
-    });
-
-
     //////////////////////////////////
     //   open/closed radio group   //
     /////////////////////////////////
@@ -370,8 +389,6 @@
     // end open/closed radio element
     ////////////////////
 
-
-
     //////////////////////////////////
     //   feature radio group       //
     /////////////////////////////////
@@ -390,7 +407,7 @@
     FeatureRadio.prototype.getEnabled = function(data){
       var self = this;
       self.updates[data.source] =
-        data.options[self.groupName].indexOf(self.displayName) > 0
+        data.options[self.groupName].indexOf(self.displayName) >= 0
 
       var enabled = _.chain(self.updates)
                      .values()
@@ -413,11 +430,11 @@
       var enabled = self.getEnabled(data);
 
       if ( !enabled ){
-        if ( selector.attr('disabled') !== 'disabled' ) {
+        if ( selector.attr('style') !== "display: none;") {
           selector.toggle('disabled');
         }
       } else if ( enabled ){
-        if ( selector.attr('style') == "display: none;") {
+        if ( selector.attr('style') === "display: none;") {
           selector.toggle('disabled');
         }
       }
@@ -437,57 +454,84 @@
     // end feature radio element
     ////////////////////
 
-    var featureGroup = {
-      "foci" : [ { "name" : "men",
-                   "displayName" : "Men" },
-                 { "name" : "women",
-                   "displayName" : "Women" },
-                 { "name" : "youth",
-                   "displayName" : "Youth" },
-                 { "name" : "gay",
-                   "displayName" : "Gay" } ],
-      "languages" : [ { "name" : "spanish",
-                   "displayName" : "Spanish" },
-                 { "name" : "french",
-                   "displayName" : "French" },
-                 { "name" : "polish",
-                   "displayName" : "Polish" } ],
-      "formats" : [
 
-      ],
-      "features" : [ { "name" : "access",
-                       "displayName" : "Accessible" },
-                     { "name" : "non_smoking",
-                       "displayName" : "Non-Smoking" },
-                     { "name" : "sitter",
-                       "displayName" : "Sitter" } ]
+    function initializeMenu() {
+      menuController = new MenuController();
+
+      var dropDowns = ['day', 'city', 'time', 'group_name']
+
+      _.each(dropDowns, function(name){
+        var menuInitializer = { 'controller' : menuController }
+        menuInitializer['elementName'] = name;
+        new MenuElement(menuInitializer);
+      });
+    
+      openClosedRadios = new RadioGroup({
+        "controller" : menuController,
+        "primary"    : "open",
+        "secondary"  : ["open", "any", "closed"]
+      });
+
+      var featureGroup = {
+        "foci" : [ { "name" : "men",
+                     "displayName" : "Men" },
+                   { "name" : "women",
+                     "displayName" : "Women" },
+                   { "name" : "youth",
+                     "displayName" : "Young People" },
+                   { "name" : "gay",
+                     "displayName" : "Gay" } ],
+        "languages" : [ { "name" : "spanish",
+                     "displayName" : "Spanish" },
+                   { "name" : "french",
+                     "displayName" : "French" },
+                   { "name" : "polish",
+                     "displayName" : "Polish" } ],
+        "formats" : [
+
+        ],
+        "features" : [ { "name" : "access",
+                         "displayName" : "Accessible" },
+                       { "name" : "non_smoking",
+                         "displayName" : "Non-Smoking" },
+                       { "name" : "sitter",
+                         "displayName" : "Sitter" } ]
+      }
+
+      _.each(_.keys(featureGroup), function(groupName){
+        _.each(featureGroup[groupName], function(feature){
+          var featureSpecs = {
+            "controller" : menuController,
+            "name" : feature["name"],
+            "groupName" : groupName,
+            "displayName" : feature["displayName"],
+          }
+          featureTest = new FeatureRadio(featureSpecs);
+        });
+      });
+
+      submitter = new SubmitElement({"controller" : menuController});
+
     }
 
-    _.each(_.keys(featureGroup), function(groupName){
-      _.each(featureGroup[groupName], function(feature){
-        var featureSpecs = {
-          "controller" : menuController,
-          "name" : feature["name"],
-          "groupName" : groupName,
-          "displayName" : feature["displayName"],
-        }
-        featureTest = new FeatureRadio(featureSpecs);
-      });
-    });
+    initializeMenu();
 
 
-    // featureSpecs["name"] = "gay";
-    // featureSpecs["displayName"] = "Gay";
-    // featureSpecs["groupName"] = "foci";
 
-    // featureTest = new FeatureRadio(featureSpecs);
 
-    //////////////////////////////////
-    //   feature group             //
-    /////////////////////////////////
 
-    // end feature group
-    ////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   }

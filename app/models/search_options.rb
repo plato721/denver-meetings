@@ -15,6 +15,7 @@ class SearchOptions
     {
       "count" => self.count,
       "source" => self.source,
+      "meetingIds" => self.meetings.map(&:id),
       "meetings" => self.meetings,
       "options" => {
         "open" => self.open?,
