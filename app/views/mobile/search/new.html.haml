@@ -68,7 +68,7 @@
        }
     });
 
-    $(".here-box").on("click", function(){
+    $('.here-box').closest('[data-role="controlgroup"]').on("click", function(){
       submitButton.button('disable'); //wait for lat and lng
       $('#city-button').toggle('hidden');
       $('#city_text').parent().toggle('hidden');
