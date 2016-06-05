@@ -1,18 +1,68 @@
 class SearchOptions
+  attr_reader :meetings, :source
+
+  def initialize(args={})
+    args = default_args.merge(args)
+    @meetings = args[:meetings]
+    @source = args[:source] # who is updating the options, false if new options
+  end
+
+  def default_args
+    {meetings: Meeting.all, source: false}
+  end
+
+  def as_json(options={})
+    {
+      "count" => self.count,
+      "source" => self.source,
+      "meetingIds" => self.meetings.map(&:id),
+      "meetings" => self.meetings,
+      "options" => {
+        "open" => self.open?,
+        "closed" => self.closed?,
+        "city" => ["any"].concat( self.cities[1..-1] ),
+        "group_name" => self.meeting_names { |_, val| val}.flatten.compact,
+        "time" => self.times.map { |_, val| val}.flatten.compact,
+        "day" => self.days.map { |_, val| val}.flatten.compact,
+        "foci" => self.foci,
+        "languages" => self.languages,
+        "formats" => self.formats,
+        "features" => self.features
+      }
+    }
+  end
+
+  def count
+    self.meetings.count
+  end
+
+  def open?
+    @open ||= self.meetings.exists?(closed: false)
+  end
+
+  def closed?
+    @closed ||= self.meetings.exists?(closed: true)
+  end
+
+  def cities_found
+    self.meetings.pluck(:city).uniq.sort
+  end
+
   def cities
-    @cities ||= Meeting.uniq.pluck(:city).sort
+    @cities ||= begin
+      any = ["--All Cities--", "any"]
+      self.cities_found.prepend(any)
+    end
   end
 
-  def cities_select
-    any = ["--All Cities--", "any"]
-    cities.prepend(any)
+  def times_found_raw
+    @times_found_raw ||= self.meetings.pluck(:time).uniq.sort
   end
 
-  def times
-    @select_times ||= begin
-      times = Meeting.uniq.pluck(:time).sort
-      times.map { |t| TimeConverter.display(t) }
-      .zip(times)
+  def times_found
+    @times_found ||= begin
+      times_found_raw.map { |t| TimeConverter.display(t) }
+      .zip(times_found_raw)
     end
   end
 
@@ -25,7 +75,15 @@ class SearchOptions
     }
   end
 
-  def time_ranges
+  def now_time_range
+    now = ["Right Now","now"]
+  end
+
+  def any_time_range
+    any = ["--Any Time--", "any"]
+  end
+
+  def possible_time_ranges
     am = ["Morning (before 10a)", "am"]
     noon = ["Midday (10a - 3p)", "noon"]
     pm = ["Afternoon (3p - 7p)", "pm"]
@@ -33,14 +91,42 @@ class SearchOptions
     [am, noon, pm, late]
   end
 
-  def times_select
-    any = ["--Any Time--", "any"]
-    now = ["Right Now","now"]
-    time_ranges.concat(times).prepend(any, now)
+  def time_ranges
+    possible_time_ranges.select do |range|
+      range_values = self.class.display_range_to_raw[range.last]
+      self.times_found.find do |display_pair|
+        display_pair.last >= range_values.first &&
+        display_pair.last <= range_values.last
+      end
+    end
+  end
+
+  def foci
+    @foci ||= Meeting.where(id: self.meetings.map(&:id))
+                     .joins(:foci).pluck('foci.name').uniq.compact
+  end
+
+  def languages
+    @languages ||= Meeting.where(id: self.meetings.map(&:id))
+                          .joins(:languages).pluck('languages.name').uniq.compact
+  end
+
+  def formats
+    @formats ||= Meeting.where(id: self.meetings.map(&:id))
+                        .joins(:formats).pluck('formats.name').uniq.compact
+  end
+
+  def features
+    @features ||= Meeting.where(id: self.meetings.map(&:id))
+                         .joins(:features).pluck('features.name').uniq.compact
+  end
+
+  def times
+    @times ||= [any_time_range, now_time_range] + time_ranges + times_found
   end
 
   def meeting_names
-    @names ||= Meeting.uniq.order(:group_name).pluck(:group_name)
+    @names ||= self.meetings.uniq.order(:group_name).pluck(:group_name)
   end
 
   def names_select
@@ -48,17 +134,28 @@ class SearchOptions
     meeting_names.zip(meeting_names).prepend(additional)
   end
 
-  def days
-    @days ||= begin
-      ["Sunday", "Monday", "Tuesday", "Wednesday",
-      "Thursday", "Friday", "Saturday"]
-    end
+  def days_found
+    @days_found ||= self.meetings.pluck(:day).uniq
   end
 
-  def days_select
-    any = ["--Any Day--", "any"]
-    today = ["Today (#{Day.display_today})", "#{Day.display_today}"]
-    days.zip(days).prepend(any, today)
+  def days_found_sorted
+    @days_found_sorted ||= Day.day_order.keep_if { |day| days_found.include? day }
+  end
+
+  def today_included?
+    self.days_found_sorted.include? self.today
+  end
+
+  def today
+    Day.display_today
+  end
+
+  def days
+    @days ||= begin
+      any = ["--Any Day--", "any"]
+      today = ["Today (#{self.today})", "#{self.today}"] if self.today_included?
+      days_found_sorted.zip(days_found_sorted).prepend(any, today)
+    end
   end
 
 end

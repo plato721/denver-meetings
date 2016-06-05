@@ -1,31 +1,40 @@
 require 'rails_helper'
 
 RSpec.describe Search do
-  fixtures :meetings
+  before :all do
+    Meeting.destroy_all
+    FactoryGirl.create_list :meeting, 5, _skip_geocoder: true
+
+    Meeting.first.update_attribute(:lat, 39.740143)
+    Meeting.first.update_attribute(:lng, -104.962335)
+
+    Meeting.second.update_attribute(:group_name, "Mojo Jojo's House of Dojo")
+    Meeting.third.update_attribute(:city, "Townsxyzpdq1234villia")
+  end
 
   it "finds by location" do
-    search = Search.new({lat: 39.740143,
-                         lng: -104.962335,
+    search = Search.new({lat: 39.740132,
+                         lng: -104.962323,
                          here: true})
 
     closest_meeting = search.results.first.last.first
     # (first group, associated meetings, first of the associated meetings)
-    expect(closest_meeting.address.include?("1311 York")).to be_truthy
+    expect(closest_meeting.group_name).to eq(Meeting.first.group_name)
   end
 
   it "finds by group name free text" do
-    search = Search.create(group_text: "daily")
+    search = Search.create(group_text: "jojo")
 
-    expected = "Daily Serenity"
+    expected = Meeting.second.group_name
     actual = search.results.first.last.first.group_name
 
     expect(actual).to eq(expected)
   end
 
   it "finds by city name free text" do
-    search = Search.create(city_text: "ake")
+    search = Search.create(city_text: "xyzp")
 
-    expected = "Always Hope"
+    expected = Meeting.third.group_name
     actual = search.results.first.last.first.group_name
 
     expect(actual).to eq(expected)
@@ -33,9 +42,9 @@ RSpec.describe Search do
 
   context "open/closed" do
     before do
-      # Meeting.first.update_attributes(closed: true)
-      # Meeting.second.update_attributes(closed: false)
-      # Meeting.third.update_attributes(closed: nil)
+      Meeting.fourth.update_attribute(:closed, true)
+      Meeting.second.update_attribute(:closed, false)
+      Meeting.fifth.update_attribute(:closed, nil)
     end
 
     it "finds closed only" do

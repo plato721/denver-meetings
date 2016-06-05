@@ -2,4 +2,4 @@
   %div{"data-collapsed-icon" => "carat-d", "data-expanded-icon" => "carat-u", "data-role" => "collapsible"}
     %h3 Group Name
     = select_tag(:group_name, options_for_select(@options.names_select), {class: "menu-element"})
-    = text_field_tag :group_text, "(Optional search text)", { class: "group-text group-text-default" }
+    = text_field_tag :group_text, "(Optional search text)", { class: "group-text" }

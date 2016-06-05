@@ -1,11 +1,21 @@
 require 'rails_helper'
 
 RSpec.describe "Search by access" do
-  fixtures :meetings
-  fixtures :features
   include_context "search"
+  include_context "codes"
 
-  before do
+  before :all do
+    Meeting.destroy_all
+    create_features
+    FactoryGirl.create_list :meeting, 3
+  end
+
+  after :all do
+    destroy_all_meeting_features
+    Meeting.destroy_all
+  end
+
+  before :each do
     @non_smoking = Feature.find_by(name: "Non-Smoking")
     @accessible = Feature.find_by(name: "Accessible")
     @sitter = Feature.find_by(name: "Sitter")

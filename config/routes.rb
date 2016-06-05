@@ -11,8 +11,11 @@ Rails.application.routes.draw do
 
   namespace :mobile do
     resources :search, only:[:new, :create, :index] do
-      get 'results', on: :collection, to: "search#new"
-      get 'here-and-now', on: :collection, to: "search#here_and_now"
+      collection do
+        get 'results', to: "search#new"
+        get 'here-and-now', to: "search#here_and_now"
+        get 'get-new-options', to: "search#get_new_options"
+      end
     end
 
     # are these used?

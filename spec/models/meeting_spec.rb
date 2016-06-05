@@ -2,15 +2,20 @@ require 'rails_helper'
 
 RSpec.describe Meeting, type: :model do
   include_context "codes"
-  fixtures :meetings
-  fixtures :raw_meetings
 
-  before do
+  before :all do
+    Meeting.destroy_all
+    create_all_meeting_features
+    FactoryGirl.create_list :meeting, 3
+  end
+
+  after :all do
+    destroy_all_meeting_features
+    Meeting.destroy_all
+  end
+
+  before :each do
     no_geocode
-    create_formats
-    create_features
-    create_foci
-    create_languages
   end
 
   it "has formats" do
@@ -111,5 +116,14 @@ RSpec.describe Meeting, type: :model do
     found = Meeting.visible
     expect(found.all? { |m| m.visible? }).to be_truthy
     expect(found.count).to eq(Meeting.count - 1)
+  end
+
+  it "scopes for open/closed" do
+    expect(Meeting.open.count).to eq(Meeting.count)
+    expect(Meeting.closed.count).to eq(0)
+
+    Meeting.first.update_attribute(:closed, true)
+    expect(Meeting.closed.count).to eq(1)
+    expect(Meeting.open.count).to eq(Meeting.count - 1)
   end
 end

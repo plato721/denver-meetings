@@ -1,6 +1,7 @@
 class Search < ActiveRecord::Base
+  before_create :scrub_text
+
   def results
-    scrub_text
     return distance_results if distance_search?
     weekday_results
   end

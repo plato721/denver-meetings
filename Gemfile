@@ -16,7 +16,7 @@ gem 'puma'
 gem 'pg'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'bootswatch-rails'
-gem 'faker'
+gem 'ffaker'
 gem 'hurley'
 gem 'nokogiri'
 gem 'rest-client'
@@ -24,6 +24,7 @@ gem 'figaro'
 gem 'geocoder'
 gem 'bootstrap_form'
 gem 'skylight'
+gem 'lodash-rails'
 
 group :production do
   gem 'rails_12factor'
@@ -37,6 +38,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'launchy'
   gem 'simplecov', require: false
+  gem 'factory_girl_rails', '~> 4.0'
 end
 
 group :test do
