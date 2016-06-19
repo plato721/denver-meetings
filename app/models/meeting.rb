@@ -1,4 +1,8 @@
 class Meeting < ActiveRecord::Base
+  include FlagShihTzu
+
+  has_flags 1 => :is_closed
+
   attr_reader :geocoder
   attr_accessor :_skip_geocoder
 
@@ -22,6 +26,12 @@ class Meeting < ActiveRecord::Base
   has_many :formats, through: :meeting_formats
   has_many :languages, through: :meeting_languages
 
+  after_save :update_closed_flag
+
+  def update_closed_flag
+    self.is_closed = self.closed
+  end
+
   def self.geocoded
     where.not(lat: nil).where.not(lng: nil)
   end
@@ -35,7 +45,8 @@ class Meeting < ActiveRecord::Base
   end
 
   def self.closed
-    where(closed: true)
+    self.is_closed
+    # where(closed: true)
   end
 
   def feature_unique
