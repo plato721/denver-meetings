@@ -26,12 +26,6 @@ class Meeting < ActiveRecord::Base
   has_many :formats, through: :meeting_formats
   has_many :languages, through: :meeting_languages
 
-  after_save :update_closed_flag
-
-  def update_closed_flag
-    self.is_closed = self.closed
-  end
-
   def self.geocoded
     where.not(lat: nil).where.not(lng: nil)
   end
@@ -42,12 +36,10 @@ class Meeting < ActiveRecord::Base
 
   def self.open
     self.not_is_closed
-    # where(closed: false)
   end
 
   def self.closed
     self.is_closed
-    # where(closed: true)
   end
 
   def feature_unique
@@ -107,9 +99,8 @@ class Meeting < ActiveRecord::Base
 
   def self.by_open(open)
     return all if open == "any"
+    binding.pry
     open == "closed" ? self.is_closed : self.not_is_closed
-    # only = where(closed: true)
-    # open == "closed" ? only : where.not(id: only.map{|m| m.id} )
   end
 
   def self.by_day(day)
