@@ -25,6 +25,7 @@ gem 'geocoder'
 gem 'bootstrap_form'
 gem 'skylight'
 gem 'lodash-rails'
+gem 'flag_shih_tzu'
 
 group :production do
   gem 'rails_12factor'

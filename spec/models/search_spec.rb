@@ -59,7 +59,6 @@ RSpec.describe Search do
 
     it "finds open only" do
       search = Search.create(open: "open")
-
       actual_name = search.results.each do |group|
         group.last.each do |meeting|
           expect(meeting.closed?).to be_falsey
