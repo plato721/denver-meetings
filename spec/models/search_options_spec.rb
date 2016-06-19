@@ -150,17 +150,16 @@ RSpec.describe SearchOptions do
 
   it "knows if open is an option" do
     FactoryGirl.create :meeting
-    FactoryGirl.create :meeting, closed: true
+    FactoryGirl.create :meeting, is_closed: true
 
     expect(SearchOptions.new.open?).to be_truthy
     expect(SearchOptions.new.closed?).to be_truthy
 
-    Meeting.first.update_attribute(:closed, true)
+    Meeting.first.update_attribute(:is_closed, true)
     expect(SearchOptions.new.open?).to be_falsey  
     expect(SearchOptions.new.closed?).to be_truthy
-
-    Meeting.first.update_attribute(:closed, false)
-    Meeting.second.update_attribute(:closed, false)
+    Meeting.first.update_attribute(:is_closed, false)
+    Meeting.second.update_attribute(:is_closed, false)
     expect(SearchOptions.new.open?).to be_truthy  
     expect(SearchOptions.new.closed?).to be_falsey
   end

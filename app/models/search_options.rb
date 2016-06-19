@@ -42,11 +42,11 @@ class SearchOptions
   end
 
   def open?
-    @open ||= self.meetings.exists?(closed: false)
+    @open ||= self.meetings.not_is_closed.present?
   end
 
   def closed?
-    @closed ||= self.meetings.exists?(closed: true)
+    @closed ||= self.meetings.is_closed.present?
   end
 
   def cities_found
