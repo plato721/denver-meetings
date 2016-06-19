@@ -18,7 +18,7 @@ FactoryGirl.define do
     lng { rand(-104.977313..-104.761446) }
     approved true
     time { [7, 12, 17.5].select }
-    closed false
+    is_closed false
     raw_meeting
   end
 

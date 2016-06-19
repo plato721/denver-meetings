@@ -14,7 +14,7 @@ class MeetingCreator
       district: district,
       city: city,
       state: "CO",
-      closed: closed,
+      is_closed: closed,
       time: time,
       raw_meeting: self.raw
       })

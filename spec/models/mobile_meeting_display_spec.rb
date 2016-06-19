@@ -58,4 +58,10 @@ RSpec.describe MobileMeetingDisplay do
 
     expect(mmd.coords).to eq("#{lat}, #{lng}")
   end
+
+  it "knows if a meeting is open/closed" do
+    mmd = MobileMeetingDisplay.new(Meeting.first)
+
+    expect(mmd.respond_to? :closed?).to be_truthy
+  end
 end

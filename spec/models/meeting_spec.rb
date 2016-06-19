@@ -119,11 +119,11 @@ RSpec.describe Meeting, type: :model do
   end
 
   # skipping while swinging to flag
-  xit "scopes for open/closed" do
+  it "scopes for open/closed" do
     expect(Meeting.open.count).to eq(Meeting.count)
     expect(Meeting.closed.count).to eq(0)
 
-    Meeting.first.update_attribute(:closed, true)
+    Meeting.first.update_attribute(:is_closed, true)
     expect(Meeting.closed.count).to eq(1)
     expect(Meeting.open.count).to eq(Meeting.count - 1)
   end

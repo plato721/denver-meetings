@@ -41,7 +41,8 @@ class Meeting < ActiveRecord::Base
   end
 
   def self.open
-    where(closed: false)
+    self.not_is_closed
+    # where(closed: false)
   end
 
   def self.closed
@@ -106,8 +107,9 @@ class Meeting < ActiveRecord::Base
 
   def self.by_open(open)
     return all if open == "any"
-    only = where(closed: true)
-    open == "closed" ? only : where.not(id: only.map{|m| m.id} )
+    open == "closed" ? self.is_closed : self.not_is_closed
+    # only = where(closed: true)
+    # open == "closed" ? only : where.not(id: only.map{|m| m.id} )
   end
 
   def self.by_day(day)
