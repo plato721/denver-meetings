@@ -4,7 +4,7 @@ describe DaccaaHeaders do
   before :all do
     @page = File.read "spec/support/raw_page.txt"
     @invalid_page = File.read "spec/support/invalid_raw_page.txt"
-    @scraper = ScrapeDaccaa.new
+    @scraper = ScrapeDaccaa.new(true, @page)
   end
 
   it "has headers" do

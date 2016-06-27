@@ -2,10 +2,11 @@ require 'rails_helper'
 
 describe RawRows do
   before :all do
-    @scraper = ScrapeDaccaa.new
     page = File.read("spec/support/raw_page.txt")
+    @scraper = ScrapeDaccaa.new(false, page)
     @noko_page = @scraper.noko_page(page)
   end
+
   it "requires a nokogiri page" do
     expect{ RawRows.new([]) }.to raise_error(ArgumentError)
   end
