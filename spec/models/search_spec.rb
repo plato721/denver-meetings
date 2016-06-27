@@ -42,9 +42,9 @@ RSpec.describe Search do
 
   context "open/closed" do
     before do
-      Meeting.fourth.update_attribute(:is_closed, true)
-      Meeting.second.update_attribute(:is_closed, false)
-      Meeting.fifth.update_attribute(:is_closed, nil)
+      Meeting.fourth.update_attribute(:closed, true)
+      Meeting.second.update_attribute(:closed, false)
+      Meeting.fifth.update_attribute(:closed, nil)
     end
 
     it "finds closed only" do

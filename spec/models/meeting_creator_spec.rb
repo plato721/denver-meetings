@@ -20,7 +20,7 @@ RSpec.describe MeetingCreator do
     end
 
     it "knows open status" do
-      expect(@meeting.is_closed).to eq(false)
+      expect(@meeting.closed?).to eq(false)
     end
 
     it "converts time to decimal" do

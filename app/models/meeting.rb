@@ -1,7 +1,7 @@
 class Meeting < ActiveRecord::Base
   include FlagShihTzu
 
-  has_flags 1 => :is_closed
+  has_flags 1 => :closed
 
   attr_reader :geocoder
   attr_accessor :_skip_geocoder
@@ -35,11 +35,7 @@ class Meeting < ActiveRecord::Base
   end
 
   def self.open
-    self.not_is_closed
-  end
-
-  def self.closed
-    self.is_closed
+    self.not_closed
   end
 
   def feature_unique
@@ -99,8 +95,7 @@ class Meeting < ActiveRecord::Base
 
   def self.by_open(open)
     return all if open == "any"
-    binding.pry
-    open == "closed" ? self.is_closed : self.not_is_closed
+    open == "closed" ? self.closed : self.not_closed
   end
 
   def self.by_day(day)

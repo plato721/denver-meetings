@@ -11,7 +11,7 @@ class MobileMeetingDisplay
   end
 
   def closed?
-    self.meeting.is_closed?
+    self.meeting.closed?
   end
 
   def raw_time
