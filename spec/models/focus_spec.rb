@@ -2,49 +2,15 @@ require 'rails_helper'
 
 RSpec.describe Focus, type: :model do
   include_context "codes"
-  let(:valid_foci) do
-    {"M" => "Men",
-    "W" => "Women",
-    "G" => "Gay",
-    "Y" => "Young People"}
-  end
 
-  it "allows only valid foci value" do
-    bad_foci = Focus.new(code: "G", name: "German")
+  it "gives result for each foci" do
+    needed_foci = [:men, :women, :gay, :young_people]
+    raw_code = ""
 
-    expect(bad_foci).to_not be_valid
-  end
+    foci = Focus.get_foci(raw_code)
 
-  it "allows only valid foci key" do
-    bad_foci = Focus.new(code: "X", name: "Gay")
-
-    expect(bad_foci).to_not be_valid
-  end
-
-  context "does not allow duplicate" do
-    before do
-      @code_foci = valid_foci.first
-      @attributes = [:code, :name].zip(@code_foci).to_h
-
-      Focus.create(@attributes)
-    end
-
-    it "code" do
-      attributes = {code: @code_foci.first,
-        name: valid_foci["Y"].last}
-
-      dup = Focus.new(attributes)
-
-      expect(dup).to_not be_valid
-    end
-
-    it "focus" do
-      attributes = {code: valid_foci["W"].first,
-        name: @code_foci.last}
-
-      dup = Focus.new(attributes)
-
-      expect(dup).to_not be_valid
+    needed_foci.each do |focus|
+      expect(foci.include? focus).to be_truthy
     end
   end
 
@@ -54,38 +20,47 @@ RSpec.describe Focus, type: :model do
       raw_code = "M"
       foci = Focus.get_foci(raw_code)
 
-      expect(foci.count).to eq(1)
-      expect(foci.first.name).to eq("Men")
+      expect(foci[:men]).to be_truthy
+
+      foci.delete(:men)
+      expect(foci.values.any? { |x| x == true }).to be_falsey
     end
 
     it "finds women" do
       raw_code = "W"
       foci = Focus.get_foci(raw_code)
-      foci = foci.map { |f| f.name }
 
-      expect(foci.count).to eq(1)
-      expect(foci.include?("Women")).to be_truthy
+      expect(foci[:women]).to be_truthy
+
+      foci.delete(:women)
+      expect(foci.values.any? { |x| x == true }).to be_falsey
     end
 
     it "finds gay" do
       raw_code = "G"
       foci = Focus.get_foci(raw_code)
 
-      expect(foci.first.name).to eq("Gay")
+      expect(foci[:gay]).to be_truthy
+
+      foci.delete(:gay)
+      expect(foci.values.any? { |x| x == true }).to be_falsey
     end
 
     it "does not give gay false positive with GV" do
       raw_code = "GV"
       foci = Focus.get_foci(raw_code)
 
-      expect(foci.empty?).to be_truthy
+      expect(foci.values.any? { |x| x == true }).to be_falsey
     end
 
     it "finds young people" do
       raw_code = "Y"
       foci = Focus.get_foci(raw_code)
 
-      expect(foci.first.name).to eq("Young People")
+      expect(foci[:young_people]).to be_truthy
+
+      foci.delete(:young_people)
+      expect(foci.values.any? { |x| x == true }).to be_falsey
     end
 
   end
