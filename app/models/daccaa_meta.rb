@@ -32,7 +32,12 @@ class DaccaaMeta
     DateTime.strptime(update_string, "%m/%d/%Y %I:%M:%S %p")
   end
 
+  def initially_seeded?
+    RawMeetingMetadata.exists?
+  end
+
   def local_updated
+    return DateTime.now.advance(years: -5) if !initially_seeded?
     RawMeetingMetadata.order(last_update: 'DESC').first.last_update
   end
 
