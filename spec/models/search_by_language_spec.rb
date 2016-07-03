@@ -6,26 +6,27 @@ RSpec.describe "Search by language" do
 
   before :all do
     Meeting.destroy_all
-    create_languages
     FactoryGirl.create_list :meeting, 3
   end
 
   after :all do
-    destroy_all_meeting_features
     Meeting.destroy_all
   end
 
   before :each do
-    @polish = Language.find_by(name: "Polish")
-    @french = Language.find_by(name: "French")
-    @spanish = Language.find_by(name: "Spanish")
     no_geocode
   end
 
   context "Polish" do
     before do
-      Meeting.first.languages.push(@polish, @french)
-      Meeting.second.languages.push(@french, @spanish)
+      Meeting.first.tap{ |m| m.update_attributes(
+        polish: true,
+        french: true
+      )}.save
+      Meeting.second.tap{ |m| m.update_attributes(
+        french: true,
+        spanish: true
+      )}.save
     end
 
     it "finds only" do
@@ -58,8 +59,14 @@ RSpec.describe "Search by language" do
 
   context "French" do
     before do
-      Meeting.first.languages.push(@polish, @french)
-      Meeting.second.languages.push(@polish, @spanish)
+      Meeting.first.tap{|m| m.update_attributes(
+        polish: true,
+        french: true
+      )}.save
+      Meeting.second.tap{|m| m.update_attributes(
+        polish: true,
+        spanish: true
+      )}.save
     end
 
     it "finds only" do
@@ -93,8 +100,14 @@ RSpec.describe "Search by language" do
 
  context "Spanish" do
     before do
-      Meeting.first.languages.push(@polish, @french)
-      Meeting.second.languages.push(@polish, @spanish)
+      Meeting.first.tap{|m| m.update_attributes(
+        polish: true,
+        french: true
+      )}.save
+      Meeting.second.tap{|m| m.update_attributes(
+        polish: true,
+        spanish: true
+      )}.save
     end
 
     it "finds only" do

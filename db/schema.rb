@@ -11,59 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160606024825) do
+ActiveRecord::Schema.define(version: 20160703132325) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "citext"
-
-  create_table "features", force: :cascade do |t|
-    t.string   "code"
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "foci", force: :cascade do |t|
-    t.string   "code"
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "formats", force: :cascade do |t|
-    t.string   "code"
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "languages", force: :cascade do |t|
-    t.string   "code"
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "meeting_features", force: :cascade do |t|
-    t.integer "meeting_id"
-    t.integer "feature_id"
-  end
-
-  create_table "meeting_foci", force: :cascade do |t|
-    t.integer "meeting_id"
-    t.integer "focus_id"
-  end
-
-  create_table "meeting_formats", force: :cascade do |t|
-    t.integer "meeting_id"
-    t.integer "format_id"
-  end
-
-  create_table "meeting_languages", force: :cascade do |t|
-    t.integer "meeting_id"
-    t.integer "language_id"
-  end
 
   create_table "meetings", force: :cascade do |t|
     t.string   "day"
@@ -84,10 +36,28 @@ ActiveRecord::Schema.define(version: 20160606024825) do
     t.integer  "raw_meeting_id"
     t.boolean  "approved",                                default: false
     t.decimal  "time"
-    t.boolean  "closed",                                  default: false
     t.boolean  "visible",                                 default: true
     t.boolean  "deleted",                                 default: false
     t.integer  "flags",                                   default: 0,     null: false
+    t.boolean  "closed",                                  default: false
+    t.boolean  "men",                                     default: false
+    t.boolean  "women",                                   default: false
+    t.boolean  "gay",                                     default: false
+    t.boolean  "young_people",                            default: false
+    t.boolean  "speaker",                                 default: false
+    t.boolean  "step",                                    default: false
+    t.boolean  "big_book",                                default: false
+    t.boolean  "grapevine",                               default: false
+    t.boolean  "traditions",                              default: false
+    t.boolean  "candlelight",                             default: false
+    t.boolean  "beginners",                               default: false
+    t.boolean  "asl",                                     default: false
+    t.boolean  "accessible",                              default: false
+    t.boolean  "non_smoking",                             default: false
+    t.boolean  "sitter",                                  default: false
+    t.boolean  "spanish",                                 default: false
+    t.boolean  "french",                                  default: false
+    t.boolean  "polish",                                  default: false
   end
 
   add_index "meetings", ["raw_meeting_id"], name: "index_meetings_on_raw_meeting_id", using: :btree

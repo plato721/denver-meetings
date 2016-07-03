@@ -2,42 +2,14 @@ require 'rails_helper'
 
 RSpec.describe Language, type: :model do
   include_context "codes"
-  let(:valid_languages) do
-    {"Spn" => "Spanish",
-     "Frn" => "French",
-     "Pol" => "Polish"}
-  end
 
-  it "allows only valid languages" do
-    bad_lang = Language.new(code: "G", name: "German")
+  it "has all the languages" do
+    languages = [:french, :polish, :spanish]
 
-    expect(bad_lang).to_not be_valid
-  end
+    found_languages = Language.get_languages ""
 
-  context "does not allow duplicate" do
-    before do
-      @code_lang = valid_languages.first
-      @attributes = [:code, :name].zip(@code_lang).to_h
-
-      Language.create(@attributes)
-    end
-
-    it "code" do
-      attributes = {code: @code_lang.first,
-        name: valid_languages["Frn"].last}
-
-      dup = Language.new(attributes)
-
-      expect(dup).to_not be_valid
-    end
-
-    it "language" do
-      attributes = {code: valid_languages["Frn"].first,
-        name: @code_lang.last}
-
-      dup = Language.new(attributes)
-
-      expect(dup).to_not be_valid
+    languages.each do |language|
+      expect(found_languages.keys.include? language).to be_truthy
     end
   end
 
@@ -47,30 +19,32 @@ RSpec.describe Language, type: :model do
       raw_code = "Frn"
       languages = Language.get_languages(raw_code)
 
-      expect(languages.count).to eq(1)
-      expect(languages.first.name).to eq("French")
+      expect(languages.delete(:french)).to be_truthy
+      expect(languages.values.reduce(&:|)).to be_falsey
     end
 
     it "finds spanish" do
       raw_code = "Spn"
       languages = Language.get_languages(raw_code)
 
-      expect(languages.count).to eq(1)
-      expect(languages.first.name).to eq("Spanish")
+      expect(languages.delete(:spanish)).to be_truthy
+      expect(languages.values.reduce(&:|)).to be_falsey
     end
 
     it "finds polish" do
       raw_code = "Pol"
       languages = Language.get_languages(raw_code)
 
-      expect(languages.first.name).to eq("Polish")
+      expect(languages.delete(:polish)).to be_truthy
+      expect(languages.values.reduce(&:|)).to be_falsey
     end
 
     it "finds with other codes" do
       raw_code = "*nFrnSp"
       languages = Language.get_languages(raw_code)
 
-      expect(languages.first.name).to eq("French")
+      expect(languages.delete(:french)).to be_truthy
+      expect(languages.values.reduce(&:|)).to be_falsey
     end
 
   end

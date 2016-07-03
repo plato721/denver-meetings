@@ -7,24 +7,22 @@ RSpec.describe "Search by language" do
   before :all do
     Meeting.destroy_all
     FactoryGirl.create_list :meeting, 3
-    create_foci
   end
 
-  after :all do
-    destroy_all_meeting_features
-  end
-
-  before do
-    @men = Focus.find_by(name: "Men")
-    @women = Focus.find_by(name: "Women")
-    @youth = Focus.find_by(name: "Young People")
-    @gay = Focus.find_by(name: "Gay")
+  before :each do
+    no_geocode
   end
 
   context "men" do
     before do
-      Meeting.first.foci.push(@men, @women)
-      Meeting.second.foci.push(@women, @youth)
+      Meeting.first.tap{ |m| m.update_attributes(
+        men: true,
+        women: true
+      )}.save
+      Meeting.second.tap{ |m| m.update_attributes(
+        women: true,
+        young_people: true
+      )}.save
     end
 
     it "finds only" do
@@ -57,8 +55,14 @@ RSpec.describe "Search by language" do
 
   context "women" do
     before do
-      Meeting.first.foci.push(@men, @women)
-      Meeting.second.foci.push(@men, @youth)
+      Meeting.first.tap{ |m| m.update_attributes(
+        men: true,
+        women: true
+      )}.save
+      Meeting.second.tap{ |m| m.update_attributes(
+        men: true,
+        young_people: true
+      )}.save
     end
 
     it "finds only" do
@@ -92,8 +96,14 @@ RSpec.describe "Search by language" do
 
  context "youth" do
     before do
-      Meeting.first.foci.push(@youth, @women)
-      Meeting.second.foci.push(@men, @women)
+      Meeting.first.tap{ |m| m.update_attributes(
+        young_people: true,
+        women: true
+      )}.save
+      Meeting.second.tap{ |m| m.update_attributes(
+        men: true,
+        women: true
+      )}.save
     end
 
     it "finds only" do
@@ -126,8 +136,14 @@ RSpec.describe "Search by language" do
 
  context "gay" do
     before do
-      Meeting.first.foci.push(@gay, @women)
-      Meeting.second.foci.push(@men, @women)
+      Meeting.first.tap{ |m| m.update_attributes(
+        gay: true,
+        women: true
+      )}.save
+      Meeting.second.tap{ |m| m.update_attributes(
+        men: true,
+        women: true
+      )}.save
     end
 
     it "finds only" do

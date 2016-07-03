@@ -1,23 +1,42 @@
 class ScrapeDaccaa
-  attr_reader :force
+  attr_reader :force, :headers, :raw_rows, :meta
   attr_accessor :raw_meetings, :parsed
 
-  def initialize(force=false)
+  def initialize(force=false, page=nil)
     @force = force
+    page ||= self.get_page
+    noko_page = noko_page(page)
+    @headers = DaccaaHeaders.new(noko_page)
+    @raw_rows = RawRows.new(noko_page)
+    @meta = DaccaaMeta.new(noko_page)
   end
 
   def self.scrape(force=false)
     scraper = self.new(force)
-    page = scraper.get_page
-    scraper.parsed = scraper.parse_meetings(page)
     scraper.tap { |s| s.raw_meetings = s.make_meetings(scraper.parsed) }
   end
 
   def make_meetings(parsed)
     return false if !update_needed?
-    current_raw = create_raw_meetings(parsed)
-    set_updated
+    return false if !valid_headers?
+    current_raw = create_raw_meetings
+    self.meta.set_updated
     current_raw
+  end
+
+  def update_needed?
+    @meta.update_needed? || self.force
+  end
+
+  def valid_headers?
+    puts "<------Checking that Dacaa Headers match expected------->"
+    if @headers.valid?
+      puts "Done!"
+      true
+    else
+      Rails.logger.error "Bad Headers: #{@headers.retrieved_headers}"
+      false
+    end
   end
 
   def url
@@ -39,56 +58,21 @@ class ScrapeDaccaa
     })
   end
 
-  def parse_meetings(page)
-    npage = Nokogiri::HTML(page)
-    data = npage.search('//text()').map(&:text).delete_if{|x| x !~ /\w|\*/}
-    data = data.map {|ugly| ugly.lstrip} #remove leading whitespace
+  def noko_page(page)
+    Nokogiri::HTML(page)
   end
 
-  def local_updated
-    RawMeetingMetadata.order(last_update: 'DESC').first.last_update
-  end
-
-  def remote_updated
-    raw = self.parsed.find { |e| e.include? "Database Last Updated" }
-    raw = raw.slice(22..-1)
-    DateTime.strptime(raw, "%m/%d/%Y %I:%M:%S %p")
-  end
-
-  def set_updated
-    RawMeetingMetadata.create(last_update: remote_updated)
-  end
-
-  def update_needed?
-    local_updated < remote_updated || self.force
-  end
-
-  def headers_raw_meetings
-    ["Day", "Time", "Group Name", "Address", "City", "District", "Codes"]
-  end
-
-  def rest_raw_meetings(parsed)
-    parsed[13..-68]
-  end
-
-  def create_attributes(flat_attrs)
-    current_set = []
-    sets = flat_attrs.each_with_object([]) do |cell, attributes|
-      if Day.day_order.include? cell
-        attributes << current_set.clone
-        current_set.clear
-      end
-      current_set << cell
+  def create_raw_meetings
+    self.raw_rows.each_with_object([]) do |row, meetings|
+      meetings << RawMeeting.add_from(row)
     end
-    sets[1..-1] << current_set
   end
 
-  def create_raw_meetings(parsed)
-    flat_attrs = rest_raw_meetings(parsed)
-    sets = create_attributes(flat_attrs)
-    sets.each_with_object([]) do |slice, meetings|
-      meetings << RawMeeting.add_from(slice)
-    end
+  def inspect
+    {
+      "headers: " => "#{self.headers.object_id}",
+      "rows: " => "#{self.raw_rows.object_id}: #{self.raw_rows.count} rows"
+    }
   end
 
 end

@@ -11,7 +11,7 @@ class MobileMeetingDisplay
   end
 
   def closed?
-    self.meeting.closed == true
+    self.meeting.closed?
   end
 
   def raw_time
@@ -23,19 +23,27 @@ class MobileMeetingDisplay
   end
 
   def format
-    self.meeting.formats.to_a.map(&:name).join(", ")
+    Format.format_methods.select do |format|
+      self.meeting.send(format)
+    end.map { |sym| sym.to_s.titleize }.join(", ")
   end
 
   def language
-    self.meeting.languages.to_a.map(&:name).join(", ")
+    Language.language_methods.select do |language|
+      self.meeting.send(language)
+    end.map { |sym| sym.to_s.titleize }.join(", ")
   end
 
   def features
-    self.meeting.features.to_a.map(&:name).join(", ")
+    Feature.feature_methods.select do |feature|
+      self.meeting.send(feature)
+    end.map { |sym| sym.to_s.titleize }.join(", ")
   end
 
   def foci
-    self.meeting.foci.to_a.map(&:name).join(", ")
+    Focus.focus_methods.select do |focus|
+      self.meeting.send(focus)
+    end.map { |sym| sym.to_s.titleize }.join(", ")
   end
 
   def group_name

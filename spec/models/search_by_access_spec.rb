@@ -6,25 +6,21 @@ RSpec.describe "Search by access" do
 
   before :all do
     Meeting.destroy_all
-    create_features
     FactoryGirl.create_list :meeting, 3
   end
 
-  after :all do
-    destroy_all_meeting_features
-    Meeting.destroy_all
+  before :each do
+    no_geocode
   end
 
-  before :each do
-    @non_smoking = Feature.find_by(name: "Non-Smoking")
-    @accessible = Feature.find_by(name: "Accessible")
-    @sitter = Feature.find_by(name: "Sitter")
+  after :all do
+    Meeting.destroy_all
   end
 
   context "non-smoking" do
     before do
-      Meeting.first.features.push(@non_smoking, @accessible)
-      Meeting.second.features.push(@accessible, @sitter)
+      Meeting.first.update_attribute(:non_smoking, true)
+      Meeting.second.update_attribute(:accessible, true)
     end
 
     it "finds only" do
@@ -57,8 +53,14 @@ RSpec.describe "Search by access" do
 
   context "accessible" do
     before do
-      Meeting.first.features.push(@non_smoking, @accessible)
-      Meeting.second.features.push(@non_smoking, @sitter)
+      Meeting.first.tap{ |m| m.update_attributes(
+        non_smoking: true,
+        accessible: true
+      )}.save
+      Meeting.second.tap{ |m| m.update_attributes(
+        non_smoking: true,
+        sitter: true
+      )}.save
     end
 
     it "finds only" do
@@ -92,8 +94,12 @@ RSpec.describe "Search by access" do
 
  context "sitter" do
     before do
-      Meeting.first.features.push(@non_smoking, @accessible)
-      Meeting.second.features.push(@non_smoking, @sitter)
+      Meeting.first.tap{ |m| m.update_attributes(
+        non_smoking: true,
+        accessible: true )}.save
+      Meeting.second.tap{ |m| m.update_attributes(
+        non_smoking: true,
+        sitter: true )}.save
     end
 
     it "finds only" do

@@ -6,8 +6,16 @@ class MeetingCreator
   end
 
   def create
-    meeting = Meeting.new({
-      group_name: group_name,
+    meeting = Meeting.new(build_attributes)
+    meeting.tap{ |m| m.save }
+  end
+
+  def build_attributes
+    base_attributes.merge(format_attributes)
+  end
+
+  def base_attributes
+    { group_name: group_name,
       day: day,
       address_1: address_1,
       notes: notes,
@@ -16,10 +24,13 @@ class MeetingCreator
       state: "CO",
       closed: closed,
       time: time,
-      raw_meeting: self.raw
-      })
-    add_properties(meeting)
-    meeting.tap{ |m| m.save }
+      raw_meeting: self.raw }
+  end
+
+  def format_attributes
+    properties_models.inject({}) do |attributes, prop_set|
+      attributes.merge get_property_set_for(codes, prop_set.to_a)
+    end
   end
 
   def day
@@ -77,15 +88,12 @@ class MeetingCreator
     Language => "languages"}
   end
 
-  def get_property_set_for(meeting, property)
-    codes = meeting.raw_meeting.codes
+  def self.features_classes
+    @@features_classes ||= self.new(nil).properties_models.keys
+  end
+
+  def get_property_set_for(codes, property)
     property.first.send("get_#{property.last}".to_sym, (codes))
   end
 
-  def add_properties(meeting)
-    properties_models.each do |property|
-      properties = get_property_set_for(meeting, property)
-      meeting.send(property.last.to_sym).concat(properties)
-  end
-  end
 end

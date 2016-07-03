@@ -1,0 +1,630 @@
+<HTML>
+
+<TITLE>qryGroupMeetinMix</TITLE>
+
+<meta name="Microsoft Theme" content="sumipntg 011, default">
+<meta name="Microsoft Border" content="tl, default">
+<BODY background = _themes/sumipntg/sumtextb.jpg bgcolor="#FFFFFF" text="#000066" link="#3333CC" vlink="#666699" alink="#990099"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><!--mstheme--><font face="verdana,arial,helvetica">
+<p align="center"><font face="Times New Roman" size="6"><b>Denver </b></font><b>
+<font face="Times New Roman" size="6">Area</font></b><font face="Times New Roman" size="6"><b> 
+Central Committee of Alcoholics Anonymous</b></font></p>
+
+<!--mstheme--></font></td></tr><!--msnavigation--></table><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%"><!--mstheme--><font face="verdana,arial,helvetica">
+
+<p>
+
+</p>
+
+<!--mstheme--></font></td><td valign="top" width="24"></td><!--msnavigation--><td valign="top"><!--mstheme--><font face="verdana,arial,helvetica">
+
+</FONT>
+
+<FONT FACE="Arial" COLOR=#000000>
+<CENTER><BIG><BIG><FONT color=navy face="">Meeting List</FONT></BIG></BIG><BR>
+<CENTER><FONT color=Maroon face="">Database Last Updated 6/15/2016 4:59:56 PM</FONT><P>
+<!--mstheme--></font><TABLE BORDER=1 BGCOLOR=#ffffff CELLSPACING=0 bordercolordark="#003366" bordercolorlight="#C0C0C0"><FONT FACE="Arial" COLOR=#000000><!--mstheme--></font><CAPTION><!--mstheme--><font face="verdana,arial,helvetica"><B></B><!--mstheme--></font></CAPTION><!--mstheme--><font face="verdana,arial,helvetica">
+</CENTER>
+    
+
+<THEAD>
+<TR>
+<TH BGCOLOR=#c0c0c0 BORDERCOLOR=#000000 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>Day</FONT></TH>
+<TH BGCOLOR=#c0c0c0 BORDERCOLOR=#000000 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>Time</FONT></TH>
+<TH BGCOLOR=#c0c0c0 BORDERCOLOR=#000000 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>Group 
+            Name</FONT></TH>
+<TH BGCOLOR=#c0c0c0 BORDERCOLOR=#000000 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>Address</FONT></TH>
+<TH BGCOLOR=#c0c0c0 BORDERCOLOR=#000000 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>Address 2 - The Deuce</FONT></TH>
+<TH BGCOLOR=#c0c0c0 BORDERCOLOR=#000000 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>City</FONT></TH>
+<TH BGCOLOR=#c0c0c0 BORDERCOLOR=#000000 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>District</FONT></TH>
+<TH BGCOLOR=#c0c0c0 BORDERCOLOR=#000000 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>Codes</FONT></TH>
+
+</TR>
+</THEAD>
+    
+<TBODY>
+    
+<TR VALIGN=top>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Sunday<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            06:30 AM<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Keeping It Simple<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            3600 S. Clarkson (NE of Ch)<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Englewood<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            11<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            *n<BR></FONT><!--mstheme--></font></TD>
+
+</TR>
+    
+<TR VALIGN=top>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Sunday<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            06:30 AM<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Sunrise Serenity<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            3355 S. Wadsworth #H125, 989-2816<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Lakewood<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            30<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            *n<BR></FONT><!--mstheme--></font></TD>
+
+</TR>
+    
+<TR VALIGN=top>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Sunday<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            06:45 AM<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Upon Awakening<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            8817 S. Broadway (Ch)<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Highlands Ranch<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            11<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            *n<BR></FONT><!--mstheme--></font></TD>
+
+</TR>
+    
+<TR VALIGN=top>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Sunday<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            10:00 AM<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Sunday Morning<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            5455 W. 38th Ave. Unit M<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Wheat Ridge<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            12<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            *n<BR></FONT><!--mstheme--></font></TD>
+
+</TR>
+    
+<TR VALIGN=top>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Sunday<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            10:30 AM<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Bonanza<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            1663 S. Acoma St.<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Denver<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            11<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            *n<BR></FONT><!--mstheme--></font></TD>
+
+</TR>
+    
+<TR VALIGN=top>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Sunday<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            10:30 AM<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Sun a.m. Serenity<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            1801 Sunset Pl. Ste B<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Longmont<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            34<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            n<BR></FONT><!--mstheme--></font></TD>
+
+</TR>
+    
+<TR VALIGN=top>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Sunday<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            11:00 AM<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            A.R.C. Group<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            3180 Airport Rd. (ARC Rm 5280)<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Boulder<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            24<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            *n<BR></FONT><!--mstheme--></font></TD>
+
+</TR>
+    
+<TR VALIGN=top>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Sunday<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            11:00 AM<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Conscious Contact<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            10242 E. 16th Ave., 366-3622<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Aurora<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            16<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            <BR></FONT><!--mstheme--></font></TD>
+
+</TR>
+    
+<TR VALIGN=top>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Saturday<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            07:30 PM<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Sweet Sobriety<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            6673 W Chatfield (Ch upstairs)<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Littleton<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            30<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            SPn<BR></FONT><!--mstheme--></font></TD>
+
+</TR>
+    
+<TR VALIGN=top>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Saturday<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            07:30 PM<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Vive y Deja Vivir<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            9057 E. Colfax Ave. Unit E<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Aurora<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            25<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Spnn<BR></FONT><!--mstheme--></font></TD>
+
+</TR>
+    
+<TR VALIGN=top>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Saturday<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            08:00 PM<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Adventures in Sobriety<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            3400 Lutheran Pkwy, (Bldg 6)<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Wheat Ridge<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            12<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            B*n<BR></FONT><!--mstheme--></font></TD>
+
+</TR>
+    
+<TR VALIGN=top>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Saturday<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            08:00 PM<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Arid Group<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            1480 Hoyt St.  238-5693<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Lakewood<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            12<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            SP*n<BR></FONT><!--mstheme--></font></TD>
+
+</TR>
+    
+<TR VALIGN=top>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Saturday<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            08:00 PM<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Grupo La Ultima Cruda<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            9357 E. Colfax Ave. Unit E<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Aurora<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            25<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Spn<BR></FONT><!--mstheme--></font></TD>
+
+</TR>
+    
+<TR VALIGN=top>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Saturday<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            08:00 PM<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Oasis Group<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            3355 S. Wadsworth #H-125 989-2816<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Lakewood<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            30<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            C*n<BR></FONT><!--mstheme--></font></TD>
+
+</TR>
+    
+<TR VALIGN=top>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Saturday<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            08:00 PM<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Saturday Night South<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            2290 S. Clayton (Church bsmt.)<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Denver<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            11<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            n<BR></FONT><!--mstheme--></font></TD>
+
+</TR>
+    
+<TR VALIGN=top>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Saturday<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            08:00 PM<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Someone Cares<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            5455 W. 38th Ave. Unit M<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Wheat Ridge<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            12<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            SP*n<BR></FONT><!--mstheme--></font></TD>
+
+</TR>
+    
+<TR VALIGN=top>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Saturday<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            08:30 PM<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Denver Serenity<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            1311 York St., 322-3674<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Denver<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            13<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            SPn<BR></FONT><!--mstheme--></font></TD>
+
+</TR>
+    
+<TR VALIGN=top>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Saturday<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            08:30 PM<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Vie-Tality<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            7267 N. Lowell Blvd (upstairs)<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Westminster<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            32<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            n<BR></FONT><!--mstheme--></font></TD>
+
+</TR>
+    
+<TR VALIGN=top>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Saturday<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            09:00 PM<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Fourth Dimension<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            10691 Melody Dr (Unit G)<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Northglenn<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            32<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            CY*n<BR></FONT><!--mstheme--></font></TD>
+
+</TR>
+    
+<TR VALIGN=top>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Saturday<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            10:00 PM<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            10 PM Last Call<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            1311 York St., 322-3674<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Denver<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            13<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            CAn<BR></FONT><!--mstheme--></font></TD>
+
+</TR>
+    
+<TR VALIGN=top>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Saturday<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            10:00 PM<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            The Ten<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            3355 S. Wadsworth Bl. #H-127<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Lakewood<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            30<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            *n<BR></FONT><!--mstheme--></font></TD>
+
+</TR>
+    
+<TR VALIGN=top>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Saturday<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            11:58 PM<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            2 mins 2 Midnight<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            1663 S. Acoma St. (Storefront)<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            Denver<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            13<BR></FONT><!--mstheme--></font></TD>
+<TD BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial" COLOR=#000000>
+            *n<BR></FONT><!--mstheme--></font></TD>
+
+</TR>
+    
+    
+
+</TBODY>
+<TFOOT></TFOOT></TABLE><!--mstheme--><font face="verdana,arial,helvetica">
+<P><P><P>
+
+<FONT SIZE=4>
+<FONT COLOR="#800000">
+<CENTER>
+Meetings Found: 1131
+<p><a href="http://www.mapquest.com/cgi-bin/mqtrip?screen=mqhome&link=/TripQuest-Main&code_mode=code_classic&uid=u50ea9c60c06pdeu&random=78"> Need a Map?</a><br>
+<p>
+</CENTER>
+<P><P><P>
+<FONT FACE="Arial" COLOR=#000000>
+
+
+<Center>
+<!--mstheme--></font><Table border = 1 Width = 80% bordercolordark="#003366" bordercolorlight="#C0C0C0"><TR><TD><!--mstheme--><font face="verdana,arial,helvetica">
+<CENTER><FONT color=navy face="">Meeting Codes</FONT><P>
+<!--mstheme--></font><TABLE width = 100% BORDER=0 CELLSPACING=0><FONT FACE="Arial" COLOR=#000000><!--mstheme--></font><CAPTION><!--mstheme--><font face="verdana,arial,helvetica"><B></B><!--mstheme--></font></CAPTION><!--mstheme--><font face="verdana,arial,helvetica">
+</CENTER>
+
+<TBODY>
+    
+<TR VALIGN=top>
+<TD  width = 20% BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial"><B>
+        O</B> = Open<BR></FONT></B><!--mstheme--></font></TD>
+        
+<TD  width = 20% BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial"><B>
+        C</B> = Closed<BR></FONT></B><!--mstheme--></font></TD>
+        
+<TD  width = 20% BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial"><B>
+        SP</B> = Speaker<BR></FONT></B><!--mstheme--></font></TD>
+        
+<TD  width = 20% BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial"><B>
+        ST</B> = Step<BR></FONT></B><!--mstheme--></font></TD>
+        
+    
+
+</TR>
+    
+<TR VALIGN=top>
+<TD  width = 20% BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial"><B>
+        BB</B> = Big Book<BR></FONT></B><!--mstheme--></font></TD>
+        
+<TD  width = 20% BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial"><B>
+        GV</B> = Grapevine<BR></FONT></B><!--mstheme--></font></TD>
+        
+<TD  width = 20% BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial"><B>
+        T</B> = Traditions<BR></FONT></B><!--mstheme--></font></TD>
+        
+<TD  width = 20% BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial"><B>
+        CA</B> = Candlelight<BR></FONT></B><!--mstheme--></font></TD>
+        
+    
+
+</TR>
+    
+<TR VALIGN=top>
+<TD  width = 20% BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial"><B>
+        Spn</B> = Spanish<BR></FONT></B><!--mstheme--></font></TD>
+        
+<TD  width = 20% BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial"><B>
+        B</B> = Beginners<BR></FONT></B><!--mstheme--></font></TD>
+        
+<TD  width = 20% BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial"><B>
+        M</B> = Men<BR></FONT></B><!--mstheme--></font></TD>
+        
+<TD  width = 20% BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial"><B>
+        W</B> = Women<BR></FONT></B><!--mstheme--></font></TD>
+        
+    
+
+</TR>
+    
+<TR VALIGN=top>
+<TD  width = 20% BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial"><B>
+        G</B> = Gay<BR></FONT></B><!--mstheme--></font></TD>
+        
+<TD  width = 20% BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial"><B>
+        Y</B> = Young People<BR></FONT></B><!--mstheme--></font></TD>
+        
+<TD  width = 20% BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial"><B>
+        Frn</B> = French<BR></FONT></B><!--mstheme--></font></TD>
+        
+<TD  width = 20% BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial"><B>
+        Pol</B> = Polish<BR></FONT></B><!--mstheme--></font></TD>
+        
+    
+
+</TR>
+    
+<TR VALIGN=top>
+<TD  width = 20% BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial"><B>
+        s</B> = Smoking<BR></FONT></B><!--mstheme--></font></TD>
+        
+<TD  width = 20% BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial"><B>
+        ASL</B> = Sign Language Interpreter<BR></FONT></B><!--mstheme--></font></TD>
+        
+<TD  width = 20% BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial"><B>
+        *</B> = Wheelchair<BR></FONT></B><!--mstheme--></font></TD>
+        
+<TD  width = 20% BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial"><B>
+        n</B> = Non-Smoking<BR></FONT></B><!--mstheme--></font></TD>
+        
+    
+
+</TR>
+    
+<TR VALIGN=top>
+<TD  width = 20% BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial"><B>
+        Sit</B> = Sitter<BR></FONT></B><!--mstheme--></font></TD>
+        
+<TD  width = 20% BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial"><B>
+        <BR></FONT></B><!--mstheme--></font></TD>
+        
+<TD  width = 20% BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial"><B>
+        <BR></FONT></B><!--mstheme--></font></TD>
+        
+<TD  width = 20% BORDERCOLOR=#c0c0c0 ><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2 FACE="Arial"><B>
+        <BR></FONT></B><!--mstheme--></font></TD>
+        
+    
+
+</TR>
+    
+</TBODY>
+<TFOOT></TFOOT></TABLE><!--mstheme--><font face="verdana,arial,helvetica">
+<!--mstheme--></font></TD></TR></TABLE><!--mstheme--><font face="verdana,arial,helvetica">
+
+<P><P><P>
+
+
+<P><P><P>
+<Center>
+<!--mstheme--></font><Table border = 1 Width = 80% bordercolordark="#003366" bordercolorlight="#C0C0C0"><TR><TD><!--mstheme--><font face="verdana,arial,helvetica">
+<CENTER><FONT color=navy face="">Selection Criteria</FONT><p>
+<!--mstheme--></font><table border="0" Width = 100%>
+  <tr>
+    <td width = 20%><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2>Group Name = <B>
+            </B></FONT><!--mstheme--></font></td>
+    <td width = 20%><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2>Day = <B>
+            0</B></FONT><!--mstheme--></font></td>
+    <td width = 20%><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2>Earliest = <B>
+            All</B></FONT><!--mstheme--></font></td>
+    <td width = 20%><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2>Latest = <B>
+            All</B></FONT><!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width = 20%><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2>City = <B>
+            </B></FONT><!--mstheme--></font></td>
+    <td width = 20%><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2>Type = <B>
+            All</B></FONT><!--mstheme--></font></td>
+    <td width = 20%><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2>Format = <B>
+            All</B></FONT><!--mstheme--></font></td>
+    <td width = 20%><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2>Special = <B>
+            All</B></FONT><!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width = 20%><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2>District = <B>
+            All</B></FONT><!--mstheme--></font></td>
+    <td width = 20%><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2>Non-Smoking = <B>
+            </B></FONT><!--mstheme--></font></td>
+    <td width = 20%><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2>Wheel Chair = <B>
+            </B></FONT><!--mstheme--></font></td>
+    <td width = 20%><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2>Sitter = <B>
+            </B></FONT><!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width = 20%><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2>Spanish = <B>
+            </B></FONT><!--mstheme--></font></td>
+    <td width = 20%><!--mstheme--><font face="verdana,arial,helvetica"><FONT SIZE=2>Candlelight = <B>
+            </B></FONT><!--mstheme--></font></td>
+  </tr>
+</table><!--mstheme--><font face="verdana,arial,helvetica">
+<!--mstheme--></font></TD></TR></TABLE><!--mstheme--><font face="verdana,arial,helvetica">
+
+</p></CENTER></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+
+
+<!--mstheme--></font><!--msnavigation--></td></tr><!--msnavigation--></table></BODY>
+
+<BR><BR>
+
+</HTML> 
+
+
+

@@ -42,11 +42,11 @@ class SearchOptions
   end
 
   def open?
-    @open ||= self.meetings.exists?(closed: false)
+    @open ||= self.meetings.where(closed: [false, nil]).exists?
   end
 
   def closed?
-    @closed ||= self.meetings.exists?(closed: true)
+    @closed ||= self.meetings.where(closed: true).exists?
   end
 
   def cities_found
@@ -113,23 +113,35 @@ class SearchOptions
   end
 
   def foci
-    @foci ||= self.meetings
-                     .joins(:foci).pluck('foci.name').uniq.compact
+    @foci ||= begin
+      Focus.focus_methods.select do |focus|
+        self.meetings.where(focus => true).exists?
+      end.map { |f| f.to_s.titleize }
+    end
   end
 
   def languages
-    @languages ||= self.meetings
-                          .joins(:languages).pluck('languages.name').uniq.compact
+    @languages ||= begin
+      Language.language_methods.select do |lang|
+        self.meetings.where(lang => true).exists?
+      end.map { |f| f.to_s.titleize }
+    end
   end
 
   def formats
-    @formats ||= self.meetings
-                        .joins(:formats).pluck('formats.name').uniq.compact
+    @formats ||= begin
+      Format.format_methods.select do |format|
+        self.meetings.where(format => true).exists?
+      end.map { |f| f.to_s.titleize }
+    end
   end
 
   def features
-    @features ||= self.meetings
-                         .joins(:features).pluck('features.name').uniq.compact
+    @features ||= begin
+      Feature.feature_methods.select do |feature|
+        self.meetings.where(feature => true).exists?
+      end.map { |f| f.to_s.titleize }
+    end
   end
 
   def times
@@ -137,7 +149,7 @@ class SearchOptions
   end
 
   def meeting_names
-    @names ||= self.meetings.uniq.order(:group_name).pluck(:group_name)
+    @names ||= self.meetings.pluck(:group_name).uniq.sort
   end
 
   def meetings_json
