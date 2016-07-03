@@ -103,10 +103,16 @@ class Meeting < ActiveRecord::Base
     where("address_1 LIKE ?", text)
   end
 
+  def self.attribute_map(attribute)
+    {"show" => :all,
+    "only" => attribute,
+    "hide" => "not_#{attribute}".to_sym}
+  end
+
   def self.by_attributes(attributes, scope=self)
-    attributes.each_with_object(scope) do |(prop, value), scope|
-      next if value == "show"
-      value == "only" ? scope.send(prop) : scope.send("not_#{prop}".to_sym)
+    attributes.reduce(scope) do |scope, (prop, value)|
+      search_command = attribute_map(prop)[value]
+      scope.send(search_command)
     end
   end
 
@@ -121,7 +127,7 @@ class Meeting < ActiveRecord::Base
       .by_open(params[:open])
 
     attributes = {
-      youth: (params[:youth]),
+      young_people: (params[:youth]),
       gay: (params[:gay]),
       men: (params[:men]),
       women: (params[:women]),
@@ -129,7 +135,7 @@ class Meeting < ActiveRecord::Base
       french: (params[:french]),
       spanish: (params[:spanish]),
       sitter: (params[:sitter]),
-      access: (params[:access]),
+      accessible: (params[:access]),
       non_smoking: (params[:non_smoking])
     }
 
