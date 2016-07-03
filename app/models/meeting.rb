@@ -1,13 +1,30 @@
 class Meeting < ActiveRecord::Base
   include FlagShihTzu
 
-  has_flags 1 => :closed
+  has_flags 1 => :closed,
+            2 => :men,
+            3 => :women,
+            4 => :gay,
+            5 => :young_people,
+            6 => :speaker,
+            7 => :step,
+            8 => :big_book,
+            9 => :grapevine,
+            10 => :traditions,
+            11 => :candlelight,
+            12 => :beginners,
+            13 => :asl,
+            14 => :accessible,
+            15 => :non_smoking,
+            16 => :sitter,
+            17 => :spanish,
+            18 => :french,
+            19 => :polish
 
   attr_reader :geocoder
   attr_accessor :_skip_geocoder
 
   validate :raw_meeting_unique, on: :create
-  validate :feature_unique, :focus_unique, :language_unique, :format_unique
 
   # geocoder dependent callbacks
   geocoded_by :address, :latitude => :lat, :longitude => :lng
@@ -16,15 +33,6 @@ class Meeting < ActiveRecord::Base
   # end geocoder depened callbacks
 
   belongs_to :raw_meeting
-
-  has_many :meeting_foci
-  has_many :meeting_formats
-  has_many :meeting_features
-  has_many :meeting_languages
-  has_many :features, through: :meeting_features
-  has_many :foci, through: :meeting_foci
-  has_many :formats, through: :meeting_formats
-  has_many :languages, through: :meeting_languages
 
   def self.geocoded
     where.not(lat: nil).where.not(lng: nil)
@@ -36,30 +44,6 @@ class Meeting < ActiveRecord::Base
 
   def self.open
     self.not_closed
-  end
-
-  def feature_unique
-    if self.features.sort.uniq != self.features.sort
-      errors.add(:feature, "must be unique")
-    end
-  end
-
-  def focus_unique
-    if self.foci.sort.uniq != self.foci.sort
-      errors.add(:focus, "must be unique")
-    end
-  end
-
-  def language_unique
-    if self.languages.sort.uniq != self.languages.sort
-      errors.add(:language, "must be unique")
-    end
-  end
-
-  def format_unique
-    if self.formats.sort.uniq != self.formats.sort
-      errors.add(:format, "must be unique")
-    end
   end
 
   def raw_meeting_unique
@@ -119,87 +103,37 @@ class Meeting < ActiveRecord::Base
     where("address_1 LIKE ?", text)
   end
 
-  def self.by_gay(gay)
-    return all if gay == "show"
-    only = joins(:foci).where(foci: { name: "Gay" })
-    gay == "only" ? only : where.not(id: only.map {|m| m.id} )
-  end
-
-  def self.by_youth(youth)
-    return all if youth == "show"
-    only = joins(:foci).where(foci: { name: "Young People" })
-    youth == "only" ? only : where.not(id: only.map {|m| m.id} )
-  end
-
-  def self.by_women(women)
-    return all if women == "show"
-    only = joins(:foci).where(foci: { name: "Women" })
-    women == "only" ? only : where.not(id: only.map {|m| m.id} )
-  end
-
-  def self.by_men(men)
-    return all if men == "show"
-    only = joins(:foci).where(foci: { name: "Men" })
-    men == "only" ? only : where.not(id: only.map {|m| m.id} )
-  end
-
-  def self.by_polish(polish)
-    return all if polish == "show"
-    only = joins(:languages).where(languages: { name: "Polish" })
-    polish == "only" ? only : where.not(id: only.map {|m| m.id} )
-  end
-
-  def self.by_spanish(spanish)
-    return all if spanish == "show"
-    only = joins(:languages).where(languages: { name: "Spanish" })
-    spanish == "only" ? only : where.not(id: only.map {|m| m.id} )
-  end
-
-  def self.by_french(french)
-    return all if french == "show"
-    only = joins(:languages).where(languages: { name: "French" })
-    french == "only" ? only : where.not(id: only.map {|m| m.id} )
-  end
-
-  def self.by_sitter(sitter)
-    return all if sitter == "show"
-    only = joins(:features).where(features: { name: "Sitter" })
-    sitter == "only" ? only : where.not(id: only.map {|m| m.id} )
-  end
-
-  def self.by_access(access)
-    return all if access == "show"
-    only = joins(:features).where(features: { name: "Accessible" })
-    access == "only" ? only : where.not(id: only.map {|m| m.id} )
-  end
-
-  def self.by_non_smoking(non_smoking)
-    return all if non_smoking == "show"
-    only = joins(:features).where(features: { name: "Non-Smoking" })
-    non_smoking == "only" ? only : where.not(id: only.map {|m| m.id} )
+  def self.by_attributes(attributes, scope=self)
+    attributes.each_with_object(scope) do |(prop, value), scope|
+      next if value == "show"
+      value == "only" ? scope.send(prop) : scope.send("not_#{prop}".to_sym)
+    end
   end
 
   def self.search(params)
-    self
-    .visible
-    .by_group_name(params[:group_name])
-    .by_group_name(params[:group_text])
-    .by_city(params[:city])
-    .by_city(params[:city_text])
-    .by_day(params[:day])
-    .by_time(params[:time])
-    .by_open(params[:open])
-    .by_youth(params[:youth])
-    .by_gay(params[:gay])
-    .by_men(params[:men])
-    .by_women(params[:women])
-    .by_polish(params[:polish])
-    .by_french(params[:french])
-    .by_spanish(params[:spanish])
-    .by_sitter(params[:sitter])
-    .by_access(params[:access])
-    .by_non_smoking(params[:non_smoking])
-    .distinct
+    scope = self.visible
+      .by_group_name(params[:group_name])
+      .by_group_name(params[:group_text])
+      .by_city(params[:city])
+      .by_city(params[:city_text])
+      .by_day(params[:day])
+      .by_time(params[:time])
+      .by_open(params[:open])
+
+    attributes = {
+      youth: (params[:youth]),
+      gay: (params[:gay]),
+      men: (params[:men]),
+      women: (params[:women]),
+      polish: (params[:polish]),
+      french: (params[:french]),
+      spanish: (params[:spanish]),
+      sitter: (params[:sitter]),
+      access: (params[:access]),
+      non_smoking: (params[:non_smoking])
+    }
+
+    scope = by_attributes(attributes, scope).distinct
   end
 
 end
