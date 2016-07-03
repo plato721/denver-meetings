@@ -29,7 +29,7 @@ class Format
 
   def self.get_formats(codes)
     format_methods.each_with_object({}) do |method, formats|
-      formats[method] = self.send("is_#{method}?".to_sym, codes)
+      formats[method] = !!self.send("is_#{method}?".to_sym, codes)
     end
   end
 

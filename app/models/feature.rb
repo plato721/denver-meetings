@@ -22,7 +22,7 @@ class Feature
 
   def self.get_features(codes)
     feature_methods.each_with_object({}) do |method, features|
-      features[method] = self.send("is_#{method}?".to_sym, codes)
+      features[method] = !!self.send("is_#{method}?".to_sym, codes)
     end
   end
 end

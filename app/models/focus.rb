@@ -24,7 +24,7 @@ class Focus
 
   def self.get_foci(codes)
     focus_methods.each_with_object({}) do |method, results|
-      results[method] = self.send("is_#{method}?".to_sym, codes)
+      results[method] = !!self.send("is_#{method}?".to_sym, codes)
     end
   end
 
