@@ -113,23 +113,35 @@ class SearchOptions
   end
 
   def foci
-    @foci ||= self.meetings
-                     .joins(:foci).pluck('foci.name').uniq.compact
+    @foci ||= begin
+      Focus.get_focus_methods.select do |focus|
+        self.meetings.send(focus).count > 0
+      end.map { |f| f.to_s.titleize }
+    end
   end
 
   def languages
-    @languages ||= self.meetings
-                          .joins(:languages).pluck('languages.name').uniq.compact
+    @languages ||= begin
+      Language.permitted_languages.values.select do |lang|
+        self.meetings.send(lang).count > 0
+      end.map { |f| f.to_s.titleize }
+    end
   end
 
   def formats
-    @formats ||= self.meetings
-                        .joins(:formats).pluck('formats.name').uniq.compact
+    @formats ||= begin
+      Format.get_format_methods.select do |format|
+        self.meetings.send(format).count > 0
+      end.map { |f| f.to_s.titleize }
+    end
   end
 
   def features
-    @features ||= self.meetings
-                         .joins(:features).pluck('features.name').uniq.compact
+    @features ||= begin
+      Feature.feature_methods.select do |feature|
+        self.meetings.send(feature).count > 0
+      end.map { |f| f.to_s.titleize }
+    end
   end
 
   def times

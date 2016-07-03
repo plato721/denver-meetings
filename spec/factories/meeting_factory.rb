@@ -22,15 +22,4 @@ FactoryGirl.define do
     raw_meeting
   end
 
-  factory :format do
-  end
-
-  factory :language do
-  end
-
-  factory :focus do
-  end
-
-  factory :feature do
-  end
 end

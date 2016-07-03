@@ -3,14 +3,6 @@ require 'rails_helper'
 RSpec.describe SearchOptions do
   include_context "codes"
 
-  before :all do
-    create_all_meeting_features
-  end
-
-  after :all do
-    destroy_all_meeting_features
-  end
-
   before :each do
     Meeting.destroy_all
   end
@@ -99,50 +91,46 @@ RSpec.describe SearchOptions do
 
   it "dynamically returns mens" do
     meeting = FactoryGirl.create :meeting
-    focus = Focus.where(name: "Men")
-    meeting.update_attribute(:foci, focus)
+    meeting.update_attribute(:men, true)
 
     FactoryGirl.create_list :meeting, 3
-    expect(Meeting.includes(:foci).where(foci: { name: "Men" }).count).to eq(1)
+    expect(Meeting.men.count).to eq(1)
 
     options = SearchOptions.new
     expect(options.foci.include? "Men").to be_truthy
 
-    options = SearchOptions.new(meetings: (Meeting.joins(:foci)
-      .where.not(foci: { name: "Men"})))
+    options = SearchOptions.new(meetings: Meeting.not_men)
     expect(options.foci.include? "Men").to be_falsey
   end
 
   it "dynamically returns language" do
     meeting = FactoryGirl.create :meeting
-    language = Language.where(name: "Spanish")
-    meeting.update_attribute(:languages, language)
+    meeting.update_attribute(:spanish, true)
 
     FactoryGirl.create_list :meeting, 3
-    expect(Meeting.includes(:languages)
-      .where(languages: { name: "Spanish" }).count).to eq(1)
+    expect(Meeting.spanish.count).to eq(1)
 
     options = SearchOptions.new
     expect(options.languages.include? "Spanish").to be_truthy
 
-    options = SearchOptions.new(meetings: (Meeting.joins(:languages)
-      .where.not(languages: { name: "Spanish"})))
+    options = SearchOptions.new(meetings: Meeting.not_spanish)
     expect(options.languages.include? "Spanish").to be_falsey
   end
 
   it "dynamically returns feature features" do
-    features = Feature.where.not('name LIKE ?', "%Sign%")
-    FactoryGirl.create_list :meeting, 3
-    features.each do |feature|
-      FactoryGirl.create :meeting, features: [feature]
-    end
+    FactoryGirl.create_list :meeting, 3,
+     {
+        accessible: true,
+        non_smoking: true,
+        sitter: true
+      }
 
     options_all = SearchOptions.new
     actual_all = options_all.features
 
-    expect(actual_all.sort).to eq(features.pluck(:name).sort)
-    ["access", "non_smoking", "sitter"].each do |feature|
-      meetings = Meeting.send("by_#{feature}".to_sym, "hide")
+    expect(actual_all.sort).to eq(["Accessible", "Non Smoking", "Sitter"].sort)
+    ["accessible", "non_smoking", "sitter"].each do |feature|
+      meetings = Meeting.by_attributes({feature.to_sym => "hide"})
       options = SearchOptions.new(meetings: meetings)
       expect(options.features.include? feature).to be_falsey
     end

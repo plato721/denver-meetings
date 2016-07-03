@@ -1,9 +1,4 @@
-class Focus < ActiveRecord::Base
-  validate :uses_only_permitted_foci
-  validates :code, uniqueness: true
-  validates :name, uniqueness: true
-  has_many :meeting_foci
-  has_many :meetings, through: :meeting_foci
+class Focus
 
   def self.get_men
     self.find_or_create_by(code: "M") do |focus|

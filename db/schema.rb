@@ -11,59 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160619225039) do
+ActiveRecord::Schema.define(version: 20160703044607) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "citext"
-
-  create_table "features", force: :cascade do |t|
-    t.string   "code"
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "foci", force: :cascade do |t|
-    t.string   "code"
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "formats", force: :cascade do |t|
-    t.string   "code"
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "languages", force: :cascade do |t|
-    t.string   "code"
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "meeting_features", force: :cascade do |t|
-    t.integer "meeting_id"
-    t.integer "feature_id"
-  end
-
-  create_table "meeting_foci", force: :cascade do |t|
-    t.integer "meeting_id"
-    t.integer "focus_id"
-  end
-
-  create_table "meeting_formats", force: :cascade do |t|
-    t.integer "meeting_id"
-    t.integer "format_id"
-  end
-
-  create_table "meeting_languages", force: :cascade do |t|
-    t.integer "meeting_id"
-    t.integer "language_id"
-  end
 
   create_table "meetings", force: :cascade do |t|
     t.string   "day"

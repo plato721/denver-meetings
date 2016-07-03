@@ -1,10 +1,4 @@
-class Format < ActiveRecord::Base
-  validate :uses_only_permitted_formats
-  validates :code, uniqueness: true
-  validates :name, uniqueness: true
-  has_many :meeting_formats
-  has_many :meetings, through: :meeting_formats
-
+class Format
   def self.is_speaker?(codes)
     codes.include?("SP")
   end
