@@ -28,8 +28,8 @@ class MeetingCreator
   end
 
   def format_attributes
-    properties_models.each_with_object({}) do |property, attributes|
-      attributes.merge( get_property_set_for(codes, property) )
+    properties_models.inject({}) do |attributes, prop_set|
+      attributes.merge get_property_set_for(codes, prop_set.to_a)
     end
   end
 
@@ -86,6 +86,10 @@ class MeetingCreator
     Format => "formats",
     Feature => "features",
     Language => "languages"}
+  end
+
+  def self.features_classes
+    @@features_classes ||= self.new(nil).properties_models.keys
   end
 
   def get_property_set_for(codes, property)
