@@ -10,4 +10,8 @@ class Language
      "Frn" => :french,
      "Pol" => :polish}
   end
+
+  def self.language_methods
+    permitted_languages.values
+  end
 end

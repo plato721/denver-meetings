@@ -114,7 +114,7 @@ class SearchOptions
 
   def foci
     @foci ||= begin
-      Focus.get_focus_methods.select do |focus|
+      Focus.focus_methods.select do |focus|
         self.meetings.where(focus => true).exists?
       end.map { |f| f.to_s.titleize }
     end
@@ -122,7 +122,7 @@ class SearchOptions
 
   def languages
     @languages ||= begin
-      Language.permitted_languages.values.select do |lang|
+      Language.language_methods.select do |lang|
         self.meetings.where(lang => true).exists?
       end.map { |f| f.to_s.titleize }
     end
@@ -130,7 +130,7 @@ class SearchOptions
 
   def formats
     @formats ||= begin
-      Format.get_format_methods.select do |format|
+      Format.format_methods.select do |format|
         self.meetings.where(format => true).exists?
       end.map { |f| f.to_s.titleize }
     end

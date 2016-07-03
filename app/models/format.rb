@@ -28,12 +28,12 @@ class Format
   end
 
   def self.get_formats(codes)
-    get_format_methods.each_with_object({}) do |method, formats|
+    format_methods.each_with_object({}) do |method, formats|
       formats[method] = self.send("is_#{method}?".to_sym, codes)
     end
   end
 
-  def self.get_format_methods
+  def self.format_methods
     [:speaker, :step, :big_book, :grapevine,
       :traditions, :candlelight, :beginners]
   end

@@ -23,12 +23,12 @@ class Focus
   end
 
   def self.get_foci(codes)
-    get_focus_methods.each_with_object({}) do |method, results|
+    focus_methods.each_with_object({}) do |method, results|
       results[method] = self.send("is_#{method}?".to_sym, codes)
     end
   end
 
-  def self.get_focus_methods
+  def self.focus_methods
     [:men, :women, :gay, :young_people]
   end
 
