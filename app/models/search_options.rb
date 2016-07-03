@@ -42,11 +42,11 @@ class SearchOptions
   end
 
   def open?
-    @open ||= self.meetings.not_closed.present?
+    @open ||= self.meetings.where(closed: [false, nil]).exists?
   end
 
   def closed?
-    @closed ||= self.meetings.closed.present?
+    @closed ||= self.meetings.where(closed: true).exists?
   end
 
   def cities_found
@@ -115,7 +115,7 @@ class SearchOptions
   def foci
     @foci ||= begin
       Focus.get_focus_methods.select do |focus|
-        self.meetings.send(focus).count > 0
+        self.meetings.where(focus => true).exists?
       end.map { |f| f.to_s.titleize }
     end
   end
@@ -123,7 +123,7 @@ class SearchOptions
   def languages
     @languages ||= begin
       Language.permitted_languages.values.select do |lang|
-        self.meetings.send(lang).count > 0
+        self.meetings.where(lang => true).exists?
       end.map { |f| f.to_s.titleize }
     end
   end
@@ -131,7 +131,7 @@ class SearchOptions
   def formats
     @formats ||= begin
       Format.get_format_methods.select do |format|
-        self.meetings.send(format).count > 0
+        self.meetings.where(format => true).exists?
       end.map { |f| f.to_s.titleize }
     end
   end
@@ -139,7 +139,7 @@ class SearchOptions
   def features
     @features ||= begin
       Feature.feature_methods.select do |feature|
-        self.meetings.send(feature).count > 0
+        self.meetings.where(feature => true).exists?
       end.map { |f| f.to_s.titleize }
     end
   end
@@ -149,7 +149,7 @@ class SearchOptions
   end
 
   def meeting_names
-    @names ||= self.meetings.uniq.order(:group_name).pluck(:group_name)
+    @names ||= self.meetings.pluck(:group_name).uniq.sort
   end
 
   def meetings_json

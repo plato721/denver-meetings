@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160703044607) do
+ActiveRecord::Schema.define(version: 20160703132325) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,25 @@ ActiveRecord::Schema.define(version: 20160703044607) do
     t.boolean  "visible",                                 default: true
     t.boolean  "deleted",                                 default: false
     t.integer  "flags",                                   default: 0,     null: false
+    t.boolean  "closed",                                  default: false
+    t.boolean  "men",                                     default: false
+    t.boolean  "women",                                   default: false
+    t.boolean  "gay",                                     default: false
+    t.boolean  "young_people",                            default: false
+    t.boolean  "speaker",                                 default: false
+    t.boolean  "step",                                    default: false
+    t.boolean  "big_book",                                default: false
+    t.boolean  "grapevine",                               default: false
+    t.boolean  "traditions",                              default: false
+    t.boolean  "candlelight",                             default: false
+    t.boolean  "beginners",                               default: false
+    t.boolean  "asl",                                     default: false
+    t.boolean  "accessible",                              default: false
+    t.boolean  "non_smoking",                             default: false
+    t.boolean  "sitter",                                  default: false
+    t.boolean  "spanish",                                 default: false
+    t.boolean  "french",                                  default: false
+    t.boolean  "polish",                                  default: false
   end
 
   add_index "meetings", ["raw_meeting_id"], name: "index_meetings_on_raw_meeting_id", using: :btree

@@ -1,26 +1,4 @@
 class Meeting < ActiveRecord::Base
-  include FlagShihTzu
-
-  has_flags 1 => :closed,
-            2 => :men,
-            3 => :women,
-            4 => :gay,
-            5 => :young_people,
-            6 => :speaker,
-            7 => :step,
-            8 => :big_book,
-            9 => :grapevine,
-            10 => :traditions,
-            11 => :candlelight,
-            12 => :beginners,
-            13 => :asl,
-            14 => :accessible,
-            15 => :non_smoking,
-            16 => :sitter,
-            17 => :spanish,
-            18 => :french,
-            19 => :polish
-
   attr_reader :geocoder
   attr_accessor :_skip_geocoder
 
@@ -43,7 +21,7 @@ class Meeting < ActiveRecord::Base
   end
 
   def self.open
-    self.not_closed
+    self.where(closed: [false, nil])
   end
 
   def raw_meeting_unique
@@ -104,16 +82,40 @@ class Meeting < ActiveRecord::Base
   end
 
   def self.attribute_map(attribute)
-    {"show" => :all,
-    "only" => attribute,
-    "hide" => "not_#{attribute}".to_sym}
+    {"show" => [true, false, nil],
+    "only" => true,
+    "hide" => false}
   end
 
   def self.by_attributes(attributes, scope=self)
     attributes.reduce(scope) do |scope, (prop, value)|
       search_command = attribute_map(prop)[value]
-      scope.send(search_command)
+      scope.where(prop => search_command)
     end
+  end
+
+  def self.flag_like_fields
+    [:closed, :men, :women, :gay, :young_people, :speaker, :step, :big_book,
+    :grapevine, :traditions, :candlelight, :beginners, :asl, :accessible,
+    :non_smoking, :sitter, :spanish, :french, :polish]
+  end
+
+  def self.not_matcher
+    /^not_/
+  end
+
+  def self.not_methods(m)
+    root = m.to_s.match(not_matcher).post_match
+    if !flag_like_fields.include? root.to_sym
+      raise NoMethodError, "#{root.to_sym} appears to be a non-bool field"
+    end
+    self.where(root.to_sym => false)
+  end
+
+  def self.method_missing(m, *args)
+    return not_methods(m) if m.to_s =~ not_matcher
+    raise NoMethodError if !flag_like_fields.include? m
+    return self.where(m => true)
   end
 
   def self.search(params)
