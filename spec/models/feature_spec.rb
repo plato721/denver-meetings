@@ -2,43 +2,15 @@ require 'rails_helper'
 
 RSpec.describe Feature, type: :model do
   include_context "codes"
-  let(:valid_features) do
-    {"ASL" => "Sign Language Interpreter",
-      "*" => "Accessible",
-      "n" => "Non-Smoking",
-    "Sit" => "Sitter"}
-  end
 
-  it "allows only valid Features" do
-    bad_feature = Feature.new(code: "G", name: "German")
+  it "has all the features" do
 
-    expect(bad_feature).to_not be_valid
-  end
+    features = [:asl, :accessible, :non_smoking, :sitter]
 
-  context "does not allow duplicate" do
-    before do
-      @code_feature = valid_features.first
-      @attributes = [:code, :name].zip(@code_feature).to_h
+    found_features = Feature.get_features("")
 
-      Feature.create(@attributes)
-    end
-
-    it "code" do
-      attributes = {code: @code_feature.first,
-        name: valid_features["Sit"].last}
-
-      dup = Feature.new(attributes)
-
-      expect(dup).to_not be_valid
-    end
-
-    it "Feature" do
-      attributes = {code: valid_features["Sit"].first,
-        name: @code_feature.last}
-
-      dup = Feature.new(attributes)
-
-      expect(dup).to_not be_valid
+    features.each do |feature|
+      expect(found_features.include? feature).to be_truthy
     end
   end
 
@@ -48,53 +20,59 @@ RSpec.describe Feature, type: :model do
       raw_code = "ASL"
       features = Feature.get_features(raw_code)
 
-      expect(features.count).to eq(1)
-      expect(features.first.name).to eq("Sign Language Interpreter")
+      expect(features.delete :asl).to be_truthy
+      expect(features.values.reduce(&:|)).to be_falsey
     end
 
     it "finds accessible" do
       raw_code = "*nFrnSp"
       features = Feature.get_features(raw_code)
-      features = features.map { |f| f.name }
 
-      expect(features.count).to eq(2)
-      expect(features.include?("Accessible")).to be_truthy
+      expect(features.delete(:accessible)).to be_truthy
+      expect(features.delete(:non_smoking)).to be_truthy
+
+      expect(features.values.reduce(&:|)).to be_falsey
     end
 
     it "finds non-smoking" do
       raw_code = "n"
       features = Feature.get_features(raw_code)
 
-      expect(features.first.name).to eq("Non-Smoking")
+      expect(features.delete :non_smoking).to be_truthy
+      expect(features.values.reduce(&:|)).to be_falsey
     end
 
     it "does not give non-smoking false positive with Spn" do
       raw_code = "Spn"
       features = Feature.get_features(raw_code)
 
-      expect(features.empty?).to be_truthy
+      expect(features.delete :non_smoking).to be_falsey
+      expect(features.values.reduce(&:|)).to be_falsey
     end
 
     it "does not give non-smoking false positive with Frn" do
       raw_code = "Frn"
       features = Feature.get_features(raw_code)
 
-      expect(features.empty?).to be_truthy
+      expect(features.delete :non_smoking).to be_falsey
+      expect(features.values.reduce(&:|)).to be_falsey
     end
 
     it "finds sitter" do
       raw_code = "Sit"
       features = Feature.get_features(raw_code)
 
-      expect(features.first.name).to eq("Sitter")
+      expect(features.delete :sitter).to be_truthy
+      expect(features.values.reduce(&:|)).to be_falsey
     end
 
     it "finds with other codes" do
       raw_code = "*nFrnSp"
       features = Feature.get_features(raw_code)
-      features = features.map {|f| f.name }
 
-      expect(features.include?("Accessible")).to be_truthy
+      expect(features.delete :accessible).to be_truthy
+      expect(features.delete :non_smoking).to be_truthy
+      expect(features.values.reduce(&:|)).to be_falsey
     end
 
   end
