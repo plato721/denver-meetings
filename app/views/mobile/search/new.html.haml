@@ -3,6 +3,7 @@
   %h1 New Search
 %div{"data-role" => "content", :role => "main"}
   = form_tag(mobile_search_index_path, method: :post, remote: true, id: "mobile_search_form") do
+    = render 'search_box'
     = render partial: "location"
     = render partial: "day_time"
     = render partial: "group"
