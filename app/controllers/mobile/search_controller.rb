@@ -42,7 +42,7 @@ class Mobile::SearchController < ApplicationController
 
   def here_and_now_params
     { lat: params[:lat],
-      lng: params[:lon],
+      lng: params[:lng],
       here_and_now: true
     }
   end
