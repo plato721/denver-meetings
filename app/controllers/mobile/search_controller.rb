@@ -33,6 +33,10 @@ class Mobile::SearchController < ApplicationController
     end
   end
 
+  def free_search
+    binding.pry
+  end
+
   private
   def search_params
     {}.merge(params.except("data-ajax", 

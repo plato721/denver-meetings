@@ -15,6 +15,7 @@ Rails.application.routes.draw do
         get 'results', to: "search#new"
         get 'here-and-now', to: "search#here_and_now"
         get 'get-new-options', to: "search#get_new_options"
+        post 'free_search', to: "search#free_search"
       end
     end
 
