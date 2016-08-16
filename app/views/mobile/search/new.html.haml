@@ -2,26 +2,21 @@
 %div{"data-role" => "header"}
   %h1 New Search
 %div{"data-role" => "content", :role => "main"}
-  %button{ "class" => "meeting-search-hot-button", "data-role" => "button", "data-icon" => "arrow-r", "data-iconpos" => "right", "id" => "one-time" }
-    = "Right Here Right Now"
-  = form_tag(free_search_mobile_search_index_path, method: :post, remote: true, id: "free_search_form") do
+  =# form_tag(free_search_mobile_search_index_path, method: :post, remote: true, id: "free_search_form") do
+  = form_tag(mobile_search_index_path, method: :post, remote: true, id: "mobile_search_form") do
     = render 'search_box'
-    = button_to "Seach for text", free_search_mobile_search_index_path, { :method => :post,
-        :class => "meeting-search-button", "data-role" => "button",
-        "data-icon" => "arrow-r", "data-iconpos" => "right", "rel" => "external" }
-  .collapsible-set
-    %div{"data-collapsed-icon" => "carat-d", "data-expanded-icon" => "carat-u", "data-role" => "collapsible"}
-      %h3 More Options
-      = form_tag(mobile_search_index_path, method: :post, remote: true, id: "mobile_search_form") do
-        = render partial: "location"
-        = render partial: "day_time"
-        = render partial: "group"
+    = render partial: "day_time"
+    = render partial: "group"
+    = render partial: "location"
+    .collapsible-set
+      %div{"data-collapsed-icon" => "carat-d", "data-expanded-icon" => "carat-u", "data-role" => "collapsible"}
+        %h3 More Options
         = render partial: "open_closed"
         = render partial: "special_focus"
         = render partial: "access"
         = render partial: "language"
-        - search_text = "Show #{pluralize(@options.count, "meetings")}"
-        = button_to search_text, mobile_search_index_path, {:method => :post, :class => "meeting-search-button", "data-role" => "button", "data-icon" => "arrow-r", "data-iconpos" => "right", "rel" => "external"}
+  -# search_text = "Show #{pluralize(@options.count, "meetings")}"
+  = button_to "Search", mobile_search_index_path, {:method => :post, :class => "meeting-search-button", "data-role" => "button", "data-icon" => "arrow-r", "data-iconpos" => "right", "rel" => "external"}
 = render "footer"
 
 :javascript
