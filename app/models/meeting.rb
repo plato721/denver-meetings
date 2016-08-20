@@ -48,6 +48,7 @@ class Meeting < ActiveRecord::Base
   end
 
   def self.by_group_name(group_name)
+    group_name = "any" if group_name == ""
     group_name == "any" ? all : where("group_name LIKE ?", "%#{group_name}%")
   end
 
@@ -121,9 +122,8 @@ class Meeting < ActiveRecord::Base
   def self.search(params)
     scope = self.visible
       .by_group_name(params[:group_name])
-      .by_group_name(params[:group_text])
+      .by_group_name(params[:free])
       .by_city(params[:city])
-      .by_city(params[:city_text])
       .by_day(params[:day])
       .by_time(params[:time])
       .by_open(params[:open])

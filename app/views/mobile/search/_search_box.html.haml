@@ -1,11 +1,11 @@
-= text_field_tag :free_search, "", { :placeholder => "Zip, City, Group Name...", 'data-icon' => 'search', 'type' => 'search', :class => "ui-icon-search free-text" }
+= text_field_tag :free, "", { :placeholder => "Zip, City, Group Name...", 'data-icon' => 'search', 'type' => 'search', :class => "ui-icon-search free-text" }
 = check_box_tag(:is_location_search, true, false)
 = label_tag :is_location_search, "This is a location"
 
 :javascript
   $(document).ready(function(){
     var locationBox = $('#is_location_search').closest('.ui-checkbox');
-    var searchBox = $('input[name="free_search"]');
+    var searchBox = $('input[name="free"]');
 
     locationBox.hide();
     searchBox.keyup( _.debounce(showLocationBox, 250));

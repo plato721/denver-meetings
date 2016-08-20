@@ -1,4 +1,5 @@
 class Mobile::SearchController < ApplicationController
+  protect_from_forgery except: :here_and_now
   layout "mobile"
 
   def new
@@ -10,6 +11,7 @@ class Mobile::SearchController < ApplicationController
     @meetings = search.results
 
     respond_to do |format|
+      format.html { render 'index' }
       format.js { render 'index' }
     end
   end
@@ -31,10 +33,6 @@ class Mobile::SearchController < ApplicationController
     respond_to do |format|
       format.js { render 'index' }
     end
-  end
-
-  def free_search
-    binding.pry
   end
 
   private
