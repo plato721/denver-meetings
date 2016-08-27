@@ -2,9 +2,7 @@ namespace :daccaa do
   desc "scrape daccaa for meetings"
   task :get_data, [:force] => :environment do |t, args|
     force = args[:force]
-    scraper = ScrapeDaccaa.scrape(force)
-    creator = MeetingsCreator.new(scraper.raw_meetings)
-    creator.run_updates
+    update(force)
   end
 
   desc "uniqueify properties for meetings"
@@ -13,6 +11,18 @@ namespace :daccaa do
     Meeting.all.each do |meeting|
       dedup(meeting, props)
     end
+  end
+
+  def update(force)
+    scraper = ScrapeDaccaa.scrape(force)
+    return no_updates_needed if !scraper.raw_meetings
+
+    creator = MeetingsCreator.new(scraper.raw_meetings)
+    creator.run_updates
+  end
+
+  def no_updates_needed
+    puts "No updates needed. Pass 'true' to get_data to force update."
   end
 
   def dedup(meeting, props)
