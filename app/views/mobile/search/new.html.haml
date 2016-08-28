@@ -34,35 +34,11 @@
   function main(){
 
     var submitButton = $('[type="submit"]');
-    $(".city-text, .group-text").on("click", function() {
-      if ($(this).val() == "(Optional search text)"){
-          $(this).val("")
-        }
-    });
-
-    $('.group-text').on("blur", function(){
-      if ( $(this).val().length > 0 ){
-        if ( $('#group_name').parent().css('display') !== 'none' ){
-          $('#group_name').parent().toggle('hidden');
-        }
-      }
-    });
 
     // why must i hack so
     setTimeout(function(){
       $('.sub-heading a').css('text-align', 'center');
     }, 0);
-
-    $('.city-text').on("blur", function(){
-      if ( $(this).val().length > 0 ){
-        if( $('.here-box').parent().css('display') !== 'none' ){
-          $('.here-box').parent().toggle('hidden');
-        }
-        if( $('#city-button').parent().css('display') !== 'none' ){
-          $('#city-button').parent().toggle('hidden');
-        }
-      }
-    });
 
     $(".meeting-search-hot-button").on("click", function(){
       if (navigator.geolocation) {
