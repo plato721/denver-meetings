@@ -11,11 +11,7 @@ class Search < ActiveRecord::Base
   end
 
   def scrub_text
-    [:city_text, :group_text].each do |field|
-        if self.send(field) =~ /^\(.*\)$/ || self.send(field).empty?
-          self.update_attributes(field => "any")
-        end
-    end
+    self.free = "" if self.free.blank?
   end
 
   def distance_results

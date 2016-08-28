@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160703132325) do
+ActiveRecord::Schema.define(version: 20160828213841) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -90,8 +90,6 @@ ActiveRecord::Schema.define(version: 20160703132325) do
     t.boolean "here_and_now", default: false
     t.decimal "lat",          default: 39.742043
     t.decimal "lng",          default: -104.991531
-    t.string  "city_text",    default: "any"
-    t.string  "group_text",   default: "any"
     t.string  "women",        default: "show"
     t.string  "men",          default: "show"
     t.string  "youth",        default: "show"

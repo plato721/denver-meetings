@@ -23,18 +23,9 @@ RSpec.describe Search do
   end
 
   it "finds by group name free text" do
-    search = Search.create(group_text: "jojo")
+    search = Search.create(free: "jojo")
 
     expected = Meeting.second.group_name
-    actual = search.results.first.last.first.group_name
-
-    expect(actual).to eq(expected)
-  end
-
-  it "finds by city name free text" do
-    search = Search.create(city_text: "xyzp")
-
-    expected = Meeting.third.group_name
     actual = search.results.first.last.first.group_name
 
     expect(actual).to eq(expected)
