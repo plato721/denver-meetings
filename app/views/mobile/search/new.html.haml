@@ -78,23 +78,6 @@
       }
     }); //here-box on click (proximity without here and now)
 
-    $('#city').change(function(){
-      if( $('#city').val() !== "any" ){
-        if( $('.here-box').parent().css('display') !== 'none' ){
-          $('.here-box').parent().toggle('hidden');
-        }
-        if( $('#city_text').parent().css('display') !== 'none' ){
-          $('#city_text').parent().toggle('hidden');
-        }
-      } else {
-        if( $('.here-box').parent().css('display') === 'none' ){
-          $('.here-box').parent().toggle('hidden');
-        }
-        if( $('#city_text').parent().css('display') === 'none' ){
-          $('#city_text').parent().toggle('hidden');
-        }
-      }
-    });
 
     ////////////////////////////////
     //      Menu Controller        //
