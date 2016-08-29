@@ -12,4 +12,6 @@
       = render partial: 'layouts/flash'
       = yield
       = render partial: 'layouts/footer'
-      
+
+- if Rails.env.production?
+  = javascript_include_tag Rails.root.join('app/assets/javascripts/shared/analytics_init.js')
