@@ -40,7 +40,7 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   # https://www.devmynd.com/blog/2014-9-setting-up-your-rails-app-for-javascript-testing/
-  Rails.application.config.assets.precompile += [
+  config.assets.precompile += [
     "teaspoon.css",
     "teaspoon-mocha.js",
     "mocha/1.17.1.js"

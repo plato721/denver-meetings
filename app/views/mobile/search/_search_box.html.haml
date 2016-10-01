@@ -3,9 +3,12 @@
 = check_box_tag(:is_location_search, true, false)
 = label_tag :is_location_search, "This is a location"
 
+= hidden_field_tag(:lat)
+= hidden_field_tag(:lng)
+
 %fieldset{"data-mini" => "true", "data-role" => "controlgroup", "data-type" => "horizontal", class: "within-miles"}
   %legend
-    = "Show meetings within (from center):"
+    = "Show meetings within:"
   = radio_button_tag(:within_miles, "1")
   = label_tag(:within_miles_1, "1 mile")
   = radio_button_tag(:within_miles, "2")
@@ -24,17 +27,18 @@
     var radiusSelect = $('fieldset.within-miles');
     var locationBox = $('#is_location_search[type=checkbox]');
 
-  locationBox.change(function(){
-    if(this.checked){
-      showRadiusSelect();
-    } else {
-      radiusSelect.hide(250);
-    }
-  });
 
     locationBoxSet.hide();
     radiusSelect.hide();
     searchBox.keyup( _.debounce(showLocationBox, 250));
+
+    locationBox.change(function(){
+      if(this.checked){
+        showRadiusSelect();
+      } else {
+        radiusSelect.hide(250);
+      }
+    });
 
     function showLocationBox(){
       locationBoxSet.show(250);
@@ -52,4 +56,6 @@
         radiusSelect.hide(250);
       }
     });
-  });
+
+
+  }); // ready

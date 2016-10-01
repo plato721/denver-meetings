@@ -2,7 +2,7 @@
 %div{"data-role" => "header"}
   %h1 New Search
 %div{"data-role" => "content", :role => "main"}
-  = form_tag(mobile_search_index_path, method: :post, remote: true, id: "mobile_search_form") do
+  = form_tag("#", id: "mobile_search_form") do
     = render 'search_box'
     = render partial: "day_time"
     = render partial: "group"
@@ -16,14 +16,43 @@
         = render partial: "special_focus"
         = render partial: "access"
         = render partial: "language"
-    = button_to "Search", mobile_search_index_path, {:method => :post, :class => "meeting-search-button", "data-role" => "button", "data-icon" => "arrow-r", "data-iconpos" => "right", "rel" => "external"}
+    = button_to "Search", "#", { :class => "meeting-search-button", "data-role" => "button", "data-icon" => "arrow-r", "data-iconpos" => "right", "rel" => "external" }
 = render "footer"
+= javascript_include_tag Rails.root.join('app/assets/javascripts/shared/location_agent.js')
 
 :javascript
+  function searchFormElement(){
+    return $('#mobile_search_form');
+  }
+
+  function getFormValues(){
+    return searchFormElement().serialize();
+  }
+
+  function submitFormUrl(){
+    var url = "#{mobile_search_index_path}";
+    return url;
+  }
+
+  function submitForm(){
+    var url = submitFormUrl();
+    $.ajax({
+      url : url,
+      response : 'script',
+      data : getFormValues(),
+      method : 'post'
+    });
+  }
 
   history.pushState("new_search", "New Search", "new");
 
   function main(){
+
+    $('#mobile_search_form').submit(function(e){
+      checkLocation(submitForm);
+      e.preventDefault();
+      return false;
+    });
 
     var submitButton = $('[type="submit"]');
 
@@ -31,53 +60,6 @@
     setTimeout(function(){
       $('.sub-heading a').css('text-align', 'center');
     }, 0);
-
-    $(".meeting-search-hot-button").on("click", function(){
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-        var pos = {
-          "lat": position.coords.latitude,
-          "lng": position.coords.longitude
-        };
-
-        var createUrl = '#{here_and_now_mobile_search_index_path(
-          lat: "__LAT__", lng: "__LNG__", format: :js)}';
-        createUrl = createUrl.replace("__LAT__", pos["lat"]).replace("__LNG__", pos["lng"]);
-
-        $.getScript(createUrl);
-        return false;
-      });
-      } else {
-        alert("Geolocation cancelled or unsupported");
-        return false;
-       }
-    });
-
-    var hereBox = $('input[name="here"]');
-    // $('.here-box').closest('[data-role="controlgroup"]').on("click", function(){
-    hereBox.change(function(){
-      if ( !hereBox.val()){ return; }
-
-      submitButton.button('disable'); //wait for lat and lng
-      $('#city-button').toggle('hidden');
-      $('#city_text').parent().toggle('hidden');
-
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-        var pos = {
-          "lat": position.coords.latitude,
-          "lng": position.coords.longitude
-        };
-        $(".main-lat").val(pos["lat"]);
-        $(".main-lng").val(pos["lng"]);
-        // console.log("lat is: " + pos["lat"] + " lng is: " + pos["lng"]);
-        submitButton.button('enable');
-      });
-      } else {
-        submitButton.button('enable');
-      }
-    }); //here-box on click (proximity without here and now)
-
 
     ////////////////////////////////
     //      Menu Controller        //
