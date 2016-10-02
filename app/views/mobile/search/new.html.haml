@@ -21,6 +21,11 @@
 = javascript_include_tag Rails.root.join('app/assets/javascripts/shared/location_agent.js')
 
 :javascript
+  function googleMapsKey(){
+    var key = "#{ENV['google_maps']}";
+    return key;
+  }
+
   function searchFormElement(){
     return $('#mobile_search_form');
   }
