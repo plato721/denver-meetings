@@ -7,25 +7,38 @@
   .col-sm-2
 
 :javascript
+  function geoSuccess(position){
+    var pos = {
+      "lat": position.coords.latitude,
+      "lng": position.coords.longitude
+    };
+    upcomingSubmit(pos);
+  }
 
-  $("#big-here-button").click(function(e){
-    e.preventDefault();
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function(position) {
+  function geoFailure(){
+    alert("Geolocation cancelled or errored: using Denver city center");
       var pos = {
-        "lat": position.coords.latitude,
-        "lng": position.coords.longitude
+        "lat": "",
+        "lng": ""
       };
+    upcomingSubmit(pos);
+  }
 
-      var createUrl = '#{here_and_now_mobile_search_index_path(
-       lat: "__LAT__", lng: "__LNG__", format: :html)}';
-      createUrl = createUrl.replace("__LAT__", pos["lat"]).replace("__LNG__", pos["lng"]);
+  function upcomingSubmit(pos){
+    var createUrl = '#{here_and_now_mobile_search_index_path(
+     lat: "__LAT__", lng: "__LNG__", format: :html)}';
+    createUrl = createUrl.replace("__LAT__", pos["lat"]).replace("__LNG__", pos["lng"]);
 
-      window.location = createUrl;
-      return false;
+    window.location = createUrl;
+    return false;
+  }
+
+  $(document).ready( function(){
+    $("#big-here-button").click(function(e){
+      e.preventDefault();
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(geoSuccess, geoFailure);
+        return false;
+      } else { geoFailure(); }
     });
-    } else {
-      alert("Geolocation cancelled or unsupported");
-      return false;
-     }
-  });
+  }() );
