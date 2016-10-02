@@ -22,38 +22,49 @@
 
 :javascript
   $(document).ready(function(){
-    var locationBoxSet = $('#is_location_search').closest('.ui-checkbox');
-    var searchBox = $('input[name="free"]');
-    var radiusSelect = $('fieldset.within-miles');
-    var locationBox = $('#is_location_search[type=checkbox]');
+    function locationBoxSet(){
+      return $('#is_location_search').closest('.ui-checkbox');
+    }
+
+    function searchBox(){
+      return $('input[name="free"]');
+    }
+
+    function radiusSelect(){
+      return $('fieldset.within-miles');
+    }
+
+    function locationBox(){
+      return $('#is_location_search[type=checkbox]');
+    }
 
 
-    locationBoxSet.hide();
-    radiusSelect.hide();
-    searchBox.keyup( _.debounce(showLocationBox, 250));
+    locationBoxSet().hide();
+    radiusSelect().hide();
+    searchBox().keyup( _.debounce(showLocationBox, 250));
 
-    locationBox.change(function(){
+    locationBox().change(function(){
       if(this.checked){
         showRadiusSelect();
       } else {
-        radiusSelect.hide(250);
+        radiusSelect().hide(250);
       }
     });
 
     function showLocationBox(){
-      locationBoxSet.show(250);
+      locationBoxSet().show(250);
       return true;
     }
 
     function showRadiusSelect(){
-      radiusSelect.show(250);
+      radiusSelect().show(250);
       return true;
     }
 
-    searchBox.blur(function(){
+    searchBox().blur(function(){
       if( $(this).val() === "" ){
-        locationBoxSet.hide(250);
-        radiusSelect.hide(250);
+        locationBoxSet().hide(250);
+        radiusSelect().hide(250);
       }
     });
 
