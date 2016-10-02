@@ -1,6 +1,6 @@
 = text_field_tag :free, "", { :placeholder => "Zip, City, Group Name...", 'data-icon' => 'search', 'type' => 'search', :class => "ui-icon-search free-text" }
 
-= check_box_tag(:is_location_search, true, false)
+= check_box_tag(:is_location_search, value=true, checked=false)
 = label_tag :is_location_search, "This is a location"
 
 = hidden_field_tag(:lat)
