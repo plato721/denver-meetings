@@ -44,6 +44,7 @@ class Mobile::SearchController < ApplicationController
 
   private
   def search_params
+    # TODO - use strong params
     {}.merge(params.except("data-ajax", 
       :method, :controller, :action, :authenticity_token, :utf8,
       :_, :format))

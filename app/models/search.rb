@@ -23,7 +23,7 @@ class Search < ActiveRecord::Base
       self.lat = denver_center.first
       self.lng = denver_center.last
       self.errors.add :free,
-        "Unable to find location #{free}. Zip codes searches are most reliable."
+        "Sorry, unable to find location #{free}. Using Denver center."
     end
     self.free = ""
   end
@@ -41,7 +41,7 @@ class Search < ActiveRecord::Base
   def distance_with(meetings)
     distance_finder = HereAndNow.new(self.to_h)
     meeting_tuples = distance_finder.meetings_with_distance(meetings)
-    DistanceMeetings.new(meeting_tuples)
+    DistanceMeetings.new(meeting_tuples, self.within_miles)
   end
 
   def raw_meetings
