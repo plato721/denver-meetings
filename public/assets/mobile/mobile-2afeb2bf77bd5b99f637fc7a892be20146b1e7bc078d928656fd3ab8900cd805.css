@@ -926,7 +926,7 @@ html .ui-alt-icon .ui-radio-off:after {
 }
 /* Loader */
 .ui-icon-loading {
-	background: url(Rails.root.join('app/assets/mobile/images/ajax-loader.gif'));
+	background: url( "<=% asset_path 'images/ajax-loader.gif' %>" );
 	background-size: 2.875em 2.875em;
 }
 /* Swatches */
