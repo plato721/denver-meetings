@@ -21,7 +21,6 @@
   = label_tag(:within_miles_any, "No limit")
 
 :javascript
-  $(document).ready(function(){
     function locationBoxSet(){
       return $('#is_location_search').closest('.ui-checkbox');
     }
@@ -38,7 +37,17 @@
       return $('#is_location_search[type=checkbox]');
     }
 
+    function showLocationBox(){
+      locationBoxSet().show(250);
+      return true;
+    }
 
+    function showRadiusSelect(){
+      radiusSelect().show(250);
+      return true;
+    }
+
+  $(document).ready(function(){
     locationBoxSet().hide();
     radiusSelect().hide();
     searchBox().keyup( _.debounce(showLocationBox, 250));
@@ -50,16 +59,6 @@
         radiusSelect().hide(250);
       }
     });
-
-    function showLocationBox(){
-      locationBoxSet().show(250);
-      return true;
-    }
-
-    function showRadiusSelect(){
-      radiusSelect().show(250);
-      return true;
-    }
 
     searchBox().blur(function(){
       if( $(this).val() === "" ){

@@ -7,7 +7,7 @@ function checkLocation(cb){
 }
 
 function isLocationSearch(){
-  
+  return locationBox().val() === "true";
 }
 
 $(document).ready(function(){
