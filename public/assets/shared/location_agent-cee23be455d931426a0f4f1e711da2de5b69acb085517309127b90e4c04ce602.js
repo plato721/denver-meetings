@@ -28,7 +28,7 @@ function storeLocation(data){
 }
 
 function isLocationSearch(){
-  return ( locationBox().val() === 'true' )
+  return locationBox().is(':checked');
 }
 
 $(document).ready(function(){
