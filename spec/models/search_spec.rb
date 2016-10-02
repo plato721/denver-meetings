@@ -15,7 +15,7 @@ RSpec.describe Search do
   it "finds by location" do
     search = Search.new({lat: 39.740132,
                          lng: -104.962323,
-                         here: true})
+                         is_location_search: true})
 
     closest_meeting = search.results.first.last.first
     # (first group, associated meetings, first of the associated meetings)
@@ -23,18 +23,9 @@ RSpec.describe Search do
   end
 
   it "finds by group name free text" do
-    search = Search.create(group_text: "jojo")
+    search = Search.create(free: "jojo")
 
     expected = Meeting.second.group_name
-    actual = search.results.first.last.first.group_name
-
-    expect(actual).to eq(expected)
-  end
-
-  it "finds by city name free text" do
-    search = Search.create(city_text: "xyzp")
-
-    expected = Meeting.third.group_name
     actual = search.results.first.last.first.group_name
 
     expect(actual).to eq(expected)

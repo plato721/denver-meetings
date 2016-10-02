@@ -1,9 +1,15 @@
 class DistanceMeetings
   include Enumerable
-  attr_reader :meeting_tuples
+  attr_reader :meeting_tuples, :radius
 
-  def initialize(meetings_with_distance)
+  def initialize(meetings_with_distance, radius=nil)
     @meeting_tuples = meetings_with_distance
+    set_radius(radius)
+  end
+
+  def set_radius(radius)
+    return if radius == "any" || !radius
+    @radius = radius.to_i
   end
 
   def distance_intervals
@@ -36,8 +42,16 @@ class DistanceMeetings
     end
   end
 
+  def limit_by_radius(meetings)
+    return meetings if !radius
+    meetings.select do |tuple|
+      tuple.last < radius
+    end
+  end
+
   def list
-    display_meetings = create_distance_displayable(meeting_tuples)
+    tuples = limit_by_radius(meeting_tuples)
+    display_meetings = create_distance_displayable(tuples)
     display_groups = display_grouped_distance(display_meetings)
   end
 

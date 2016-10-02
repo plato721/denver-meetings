@@ -9,3 +9,6 @@
   %body
     #p1{"data-role" => "page", "data-theme" => "b"}
       = yield
+
+- if Rails.env.production?
+  = javascript_include_tag Rails.root.join('app/assets/javascripts/shared/analytics_init.js')

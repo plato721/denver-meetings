@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount MagicLamp::Genie, at: "/magic_lamp" if defined?(MagicLamp)
+
   root to: 'welcome#index'
   get "faq", to: "welcome#faq"
   get "about", to: "welcome#about"
@@ -15,6 +17,7 @@ Rails.application.routes.draw do
         get 'results', to: "search#new"
         get 'here-and-now', to: "search#here_and_now"
         get 'get-new-options', to: "search#get_new_options"
+        post 'free_search', to: "search#free_search"
       end
     end
 
@@ -30,4 +33,5 @@ Rails.application.routes.draw do
   end
 
   get '403', to: 'error#unauthorized', as: "unauthorized"
+
 end

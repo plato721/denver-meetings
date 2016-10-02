@@ -2,123 +2,69 @@
 %div{"data-role" => "header"}
   %h1 New Search
 %div{"data-role" => "content", :role => "main"}
-  = form_tag(mobile_search_index_path, method: :post, remote: true, id: "mobile_search_form") do
-    = render partial: "location"
+  = form_tag("#", id: "mobile_search_form") do
+    = render 'search_box'
     = render partial: "day_time"
     = render partial: "group"
-    = render partial: "open_closed"
-    = render partial: "special_focus"
-    = render partial: "access"
-    = render partial: "language"
-    - search_text = "Show #{pluralize(@options.count, "meetings")}"
-    = button_to search_text, mobile_search_index_path, {:method => :post, :class => "meeting-search-button", "data-role" => "button", "data-icon" => "arrow-r", "data-iconpos" => "right", "rel" => "external"}
-  %button{ "class" => "meeting-search-hot-button", "data-role" => "button", "data-icon" => "arrow-r", "data-iconpos" => "right", "id" => "one-time" }
-    = "Quick Search (Upcoming Nearby)"
+    = render partial: "location"
+    .collapsible-set
+      %div{"data-collapsed-icon" => "carat-d", "data-expanded-icon" => "carat-u",
+      "data-role" => "collapsible", "data-iconpos" => "right"}
+        %h3{:class => "sub-heading"}
+          More Options
+        = render partial: "open_closed"
+        = render partial: "special_focus"
+        = render partial: "access"
+        = render partial: "language"
+    = button_to "Search", "#", { :class => "meeting-search-button", "data-role" => "button", "data-icon" => "arrow-r", "data-iconpos" => "right", "rel" => "external" }
 = render "footer"
+= javascript_include_tag Rails.root.join('app/assets/javascripts/shared/location_agent.js')
 
 :javascript
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  function googleMapsKey(){
+    var key = "#{ENV['google_maps']}";
+    return key;
+  }
 
-  ga('create', 'UA-82510602-1', 'auto');
-  ga('send', 'pageview');
-  //end google anal
+  function searchFormElement(){
+    return $('#mobile_search_form');
+  }
+
+  function getFormValues(){
+    return searchFormElement().serialize();
+  }
+
+  function submitFormUrl(){
+    var url = "#{mobile_search_index_path}";
+    return url;
+  }
+
+  function submitForm(){
+    var url = submitFormUrl();
+    $.ajax({
+      url : url,
+      response : 'script',
+      data : getFormValues(),
+      method : 'post'
+    });
+  }
 
   history.pushState("new_search", "New Search", "new");
 
   function main(){
 
+    $('#mobile_search_form').submit(function(e){
+      checkLocation(submitForm);
+      e.preventDefault();
+      return false;
+    });
+
     var submitButton = $('[type="submit"]');
-    $(".city-text, .group-text").on("click", function() {
-      if ($(this).val() == "(Optional search text)"){
-          $(this).val("")
-        }
-    });
 
-    $('.group-text').on("blur", function(){
-      if ( $(this).val().length > 0 ){
-        if ( $('#group_name').parent().css('display') !== 'none' ){
-          $('#group_name').parent().toggle('hidden');
-        }
-      }
-    });
-
-    $('.city-text').on("blur", function(){
-      if ( $(this).val().length > 0 ){
-        if( $('.here-box').parent().css('display') !== 'none' ){
-          $('.here-box').parent().toggle('hidden');
-        }
-        if( $('#city-button').parent().css('display') !== 'none' ){
-          $('#city-button').parent().toggle('hidden');
-        }
-      }
-    });
-
-    $(".meeting-search-hot-button").on("click", function(){
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-        var pos = {
-          "lat": position.coords.latitude,
-          "lng": position.coords.longitude
-        };
-
-        var createUrl = '#{here_and_now_mobile_search_index_path(
-          lat: "__LAT__", lng: "__LNG__", format: :js)}';
-        createUrl = createUrl.replace("__LAT__", pos["lat"]).replace("__LNG__", pos["lng"]);
-
-        $.getScript(createUrl);
-        return false;
-      });
-      } else {
-        alert("Geolocation cancelled or unsupported");
-        return false;
-       }
-    });
-
-    var hereBox = $('input[name="here"]');
-    // $('.here-box').closest('[data-role="controlgroup"]').on("click", function(){
-    hereBox.change(function(){
-      if ( !hereBox.val()){ return; }
-
-      submitButton.button('disable'); //wait for lat and lng
-      $('#city-button').toggle('hidden');
-      $('#city_text').parent().toggle('hidden');
-
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-        var pos = {
-          "lat": position.coords.latitude,
-          "lng": position.coords.longitude
-        };
-        $(".main-lat").val(pos["lat"]);
-        $(".main-lng").val(pos["lng"]);
-        // console.log("lat is: " + pos["lat"] + " lng is: " + pos["lng"]);
-        submitButton.button('enable');
-      });
-      } else {
-        submitButton.button('enable');
-      }
-    }); //here-box on click (proximity without here and now)
-
-    $('#city').change(function(){
-      if( $('#city').val() !== "any" ){
-        if( $('.here-box').parent().css('display') !== 'none' ){
-          $('.here-box').parent().toggle('hidden');
-        }
-        if( $('#city_text').parent().css('display') !== 'none' ){
-          $('#city_text').parent().toggle('hidden');
-        }
-      } else {
-        if( $('.here-box').parent().css('display') === 'none' ){
-          $('.here-box').parent().toggle('hidden');
-        }
-        if( $('#city_text').parent().css('display') === 'none' ){
-          $('#city_text').parent().toggle('hidden');
-        }
-      }
-    });
+    // why must i hack so
+    setTimeout(function(){
+      $('.sub-heading a').css('text-align', 'center');
+    }, 0);
 
     ////////////////////////////////
     //      Menu Controller        //

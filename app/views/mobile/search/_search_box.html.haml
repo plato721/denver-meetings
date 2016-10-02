@@ -1,0 +1,71 @@
+= text_field_tag :free, "", { :placeholder => "Zip, City, Group Name...", 'data-icon' => 'search', 'type' => 'search', :class => "ui-icon-search free-text" }
+
+= check_box_tag(:is_location_search, true, false)
+= label_tag :is_location_search, "This is a location"
+
+= hidden_field_tag(:lat)
+= hidden_field_tag(:lng)
+
+%fieldset{"data-mini" => "true", "data-role" => "controlgroup", "data-type" => "horizontal", class: "within-miles"}
+  %legend
+    = "Show meetings within:"
+  = radio_button_tag(:within_miles, "1")
+  = label_tag(:within_miles_1, "1 mile")
+  = radio_button_tag(:within_miles, "2")
+  = label_tag(:within_miles_2, "2 miles")
+  = radio_button_tag(:within_miles, "5", true)
+  = label_tag(:within_miles_5, "5 miles")
+  = radio_button_tag(:within_miles, "10")
+  = label_tag(:within_miles_10, "10 miles")
+  = radio_button_tag(:within_miles, "any")
+  = label_tag(:within_miles_any, "No limit")
+
+:javascript
+    function locationBoxSet(){
+      return $('#is_location_search').closest('.ui-checkbox');
+    }
+
+    function searchBox(){
+      return $('input[name="free"]');
+    }
+
+    function radiusSelect(){
+      return $('fieldset.within-miles');
+    }
+
+    function locationBox(){
+      return $('#is_location_search[type=checkbox]');
+    }
+
+    function showLocationBox(){
+      locationBoxSet().show(250);
+      return true;
+    }
+
+    function showRadiusSelect(){
+      radiusSelect().show(250);
+      return true;
+    }
+
+  $(document).ready(function(){
+    locationBoxSet().hide();
+    radiusSelect().hide();
+    searchBox().keyup( _.debounce(showLocationBox, 250));
+
+    locationBox().change(function(){
+      if(this.checked){
+        showRadiusSelect();
+      } else {
+        radiusSelect().hide(250);
+      }
+    });
+
+    searchBox().blur(function(){
+      if( $(this).val() === "" ){
+        locationBoxSet().hide(250);
+        radiusSelect().hide(250);
+      }
+    });
+
+
+  }); // ready

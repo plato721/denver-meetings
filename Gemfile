@@ -39,12 +39,16 @@ group :development, :test do
   gem 'launchy'
   gem 'simplecov', require: false
   gem 'factory_girl_rails', '~> 4.0'
+  gem 'teaspoon'
+  gem 'teaspoon-mocha'
+  gem 'magic_lamp'
 end
 
 group :test do
   gem 'vcr'
   gem 'database_cleaner'
   gem 'webmock'
+  gem 'selenium-webdriver'
 end
 
 group :development do

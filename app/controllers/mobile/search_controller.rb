@@ -1,4 +1,5 @@
 class Mobile::SearchController < ApplicationController
+  protect_from_forgery except: :here_and_now
   layout "mobile"
 
   def new
@@ -10,6 +11,7 @@ class Mobile::SearchController < ApplicationController
     @meetings = search.results
 
     respond_to do |format|
+      format.html { render 'index' }
       format.js { render 'index' }
     end
   end
@@ -27,6 +29,13 @@ class Mobile::SearchController < ApplicationController
   def create
     search = Search.create(search_params)
     @meetings = search.results
+    if search.errors
+      # the error will be to "free." won't make any sense
+      # to the user to include this attribute name
+      flash[:error] = search.errors.messages.map do |error_group|
+        error_group.last.join("\n")
+      end.join("\n")
+    end
 
     respond_to do |format|
       format.js { render 'index' }
@@ -35,6 +44,7 @@ class Mobile::SearchController < ApplicationController
 
   private
   def search_params
+    # TODO - use strong params
     {}.merge(params.except("data-ajax", 
       :method, :controller, :action, :authenticity_token, :utf8,
       :_, :format))

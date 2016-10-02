@@ -1,17 +1,31 @@
 .container-fluid.welcome-header
   .col-sm-2
   .col-sm-8
-    .row.header-text
-      %h1.pull-right Denver Meetings
     .row.meeting-button-row
-      = link_to "Find a Meeting >", new_mobile_search_path, {class: "btn btn-lg btn-default center-block find-meetings-button", id: "meetings-button"}
+      = link_to "Find an AA Meeting >", new_mobile_search_path, { class: "btn btn-lg btn-default center-block find-meetings-button", id: "meetings-button" }
+      = link_to "Upcoming Nearby Meetings >", '', { class: "btn btn-lg btn-default center-block find-meetings-button", id: "big-here-button" }
   .col-sm-2
 
 :javascript
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-82510602-1', 'auto');
-  ga('send', 'pageview');
+  $("#big-here-button").click(function(e){
+    e.preventDefault();
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = {
+        "lat": position.coords.latitude,
+        "lng": position.coords.longitude
+      };
+
+      var createUrl = '#{here_and_now_mobile_search_index_path(
+       lat: "__LAT__", lng: "__LNG__", format: :html)}';
+      createUrl = createUrl.replace("__LAT__", pos["lat"]).replace("__LNG__", pos["lng"]);
+
+      window.location = createUrl;
+      return false;
+    });
+    } else {
+      alert("Geolocation cancelled or unsupported");
+      return false;
+     }
+  });

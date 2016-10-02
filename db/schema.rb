@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160703132325) do
+ActiveRecord::Schema.define(version: 20161001195456) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -82,27 +82,26 @@ ActiveRecord::Schema.define(version: 20160703132325) do
 
   create_table "searches", force: :cascade do |t|
     t.citext  "free"
-    t.string  "city",         default: "any"
-    t.string  "group_name",   default: "any"
-    t.string  "day",          default: "any"
-    t.string  "time",         default: "any"
-    t.string  "open",         default: "any"
-    t.boolean "here_and_now", default: false
-    t.decimal "lat",          default: 39.742043
-    t.decimal "lng",          default: -104.991531
-    t.string  "city_text",    default: "any"
-    t.string  "group_text",   default: "any"
-    t.string  "women",        default: "show"
-    t.string  "men",          default: "show"
-    t.string  "youth",        default: "show"
-    t.string  "gay",          default: "show"
-    t.string  "access",       default: "show"
-    t.string  "non_smoking",  default: "show"
-    t.string  "sitter",       default: "show"
-    t.string  "spanish",      default: "show"
-    t.string  "polish",       default: "show"
-    t.string  "french",       default: "show"
-    t.boolean "here",         default: false
+    t.string  "city",               default: "any"
+    t.string  "group_name",         default: "any"
+    t.string  "day",                default: "any"
+    t.string  "time",               default: "any"
+    t.string  "open",               default: "any"
+    t.boolean "here_and_now",       default: false
+    t.decimal "lat",                default: 39.742043
+    t.decimal "lng",                default: -104.991531
+    t.string  "women",              default: "show"
+    t.string  "men",                default: "show"
+    t.string  "youth",              default: "show"
+    t.string  "gay",                default: "show"
+    t.string  "access",             default: "show"
+    t.string  "non_smoking",        default: "show"
+    t.string  "sitter",             default: "show"
+    t.string  "spanish",            default: "show"
+    t.string  "polish",             default: "show"
+    t.string  "french",             default: "show"
+    t.boolean "is_location_search", default: false
+    t.decimal "within_miles"
   end
 
   create_table "users", force: :cascade do |t|

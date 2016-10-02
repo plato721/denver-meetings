@@ -61,7 +61,7 @@ class SearchOptions
 
   def cities
     @cities ||= begin
-      any = ["--All Cities--", "any"]
+      any = ["City", "any"]
       self.cities_found.prepend(any)
     end
   end
@@ -91,7 +91,7 @@ class SearchOptions
   end
 
   def any_time_range
-    any = ["--Any Time--", "any"]
+    any = ["Time", "any"]
   end
 
   def possible_time_ranges
@@ -159,7 +159,7 @@ class SearchOptions
   end
 
   def names_select
-    additional = ["--All Group Names--", "any"]
+    additional = ["Group", "any"]
     meeting_names.zip(meeting_names).prepend(additional)
   end
 
@@ -181,7 +181,7 @@ class SearchOptions
 
   def days
     @days ||= begin
-      any = ["--Any Day--", "any"]
+      any = ["Day", "any"]
       today = ["Today (#{self.today})", "#{self.today}"] if self.today_included?
       days_found_sorted.zip(days_found_sorted).prepend(any, today)
     end
