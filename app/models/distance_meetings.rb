@@ -50,7 +50,7 @@ class DistanceMeetings
   end
 
   def list
-    tuples = limit_by_radius(meeting_tuples) if radius
+    tuples = limit_by_radius(meeting_tuples)
     display_meetings = create_distance_displayable(tuples)
     display_groups = display_grouped_distance(display_meetings)
   end
