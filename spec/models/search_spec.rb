@@ -15,7 +15,7 @@ RSpec.describe Search do
   it "finds by location" do
     search = Search.new({lat: 39.740132,
                          lng: -104.962323,
-                         here: true})
+                         is_location_search: true})
 
     closest_meeting = search.results.first.last.first
     # (first group, associated meetings, first of the associated meetings)
