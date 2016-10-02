@@ -18,7 +18,7 @@
         = render partial: "language"
     = button_to "Search", "#", { :class => "meeting-search-button", "data-role" => "button", "data-icon" => "arrow-r", "data-iconpos" => "right", "rel" => "external" }
 = render "footer"
-= javascript_include_tag Rails.root.join('app/assets/javascripts/shared/location_agent.js')
+= javascript_include_tag 'shared/location_agent.js'
 
 :javascript
   function googleMapsKey(){
