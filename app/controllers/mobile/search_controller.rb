@@ -29,6 +29,13 @@ class Mobile::SearchController < ApplicationController
   def create
     search = Search.create(search_params)
     @meetings = search.results
+    if search.errors
+      # the error will be to "free." won't make any sense
+      # to the user to include this attribute name
+      flash[:error] = search.errors.messages.map do |error_group|
+        error_group.last.join("\n")
+      end.join("\n")
+    end
 
     respond_to do |format|
       format.js { render 'index' }

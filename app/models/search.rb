@@ -7,14 +7,29 @@ class Search < ActiveRecord::Base
   end
 
   def distance_search?
-    self.here || self.here_and_now
+    self.is_location_search || self.here_and_now
   end
 
   def scrub_text
     self.free = "" if self.free.blank?
   end
 
+  def denver_center
+    [39.742043, -104.991531]
+  end
+
+  def set_distance_defaults
+    if( !self.lat || !self.lng )
+      self.lat = denver_center.first
+      self.lng = denver_center.last
+      self.errors.add :free,
+        "Unable to find location #{free}. Zip codes searches are most reliable."
+    end
+    self.free = ""
+  end
+
   def distance_results
+    set_distance_defaults
     return HereAndNow.new(self.to_h).search if self.here_and_now
     distance_with(raw_meetings.geocoded)
   end
