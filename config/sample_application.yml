@@ -1,0 +1,20 @@
+# To use, change name to application.yml and populate
+# with your keys. Do not check into your repo. Lock
+# the keys down to your domain, especially the client
+# key, as it will be sent in client-side javascript.
+#
+# The local app should pick these up on their own thanks
+# to Figaro. Refre to the docs for how to use with Heroku,
+# etc. Or just rip out Figaro and use environment variables
+# by themselves or some other solution.
+#
+# google_api_key_server: "some_key"
+# google_api_key_client: "another_key"
+
+# development:
+#   google_api_key_server: "some_key"
+#   google_api_key_client: "another_key"
+
+# test:
+#   google_api_key_server: "some_key"
+#   google_api_key_client: "another_key"
