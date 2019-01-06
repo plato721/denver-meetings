@@ -2,8 +2,7 @@
 
 #### Links
 
-* [GitHub URL](https://github.com/plato721/denver-meetings)
-* [Production](http://denvermeetings.herokuapp.com)
+* [Production](http://denvermeetings.org)
 
 #### Description
 
