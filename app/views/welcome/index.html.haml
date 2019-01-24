@@ -15,6 +15,14 @@
     upcomingSubmit(pos);
   }
 
+  function apiLocateSuccess(position){
+    var pos = {
+      "lat": position.location.lat,
+      "lng": position.location.lng
+    }
+    upcomingSubmit(pos);
+  }
+
   function geoFailure(){
     alert("Geolocation cancelled or errored: using Denver city center");
       var pos = {
@@ -33,12 +41,19 @@
     return false;
   }
 
+  function apiGeoLocate() {
+    var url = 'https://www.googleapis.com/geolocation/v1/geolocate?key=' +
+      "#{ENV['google_api_key_client']}";
+    $.post(url, apiLocateSuccess)
+     .fail(geoFailure);
+  }
+
   $(document).ready( function(){
     $("#big-here-button").click(function(e){
       e.preventDefault();
       if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(geoSuccess, geoFailure);
+        navigator.geolocation.getCurrentPosition(geoSuccess, apiGeoLocate);
         return false;
-      } else { geoFailure(); }
+      } else { apiGeoLocate(); }
     });
   }() );
