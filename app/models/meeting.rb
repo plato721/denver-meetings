@@ -41,10 +41,16 @@ class Meeting < ActiveRecord::Base
     @geocoder ||= Geocoder.search([self.lat, self.lng]).first
   end
 
+  def address_1_from(geocoder, address_1)
+    return address_1 unless geocoder.house_number && geocoder.street
+
+    "#{geocoder.house_number} #{geocoder.street}"
+  end
+
   def address_from_coords
     return if !self.geocoder.present?
     self.zip = self.geocoder.postal_code
-    self.address_1 = self.geocoder.street_address
+    self.address_1 = address_1_from(self.geocoder, self.address_1)
   end
 
   def self.by_group_name(group_name)
