@@ -1,4 +1,4 @@
-class AddDefaultsToSearch < ActiveRecord::Migration
+class AddDefaultsToSearch < ActiveRecord::Migration[4.2]
   def change
     change_column :searches, :city, :string, default: "any" 
     change_column :searches, :group_name, :string, default: "any" 

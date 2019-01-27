@@ -1,4 +1,4 @@
-class CreateRawMeetings < ActiveRecord::Migration
+class CreateRawMeetings < ActiveRecord::Migration[4.2]
   def change
     create_table :raw_meetings do |t|
       t.string :day

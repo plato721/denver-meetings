@@ -1,4 +1,4 @@
-class ChangeFlagsToBools < ActiveRecord::Migration
+class ChangeFlagsToBools < ActiveRecord::Migration[4.2]
   def change
     add_column :meetings, :closed, :boolean, default: false
     add_column :meetings, :men, :boolean, default: false

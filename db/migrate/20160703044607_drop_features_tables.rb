@@ -1,4 +1,4 @@
-class DropFeaturesTables < ActiveRecord::Migration
+class DropFeaturesTables < ActiveRecord::Migration[4.2]
   def change
     drop_table :features
     drop_table :formats

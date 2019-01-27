@@ -34,11 +34,12 @@ RSpec.describe MeetingsCreator do
     #   of raw meetings will be first_or_create for every meeting
     #   on the target scraping site.
     target = @raw_meetings.to_a.pop
-    @creator = MeetingsCreator.new(@raw_meetings, 0.0)
-    @creator.run_updates
+    raw_meetings = @raw_meetings.to_a.select { |rm| rm.id != target.id }
+    creator = MeetingsCreator.new(raw_meetings, 0.0)
+    creator.run_updates
 
-    expect(@creator.deleted.count).to eq(1)
-    expect(@creator.deleted.first.raw_meeting).to eq(target)
+    expect(creator.deleted.count).to eq(1)
+    expect(creator.deleted.first.raw_meeting).to eq(target)
     expect(Meeting.where(visible: true).count).to eq(initial_count - 1)
   end
 
