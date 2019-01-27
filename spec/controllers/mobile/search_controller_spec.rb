@@ -14,14 +14,18 @@ RSpec.describe Mobile::SearchController, type: :controller do
   end
 
   context "#get_new_options" do
+    let(:params) do
+      { source: "day", options: "Monday", format: :json }
+    end
+
     it "responds" do
-      get :get_new_options, { source: "day", options: "Monday", format: :json }
+      get :get_new_options, params: params
 
       expect(response).to have_http_status(200)
     end
 
     it "get new json-ready options" do
-      get :get_new_options, { source: "day", options: "Monday", format: :json }
+      get :get_new_options, params: params
 
       result = assigns(:options).as_json.with_indifferent_access
 

@@ -1,4 +1,4 @@
-class CreateMeetingFormats < ActiveRecord::Migration
+class CreateMeetingFormats < ActiveRecord::Migration[4.2]
   def change
     create_table :meeting_formats do |t|
       t.integer :meeting_id

@@ -1,4 +1,4 @@
-class ChangeGroupNameToCiText < ActiveRecord::Migration
+class ChangeGroupNameToCiText < ActiveRecord::Migration[4.2]
   def change
     enable_extension 'citext'
 

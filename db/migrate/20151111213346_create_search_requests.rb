@@ -1,4 +1,4 @@
-class CreateSearchRequests < ActiveRecord::Migration
+class CreateSearchRequests < ActiveRecord::Migration[4.2]
   def change
     create_table :search_requests do |t|
       t.string :text

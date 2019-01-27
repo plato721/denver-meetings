@@ -1,4 +1,4 @@
-class AddColumnsToSearch < ActiveRecord::Migration
+class AddColumnsToSearch < ActiveRecord::Migration[4.2]
   def change
     add_column :searches, :city_text, :string
     add_column :searches, :group_text, :string

@@ -1,4 +1,4 @@
-class CreateFoci < ActiveRecord::Migration
+class CreateFoci < ActiveRecord::Migration[4.2]
   def change
     create_table :foci do |t|
       t.string :code
