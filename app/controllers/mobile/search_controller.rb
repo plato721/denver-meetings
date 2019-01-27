@@ -44,17 +44,32 @@ class Mobile::SearchController < ApplicationController
 
   private
   def search_params
-    # TODO - use strong params
-    {}.merge(params.except("data-ajax", 
-      :method, :controller, :action, :authenticity_token, :utf8,
-      :_, :format))
+    params.permit(permitted_params)
   end
 
   def here_and_now_params
-    { lat: params[:lat],
-      lng: params[:lng],
-      here_and_now: true
-    }
+    params.permit(:lat, :lng).merge(here_and_now: true)
   end
 
+  def permitted_params
+    [:free,
+      :lat,
+      :lng,
+      :within_miles,
+      :day,
+      :time,
+      :group_name,
+      :city,
+      :open,
+      :men,
+      :women,
+      :youth,
+      :gay,
+      :access,
+      :non_smoking,
+      :sitter,
+      :spanish,
+      :polish,
+      :french]
+  end
 end
