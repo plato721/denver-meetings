@@ -66,7 +66,7 @@ class MeetingCreator
   end
 
   def address_1
-    raw_notes ? raw_notes.pre_match.to_s.strip! : raw.address
+    raw_notes ? raw_notes.pre_match.to_s.strip : raw.address
   end
 
   def address_2
