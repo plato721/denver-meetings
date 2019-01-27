@@ -34,7 +34,7 @@ class HereAndNow
   end
 
   def morning_meetings_needed?(now_meetings)
-    now_meetings.count > 10 || TimeConverter.now < 19
+    now_meetings.count < 10 && TimeConverter.now < 19
   end
 
   def add_morning_meetings_if_necessary(now_meetings)
