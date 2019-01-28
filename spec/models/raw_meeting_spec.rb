@@ -17,25 +17,6 @@ RSpec.describe RawMeeting do
     @raw_stream = @raw_attributes.values
   end
 
-  context "#self.compute_checksum" do
-    it "computes checksum based on all raw values" do
-      #Meeting name is not guaranteed to be unique. Meeting name and location
-      # are not unique as some meeting are throughout the week. Check uniqueness
-      # from all values with a checksum
-      checksum = RawMeeting.compute_checksum(@raw_stream)
-
-      expect(checksum.is_a?(String)).to be_truthy
-      expect(checksum.empty?).to be_falsey
-    end
-
-    it "computes the same checksum for the same meeting" do
-      checksum = RawMeeting.compute_checksum(@raw_stream)
-      recalc = RawMeeting.compute_checksum(@raw_stream)
-
-      expect(checksum).to eq(recalc)
-    end
-  end
-
   context "Using #self.add_from" do
     before(:each) do
       RawMeeting.add_from(@raw_stream)
