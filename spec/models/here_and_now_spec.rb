@@ -15,5 +15,18 @@ RSpec.describe HereAndNow do
     expect(meetings.first.first).to eq("Within 1 mile")
     expect(meetings.first.second.first.group_name).to eq("Daily Serenity")
   end
-  
+
+  context "morning meetings" do
+    # TODO
+    # it "no morning meetings are added if it's earlier than 7p" do
+    #   allow(TimeConverter).to receive(:now_raw).and_return(Time.new(2015,11,17,18,59,0))
+
+    #   # create some morning meetings. ensure they aren't in the results
+    #   here_and_now = HereAndNow.new({lat: @lat, lng: @lng})
+
+    #   expect(here_and_now.morning_meetings_needed?).to be_falsey
+    # end
+
+    # then another test here ensuring the meetings are added
+  end
 end
