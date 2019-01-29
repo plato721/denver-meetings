@@ -16,7 +16,7 @@ class ExtractPhone
     end
 
     def phone_regex
-      /\d{3}-(\d{3})?-\d{4}/
+      /\d{3}(-\d{3})?-\d{4}/
     end
 
     def phone_and_leading_comma_regex
