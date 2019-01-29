@@ -54,11 +54,14 @@ class MeetingCreator
   end
 
   def notes
-    notes ||= raw_notes.to_s.gsub(/[(|)]/, "")
+    notes ||= raw_notes.gsub(/[(|)]/, "")
   end
 
   def raw_notes
-    raw_notes ||= self.raw.address.match(/\(.+\)/)
+    raw_notes ||= begin
+      notes_match = self.raw.address.match(/\(.+\)/)
+      notes_match ? notes_match.to_s : ""
+    end
   end
 
   def codes
@@ -66,15 +69,25 @@ class MeetingCreator
   end
 
   def address_1
-    raw_notes ? raw_notes.pre_match.to_s.strip : raw.address
+    raw.address.gsub(raw_notes, "").gsub(raw_phone, "")
   end
 
   def address_2
     #logic here
   end
 
+  def raw_phone
+    phone_match = raw.address.match(/(, )?\d{3}(-\d{3})?-\d{4}/)
+    phone_match ? phone_match[0] : ""
+  end
+
+  def remove_leading_comma(raw_phone)
+    has_leading_comma = raw_phone.match(/^,( )?/)
+    has_leading_comma ? has_leading_comma.post_match : raw_phone
+  end
+
   def phone
-    #logic here
+    remove_leading_comma(raw_phone)
   end
 
   def district
