@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.3'
+ruby '2.3.0'
 
 gem 'rails'
 gem 'haml'
@@ -43,6 +43,7 @@ group :development, :test do
   gem 'teaspoon'
   gem 'teaspoon-mocha'
   gem 'magic_lamp'
+  gem 'rubocop'
 end
 
 group :test do
