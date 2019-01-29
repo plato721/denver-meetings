@@ -41,16 +41,8 @@ class Meeting < ActiveRecord::Base
     @geocoder ||= Geocoder.search([self.lat, self.lng]).first
   end
 
-  def address_1_from(geocoder, address_1)
-    return address_1 unless geocoder.house_number && geocoder.street
-
-    "#{geocoder.house_number} #{geocoder.street}"
-  end
-
   def address_from_coords
-    return if !self.geocoder.present?
-    self.zip = self.geocoder.postal_code
-    self.address_1 = address_1_from(self.geocoder, self.address_1)
+    self.zip = self.geocoder.postal_code if self.geocoder.present?
   end
 
   def self.by_group_name(group_name)
@@ -150,4 +142,22 @@ class Meeting < ActiveRecord::Base
     scope = by_attributes(attributes, scope).distinct
   end
 
+  # Find meetings whose address_1 doesn't jive with the corresponding
+  # raw meeting's address field
+  def self.bad_address_1_meetings
+    meetings = Meeting.includes(:raw_meeting)
+                      .where.not(deleted: true)
+                      .where(visible: true)
+    bad_meetings = meetings.select do |meeting|
+      street_address = meeting.address_1
+      raw_address = meeting.raw_meeting.address
+      match_on = /^#{street_address[0..4]}/ rescue nil
+      matches = raw_address.match(match_on) rescue false
+      !matches
+    end
+
+    bad_meetings.each do |bad_meeting|
+      Rails.logger.warn { "Bad meeting found!\n id: #{bad_meeting.id} group_name: #{bad_meeting.group_name} address_1: #{bad_meeting.address_1} raw_address: #{bad_meeting.raw_meeting.address}" }
+    end
+  end
 end

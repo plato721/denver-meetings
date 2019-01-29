@@ -17,6 +17,8 @@ namespace :daccaa do
     scraper = ScrapeDaccaa.scrape(force)
     return no_updates_needed if !scraper.raw_meetings
 
+    # As long as force was set to true, or if the timestamp applies,
+    # we get here with raw meetings --> all of them for everything
     creator = MeetingsCreator.new(scraper.raw_meetings)
     creator.run_updates
   end
