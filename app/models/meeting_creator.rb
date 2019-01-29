@@ -69,7 +69,7 @@ class MeetingCreator
   end
 
   def address_1
-    raw.address.gsub(raw_notes, "").gsub(raw_phone, "")
+    raw.address.gsub(raw_notes, "").gsub(raw_phone, "").strip
   end
 
   def address_2
