@@ -12,5 +12,4 @@ describe ExtractPhone do
     expect(meeting.phone).to eql('303-420-6560')
     expect(meeting.changed?).to be_falsey
   end
-
 end
