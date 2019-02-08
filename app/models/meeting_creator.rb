@@ -69,11 +69,19 @@ class MeetingCreator
   end
 
   def address_1
-    raw.address.gsub(raw_notes, "").gsub(raw_phone, "").strip
+    raw.address.gsub(raw_notes, "")
+               .gsub(raw_phone, "")
+               .gsub(raw_unit, "")
+               .strip
   end
 
   def address_2
-    #logic here
+    remove_leading_comma(raw_unit)
+  end
+
+  def raw_unit
+    unit_match = raw.address.match(/(, )?(unit).{0,1}\d+/i)
+    unit_match ? unit_match[0] : ""
   end
 
   def raw_phone

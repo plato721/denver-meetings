@@ -65,7 +65,11 @@ RSpec.describe MeetingCreator do
     end
 
     it "parses address_1" do
-      expect(@mc.address_1).to eql("8250 W. 80th Ave. Unit 12")
+      expect(@mc.address_1).to eql("8250 W. 80th Ave.")
+    end
+
+    it "parses address_2" do
+      expect(@mc.address_2).to eql("Unit 12")
     end
 
     it "parses notes" do
@@ -109,7 +113,11 @@ RSpec.describe MeetingCreator do
     end
 
     it "parses address_1" do
-      expect(@mc.address_1).to eql("15210 E 6th Ave, Unit 1")
+      expect(@mc.address_1).to eql("15210 E 6th Ave")
+    end
+
+    it "parses address_2" do
+      expect(@mc.address_2).to eql("Unit 1")
     end
 
     it "parses notes" do
