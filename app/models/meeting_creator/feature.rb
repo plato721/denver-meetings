@@ -1,5 +1,4 @@
-class Feature
-  
+class MeetingCreator::Feature
   def self.is_asl?(codes)
     codes =~ /.*ASL.*/
   end

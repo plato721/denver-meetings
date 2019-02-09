@@ -53,6 +53,11 @@ RSpec.describe MeetingCreator do
     it "parses notes" do
       expect(@mc.notes).to eql("Ch bsmt #104")
     end
+
+    it "is men's" do
+      expect(@mc.build_attributes[:men]).to be_truthy
+      expect(@mc.build_attributes[:gay]).to be_falsey
+    end
   end
 
   context "with phone number" do

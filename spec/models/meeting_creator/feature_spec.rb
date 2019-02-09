@@ -1,13 +1,13 @@
 require 'rails_helper'
 
-RSpec.describe Feature, type: :model do
+RSpec.describe MeetingCreator::Feature, type: :model do
   include_context "codes"
 
   it "has all the features" do
 
     features = [:asl, :accessible, :non_smoking, :sitter]
 
-    found_features = Feature.get_features("")
+    found_features = described_class.get_features("")
 
     features.each do |feature|
       expect(found_features.include? feature).to be_truthy
@@ -18,7 +18,7 @@ RSpec.describe Feature, type: :model do
 
     it "finds ASL" do
       raw_code = "ASL"
-      features = Feature.get_features(raw_code)
+      features = described_class.get_features(raw_code)
 
       expect(features.delete :asl).to be_truthy
       expect(features.values.reduce(&:|)).to be_falsey
@@ -26,7 +26,7 @@ RSpec.describe Feature, type: :model do
 
     it "finds accessible" do
       raw_code = "*nFrnSp"
-      features = Feature.get_features(raw_code)
+      features = described_class.get_features(raw_code)
 
       expect(features.delete(:accessible)).to be_truthy
       expect(features.delete(:non_smoking)).to be_truthy
@@ -36,7 +36,7 @@ RSpec.describe Feature, type: :model do
 
     it "finds non-smoking" do
       raw_code = "n"
-      features = Feature.get_features(raw_code)
+      features = described_class.get_features(raw_code)
 
       expect(features.delete :non_smoking).to be_truthy
       expect(features.values.reduce(&:|)).to be_falsey
@@ -44,7 +44,7 @@ RSpec.describe Feature, type: :model do
 
     it "does not give non-smoking false positive with Spn" do
       raw_code = "Spn"
-      features = Feature.get_features(raw_code)
+      features = described_class.get_features(raw_code)
 
       expect(features.delete :non_smoking).to be_falsey
       expect(features.values.reduce(&:|)).to be_falsey
@@ -52,7 +52,7 @@ RSpec.describe Feature, type: :model do
 
     it "does not give non-smoking false positive with Frn" do
       raw_code = "Frn"
-      features = Feature.get_features(raw_code)
+      features = described_class.get_features(raw_code)
 
       expect(features.delete :non_smoking).to be_falsey
       expect(features.values.reduce(&:|)).to be_falsey
@@ -60,7 +60,7 @@ RSpec.describe Feature, type: :model do
 
     it "finds sitter" do
       raw_code = "Sit"
-      features = Feature.get_features(raw_code)
+      features = described_class.get_features(raw_code)
 
       expect(features.delete :sitter).to be_truthy
       expect(features.values.reduce(&:|)).to be_falsey
@@ -68,7 +68,7 @@ RSpec.describe Feature, type: :model do
 
     it "finds with other codes" do
       raw_code = "*nFrnSp"
-      features = Feature.get_features(raw_code)
+      features = described_class.get_features(raw_code)
 
       expect(features.delete :accessible).to be_truthy
       expect(features.delete :non_smoking).to be_truthy

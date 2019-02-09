@@ -114,7 +114,7 @@ class SearchOptions
 
   def foci
     @foci ||= begin
-      Focus.focus_methods.select do |focus|
+      MeetingCreator::Focus.focus_methods.select do |focus|
         self.meetings.where(focus => true).exists?
       end.map { |f| f.to_s.titleize }
     end
@@ -122,7 +122,7 @@ class SearchOptions
 
   def languages
     @languages ||= begin
-      Language.language_methods.select do |lang|
+      MeetingCreator::Language.language_methods.select do |lang|
         self.meetings.where(lang => true).exists?
       end.map { |f| f.to_s.titleize }
     end
@@ -130,7 +130,7 @@ class SearchOptions
 
   def formats
     @formats ||= begin
-      Format.format_methods.select do |format|
+      MeetingCreator::Format.format_methods.select do |format|
         self.meetings.where(format => true).exists?
       end.map { |f| f.to_s.titleize }
     end
@@ -138,7 +138,7 @@ class SearchOptions
 
   def features
     @features ||= begin
-      Feature.feature_methods.select do |feature|
+      MeetingCreator::Feature.feature_methods.select do |feature|
         self.meetings.where(feature => true).exists?
       end.map { |f| f.to_s.titleize }
     end

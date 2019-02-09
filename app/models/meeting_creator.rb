@@ -15,7 +15,8 @@ class MeetingCreator
   end
 
   def base_attributes
-    { group_name: group_name,
+    {
+      group_name: group_name,
       day: day,
       address_1: address_1,
       notes: notes,
@@ -24,7 +25,8 @@ class MeetingCreator
       state: "CO",
       closed: closed,
       time: time,
-      raw_meeting: self.raw }
+      raw_meeting: self.raw
+    }
   end
 
   def format_attributes
@@ -103,10 +105,12 @@ class MeetingCreator
   end
 
   def properties_models
-    {Focus => "foci",
-    Format => "formats",
-    Feature => "features",
-    Language => "languages"}
+    {
+      MeetingCreator::Focus => "foci",
+      MeetingCreator::Format => "formats",
+      MeetingCreator::Feature => "features",
+      MeetingCreator::Language => "languages"
+    }
   end
 
   def self.features_classes
@@ -116,5 +120,4 @@ class MeetingCreator
   def get_property_set_for(codes, property)
     property.first.send("get_#{property.last}".to_sym, (codes))
   end
-
 end

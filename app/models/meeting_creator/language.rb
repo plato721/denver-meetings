@@ -1,4 +1,4 @@
-class Language
+class MeetingCreator::Language
   def self.get_languages(codes)
     permitted_languages.each_with_object({}) do |(code, language), results|
       results[language] = codes.include? code
