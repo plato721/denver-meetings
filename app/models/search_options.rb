@@ -42,17 +42,15 @@ class SearchOptions
   end
 
   def open?
-    @open ||= self.meetings.where(closed: [false, nil]).exists?
+    self.meetings.where(closed: [false, nil]).exists?
   end
 
   def closed?
-    @closed ||= self.meetings.where(closed: true).exists?
+    self.meetings.where(closed: true).exists?
   end
 
   def cities_found
-    @cities_found ||= begin
-      self.meetings.pluck(:city).uniq.sort
-    end
+    self.meetings.pluck(:city).uniq.sort
   end
 
   def cities_json
@@ -60,21 +58,17 @@ class SearchOptions
   end
 
   def cities
-    @cities ||= begin
-      any = ["City", "any"]
-      self.cities_found.prepend(any)
-    end
+    any = ["City", "any"]
+    self.cities_found.prepend(any)
   end
 
   def times_found_raw
-    @times_found_raw ||= self.meetings.pluck(:time).uniq.sort
+    self.meetings.pluck(:time).uniq.sort
   end
 
   def times_found
-    @times_found ||= begin
-      times_found_raw.map { |t| TimeConverter.display(t) }
-      .zip(times_found_raw)
-    end
+    times_found_raw.map { |t| TimeConverter.display(t) }
+                   .zip(times_found_raw)
   end
 
   def self.display_range_to_raw
@@ -139,7 +133,7 @@ class SearchOptions
 
   def formats
     format_methods.select do |format|
-        self.meetings.where(format => true).exists?
+      self.meetings.where(format => true).exists?
     end.map { |f| f.to_s.titleize }
   end
 
@@ -154,17 +148,15 @@ class SearchOptions
   end
 
   def times
-    @times ||= [any_time_range, now_time_range] + time_ranges + times_found
+    [any_time_range, now_time_range] + time_ranges + times_found
   end
 
   def meeting_names
-    @names ||= self.meetings.pluck(:group_name).uniq.sort
+    self.meetings.pluck(:group_name).uniq.sort
   end
 
   def meetings_json
-    @meetings_json ||= begin
-      ["any"] + self.meetings.pluck(:group_name).uniq.sort
-    end
+    ["any"] + self.meetings.pluck(:group_name).uniq.sort
   end
 
   def names_select
@@ -173,11 +165,11 @@ class SearchOptions
   end
 
   def days_found
-    @days_found ||= self.meetings.pluck(:day).uniq
+    self.meetings.pluck(:day).uniq
   end
 
   def days_found_sorted
-    @days_found_sorted ||= Day.day_order.keep_if { |day| days_found.include? day }
+    Day.day_order.keep_if { |day| days_found.include? day }
   end
 
   def today_included?
@@ -189,11 +181,9 @@ class SearchOptions
   end
 
   def days
-    @days ||= begin
-      any = ["Day", "any"]
-      today = ["Today (#{self.today})", "#{self.today}"] if self.today_included?
-      days_found_sorted.zip(days_found_sorted).prepend(any, today)
-    end
+    any = ["Day", "any"]
+    today = ["Today (#{self.today})", "#{self.today}"] if self.today_included?
+    days_found_sorted.zip(days_found_sorted).prepend(any, today)
   end
 
 end
