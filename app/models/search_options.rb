@@ -112,36 +112,45 @@ class SearchOptions
     end
   end
 
+  def focus_methods
+    [:men, :women, :gay, :young_people]
+  end
+
   def foci
-    @foci ||= begin
-      MeetingCreator::Focus.focus_methods.select do |focus|
-        self.meetings.where(focus => true).exists?
-      end.map { |f| f.to_s.titleize }
-    end
+    focus_methods.select do |focus|
+      self.meetings.where(focus => true).exists?
+    end.map { |f| f.to_s.titleize }
+  end
+
+  def language_methods
+    [:spanish, :french, :polish]
   end
 
   def languages
-    @languages ||= begin
-      MeetingCreator::Language.language_methods.select do |lang|
-        self.meetings.where(lang => true).exists?
-      end.map { |f| f.to_s.titleize }
-    end
+    language_methods.select do |lang|
+      self.meetings.where(lang => true).exists?
+    end.map { |f| f.to_s.titleize }
+  end
+
+  def format_methods
+    [:speaker, :step, :big_book, :grapevine,
+      :traditions, :candlelight, :beginners]
   end
 
   def formats
-    @formats ||= begin
-      MeetingCreator::Format.format_methods.select do |format|
+    format_methods.select do |format|
         self.meetings.where(format => true).exists?
-      end.map { |f| f.to_s.titleize }
-    end
+    end.map { |f| f.to_s.titleize }
+  end
+
+  def feature_methods
+    [:asl, :accessible, :non_smoking, :sitter]
   end
 
   def features
-    @features ||= begin
-      MeetingCreator::Feature.feature_methods.select do |feature|
-        self.meetings.where(feature => true).exists?
-      end.map { |f| f.to_s.titleize }
-    end
+    feature_methods.select do |feature|
+      self.meetings.where(feature => true).exists?
+    end.map { |f| f.to_s.titleize }
   end
 
   def times
