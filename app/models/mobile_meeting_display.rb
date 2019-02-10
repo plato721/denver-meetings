@@ -22,28 +22,45 @@ class MobileMeetingDisplay
     Day.day_to_int[self.meeting.day]
   end
 
+  def language_attributes
+    [:spanish, :french, :polish]
+  end
+
+  def format_attributes
+    [:speaker, :step, :big_book, :grapevine, :traditions, :candlelight,
+     :beginners]
+  end
+
+  def foci_attributes
+    [:men, :women, :gay, :young_people]
+  end
+
+  def features_attributes
+    [:asl, :accessible, :non_smoking, :sitter]
+  end
+
+  # takes :formats, :languages, etc., gets all true flags for that group, then
+  # titleizes and joins by comma for front-end presentation
+  def titleized_attributes_for(group)
+    send(group).map do |attribute|
+      attribute.to_s.titleize if meeting.send(attribute)
+    end.compact.join(", ")
+  end
+
   def format
-    Format.format_methods.select do |format|
-      self.meeting.send(format)
-    end.map { |sym| sym.to_s.titleize }.join(", ")
+    titleized_attributes_for(:format_attributes)
   end
 
   def language
-    Language.language_methods.select do |language|
-      self.meeting.send(language)
-    end.map { |sym| sym.to_s.titleize }.join(", ")
+    titleized_attributes_for(:language_attributes)
   end
 
   def features
-    Feature.feature_methods.select do |feature|
-      self.meeting.send(feature)
-    end.map { |sym| sym.to_s.titleize }.join(", ")
+    titleized_attributes_for(:features_attributes)
   end
 
   def foci
-    Focus.focus_methods.select do |focus|
-      self.meeting.send(focus)
-    end.map { |sym| sym.to_s.titleize }.join(", ")
+    titleized_attributes_for(:foci_attributes)
   end
 
   def group_name
