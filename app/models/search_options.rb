@@ -1,7 +1,16 @@
+# frozen_string_literal: true
+
+# This class builds available options from which to choose for the front end.
+# It needs an array of objects that have a meeting id. Those ids are then
+# used to get a Meeting::ActiveRecord_Relation. The meetings are then
+# looked at to see what filters are applicable when #as_json is called.
+# The filters are given along with a meeting count.
+# Usage: initalize with args[:meetings], then use to_json or as_json to
+#        compute and be presented with available filters and meeting count.
 class SearchOptions
   attr_reader :meetings, :source
 
-  def initialize(args={})
+  def initialize(args = {})
     args = default_args.merge(args)
     @meetings = cleanse_meetings(args[:meetings])
     @source = args[:source] # who is updating the options, false if new options
@@ -12,167 +21,169 @@ class SearchOptions
   end
 
   def default_args
-    {meetings: Meeting.all, source: false}
+    { meetings: Meeting.all, source: false }
   end
 
-  def as_json(options={})
+  def as_json(*)
     {
-      "count" => self.count,
-      "source" => self.source,
-      "meetingIds" => self.meetings.map(&:id),
-      "meetings" => self.meetings,
-      "options" => {
-        "open" => self.open?,
-        "closed" => self.closed?,
-        "city" => self.cities_json,
-        "group_name" => self.meetings_json,
+      'count' => count,
+      'source' => source,
+      'meetingIds' => meetings.map(&:id),
+      'meetings' => meetings,
+      'options' => {
+        'open' => open?,
+        'closed' => closed?,
+        'city' => cities_json,
+        'group_name' => meetings_json,
         # self.meeting_names { |_, val| val}.flatten.compact,
-        "time" => self.times.map { |_, val| val}.flatten.compact,
-        "day" => self.days.map { |_, val| val}.flatten.compact,
-        "foci" => self.foci,
-        "languages" => self.languages,
-        "formats" => self.formats,
-        "features" => self.features
+        'time' => times.map { |_, val| val }.flatten.compact,
+        'day' => days.map { |_, val| val }.flatten.compact,
+        'foci' => foci,
+        'languages' => languages,
+        'formats' => formats,
+        'features' => features
       }
     }
   end
 
   def count
-    self.meetings.count
+    meetings.count
   end
 
   def open?
-    @open ||= self.meetings.where(closed: [false, nil]).exists?
+    meetings.where(closed: [false, nil]).exists?
   end
 
   def closed?
-    @closed ||= self.meetings.where(closed: true).exists?
+    meetings.where(closed: true).exists?
   end
 
   def cities_found
-    @cities_found ||= begin
-      self.meetings.pluck(:city).uniq.sort
-    end
+    meetings.distinct.pluck(:city).sort
   end
 
   def cities_json
-    ["any"] + cities_found
+    ['any'] + cities_found
   end
 
   def cities
-    @cities ||= begin
-      any = ["City", "any"]
-      self.cities_found.prepend(any)
-    end
+    any = ['City', 'any']
+    cities_found.prepend(any)
   end
 
   def times_found_raw
-    @times_found_raw ||= self.meetings.pluck(:time).uniq.sort
+    meetings.distinct.pluck(:time).sort
   end
 
   def times_found
-    @times_found ||= begin
-      times_found_raw.map { |t| TimeConverter.display(t) }
-      .zip(times_found_raw)
-    end
+    times_found_raw.map { |t| TimeConverter.display(t) }
+                   .zip(times_found_raw)
   end
 
   def self.display_range_to_raw
-    {"am" => [0, 9.99],
-      "noon" => [10, 14.99],
-      "pm" => [15, 18.99],
-      "late" => [19, 23.99],
-      "now" => [TimeConverter.now, TimeConverter.now + 3]
+    {
+      'am' => [0, 9.99],
+      'noon' => [10, 14.99],
+      'pm' => [15, 18.99],
+      'late' => [19, 23.99],
+      'now' => [TimeConverter.now, TimeConverter.now + 3]
     }
   end
 
   def now_time_range
-    now = ["Right Now","now"]
+    ['Right Now', 'now']
   end
 
   def any_time_range
-    any = ["Time", "any"]
+    ['Time', 'any']
   end
 
   def possible_time_ranges
-    am = ["Morning (before 10a)", "am"]
-    noon = ["Midday (10a - 3p)", "noon"]
-    pm = ["Afternoon (3p - 7p)", "pm"]
-    late = ["Evening (7p +)", "late"]
+    am = ['Morning (before 10a)', 'am']
+    noon = ['Midday (10a - 3p)', 'noon']
+    pm = ['Afternoon (3p - 7p)', 'pm']
+    late = ['Evening (7p +)', 'late']
     [am, noon, pm, late]
   end
 
   def time_ranges
     possible_time_ranges.select do |range|
       range_values = self.class.display_range_to_raw[range.last]
-      self.times_found.find do |display_pair|
+      times_found.find do |display_pair|
         display_pair.last >= range_values.first &&
-        display_pair.last <= range_values.last
+          display_pair.last <= range_values.last
       end
     end
   end
 
+  def focus_methods
+    [:men, :women, :gay, :young_people]
+  end
+
   def foci
-    @foci ||= begin
-      Focus.focus_methods.select do |focus|
-        self.meetings.where(focus => true).exists?
-      end.map { |f| f.to_s.titleize }
-    end
+    focus_methods.map do |focus|
+      focus.to_s.titleize if meetings.where(focus => true).exists?
+    end.compact
+  end
+
+  def language_methods
+    [:spanish, :french, :polish]
   end
 
   def languages
-    @languages ||= begin
-      Language.language_methods.select do |lang|
-        self.meetings.where(lang => true).exists?
-      end.map { |f| f.to_s.titleize }
-    end
+    language_methods.map do |language|
+      language.to_s.titleize if meetings.where(language => true).exists?
+    end.compact
+  end
+
+  def format_methods
+    [:speaker, :step, :big_book, :grapevine, :traditions, :candlelight,
+     :beginners]
   end
 
   def formats
-    @formats ||= begin
-      Format.format_methods.select do |format|
-        self.meetings.where(format => true).exists?
-      end.map { |f| f.to_s.titleize }
-    end
+    format_methods.map do |format|
+      format.to_s.titleize if meetings.where(format => true).exists?
+    end.compact
+  end
+
+  def feature_methods
+    [:asl, :accessible, :non_smoking, :sitter]
   end
 
   def features
-    @features ||= begin
-      Feature.feature_methods.select do |feature|
-        self.meetings.where(feature => true).exists?
-      end.map { |f| f.to_s.titleize }
-    end
+    feature_methods.map do |feature|
+      feature.to_s.titleize if meetings.where(feature => true).exists?
+    end.compact
   end
 
   def times
-    @times ||= [any_time_range, now_time_range] + time_ranges + times_found
+    [any_time_range, now_time_range] + time_ranges + times_found
   end
 
   def meeting_names
-    @names ||= self.meetings.pluck(:group_name).uniq.sort
+    meetings.distinct.pluck(:group_name).sort
   end
 
   def meetings_json
-    @meetings_json ||= begin
-      ["any"] + self.meetings.pluck(:group_name).uniq.sort
-    end
+    ['any'] + meetings.distinct.pluck(:group_name).sort
   end
 
   def names_select
-    additional = ["Group", "any"]
+    additional = ['Group', 'any']
     meeting_names.zip(meeting_names).prepend(additional)
   end
 
   def days_found
-    @days_found ||= self.meetings.pluck(:day).uniq
+    meetings.distinct.pluck(:day)
   end
 
   def days_found_sorted
-    @days_found_sorted ||= Day.day_order.keep_if { |day| days_found.include? day }
+    Day.day_order.keep_if { |day| days_found.include?(day) }
   end
 
   def today_included?
-    self.days_found_sorted.include? self.today
+    days_found_sorted.include?(today)
   end
 
   def today
@@ -180,11 +191,8 @@ class SearchOptions
   end
 
   def days
-    @days ||= begin
-      any = ["Day", "any"]
-      today = ["Today (#{self.today})", "#{self.today}"] if self.today_included?
-      days_found_sorted.zip(days_found_sorted).prepend(any, today)
-    end
+    any = ['Day', 'any']
+    today = ["Today (#{today})", today.to_s] if today_included?
+    days_found_sorted.zip(days_found_sorted).prepend(any, today)
   end
-
 end

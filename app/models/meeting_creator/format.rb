@@ -1,4 +1,4 @@
-class Format
+class MeetingCreator::Format
   def self.is_speaker?(codes)
     codes.include?("SP")
   end
@@ -37,5 +37,4 @@ class Format
     [:speaker, :step, :big_book, :grapevine,
       :traditions, :candlelight, :beginners]
   end
-
 end

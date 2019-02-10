@@ -15,7 +15,8 @@ class MeetingCreator
   end
 
   def base_attributes
-    { group_name: group_name,
+    {
+      group_name: group_name,
       day: day,
       address_1: address_1,
       notes: notes,
@@ -24,7 +25,8 @@ class MeetingCreator
       state: "CO",
       closed: closed,
       time: time,
-      raw_meeting: self.raw }
+      raw_meeting: self.raw
+    }
   end
 
   def format_attributes
@@ -69,11 +71,19 @@ class MeetingCreator
   end
 
   def address_1
-    raw.address.gsub(raw_notes, "").gsub(raw_phone, "").strip
+    raw.address.gsub(raw_notes, "")
+               .gsub(raw_phone, "")
+               .gsub(raw_unit, "")
+               .strip
   end
 
   def address_2
-    #logic here
+    remove_leading_comma(raw_unit)
+  end
+
+  def raw_unit
+    unit_match = raw.address.match(/(, )?(unit).{0,1}\d+/i)
+    unit_match ? unit_match[0] : ""
   end
 
   def raw_phone
@@ -95,10 +105,12 @@ class MeetingCreator
   end
 
   def properties_models
-    {Focus => "foci",
-    Format => "formats",
-    Feature => "features",
-    Language => "languages"}
+    {
+      MeetingCreator::Focus => "foci",
+      MeetingCreator::Format => "formats",
+      MeetingCreator::Feature => "features",
+      MeetingCreator::Language => "languages"
+    }
   end
 
   def self.features_classes
@@ -108,5 +120,4 @@ class MeetingCreator
   def get_property_set_for(codes, property)
     property.first.send("get_#{property.last}".to_sym, (codes))
   end
-
 end

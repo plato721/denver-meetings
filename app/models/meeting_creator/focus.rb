@@ -1,5 +1,4 @@
-class Focus
-
+class MeetingCreator::Focus
   def self.get_men
     self.find_or_create_by(code: "M") do |focus|
       focus.name = "Men"
@@ -31,5 +30,4 @@ class Focus
   def self.focus_methods
     [:men, :women, :gay, :young_people]
   end
-
 end
