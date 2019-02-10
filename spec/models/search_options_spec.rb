@@ -8,7 +8,7 @@ RSpec.describe SearchOptions do
   end
 
   it "is narrowed when initialized with meetings" do
-    FactoryGirl.create_list :meeting, 5
+    FactoryBot.create_list :meeting, 5
 
     meetings = Meeting.where(id: Meeting.first.id)
     options_narrowed = SearchOptions.new(meetings: meetings)
@@ -18,7 +18,7 @@ RSpec.describe SearchOptions do
 
   it "dynamically returns meeting day options" do
     days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-    days.each { |d| FactoryGirl.create :meeting, day: d }
+    days.each { |d| FactoryBot.create :meeting, day: d }
 
     options_all = SearchOptions.new
     options_narrowed = SearchOptions.new(meetings: Meeting.where(day: ["Tuesday", "Thursday"]))
@@ -29,7 +29,7 @@ RSpec.describe SearchOptions do
 
   it "dynamically returns clock time options" do
     times = [*18..24]
-    times.each { |t| FactoryGirl.create :meeting, time: t }
+    times.each { |t| FactoryBot.create :meeting, time: t }
 
     fewer_times = [19, 20]
     options_all = SearchOptions.new
@@ -54,7 +54,7 @@ RSpec.describe SearchOptions do
   it "dynamically returns available cities" do
     cities = ["Aurora", "Denver", "Boulder", "Westminster", "Broomfield"]
     cities_fewer = cities[0..1]
-    cities.each { |c| FactoryGirl.create :meeting, city: c }
+    cities.each { |c| FactoryBot.create :meeting, city: c }
 
     options_all = SearchOptions.new
     options_fewer = SearchOptions.new(meetings: Meeting.where(city: cities_fewer))
@@ -67,7 +67,7 @@ RSpec.describe SearchOptions do
 
   it "dynamically returns time ranges" do
     times = [*5..23]
-    times.each { |t| FactoryGirl.create :meeting, time: t }
+    times.each { |t| FactoryBot.create :meeting, time: t }
 
     ["any", "now"].each do |range|
       expect(SearchOptions.new.times.to_a.flatten.include? range)
@@ -90,10 +90,10 @@ RSpec.describe SearchOptions do
   end
 
   it "dynamically returns mens" do
-    meeting = FactoryGirl.create :meeting
+    meeting = FactoryBot.create :meeting
     meeting.update_attribute(:men, true)
 
-    FactoryGirl.create_list :meeting, 3
+    FactoryBot.create_list :meeting, 3
     expect(Meeting.men.count).to eq(1)
 
     options = SearchOptions.new
@@ -104,10 +104,10 @@ RSpec.describe SearchOptions do
   end
 
   it "dynamically returns language" do
-    meeting = FactoryGirl.create :meeting
+    meeting = FactoryBot.create :meeting
     meeting.update_attribute(:spanish, true)
 
-    FactoryGirl.create_list :meeting, 3
+    FactoryBot.create_list :meeting, 3
     expect(Meeting.spanish.count).to eq(1)
 
     options = SearchOptions.new
@@ -118,7 +118,7 @@ RSpec.describe SearchOptions do
   end
 
   it "dynamically returns feature features" do
-    FactoryGirl.create_list :meeting, 3,
+    FactoryBot.create_list :meeting, 3,
      {
         accessible: true,
         non_smoking: true,
@@ -137,8 +137,8 @@ RSpec.describe SearchOptions do
   end
 
   it "knows if open is an option" do
-    FactoryGirl.create :meeting
-    FactoryGirl.create :meeting, closed: true
+    FactoryBot.create :meeting
+    FactoryBot.create :meeting, closed: true
 
     expect(SearchOptions.new.open?).to be_truthy
     expect(SearchOptions.new.closed?).to be_truthy
@@ -153,7 +153,7 @@ RSpec.describe SearchOptions do
   end
 
   it "has a meeting count" do
-    FactoryGirl.create_list :meeting, 2
+    FactoryBot.create_list :meeting, 2
     expect(SearchOptions.new.count).to eq(Meeting.count)
   end
 

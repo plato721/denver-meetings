@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Search do
   before :all do
     Meeting.destroy_all
-    FactoryGirl.create_list :meeting, 5, _skip_geocoder: true
+    FactoryBot.create_list :meeting, 5, _skip_geocoder: true
 
     Meeting.first.update_attribute(:lat, 39.740143)
     Meeting.first.update_attribute(:lng, -104.962335)

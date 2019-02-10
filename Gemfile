@@ -39,7 +39,7 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'launchy'
   gem 'simplecov', require: false
-  gem 'factory_girl_rails', '~> 4.0'
+  gem 'factory_bot_rails'
   gem 'teaspoon'
   gem 'teaspoon-mocha'
   gem 'magic_lamp'
