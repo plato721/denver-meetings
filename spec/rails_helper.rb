@@ -6,7 +6,6 @@ require 'spec_helper'
 require 'rspec/rails'
 require 'support/codes'
 require 'support/search_support'
-require 'support/factory_girl'
 require 'simplecov'
 
 SimpleCov.start "rails" do

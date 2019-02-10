@@ -3,7 +3,7 @@ require Rails.root.join('./app/models/meeting/extract_phone.rb').to_s
 
 describe ExtractPhone do
   it 'extracts a trailing phone number' do
-    meeting = FactoryGirl.create :meeting,
+    meeting = FactoryBot.create :meeting,
       address_1: "8250 W. 80th Ave. Unit 12, 303-420-6560"
 
     described_class.extract! meeting
@@ -14,7 +14,7 @@ describe ExtractPhone do
   end
 
   it 'extracts a seven digit phone number' do
-    meeting = FactoryGirl.create :meeting,
+    meeting = FactoryBot.create :meeting,
       address_1: "3355 S. Wadsworth #H125, 989-2816"
 
     described_class.extract! meeting

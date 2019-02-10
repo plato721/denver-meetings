@@ -4,7 +4,7 @@ RSpec.describe MeetingsCreator do
   before :all do
     Meeting.destroy_all
     RawMeeting.destroy_all
-    FactoryGirl.create_list :raw_meeting, 3
+    FactoryBot.create_list :raw_meeting, 3
   end
 
   before :each do

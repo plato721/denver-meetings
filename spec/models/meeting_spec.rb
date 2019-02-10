@@ -5,7 +5,7 @@ RSpec.describe Meeting, type: :model do
 
   before :all do
     Meeting.destroy_all
-    FactoryGirl.create_list :meeting, 3
+    FactoryBot.create_list :meeting, 3
   end
 
   after :all do

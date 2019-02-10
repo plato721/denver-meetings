@@ -4,7 +4,7 @@ RSpec.describe Proximal do
   let(:my_coords) {[39.740143, -104.962335]}
 
   before :all do
-    FactoryGirl.create_list :meeting, 3
+    FactoryBot.create_list :meeting, 3
     Meeting.first.update_attribute(:lat, 39.736960)
     Meeting.first.update_attribute(:lng, -104.959935)
     Meeting.first.update_attribute(:group_name, "Daily Serenity")

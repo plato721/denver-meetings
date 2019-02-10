@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Mobile::SearchController, type: :controller do
   before :all do
     Meeting.destroy_all
-    FactoryGirl.create_list :meeting, 3
+    FactoryBot.create_list :meeting, 3
   end
 
   it "#new" do

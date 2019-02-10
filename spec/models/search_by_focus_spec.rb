@@ -6,7 +6,7 @@ RSpec.describe "Search by language" do
 
   before :all do
     Meeting.destroy_all
-    FactoryGirl.create_list :meeting, 3
+    FactoryBot.create_list :meeting, 3
   end
 
   before :each do

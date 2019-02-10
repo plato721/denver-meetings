@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe MobileMeetingDisplay do
   before :all do
-    FactoryGirl.create_list :meeting, 3
+    FactoryBot.create_list :meeting, 3
   end
 
   after :all do
