@@ -6,7 +6,19 @@ describe MeetingCreator::Address1Extractor do
     '3600 S. Clarkson (NE of Ch)' => '3600 S. Clarkson St.',
     '3355 S. Wadsworth #H125, 989-2816' => '3355 S. Wadsworth Blvd.',
     '8817 S. Broadway (Ch)' => '8817 S. Broadway',
-    '1311 York St., 322-3674' => '1311 York St.'
+    '1311 York St., 322-3674' => '1311 York St.',
+    '5455 W. 38th Ave. Unit M' => '5455 W. 38th Ave.',
+    '1801 Sunset Pl. Ste B' => '1801 Sunset Pl.',
+
+    # testing no spaces before notes
+    '10151 W. 26th Ave.(Restaurant)' => '10151 W. 26th Ave.',
+
+    # ensuring Wadsworth Blvd. doesn't become Blvd. Blvd.
+    '3355 S. Wadsworth Blvd. #H-125, 989-2816' => '3355 S. Wadsworth Blvd.',
+    '7964 S. Depew (Platte Canyon/Chatfield)' => '7964 S. Depew St.',
+
+    # yes, 3 different wadsworths
+    '1050 Wadsworth Bl. 303-238-5693' => '1050 Wadsworth Blvd.'
   }
 
   addresses_with_extracted.each do |address_in, expected_output|
