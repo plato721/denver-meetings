@@ -4,7 +4,9 @@ describe MeetingCreator::Address1Extractor do
   addresses_with_extracted = {
     '123 Fake St.' => '123 Fake St.',
     '3600 S. Clarkson (NE of Ch)' => '3600 S. Clarkson St.',
-    '3355 S. Wadsworth #H125, 989-2816' => '3355 S. Wadsworth Blvd.'
+    '3355 S. Wadsworth #H125, 989-2816' => '3355 S. Wadsworth Blvd.',
+    '8817 S. Broadway (Ch)' => '8817 S. Broadway',
+    '1311 York St., 322-3674' => '1311 York St.'
   }
 
   addresses_with_extracted.each do |address_in, expected_output|

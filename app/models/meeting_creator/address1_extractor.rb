@@ -5,6 +5,7 @@ class MeetingCreator::Address1Extractor
     address = check_and_fix_wadsworth(address)
     address = keep_only_before_pound(address)
     address = keep_only_before_notes(address)
+    address = keep_only_before_comma(address)
   end
 
   # clarkson is a street and needs to be that way to be geocoded, but is
@@ -31,6 +32,13 @@ class MeetingCreator::Address1Extractor
 
   def self.keep_only_before_notes(address)
     matched = address.match(/\(.+\)/)
+    return address unless matched
+
+    matched.pre_match.strip
+  end
+
+  def self.keep_only_before_comma(address)
+    matched = address.match(/,/)
     return address unless matched
 
     matched.pre_match.strip
