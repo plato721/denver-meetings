@@ -18,7 +18,8 @@ describe MeetingCreator::Address1Extractor do
     '7964 S. Depew (Platte Canyon/Chatfield)' => '7964 S. Depew St.',
 
     # yes, 3 different wadsworths
-    '1050 Wadsworth Bl. 303-238-5693' => '1050 Wadsworth Blvd.'
+    '1050 Wadsworth Bl. 303-238-5693' => '1050 Wadsworth Blvd.',
+    '147 S. 2nd Place, 303-659-9953' => '147 S. 2nd Place'
   }
 
   addresses_with_extracted.each do |address_in, expected_output|
