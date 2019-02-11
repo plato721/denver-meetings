@@ -3,10 +3,8 @@ require 'rails_helper'
 # Defining a fake attribute handler-- we don't want to mess the class up for
 # tests that target these handlers specifically.
 class MeetingCreator::SizeExtractor
-  def self.extract(_raw_meeting, attribute = :size)
-    tuple = {}
-    tuple[attribute] = 'Large'
-    tuple
+  def self.extract(_raw_meeting)
+    'Large'
   end
 end
 

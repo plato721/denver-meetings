@@ -58,21 +58,35 @@ class MeetingCreator::BuildAttributes
   def build
     self.class.meeting_attributes
         .each_with_object({}) do |attribute, attributes|
-      extractor = handler(attribute)
-      extracted_value = extractor.extract(raw_meeting, attribute)
+      handler = determine_handler(attribute)
+      extracted_value = extract_value(handler, attribute)
       attributes[attribute] = extracted_value
     end
+  end
+
+  def extract_value(handler, attribute)
+    if handler == passthru_handler
+      # The passthrough handler has to know which attribute to pass through
+      # from the raw_meeting.
+      handler.extract(raw_meeting, attribute)
+    else
+      handler.extract(raw_meeting)
+    end
+  end
+
+  def passthru_handler
+    MeetingCreator::PassthroughExtractor
   end
 
   # Go find a handler of the form:
   #   MeetingCreator:<Attribute>Extractor
   # If you can't find one, use:
   #   MeetingCreator::PassthroughExtractor
-  def handler(attribute)
+  def determine_handler(attribute)
     base = attribute.to_s.delete('_').titleize
     base = 'MeetingCreator::' + base + 'Extractor'
     base.constantize
   rescue NameError
-    MeetingCreator::PassthroughExtractor
+    passthru_handler
   end
 end
