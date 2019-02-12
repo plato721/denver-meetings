@@ -38,4 +38,11 @@ describe MeetingCreator::BuildAttributes do
     expect(MeetingCreator::SizeExtractor).to have_received(:extract).exactly(1)
                                                                     .times
   end
+
+  context 'determine handler - ' do
+    it 'gets RawMeeting for :raw_meeting' do
+      handler = described_class.new('x').determine_handler(:raw_meeting)
+      expect(handler).to eql(MeetingCreator::RawMeetingExtractor)
+    end
+  end
 end

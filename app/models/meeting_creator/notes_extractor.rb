@@ -3,6 +3,6 @@ class MeetingCreator::NotesExtractor
     notes_match = raw_meeting.address.match(/\(.+\)/)
     notes = notes_match ? notes_match.to_s : ""
     notes.delete(/[(|)]/)
-    { notes: notes(raw_meeting) }
+    notes
   end
 end

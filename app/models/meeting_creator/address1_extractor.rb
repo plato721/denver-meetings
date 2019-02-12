@@ -6,7 +6,6 @@ class MeetingCreator::Address1Extractor
     # next two are order dependent
     address = check_and_fix_wadsworth_bl(address)
     address = check_and_fix_wadsworth(address)
-
     address = check_and_fix_depew(address)
     address = keep_only_before_unit(address)
     address = keep_only_before_notes(address)

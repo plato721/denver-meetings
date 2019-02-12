@@ -42,21 +42,20 @@ RSpec.describe MeetingCreator do
 
     before :each do
       allow_any_instance_of(Meeting).to receive(:geocode).and_return(nil)
-      @mc = MeetingCreator.new(@raw)
-      # @meeting = mc.create
+      @meeting = described_class.new(@raw).create
     end
 
     it "parses address_1" do
-      expect(@mc.address_1).to eql("1200 South St.")
+      expect(@meeting.address_1).to eql("1200 South St.")
     end
 
     it "parses notes" do
-      expect(@mc.notes).to eql("Ch bsmt #104")
+      expect(@meeting.notes).to eql("Ch bsmt #104")
     end
 
     it "is men's" do
-      expect(@mc.build_attributes[:men]).to be_truthy
-      expect(@mc.build_attributes[:gay]).to be_falsey
+      expect(@meeting.men).to be_truthy
+      expect(@meeting.gay).to be_falsey
     end
   end
 

@@ -24,6 +24,7 @@ class MeetingCreator::BuildAttributes
       :district,
       :city,
       :state,
+
       # 'Features'
       :asl,
       :accessible,
@@ -83,7 +84,7 @@ class MeetingCreator::BuildAttributes
   # If you can't find one, use:
   #   MeetingCreator::PassthroughExtractor
   def determine_handler(attribute)
-    base = attribute.to_s.delete('_').titleize
+    base = attribute.to_s.titleize.delete(' ')
     base = 'MeetingCreator::' + base + 'Extractor'
     base.constantize
   rescue NameError
