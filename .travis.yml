@@ -2,9 +2,7 @@ language: ruby
 rvm:
 - 2.3.0
 services:
-  - postgresql
-before_script:
-  - psql -c 'create database [denver-meetings_test];' -U postgres
+- postgresql
 script:
 - bundle install
 - bundle exec rake db:create db:schema:load
