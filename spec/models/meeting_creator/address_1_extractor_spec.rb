@@ -19,7 +19,8 @@ describe MeetingCreator::Address1Extractor do
 
     # yes, 3 different wadsworths
     '1050 Wadsworth Bl. 303-238-5693' => '1050 Wadsworth Blvd.',
-    '147 S. 2nd Place, 303-659-9953' => '147 S. 2nd Place'
+    '147 S. 2nd Place, 303-659-9953' => '147 S. 2nd Place',
+    '1200 South St.(Ch bsmt #104)' => "1200 South St."
   }
 
   addresses_with_extracted.each do |address_in, expected_output|

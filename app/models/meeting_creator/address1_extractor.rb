@@ -1,14 +1,17 @@
 class MeetingCreator::Address1Extractor
   def self.extract(raw_meeting)
     address = raw_meeting.address
+
     address = check_and_fix_clarkson(address)
+    address = check_and_fix_depew(address)
 
     # next two are order dependent
     address = check_and_fix_wadsworth_bl(address)
     address = check_and_fix_wadsworth(address)
-    address = check_and_fix_depew(address)
-    address = keep_only_before_unit(address)
+
+    # notes needs to come before unit
     address = keep_only_before_notes(address)
+    address = keep_only_before_unit(address)
     address = keep_only_before_comma(address)
     address = keep_only_before_phone(address)
     address.strip
