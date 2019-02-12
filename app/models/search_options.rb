@@ -192,7 +192,7 @@ class SearchOptions
 
   def days
     any = ['Day', 'any']
-    today = ["Today (#{today})", today.to_s] if today_included?
+    today = ["Today (#{self.today})", self.today.to_s] if today_included?
     days_found_sorted.zip(days_found_sorted).prepend(any, today)
   end
 end
