@@ -24,6 +24,7 @@ class MeetingCreator::BuildAttributes
       :district,
       :city,
       :state,
+      :phone,
 
       # 'Features'
       :asl,
