@@ -1,9 +1,8 @@
 class MeetingCreator::Address2Extractor
   def self.extract(raw_meeting)
-    # Unit B
-    # #143
-    # Ste. 103
-    # etc.
-    ""
+    matched = raw_meeting.address.match /(Unit|Ste|#)[ ]{0,}[\w-]+/
+    return '' unless matched
+
+    matched.to_s
   end
 end
