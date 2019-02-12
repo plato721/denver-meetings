@@ -19,6 +19,7 @@ class ScrapeDaccaa
   def make_meetings(parsed)
     return false if !update_needed?
     return false if !valid_headers?
+
     current_raw = create_raw_meetings
     self.meta.set_updated
     current_raw
@@ -34,27 +35,27 @@ class ScrapeDaccaa
       puts "Done!"
       true
     else
-      Rails.logger.error "Bad Headers: #{@headers.retrieved_headers}"
+      Rails.logger.error { "Bad Headers: #{@headers.retrieved_headers}" }
       false
     end
   end
 
   def url
-    url = "http://www.daccaa.org/query.asp"
+    "http://www.daccaa.org/query.asp"
   end
 
   def get_page
     RestClient.post(url, {
-    'txtGroup'=>'',
-    'cboDay'=>'0',
-    'cboStartTime'=>'All',
-    'cboEndTime'=>'All',
-    'txtCity'=>'',
-    'cboMeetingType'=>'All',
-    'cboMeetingFormat'=>'All',
-    'cboSpecialMeeting'=>'All',
-    'cboDistrict'=>'All',
-    'cmdFindMeetings'=>'Find Meetings'
+      'txtGroup'=>'',
+      'cboDay'=>'0',
+      'cboStartTime'=>'All',
+      'cboEndTime'=>'All',
+      'txtCity'=>'',
+      'cboMeetingType'=>'All',
+      'cboMeetingFormat'=>'All',
+      'cboSpecialMeeting'=>'All',
+      'cboDistrict'=>'All',
+      'cmdFindMeetings'=>'Find Meetings'
     })
   end
 
@@ -74,5 +75,4 @@ class ScrapeDaccaa
       "rows: " => "#{self.raw_rows.object_id}: #{self.raw_rows.count} rows"
     }
   end
-
 end

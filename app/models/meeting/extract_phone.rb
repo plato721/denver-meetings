@@ -1,4 +1,8 @@
-class ExtractPhone
+# This was put in place in early 2019 to scrube phone numbers out of existing
+# addresses. That is, it gets the phone number, saves it where it should be,
+# removes the number and any leading comma from the address, and stores the
+# address.
+class Meeting::ExtractPhone
   class << self
     def extract! meeting
       initial_address = meeting.address_1
@@ -16,7 +20,7 @@ class ExtractPhone
     end
 
     def phone_regex
-      /\d{3}(-\d{3})?-\d{4}/
+      MeetingCreator::PhoneExtractor.phone_matcher
     end
 
     def phone_and_leading_comma_regex
