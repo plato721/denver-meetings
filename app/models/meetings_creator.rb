@@ -2,7 +2,7 @@ class MeetingsCreator
   attr_accessor :deleted, :created, :untouched
   attr_reader :raw_meetings, :throttle
 
-  def initialize(raw_meetings, throttle=1.0)
+  def initialize(raw_meetings, throttle = 1.0)
     @raw_meetings = raw_meetings
     @throttle = throttle #geocode delay
   end
@@ -62,5 +62,4 @@ class MeetingsCreator
       MeetingCreator.new(raw).create
     end
   end
-
 end

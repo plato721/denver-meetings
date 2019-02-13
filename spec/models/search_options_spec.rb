@@ -94,12 +94,12 @@ RSpec.describe SearchOptions do
     meeting.update_attribute(:men, true)
 
     FactoryBot.create_list :meeting, 3
-    expect(Meeting.men.count).to eq(1)
+    expect(Meeting.where(men: true).count).to eql(1)
 
     options = SearchOptions.new
     expect(options.foci.include? "Men").to be_truthy
 
-    options = SearchOptions.new(meetings: Meeting.not_men)
+    options = SearchOptions.new(meetings: Meeting.where.not(men: true))
     expect(options.foci.include? "Men").to be_falsey
   end
 
@@ -108,12 +108,12 @@ RSpec.describe SearchOptions do
     meeting.update_attribute(:spanish, true)
 
     FactoryBot.create_list :meeting, 3
-    expect(Meeting.spanish.count).to eq(1)
+    expect(Meeting.where(spanish: true).count).to eq(1)
 
     options = SearchOptions.new
     expect(options.languages.include? "Spanish").to be_truthy
 
-    options = SearchOptions.new(meetings: Meeting.not_spanish)
+    options = SearchOptions.new(meetings: Meeting.where.not(spanish: true))
     expect(options.languages.include? "Spanish").to be_falsey
   end
 
