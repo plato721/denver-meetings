@@ -4,6 +4,8 @@ class MeetingCreator::Address1Extractor
 
     address = check_and_fix_clarkson(address)
     address = check_and_fix_depew(address)
+    address = check_and_fix_iliff(address)
+    address = check_and_fix_72nd(address)
 
     # next two are order dependent
     address = check_and_fix_wadsworth_bl(address)
@@ -28,6 +30,21 @@ class MeetingCreator::Address1Extractor
       !address.match(/Depew St/)
 
     address.gsub(/Depew /, 'Depew St. ')
+  end
+
+  # TODO - add one to make Av. Ave.
+  def self.check_and_fix_iliff(address)
+    return address unless address.match(/Iliff/) &&
+      !address.match(/Iliff Av/)
+
+    address.gsub(/Iliff /, 'Iliff Ave. ')
+  end
+
+  def self.check_and_fix_72nd(address)
+    return address unless address.match(/72nd/) &&
+      !address.match(/72nd Ave/)
+
+    address.gsub(/72nd /, '72nd Ave. ')
   end
 
   # clarkson is a street and needs to be that way to be geocoded, but is
