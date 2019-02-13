@@ -32,9 +32,10 @@ class MeetingCreator::Address1Extractor
     address.gsub(/Depew /, 'Depew St. ')
   end
 
+  # TODO - add one to make Av. Ave.
   def self.check_and_fix_iliff(address)
     return address unless address.match(/Iliff/) &&
-      !address.match(/Iliff Ave/)
+      !address.match(/Iliff Av/)
 
     address.gsub(/Iliff /, 'Iliff Ave. ')
   end

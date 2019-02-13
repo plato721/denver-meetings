@@ -24,7 +24,6 @@ describe MeetingCreator::Address1Extractor do
 
     '16732 E. Iliff (Shop. Ctr) 695-7766' => '16732 E. Iliff Ave.',
     '3489 W. 72nd (Rm 104)' => '3489 W. 72nd Ave.'
-
   }
 
   addresses_with_extracted.each do |address_in, expected_output|
