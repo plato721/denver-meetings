@@ -12,6 +12,6 @@ class MeetingCreator::Address2Extractor
     matched = address.match(matcher)
     return address unless matched
 
-    address.delete(matched.to_s)
+    address.gsub(matched.to_s, '')
   end
 end

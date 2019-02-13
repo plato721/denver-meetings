@@ -37,3 +37,5 @@ namespace :daccaa do
   end
 
 end
+
+task update: 'daccaa:get_data'
