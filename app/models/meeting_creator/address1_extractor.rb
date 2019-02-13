@@ -6,9 +6,12 @@ class MeetingCreator::Address1Extractor
     address = check_and_fix_depew(address)
     address = check_and_fix_iliff(address)
     address = check_and_fix_72nd(address)
+    address = check_and_fix_filmore(address)
+    address = check_and_fix_heather(address)
+    address = check_and_fix_h_127(address)
 
     # next two are order dependent
-    address = check_and_fix_wadsworth_bl(address)
+    address = check_and_fix_bl(address)
     address = check_and_fix_wadsworth(address)
 
     # notes needs to come before unit
@@ -19,10 +22,27 @@ class MeetingCreator::Address1Extractor
     address.strip
   end
 
-  def self.check_and_fix_wadsworth_bl(address)
-    return address unless address.match(/Wadsworth Bl\./)
+  def self.check_and_fix_h_127(address)
+    address.gsub(' H-127', '#H-127')
+  end
 
-    address.gsub(/Wadsworth Bl\./, 'Wadsworth Blvd.')
+  def self.check_and_fix_heather(address)
+    return address unless address.match(/Heather Gardens/)
+
+    return address if address.match(/Heather Gardens Way/) ||
+      address.match(/Heather Gardens Wy/)
+
+    address.gsub('Heather Gardens', 'Heather Gardens Way')
+  end
+
+  def self.check_and_fix_filmore(address)
+    address.gsub('Filmore', 'Fillmore')
+  end
+
+  def self.check_and_fix_bl(address)
+    return address unless address.match(/ Bl\./)
+
+    address.gsub(/ Bl\./, ' Blvd.')
   end
 
   def self.check_and_fix_depew(address)

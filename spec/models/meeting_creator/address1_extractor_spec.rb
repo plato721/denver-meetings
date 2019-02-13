@@ -14,7 +14,7 @@ describe MeetingCreator::Address1Extractor do
     '10151 W. 26th Ave.(Restaurant)' => '10151 W. 26th Ave.',
 
     # ensuring Wadsworth Blvd. doesn't become Blvd. Blvd.
-    '3355 S. Wadsworth Blvd. #H-125, 989-2816' => '3355 S. Wadsworth Blvd.',
+    '3355 S. Wadsworth Blvd. #H-127, 989-2816' => '3355 S. Wadsworth Blvd.',
     '7964 S. Depew (Platte Canyon/Chatfield)' => '7964 S. Depew St.',
 
     # yes, 3 different wadsworths
