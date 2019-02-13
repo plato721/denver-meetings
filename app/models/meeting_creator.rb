@@ -10,8 +10,7 @@ class MeetingCreator
   end
 
   def create
-    meeting = Meeting.new(build_attributes)
-    meeting.tap{ |m| m.save }
+    Meeting.create(build_attributes)
   end
 
   def build_attributes

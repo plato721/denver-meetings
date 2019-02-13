@@ -8,7 +8,7 @@ class Meeting < ActiveRecord::Base
   geocoded_by :address, :latitude => :lat, :longitude => :lng
   after_validation :geocode, :unless => :_skip_geocoder
   before_create :custom_reverse, :address_from_coords, :unless => :_skip_geocoder
-  # end geocoder depened callbacks
+  # end geocoder dependent callbacks
 
   belongs_to :raw_meeting
 
@@ -21,12 +21,16 @@ class Meeting < ActiveRecord::Base
   end
 
   def self.open
-    self.where(closed: [false, nil])
+    where(closed: [false, nil])
+  end
+
+  def self.closed
+    where(closed: true)
   end
 
   def raw_meeting_unique
-    # this allows a meeting to be created without
-    #   a raw meeting. but if it's passed, must be unique.
+    # one can create a meeting without a raw meeting. but if it is passed, it
+    #   must be unique.
     if Meeting.find_by(raw_meeting_id: raw_meeting_id)
       errors.add(:raw_meeting_id, "must be unique")
     end
@@ -38,6 +42,7 @@ class Meeting < ActiveRecord::Base
 
   def custom_reverse
     return if (!self.lat.present? || !self.lng.present?)
+
     @geocoder ||= Geocoder.search([self.lat, self.lng]).first
   end
 
@@ -56,7 +61,8 @@ class Meeting < ActiveRecord::Base
 
   def self.by_open(open)
     return all if open == "any"
-    open == "closed" ? self.closed : self.not_closed
+
+    open == "closed" ? closed : self.open
   end
 
   def self.by_day(day)
@@ -65,7 +71,7 @@ class Meeting < ActiveRecord::Base
 
   def self.by_time(time)
     if SearchOptions.display_range_to_raw.keys.include?(time)
-      return by_time_range(time)
+      by_time_range(time)
     else
       time == "any" ? all : where(time: time)
     end
@@ -91,30 +97,6 @@ class Meeting < ActiveRecord::Base
       search_command = attribute_map(prop)[value]
       scope.where(prop => search_command)
     end
-  end
-
-  def self.flag_like_fields
-    [:closed, :men, :women, :gay, :young_people, :speaker, :step, :big_book,
-    :grapevine, :traditions, :candlelight, :beginners, :asl, :accessible,
-    :non_smoking, :sitter, :spanish, :french, :polish]
-  end
-
-  def self.not_matcher
-    /^not_/
-  end
-
-  def self.not_methods(m)
-    root = m.to_s.match(not_matcher).post_match
-    if !flag_like_fields.include? root.to_sym
-      raise NoMethodError, "#{root.to_sym} appears to be a non-bool field"
-    end
-    self.where(root.to_sym => false)
-  end
-
-  def self.method_missing(m, *args)
-    return not_methods(m) if m.to_s =~ not_matcher
-    raise NoMethodError if !flag_like_fields.include? m
-    return self.where(m => true)
   end
 
   def self.search(params)
