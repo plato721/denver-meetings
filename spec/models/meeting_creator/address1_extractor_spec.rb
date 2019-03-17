@@ -20,12 +20,16 @@ describe MeetingCreator::Address1Extractor do
     # yes, 3 different wadsworths
     '1050 Wadsworth Bl. 303-238-5693' => '1050 Wadsworth Blvd.',
     '147 S. 2nd Place, 303-659-9953' => '147 S. 2nd Place',
-    '1200 South St.(Ch bsmt #104)' => "1200 South St."
+    '1200 South St.(Ch bsmt #104)' => "1200 South St.",
+
+    '16732 E. Iliff (Shop. Ctr) 695-7766' => '16732 E. Iliff Ave.',
+    '3489 W. 72nd (Rm 104)' => '3489 W. 72nd Ave.'
   }
 
   addresses_with_extracted.each do |address_in, expected_output|
     it "extracts #{expected_output} from #{address_in}" do
       raw_meeting = OpenStruct.new(address: address_in)
+
       result = described_class.extract(raw_meeting)
 
       expect(result).to eql(expected_output)

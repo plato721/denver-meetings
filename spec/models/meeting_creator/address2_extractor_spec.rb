@@ -16,7 +16,8 @@ describe MeetingCreator::Address2Extractor do
     # a '#' with a dash
     '3355 S. Wadsworth Blvd. #H-125, 989-2816' => '#H-125',
     '147 S. 2nd Place, 303-659-9953' => '',
-    '1200 South St.(Ch bsmt #104)' => ''
+    '1200 South St.(Ch bsmt #104)' => '',
+    '2525 W. Evans Ave. (Polish 882-1038)' => '',
   }
 
   addresses_with_extracted.each do |raw_address, desired_output|
