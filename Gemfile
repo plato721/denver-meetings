@@ -14,7 +14,7 @@ gem 'sdoc', group: :doc
 gem 'omniauth-github'
 gem 'puma'
 gem 'pg', '~> 0.18'
-gem 'bootstrap-sass', '~> 3.3.5'
+gem "bootstrap-sass", "~> 3.4.1"
 gem 'bootswatch-rails'
 gem 'ffaker'
 gem 'hurley'
