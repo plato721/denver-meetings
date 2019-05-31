@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_31_175648) do
+ActiveRecord::Schema.define(version: 2019_05_31_204946) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "citext"
@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(version: 2019_05_31_175648) do
     t.boolean "spanish", default: false
     t.boolean "french", default: false
     t.boolean "polish", default: false
+    t.integer "address_id"
     t.index ["raw_meeting_id"], name: "index_meetings_on_raw_meeting_id"
   end
 

@@ -1,4 +1,5 @@
 class Address < ActiveRecord::Base
+  has_many :meetings
   validate :address_unique
 
   def address_unique

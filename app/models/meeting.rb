@@ -1,4 +1,7 @@
 class Meeting < ActiveRecord::Base
+  # TODO - move the addresses and use this assoication
+  # belongs_to :address
+
   attr_reader :geocoder
   attr_accessor :_skip_geocoder
 
