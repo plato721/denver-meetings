@@ -29,4 +29,14 @@
 
       expect(address.meetings).to include(meeting)
     end
+
+    it "handles the same address for a different meeting" do
+      meeting1 = FactoryBot.create :meeting, address_attributes
+      meeting2 = FactoryBot.create :meeting, address_attributes
+
+      address1 = MoveAddress.call(meeting1)
+      address2 = MoveAddress.call(meeting2)
+
+      expect(address1).to eql(address2)
+    end
   end
