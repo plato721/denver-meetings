@@ -1,0 +1,7 @@
+- create rake task that calls move_addresses
+- test locally
+=> then addresses are copied over into the address table
+
+- handle path of new address creation
+  - handle geolocation in address
+- cut over within app to address table
