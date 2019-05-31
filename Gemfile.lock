@@ -354,7 +354,7 @@ DEPENDENCIES
   pg (~> 0.18)
   pry
   puma
-  rails
+  rails (= 5.2.2)
   rails-controller-testing
   rails_12factor
   rest-client

@@ -10,11 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_28_050704) do
+ActiveRecord::Schema.define(version: 2019_05_31_204946) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "citext"
   enable_extension "plpgsql"
+
+  create_table "addresses", force: :cascade do |t|
+    t.citext "address_1"
+    t.string "address_2"
+    t.citext "notes"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
+    t.string "district"
+    t.decimal "lat", precision: 10, scale: 6
+    t.decimal "lng", precision: 10, scale: 6
+  end
 
   create_table "meetings", id: :serial, force: :cascade do |t|
     t.string "day"
@@ -57,6 +69,7 @@ ActiveRecord::Schema.define(version: 2019_01_28_050704) do
     t.boolean "spanish", default: false
     t.boolean "french", default: false
     t.boolean "polish", default: false
+    t.integer "address_id"
     t.index ["raw_meeting_id"], name: "index_meetings_on_raw_meeting_id"
   end
 

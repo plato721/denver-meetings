@@ -16,6 +16,19 @@ RSpec.describe Meeting, type: :model do
     no_geocode
   end
 
+  context "associations" do
+    # TODO - move the address and use association
+    xit "has an address" do
+      address = FactoryBot.create :address
+      meeting = FactoryBot.create :meeting
+
+      meeting.address = address
+      meeting.save
+
+      expect(meeting.address).to eql(address)
+    end
+  end
+
   it "is visible by default" do
     meeting = Meeting.first
 
