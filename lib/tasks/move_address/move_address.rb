@@ -11,7 +11,9 @@ class MoveAddress
         lat: meeting.lat,
         lng: meeting.lng
       }
-      Address.create(address_attributes)
+      address = Address.create(address_attributes)
+      address.meetings << meeting
+      address
     end
   end
 end

@@ -22,4 +22,11 @@
 
       expect(Address.find_by(address_attributes)).to be_truthy
     end
+
+    it "sets the address_id on the meeting" do
+      meeting = FactoryBot.create(:meeting, address_attributes)
+      address = described_class.call(meeting)
+
+      expect(address.meetings).to include(meeting)
+    end
   end
