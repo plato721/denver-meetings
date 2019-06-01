@@ -9,10 +9,6 @@ RSpec.describe "Search by access" do
     FactoryBot.create_list :meeting, 3
   end
 
-  before :each do
-    no_geocode
-  end
-
   after :all do
     Meeting.destroy_all
   end

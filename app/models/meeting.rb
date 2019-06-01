@@ -1,18 +1,7 @@
 class Meeting < ActiveRecord::Base
-  # TODO - move the addresses and use this assoication
-  # belongs_to :address
-
-  attr_reader :geocoder
-  attr_accessor :_skip_geocoder
+  belongs_to :address
 
   validate :raw_meeting_unique, on: :create
-
-  # geocoder dependent callbacks
-  geocoded_by :address, :latitude => :lat, :longitude => :lng
-  after_validation :geocode, :unless => :_skip_geocoder
-  before_create :custom_reverse, :address_from_coords, :unless => :_skip_geocoder
-  # end geocoder dependent callbacks
-
   belongs_to :raw_meeting
 
   def self.geocoded
@@ -37,20 +26,6 @@ class Meeting < ActiveRecord::Base
     if Meeting.find_by(raw_meeting_id: raw_meeting_id)
       errors.add(:raw_meeting_id, "must be unique")
     end
-  end
-
-  def address
-    [address_1, city, state].compact.join(', ')
-  end
-
-  def custom_reverse
-    return if (!self.lat.present? || !self.lng.present?)
-
-    @geocoder ||= Geocoder.search([self.lat, self.lng]).first
-  end
-
-  def address_from_coords
-    self.zip = self.geocoder.postal_code if self.geocoder.present?
   end
 
   def self.by_group_name(group_name)

@@ -8,7 +8,6 @@ RSpec.describe MeetingsCreator do
   end
 
   before :each do
-    no_geocode
     @raw_meetings = RawMeeting.all
     @creator = MeetingsCreator.new(@raw_meetings, 0.0)
   end

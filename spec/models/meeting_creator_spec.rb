@@ -5,7 +5,6 @@ RSpec.describe MeetingCreator do
 
   context "with parenthetical location description and minimal codes" do
     before :each do
-      allow_any_instance_of(Meeting).to receive(:geocode).and_return(nil)
       @rm = RawMeeting.where(RawMeeting.arel_table[:address].matches('%3355 S.%')).first
       mc = MeetingCreator.new(@rm)
       @meeting = mc.create
@@ -41,7 +40,6 @@ RSpec.describe MeetingCreator do
     end
 
     before :each do
-      allow_any_instance_of(Meeting).to receive(:geocode).and_return(nil)
       @meeting = described_class.new(@raw).create
     end
 

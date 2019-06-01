@@ -13,7 +13,7 @@ RSpec.configure do |config|
   config.mock_with :rspec do |mocks|
     mocks.verify_partial_doubles = true
   end
-  
+
   config.before(:suite) do
     DatabaseCleaner.start
     DatabaseCleaner.strategy = :transaction
@@ -28,7 +28,7 @@ RSpec.configure do |config|
   WebMock.stub_request(:any, "www.localhost:3000")
   WebMock.stub_request(:get, "http://maps.googleapis.com/maps/api/geocode/json?address=3355%20S.%20Wadsworth%20Ave.,%20Lakewood,%20CO&language=en&sensor=false")
   WebMock.stub_request(:get, "http://maps.googleapis.com/maps/api/geocode/json?address=3355%20S.%20Wadsworth%20Bl.%20%23H-127,%20Lakewood,%20CO&language=en&sensor=false")
-  
+
   def login(user)
     OmniAuth.config.test_mode = true
     OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new({
@@ -48,10 +48,6 @@ RSpec.configure do |config|
     })
   end
 
-  def no_geocode(klass=Meeting)
-    allow_any_instance_of(klass).to receive(:geocode).and_return(nil)
-  end
-  
 =begin
   # These two settings work together to allow you to limit a spec run
   # to individual examples or groups you care about by tagging them with

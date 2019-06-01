@@ -13,10 +13,6 @@ RSpec.describe "Search by language" do
     Meeting.destroy_all
   end
 
-  before :each do
-    no_geocode
-  end
-
   context "Polish" do
     before do
       Meeting.first.tap{ |m| m.update_attributes(

@@ -2,7 +2,6 @@ FactoryBot.define do
   sequence(:group_name) { |i| "Group Name #{i}" }
 
   factory :meeting do
-    _skip_geocoder { true }
     day { Day.day_order.sample }
     group_name
     address_1 { FFaker::AddressUS.street_address }

@@ -15,7 +15,6 @@ RSpec.describe Proximal do
   end
 
   it "calculates the distance between a location and a meeting" do
-    no_geocode
     meeting = Meeting.find_by(group_name: "Daily Serenity")
 
     prox = Proximal.new(meeting)
