@@ -12,7 +12,7 @@ class MoveAddress
         lng: meeting.lng
       }
 
-      address = Address.first_or_create(address_attributes)
+      address = Address.find_or_create_by(address_attributes)
       address.meetings << meeting
       address
     end
