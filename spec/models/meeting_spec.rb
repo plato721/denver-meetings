@@ -12,13 +12,8 @@ RSpec.describe Meeting, type: :model do
     Meeting.destroy_all
   end
 
-  before :each do
-    no_geocode
-  end
-
   context "associations" do
-    # TODO - move the address and use association
-    xit "has an address" do
+    it "has an address" do
       address = FactoryBot.create :address
       meeting = FactoryBot.create :meeting
 
@@ -35,22 +30,29 @@ RSpec.describe Meeting, type: :model do
     expect(meeting.visible?).to be_truthy
   end
 
-  it "scopes for visible" do
-    meeting = Meeting.first
-    meeting.update_attribute(:visible, false)
+  context "scopes" do
+    it "- visible shows visible meetings" do
+      meeting = Meeting.first
+      meeting.update_attribute(:visible, false)
 
-    found = Meeting.visible
-    expect(found.all? { |m| m.visible? }).to be_truthy
-    expect(found.count).to eq(Meeting.count - 1)
-  end
+      found = Meeting.visible
+      expect(found.all? { |m| m.visible? }).to be_truthy
+      expect(found.count).to eq(Meeting.count - 1)
+    end
 
-  # skipping while swinging to flag
-  it "scopes for open/closed" do
-    expect(Meeting.open.count).to eq(Meeting.count)
-    expect(Meeting.closed.count).to eq(0)
+    it "- open meetings are those that aren't closed" do
+      expect(Meeting.open.count).to eq(Meeting.count)
+      expect(Meeting.closed.count).to eq(0)
 
-    Meeting.first.update_attribute(:closed, true)
-    expect(Meeting.closed.count).to eq(1)
-    expect(Meeting.open.count).to eq(Meeting.count - 1)
+      Meeting.first.update_attribute(:closed, true)
+      expect(Meeting.closed.count).to eq(1)
+      expect(Meeting.open.count).to eq(Meeting.count - 1)
+    end
+
+    it "- address is used to know whether geocoded" do
+
+    end
+
+
   end
 end

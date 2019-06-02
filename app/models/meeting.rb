@@ -1,22 +1,13 @@
 class Meeting < ActiveRecord::Base
-  # TODO - move the addresses and use this assoication
-  # belongs_to :address
-
-  attr_reader :geocoder
-  attr_accessor :_skip_geocoder
+  belongs_to :address
 
   validate :raw_meeting_unique, on: :create
-
-  # geocoder dependent callbacks
-  geocoded_by :address, :latitude => :lat, :longitude => :lng
-  after_validation :geocode, :unless => :_skip_geocoder
-  before_create :custom_reverse, :address_from_coords, :unless => :_skip_geocoder
-  # end geocoder dependent callbacks
-
   belongs_to :raw_meeting
 
   def self.geocoded
-    where.not(lat: nil).where.not(lng: nil)
+    joins(:address)
+    .where.not(addresses: { lat: nil })
+    .where.not(addresses: { lng: nil })
   end
 
   def self.visible
@@ -31,6 +22,10 @@ class Meeting < ActiveRecord::Base
     where(closed: true)
   end
 
+  def geocoded?
+    address&.geocoded?
+  end
+
   def raw_meeting_unique
     # one can create a meeting without a raw meeting. but if it is passed, it
     #   must be unique.
@@ -39,27 +34,13 @@ class Meeting < ActiveRecord::Base
     end
   end
 
-  def address
-    [address_1, city, state].compact.join(', ')
-  end
-
-  def custom_reverse
-    return if (!self.lat.present? || !self.lng.present?)
-
-    @geocoder ||= Geocoder.search([self.lat, self.lng]).first
-  end
-
-  def address_from_coords
-    self.zip = self.geocoder.postal_code if self.geocoder.present?
-  end
-
   def self.by_group_name(group_name)
     group_name = "any" if group_name == ""
     group_name == "any" ? all : where("group_name LIKE ?", "%#{group_name}%")
   end
 
   def self.by_city(city)
-    city == "any" ? all : where("city LIKE ?", "%#{city}%")
+    city == "any" ? all : where("addresses.city LIKE ?", "%#{city}%")
   end
 
   def self.by_open(open)
@@ -103,7 +84,8 @@ class Meeting < ActiveRecord::Base
   end
 
   def self.search(params)
-    scope = self.visible
+    scope = Meeting.joins(:address).includes(:address)
+      .visible
       .by_group_name(params[:group_name])
       .by_group_name(params[:free])
       .by_city(params[:city])
@@ -134,7 +116,7 @@ class Meeting < ActiveRecord::Base
                       .where.not(deleted: true)
                       .where(visible: true)
     bad_meetings = meetings.select do |meeting|
-      street_address = meeting.address_1
+      street_address = meeting.address&.address_1
       raw_address = meeting.raw_meeting.address
       match_on = /^#{street_address[0..4]}/ rescue nil
       matches = raw_address.match(match_on) rescue false
@@ -142,7 +124,7 @@ class Meeting < ActiveRecord::Base
     end
 
     bad_meetings.each do |bad_meeting|
-      Rails.logger.warn { "Bad meeting found!\n id: #{bad_meeting.id} group_name: #{bad_meeting.group_name} address_1: #{bad_meeting.address_1} raw_address: #{bad_meeting.raw_meeting.address}" }
+      Rails.logger.warn { "Bad meeting found!\n id: #{bad_meeting.id} group_name: #{bad_meeting.group_name} address_1: #{bad_meeting.address&.address_1} raw_address: #{bad_meeting.raw_meeting.address}" }
     end
   end
 end

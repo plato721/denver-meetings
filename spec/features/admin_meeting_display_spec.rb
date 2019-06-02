@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "Admin meeting display" do
-  fixtures :meetings
+  fixtures :meetings, :addresses
   fixtures :raw_meetings
 
   context "as an admin" do
@@ -22,8 +22,6 @@ RSpec.feature "Admin meeting display" do
     end
 
     it "can edit a meeting" do
-      allow_any_instance_of(Meeting).to receive(:geocode).and_return(nil)
-
       meeting = Meeting.first
       id = meeting.id
       group_name = meeting.group_name

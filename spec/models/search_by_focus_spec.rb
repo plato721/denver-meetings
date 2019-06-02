@@ -9,10 +9,6 @@ RSpec.describe "Search by language" do
     FactoryBot.create_list :meeting, 3
   end
 
-  before :each do
-    no_geocode
-  end
-
   context "men" do
     before do
       Meeting.first.tap{ |m| m.update_attributes(

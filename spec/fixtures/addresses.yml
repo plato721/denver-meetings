@@ -1,0 +1,30 @@
+one:
+  address_1: 3600 S. Clarkson
+  address_2: 
+  notes: NE of Ch
+  city: Englewood
+  state: CO
+  zip: 80113
+  district: 11
+  lat: 39.650253
+  lng: -104.977313
+
+two:
+  address_1: 1311 York St.
+  address_2: 
+  notes: Oldest still active clubhouse
+  city: Denver
+  state: CO
+  zip: 80206
+  lat: 39.736960
+  lng: -104.959935
+
+three:
+  address_1: 3355 S. Wadsworth Ave.
+  address_2: H-125
+  city: Lakewood
+  state: CO
+  zip: 80227
+  district: 30
+  lat: 39.654566
+  lng: -105.08218

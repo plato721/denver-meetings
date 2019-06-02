@@ -7,6 +7,6 @@ class ExternalMapLink
   end
 
   def url
-    "http://maps.google.com/maps?q=loc:#{self.meeting.lat},#{self.meeting.lng}"
+    "http://maps.google.com/maps?q=loc:#{self.meeting.address&.lat},#{self.meeting.address&.lng}"
   end
 end

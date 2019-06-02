@@ -22,7 +22,9 @@ class HereAndNow
 
   def meetings_with_distance(meetings)
     meetings.map do |meeting|
-      [meeting, Proximal.new(meeting).distance_from([self.lat, self.lng])]
+      [meeting, Proximal.new(meeting).distance_from(
+        [self.lat, self.lng]
+      )]
     end
   end
 

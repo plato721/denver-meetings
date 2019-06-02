@@ -1,5 +1,5 @@
 class MeetingCreator::PhoneExtractor
-  def self.extract(raw_meeting)
+  def self.extract(raw_meeting, _)
     matched = raw_meeting.address.match(phone_matcher)
     matched ? matched.to_s : ''
   end

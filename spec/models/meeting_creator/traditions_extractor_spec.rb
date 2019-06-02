@@ -4,7 +4,7 @@ describe MeetingCreator::TraditionsExtractor do
   it "finds traditions" do
     raw_meeting = OpenStruct.new(codes: 'T')
 
-    result = described_class.extract(raw_meeting)
+    result = described_class.extract(raw_meeting, nil)
 
     expect(result).to be_truthy
   end
@@ -12,7 +12,7 @@ describe MeetingCreator::TraditionsExtractor do
   it "does not find traditions in ST" do
     raw_meeting = OpenStruct.new(codes: 'ST')
 
-    result = described_class.extract(raw_meeting)
+    result = described_class.extract(raw_meeting, nil)
 
     expect(result).to be_falsey
   end

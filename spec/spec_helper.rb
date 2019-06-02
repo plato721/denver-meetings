@@ -13,7 +13,7 @@ RSpec.configure do |config|
   config.mock_with :rspec do |mocks|
     mocks.verify_partial_doubles = true
   end
-  
+
   config.before(:suite) do
     DatabaseCleaner.start
     DatabaseCleaner.strategy = :transaction
@@ -28,7 +28,7 @@ RSpec.configure do |config|
   WebMock.stub_request(:any, "www.localhost:3000")
   WebMock.stub_request(:get, "http://maps.googleapis.com/maps/api/geocode/json?address=3355%20S.%20Wadsworth%20Ave.,%20Lakewood,%20CO&language=en&sensor=false")
   WebMock.stub_request(:get, "http://maps.googleapis.com/maps/api/geocode/json?address=3355%20S.%20Wadsworth%20Bl.%20%23H-127,%20Lakewood,%20CO&language=en&sensor=false")
-  
+
   def login(user)
     OmniAuth.config.test_mode = true
     OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new({
@@ -48,10 +48,30 @@ RSpec.configure do |config|
     })
   end
 
-  def no_geocode(klass=Meeting)
-    allow_any_instance_of(klass).to receive(:geocode).and_return(nil)
+  def no_geocoding
+    allow_any_instance_of(Address).to receive(:geocode).and_return(nil)
+    geocoder_result = double(:result, data: {
+      "place_id" => 240016995,
+      "licence" => "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+      "osm_type" => "way",
+      "osm_id" => 628364649,
+      "lat" => "39.8418828993539",
+      "lon" => "-105.081345000655",
+      "display_name" => "West 80th Avenue, Arvada, Jefferson County, Colorado, 80003, USA",
+      "address" =>
+        {"road" => "West 80th Avenue",
+        "town" => "Arvada",
+        "county" => "Jefferson County",
+        "state" => "Colorado",
+        "postcode" => "80003",
+        "country" => "USA",
+        "country_code" => "us"},
+      "boundingbox" => ["39.8418784", "39.8418829", "-105.0813451", "-105.0806532"]}
+ )
+    geocoder_results = [geocoder_result]
+    allow(Geocoder).to receive(:search).and_return(geocoder_results)
   end
-  
+
 =begin
   # These two settings work together to allow you to limit a spec run
   # to individual examples or groups you care about by tagging them with

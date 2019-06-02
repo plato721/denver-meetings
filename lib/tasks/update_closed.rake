@@ -3,7 +3,6 @@ namespace :flags do
   task :migrate_closed => :environment do
     Meeting.all.each do |meeting|
       meeting.is_closed = meeting.closed
-      meeting._skip_geocoder = true
       meeting.save
     end
   end

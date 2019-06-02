@@ -14,15 +14,10 @@ class AdminMeetingDisplay
   end
 
   def address
-    meeting.address_2.nil? ? three_line_address : four_line_address
-  end
-
-  def three_line_address
-    "#{meeting.address_1}<br>#{meeting.city}, #{meeting.state}  #{meeting.zip}"
-  end
-
-  def four_line_address
-    "#{meeting.address_1}<br>#{meeting.address_2}<br>#{meeting.city}, #{meeting.state}  #{meeting.zip}"
+    [ meeting&.address&.address_1,
+      meeting&.address&.address_2,
+      "#{meeting&.address&.city}, #{meeting&.address&.state}"
+    ].select(&:present?).join("<br>").html_safe
   end
 
   def approved
@@ -42,7 +37,10 @@ class AdminMeetingDisplay
   end
 
   def coords
-    "#{meeting.lat}, #{meeting.lng}"
+    lat = meeting&.address&.lat ? "#{meeting&.address&.lat}" : "?"
+    lng = meeting&.address&.lng ? "#{meeting&.address&.lng}" : "?"
+
+    "#{lat}, #{lng}"
   end
 
   def phone

@@ -1,5 +1,5 @@
 class MeetingCreator::Address2Extractor
-  def self.extract(raw_meeting)
+  def self.extract(raw_meeting, _)
     address = remove_notes(raw_meeting.address)
     matched = address.match /(Unit|Ste|#)[\.]?[ ]{0,}[\w-]+/
     return '' unless matched

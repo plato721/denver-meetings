@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe HereAndNow do
-  fixtures :meetings
+  fixtures :meetings, :addresses
 
   before do
     @lat = 39.7402592

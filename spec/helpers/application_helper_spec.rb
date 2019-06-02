@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe ApplicationHelper, type: :helper do
-  fixtures :meetings
+  fixtures :meetings, :addresses
 
   it "generates cache key names" do
     label = "thumbnail"

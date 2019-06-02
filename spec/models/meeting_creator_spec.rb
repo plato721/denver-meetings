@@ -3,20 +3,23 @@ require 'rails_helper'
 RSpec.describe MeetingCreator do
   fixtures :raw_meetings
 
+  before do
+    no_geocoding
+  end
+
   context "with parenthetical location description and minimal codes" do
     before :each do
-      allow_any_instance_of(Meeting).to receive(:geocode).and_return(nil)
       @rm = RawMeeting.where(RawMeeting.arel_table[:address].matches('%3355 S.%')).first
       mc = MeetingCreator.new(@rm)
       @meeting = mc.create
     end
 
     it "extracts city" do
-      expect(@meeting.city).to eq(@rm.city)
+      expect(@meeting.address.city).to eq(@rm.city)
     end
 
     it "extracts first line address" do
-      expect(@meeting.address_1).to eq('3355 S. Wadsworth Blvd.')
+      expect(@meeting.address.address_1).to eq('3355 S. Wadsworth Blvd.')
     end
 
     it "knows open status" do
@@ -29,7 +32,7 @@ RSpec.describe MeetingCreator do
   end
 
   context "with non-spaced parenthetical location description" do
-    before :all do
+    before :each do
       @raw = RawMeeting.create(
         day: 'Tuesday',
         group_name: "Men's Meeting",
@@ -38,19 +41,15 @@ RSpec.describe MeetingCreator do
         district: '10',
         codes: 'CMn'
       )
-    end
-
-    before :each do
-      allow_any_instance_of(Meeting).to receive(:geocode).and_return(nil)
       @meeting = described_class.new(@raw).create
     end
 
     it "parses address_1" do
-      expect(@meeting.address_1).to eql("1200 South St.")
+      expect(@meeting.address.address_1).to eql("1200 South St.")
     end
 
     it "parses notes" do
-      expect(@meeting.notes).to eql("Ch bsmt #104")
+      expect(@meeting.address.notes).to eql("Ch bsmt #104")
     end
 
     it "is men's" do
@@ -69,15 +68,15 @@ RSpec.describe MeetingCreator do
     end
 
     it "parses address_1" do
-      expect(@meeting.address_1).to eql("8250 W. 80th Ave.")
+      expect(@meeting.address.address_1).to eql("8250 W. 80th Ave.")
     end
 
     it "parses address_2" do
-      expect(@meeting.address_2).to eql("Unit 12")
+      expect(@meeting.address.address_2).to eql("Unit 12")
     end
 
     it "parses notes" do
-      expect(@meeting.notes).to_not be_present
+      expect(@meeting.address.notes).to_not be_present
     end
 
     it "parses phone number" do
@@ -95,11 +94,11 @@ RSpec.describe MeetingCreator do
     end
 
     it "parses address_1" do
-      expect(@meeting.address_1).to eql("16732 E Iliff Av")
+      expect(@meeting.address.address_1).to eql("16732 E Iliff Av")
     end
 
     it "parses notes" do
-      expect(@meeting.notes).to eql("Shop Ctr")
+      expect(@meeting.address.notes).to eql("Shop Ctr")
     end
 
     it "parses phone number" do
@@ -117,15 +116,15 @@ RSpec.describe MeetingCreator do
     end
 
     it "parses address_1" do
-      expect(@meeting.address_1).to eql("15210 E 6th Ave")
+      expect(@meeting.address.address_1).to eql("15210 E 6th Ave")
     end
 
     it "parses address_2" do
-      expect(@meeting.address_2).to eql("Unit 1")
+      expect(@meeting.address.address_2).to eql("Unit 1")
     end
 
     it "parses notes" do
-      expect(@meeting.notes).to eql("")
+      expect(@meeting.address.notes).to eql("")
     end
 
     it "parses phone number" do
