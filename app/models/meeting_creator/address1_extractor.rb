@@ -1,5 +1,5 @@
 class MeetingCreator::Address1Extractor
-  def self.extract(raw_meeting)
+  def self.extract(raw_meeting, _)
     address = raw_meeting.address
 
     address = check_and_fix_clarkson(address)

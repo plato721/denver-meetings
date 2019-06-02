@@ -10,20 +10,14 @@ class MeetingCreator::BuildAttributes
     ba.build
   end
 
-  # Note, zip code, lat, and lng will come from geocoding done in Meeting
-  def self.meeting_attributes
+  def object_attributes
     [
+      :address,
       :raw_meeting,
       :group_name,
       :day,
       :closed,
       :time,
-      :address_1,
-      :address_2,
-      :notes,
-      :district,
-      :city,
-      :state,
       :phone,
 
       # 'Features'
@@ -55,24 +49,12 @@ class MeetingCreator::BuildAttributes
     @raw_meeting = raw_meeting
   end
 
-  # Loop through the meeting_attributes. Find a handler for each, call that
+  # Loop through the object_attributes. Find a handler for each, call that
   # handler, and build up a hash with the attribute and the extracted value.
   def build
-    self.class.meeting_attributes
-        .each_with_object({}) do |attribute, attributes|
+    object_attributes.each_with_object({}) do |attribute, attributes|
       handler = determine_handler(attribute)
-      extracted_value = extract_value(handler, attribute)
-      attributes[attribute] = extracted_value
-    end
-  end
-
-  def extract_value(handler, attribute)
-    if handler == passthru_handler
-      # The passthrough handler has to know which attribute to pass through
-      # from the raw_meeting.
-      handler.extract(raw_meeting, attribute)
-    else
-      handler.extract(raw_meeting)
+      attributes[attribute] = handler.extract(raw_meeting, attribute)
     end
   end
 

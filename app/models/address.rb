@@ -2,25 +2,31 @@ class Address < ApplicationRecord
   has_many :meetings
   validate :address_unique
 
-  attr_reader :geocoder
-  attr_accessor :_skip_geocoder
+  geocoded_by :geocoding_string, :latitude => :lat, :longitude => :lng
 
-  geocoded_by :address, :latitude => :lat, :longitude => :lng
-  # after_validation :geocode, :unless => :_skip_geocoder
-  # before_create :custom_reverse, :address_from_coords, :unless => :_skip_geocoder
+  def geocoded?
+    lat.present? && lng.present?
+  end
 
-  def address
+  def geocoding_string
     [address_1, city, state].compact.join(', ')
   end
 
-  def custom_reverse
-    return if (!self.lat.present? || !self.lng.present?)
-
-    @geocoder ||= Geocoder.search([self.lat, self.lng]).first
+  def geocode_with_reverse
+    self.geocode
+    get_and_store_zip
   end
 
-  def address_from_coords
-    self.zip = self.geocoder.postal_code if self.geocoder.present?
+  def get_and_store_zip
+    return if (!self.lat.present? || !self.lng.present?)
+
+    search_result = Geocoder.search([self.lat, self.lng])&.first
+    zip = zip_from(search_result)
+    save
+  end
+
+  def zip_from(result)
+    result.data["address"]["postcode"] rescue nil
   end
 
   def address_unique

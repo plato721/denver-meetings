@@ -3,6 +3,30 @@ require 'rails_helper'
 RSpec.describe MeetingCreator do
   fixtures :raw_meetings
 
+  before do
+    allow_any_instance_of(Address).to receive(:geocode).and_return(nil)
+    geocoder_result = double(:result, data: {
+      "place_id" => 240016995,
+      "licence" => "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+      "osm_type" => "way",
+      "osm_id" => 628364649,
+      "lat" => "39.8418828993539",
+      "lon" => "-105.081345000655",
+      "display_name" => "West 80th Avenue, Arvada, Jefferson County, Colorado, 80003, USA",
+      "address" => 
+      {"road" => "West 80th Avenue",
+      "town" => "Arvada",
+      "county" => "Jefferson County",
+      "state" => "Colorado",
+      "postcode" => "80003",
+      "country" => "USA",
+      "country_code" => "us"},
+      "boundingbox" => ["39.8418784", "39.8418829", "-105.0813451", "-105.0806532"]}
+ )
+    geocoder_results = [geocoder_result]
+    allow(Geocoder).to receive(:search).and_return(geocoder_results)
+  end
+
   context "with parenthetical location description and minimal codes" do
     before :each do
       @rm = RawMeeting.where(RawMeeting.arel_table[:address].matches('%3355 S.%')).first
@@ -11,11 +35,11 @@ RSpec.describe MeetingCreator do
     end
 
     it "extracts city" do
-      expect(@meeting.city).to eq(@rm.city)
+      expect(@meeting.address.city).to eq(@rm.city)
     end
 
     it "extracts first line address" do
-      expect(@meeting.address_1).to eq('3355 S. Wadsworth Blvd.')
+      expect(@meeting.address.address_1).to eq('3355 S. Wadsworth Blvd.')
     end
 
     it "knows open status" do
@@ -28,7 +52,7 @@ RSpec.describe MeetingCreator do
   end
 
   context "with non-spaced parenthetical location description" do
-    before :all do
+    before :each do
       @raw = RawMeeting.create(
         day: 'Tuesday',
         group_name: "Men's Meeting",
@@ -37,18 +61,15 @@ RSpec.describe MeetingCreator do
         district: '10',
         codes: 'CMn'
       )
-    end
-
-    before :each do
       @meeting = described_class.new(@raw).create
     end
 
     it "parses address_1" do
-      expect(@meeting.address_1).to eql("1200 South St.")
+      expect(@meeting.address.address_1).to eql("1200 South St.")
     end
 
     it "parses notes" do
-      expect(@meeting.notes).to eql("Ch bsmt #104")
+      expect(@meeting.address.notes).to eql("Ch bsmt #104")
     end
 
     it "is men's" do
@@ -67,15 +88,15 @@ RSpec.describe MeetingCreator do
     end
 
     it "parses address_1" do
-      expect(@meeting.address_1).to eql("8250 W. 80th Ave.")
+      expect(@meeting.address.address_1).to eql("8250 W. 80th Ave.")
     end
 
     it "parses address_2" do
-      expect(@meeting.address_2).to eql("Unit 12")
+      expect(@meeting.address.address_2).to eql("Unit 12")
     end
 
     it "parses notes" do
-      expect(@meeting.notes).to_not be_present
+      expect(@meeting.address.notes).to_not be_present
     end
 
     it "parses phone number" do
@@ -93,11 +114,11 @@ RSpec.describe MeetingCreator do
     end
 
     it "parses address_1" do
-      expect(@meeting.address_1).to eql("16732 E Iliff Av")
+      expect(@meeting.address.address_1).to eql("16732 E Iliff Av")
     end
 
     it "parses notes" do
-      expect(@meeting.notes).to eql("Shop Ctr")
+      expect(@meeting.address.notes).to eql("Shop Ctr")
     end
 
     it "parses phone number" do
@@ -115,15 +136,15 @@ RSpec.describe MeetingCreator do
     end
 
     it "parses address_1" do
-      expect(@meeting.address_1).to eql("15210 E 6th Ave")
+      expect(@meeting.address.address_1).to eql("15210 E 6th Ave")
     end
 
     it "parses address_2" do
-      expect(@meeting.address_2).to eql("Unit 1")
+      expect(@meeting.address.address_2).to eql("Unit 1")
     end
 
     it "parses notes" do
-      expect(@meeting.notes).to eql("")
+      expect(@meeting.address.notes).to eql("")
     end
 
     it "parses phone number" do
