@@ -2,8 +2,8 @@ class Proximal
   attr_reader :lat, :lng
 
   def initialize(meeting)
-    @lat = meeting.lat
-    @lng = meeting.lng
+    @lat = meeting.address&.lat
+    @lng = meeting.address&.lng
   end
 
   def earth_radius #in miles, at 39.xx degrees latitude

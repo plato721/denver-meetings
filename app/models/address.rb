@@ -21,7 +21,7 @@ class Address < ApplicationRecord
     return if (!self.lat.present? || !self.lng.present?)
 
     search_result = Geocoder.search([self.lat, self.lng])&.first
-    zip = zip_from(search_result)
+    self.zip = zip_from(search_result)
     save
   end
 

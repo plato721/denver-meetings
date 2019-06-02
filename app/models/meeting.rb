@@ -5,7 +5,9 @@ class Meeting < ActiveRecord::Base
   belongs_to :raw_meeting
 
   def self.geocoded
-    where.not(lat: nil).where.not(lng: nil)
+    joins(:address)
+    .where.not(addresses: { lat: nil })
+    .where.not(addresses: { lng: nil })
   end
 
   def self.visible
@@ -18,6 +20,10 @@ class Meeting < ActiveRecord::Base
 
   def self.closed
     where(closed: true)
+  end
+
+  def geocoded?
+    address&.geocoded?
   end
 
   def raw_meeting_unique
@@ -34,7 +40,7 @@ class Meeting < ActiveRecord::Base
   end
 
   def self.by_city(city)
-    city == "any" ? all : where("city LIKE ?", "%#{city}%")
+    city == "any" ? all : where("addresses.city LIKE ?", "%#{city}%")
   end
 
   def self.by_open(open)
@@ -78,7 +84,8 @@ class Meeting < ActiveRecord::Base
   end
 
   def self.search(params)
-    scope = self.visible
+    scope = Meeting.joins(:address).includes(:address)
+      .visible
       .by_group_name(params[:group_name])
       .by_group_name(params[:free])
       .by_city(params[:city])
@@ -109,7 +116,7 @@ class Meeting < ActiveRecord::Base
                       .where.not(deleted: true)
                       .where(visible: true)
     bad_meetings = meetings.select do |meeting|
-      street_address = meeting.address_1
+      street_address = meeting.address&.address_1
       raw_address = meeting.raw_meeting.address
       match_on = /^#{street_address[0..4]}/ rescue nil
       matches = raw_address.match(match_on) rescue false
@@ -117,7 +124,7 @@ class Meeting < ActiveRecord::Base
     end
 
     bad_meetings.each do |bad_meeting|
-      Rails.logger.warn { "Bad meeting found!\n id: #{bad_meeting.id} group_name: #{bad_meeting.group_name} address_1: #{bad_meeting.address_1} raw_address: #{bad_meeting.raw_meeting.address}" }
+      Rails.logger.warn { "Bad meeting found!\n id: #{bad_meeting.id} group_name: #{bad_meeting.group_name} address_1: #{bad_meeting.address&.address_1} raw_address: #{bad_meeting.raw_meeting.address}" }
     end
   end
 end

@@ -5,13 +5,15 @@
 class Meeting::ExtractPhone
   class << self
     def extract! meeting
-      initial_address = meeting.address_1
+      initial_address = meeting.address&.address_1
       return unless has_phone? initial_address
 
       phone_part = initial_address.match(phone_regex).to_s
       address_part = scrub_phone_from(initial_address)
 
-      meeting.update_column(:address_1, address_part)
+      address = meeting.address
+
+      address.update_column(:address_1, address_part)
       meeting.update_column(:phone, phone_part)
     end
 

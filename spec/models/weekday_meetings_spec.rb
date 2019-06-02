@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe WeekdayMeetings do
-  fixtures :meetings
+  fixtures :meetings, :addresses
 
   let(:days) { Day.day_order }
   before(:all) { @meetings = Meeting.all }

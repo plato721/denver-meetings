@@ -1,5 +1,5 @@
 RSpec.describe AdminMeetingDisplay do
-  fixtures :meetings
+  fixtures :meetings, :addresses
 
   it "creates a url to google maps using a meeting's coordinates" do
     amd = AdminMeetingDisplay.new(Meeting.first)

@@ -1,6 +1,7 @@
 FactoryBot.define do
   factory :address do
     address_1 { FFaker::AddressUS.street_address }
+    address_2 { nil }
     notes { FFaker::DizzleIpsum.words.join.capitalize }
     city { FFaker::AddressUS.city }
     state { FFaker::AddressUS.state }

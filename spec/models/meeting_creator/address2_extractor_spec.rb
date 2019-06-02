@@ -24,7 +24,7 @@ describe MeetingCreator::Address2Extractor do
     it "extracts '#{desired_output}' from '#{raw_address}'" do
       raw_meeting = OpenStruct.new(address: raw_address)
 
-      result = described_class.extract(raw_meeting)
+      result = described_class.extract(raw_meeting, nil)
 
       expect(result).to eql(desired_output)
     end

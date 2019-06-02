@@ -52,8 +52,8 @@ RSpec.describe MobileMeetingDisplay do
   end
 
   it "has meeting coords" do
-    lat = Meeting.first.lat
-    lng = Meeting.first.lng
+    lat = Meeting.first.address.lat
+    lng = Meeting.first.address.lng
     mmd = MobileMeetingDisplay.new(Meeting.first)
 
     expect(mmd.coords).to eq("#{lat}, #{lng}")

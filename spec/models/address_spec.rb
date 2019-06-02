@@ -55,13 +55,12 @@ describe Address do
       end
 
       it "get_and_store_zip" do
+        no_geocoding
         sut = FactoryBot.create(:address, lat: 40, lng: -109, zip: nil)
-        address_result = double(:geocoder, zip: "12345")
-        allow(Geocoder).to receive(:search).and_return([address_result])
 
         sut.get_and_store_zip
 
-        expect(sut.zip).to eq("12345")
+        expect(sut.zip).to eq("80003")
       end
     end
   end

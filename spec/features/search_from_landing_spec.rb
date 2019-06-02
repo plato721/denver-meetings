@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "Search from landing" do
-  fixtures :meetings
+  fixtures :meetings, :addresses
 
   context "as mobile user" do
     scenario "it is directed to a search form" do

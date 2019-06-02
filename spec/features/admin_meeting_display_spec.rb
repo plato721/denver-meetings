@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "Admin meeting display" do
-  fixtures :meetings
+  fixtures :meetings, :addresses
   fixtures :raw_meetings
 
   context "as an admin" do

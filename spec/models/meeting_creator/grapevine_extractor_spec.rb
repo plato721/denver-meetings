@@ -4,7 +4,7 @@ describe MeetingCreator::GrapevineExtractor do
   it 'finds grapevine' do
     raw_meeting = OpenStruct.new(codes: 'GV')
 
-    result = described_class.extract(raw_meeting)
+    result = described_class.extract(raw_meeting, nil)
 
     expect(result).to be_truthy
   end

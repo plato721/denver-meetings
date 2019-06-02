@@ -68,7 +68,7 @@ RSpec.describe RawMeeting do
 
   context "scope" do
     fixtures :raw_meetings
-    fixtures :meetings
+    fixtures :meetings, :addresses
 
     it "scope - raw meetings for which there is a meeting that points to it" do
       results = RawMeeting.for_all_non_daccaa_deleted

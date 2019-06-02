@@ -5,8 +5,8 @@ RSpec.describe Search do
     Meeting.destroy_all
     FactoryBot.create_list :meeting, 5
 
-    Meeting.first.update_attribute(:lat, 39.740143)
-    Meeting.first.update_attribute(:lng, -104.962335)
+    Meeting.first.address.update_attribute(:lat, 39.740143)
+    Meeting.first.address.update_attribute(:lng, -104.962335)
 
     Meeting.second.update_attribute(:group_name, "Mojo Jojo's House of Dojo")
     Meeting.third.update_attribute(:city, "Townsxyzpdq1234villia")
