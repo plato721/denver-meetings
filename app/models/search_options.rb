@@ -17,7 +17,7 @@ class SearchOptions
   end
 
   def cleanse_meetings(meetings)
-    Meeting.where(id: meetings.map(&:id))
+    Meeting.includes(:address).where(id: meetings.map(&:id))
   end
 
   def default_args
@@ -59,7 +59,12 @@ class SearchOptions
   end
 
   def cities_found
-    meetings.distinct.pluck(:city).sort
+    meetings
+    .select('addresses.city')
+    .where.not(addresses: {city: nil})
+    .distinct
+    .order('addresses.city')
+    .pluck('addresses.city')
   end
 
   def cities_json
@@ -162,11 +167,11 @@ class SearchOptions
   end
 
   def meeting_names
-    meetings.distinct.pluck(:group_name).sort
+    meetings.distinct.order(:group_name).pluck(:group_name)
   end
 
   def meetings_json
-    ['any'] + meetings.distinct.pluck(:group_name).sort
+    ['any'] + meetings.distinct.order(:group_name).pluck(:group_name)
   end
 
   def names_select

@@ -84,7 +84,7 @@ class Meeting < ActiveRecord::Base
   end
 
   def self.search(params)
-    scope = Meeting.joins(:address).includes(:address)
+    scope = Meeting.includes(:address)
       .visible
       .by_group_name(params[:group_name])
       .by_group_name(params[:free])

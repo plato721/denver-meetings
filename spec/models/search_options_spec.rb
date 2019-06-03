@@ -54,10 +54,16 @@ RSpec.describe SearchOptions do
   it "dynamically returns available cities" do
     cities = ["Aurora", "Denver", "Boulder", "Westminster", "Broomfield"]
     cities_fewer = cities[0..1]
-    cities.each { |c| FactoryBot.create :meeting, city: c }
+
+    cities.each do |city|
+      address = FactoryBot.create :address, city: city
+      FactoryBot.create :meeting, address: address
+    end
 
     options_all = SearchOptions.new
-    options_fewer = SearchOptions.new(meetings: Meeting.where(city: cities_fewer))
+    options_fewer = SearchOptions.new(
+      meetings: Meeting.includes(:address).where(addresses: { city: cities_fewer})
+    )
 
     expect(options_all.cities_found.length).to eq(cities.length)
     expect(options_fewer.cities_found.length).to eq(cities_fewer.length)
