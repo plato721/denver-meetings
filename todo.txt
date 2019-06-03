@@ -1,7 +1,13 @@
-- create rake task that calls move_addresses
-- test locally
-=> then addresses are copied over into the address table
+x - create rake task that calls move_addresses
+x - test locally
+x => then addresses are copied over into the address table
 
-- handle path of new address creation
-  - handle geolocation in address
-- cut over within app to address table
+x- handle path of new address creation
+  x- handle geolocation in address
+x- cut over within app to address table
+above completed 6/1 and 6/2
+
+- fix admin edit
+ - get rid of github auth
+- scrub data
+- get meetings updated again
