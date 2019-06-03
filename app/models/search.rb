@@ -3,6 +3,7 @@ class Search < ActiveRecord::Base
 
   def results
     return distance_results if distance_search?
+
     weekday_results
   end
 

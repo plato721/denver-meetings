@@ -37,7 +37,7 @@ RSpec.describe MobileMeetingDisplay do
 
   it "access meeting notes" do
     new_notes = "old cabin"
-    Meeting.first.update_attribute(:notes, new_notes)
+    Meeting.first.address.update_attribute(:notes, new_notes)
     mmd = MobileMeetingDisplay.new(Meeting.first)
 
     expect(mmd.notes).to eq(new_notes)

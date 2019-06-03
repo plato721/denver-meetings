@@ -9,12 +9,12 @@ RSpec.describe Search do
     Meeting.first.address.update_attribute(:lng, -104.962335)
 
     Meeting.second.update_attribute(:group_name, "Mojo Jojo's House of Dojo")
-    Meeting.third.update_attribute(:city, "Townsxyzpdq1234villia")
+    Meeting.third.address.update_attribute(:city, "Townsxyzpdq1234villia")
   end
 
   it "finds by location" do
-    search = Search.new({lat: 39.740132,
-                         lng: -104.962323,
+    search = Search.new({lat: 39.740142,
+                         lng: -104.962334,
                          is_location_search: true})
 
     closest_meeting = search.results.first.last.first

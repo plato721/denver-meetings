@@ -87,7 +87,7 @@ class MobileMeetingDisplay
   end
 
   def notes
-    meeting.notes
+    meeting.address&.notes
   end
 
   def coords

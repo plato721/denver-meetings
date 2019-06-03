@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_31_204946) do
+ActiveRecord::Schema.define(version: 2019_06_02_212558) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "citext"
@@ -31,14 +31,7 @@ ActiveRecord::Schema.define(version: 2019_05_31_204946) do
   create_table "meetings", id: :serial, force: :cascade do |t|
     t.string "day"
     t.citext "group_name"
-    t.citext "address_1"
-    t.string "address_2"
-    t.citext "notes"
-    t.string "city"
-    t.string "state"
-    t.string "zip"
     t.string "phone"
-    t.string "district"
     t.string "codes"
     t.decimal "lat", precision: 10, scale: 6
     t.decimal "lng", precision: 10, scale: 6
