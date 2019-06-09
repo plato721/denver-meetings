@@ -23,7 +23,7 @@ RSpec.feature "Admin meeting display" do
 
     # TODO - broken since normalizing with address table
     # nest the attributes or what have you
-    xit "can edit a meeting" do
+    it "can edit a meeting" do
       meeting = Meeting.first
       id = meeting.id
       group_name = meeting.group_name
@@ -33,7 +33,7 @@ RSpec.feature "Admin meeting display" do
         click_link_or_button "False"
       end
       expect(current_path).to eq("/admin/meetings/#{id}/edit")
-      fill_in "meeting_group_name", with: "Patterns on whiteboards"
+      fill_in "group_name", with: "Patterns on whiteboards"
       click_link_or_button "Update Meeting"
       expect(page).to have_content("Patterns on whiteboards")
       expect(page).to_not have_content(group_name)
