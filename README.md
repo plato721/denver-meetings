@@ -1,3 +1,5 @@
+![Travis build status](https://travis-ci.org/plato721/denver-meetings.svg?branch=master)
+
 ### Personal Project - Denver Meetings
 
 #### Links
