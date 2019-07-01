@@ -1,15 +1,15 @@
 %h2.edit-header
   Edit Meeting
-= bootstrap_form_for @meeting, layout: :horizontal, :url => admin_meeting_path, :html => {:method => :patch} do |f|
-  = f.text_field :group_name
-  = f.text_field :day
-  = f.text_field :time
-  = f.text_field :address_1
-  = f.text_field :address_2
-  = f.text_field :notes
-  = f.text_field :city
-  = f.text_field :zip
-  = f.text_field :lat, label: "Latitude"
-  = f.text_field :lng, label: "Longitude"
+= bootstrap_form_tag({ layout: :horizontal, url: "/admin/meetings/#{@meeting.id}", method: :patch}) do |f|
+  = f.text_field :group_name, value: @meeting.group_name
+  = f.text_field :day, value: @meeting.day
+  = f.text_field :time, value: @meeting.time
+  = f.text_field :address_1, value: @meeting.address.address_1
+  = f.text_field :address_2, value: @meeting.address.address_2
+  = f.text_field :notes, value: @meeting.address.notes
+  = f.text_field :city, value: @meeting.address.city
+  = f.text_field :zip, value: @meeting.address.zip
+  = f.text_field :lat, label: "Latitude", value: @meeting.address.lat
+  = f.text_field :lng, label: "Longitude", value: @meeting.address.lng
   = f.check_box :approved, label: "Make this meeting displayable"
   = f.submit "Update Meeting", class: "btn btn-default btn-lg update-meeting-button"

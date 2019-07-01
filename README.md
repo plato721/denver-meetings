@@ -22,5 +22,10 @@ My user is a professional who is very good at her job when she shows up to it. T
 
 #### Building
 
-API Keys. You're going to need some. Get a google maps API key for client-side and server-side. You can make use of Figaro to set the environment variables referenced by the app-- change sample_application.yml to application.yml and follow instructions in Figaro docs to set environment variables
-from the file in production. Do not check application.yml into a public repo.
+- Secrets
+  - Copy sample_application.yml to application.yml
+  - Don't check this into your fork. It should already be present in .gitignore
+  - Replace google maps api keys with your own
+  - Pick an admin password if you like - seeds will create an admin user
+
+

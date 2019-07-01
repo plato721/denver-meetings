@@ -1,0 +1,16 @@
+<div class="login-form">
+  <%= bootstrap_form_tag({ layout: :horizontal, url: "/login" }) do |f| %>
+
+    <%= f.text_field :username %>
+    <%= f.password_field :password %>
+    <%= f.submit "Log In", class: "button button-large button-primary button-submit" %>
+    <%#= "@user.username should be blank. It is: #{@user.username}" %>
+
+  <% end %>
+</div>
+
+<style>
+  .login-form {
+    margin-top: 8em;
+  }
+</style>

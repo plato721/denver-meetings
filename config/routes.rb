@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   
   resources :meetings, only:[:index, :show]
   
+  get "login", to: "sessions#new", as: "login"
+  post "login", to: "sessions#create"
   delete 'logout', to: 'sessions#destroy', as: "logout"
-  get "auth/github", as: "login"
-  get "auth/github/callback", to: "sessions#create"
 
   namespace :mobile do
     resources :search, only:[:new, :create, :index] do
@@ -27,9 +27,10 @@ Rails.application.routes.draw do
     ####
   end
 
-  namespace :admin do
-    root to: "admin#index"
+namespace :admin do
+    root to: "dashboards#index", as: "dashboard"
     resources :meetings, only:[:index, :edit, :update]
+    resources :users, only:[:index]
   end
 
   get '403', to: 'error#unauthorized', as: "unauthorized"
