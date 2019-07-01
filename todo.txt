@@ -7,7 +7,11 @@ x- handle path of new address creation
 x- cut over within app to address table
 above completed 6/1 and 6/2
 
-- fix admin edit
- - get rid of github auth
+x6-30-19- fix admin edit
+ x6-30-19- get rid of github auth
 - scrub data
 - get meetings updated again
+
+7-1-19 - migrate on deploy
+7-1-19 - bundle on deploy
+7-1-19 - update heroku bundle
