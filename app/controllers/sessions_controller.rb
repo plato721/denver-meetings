@@ -1,12 +1,15 @@
 class SessionsController < ApplicationController
+  def new
+  end
+
   def create
-    user = User.from_omniauth(auth)
-    if user
+    user = User.find_by(username: user_params[:username])
+    if user && user.authenticate(user_params[:password])
       session[:user_id] = user.id
-      redirect_to admin_meetings_path
+      redirect_to admin_dashboard_path
     else
       flash[:danger] = "Unable to authenticate. Please try again."
-      redirect_to root_path
+      render :new
     end
   end
 
@@ -17,7 +20,7 @@ class SessionsController < ApplicationController
   end
 
   private
-  def auth
-    request.env["omniauth.auth"]
+  def user_params
+    params.permit(:username, :password)
   end
 end

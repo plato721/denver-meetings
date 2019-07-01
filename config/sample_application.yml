@@ -18,3 +18,7 @@
 # test:
 #   google_api_key_server: "some_key"
 #   google_api_key_client: "another_key"
+
+# admin_password: "maybe use SecureRandom.hex"
+# admin_name: "First Last"
+# admin_email: "youremail@domain.com"

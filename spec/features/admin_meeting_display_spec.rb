@@ -5,7 +5,7 @@ RSpec.feature "Admin meeting display" do
   fixtures :raw_meetings
 
   context "as an admin" do
-    let(:admin){ User.find_by(nickname: "plato721") }
+    let(:admin){ create(:user, role: "admin") }
 
     before do
       login(admin)
@@ -16,14 +16,14 @@ RSpec.feature "Admin meeting display" do
     end
 
     it "displays a list of meetings" do
-      visit admin_root_path
+      visit admin_meetings_path
       expect(current_path).to eq(admin_meetings_path)
       expect(page).to have_content(Meeting.first.group_name)
     end
 
     # TODO - broken since normalizing with address table
     # nest the attributes or what have you
-    xit "can edit a meeting" do
+    it "can edit a meeting" do
       meeting = Meeting.first
       id = meeting.id
       group_name = meeting.group_name
@@ -33,7 +33,7 @@ RSpec.feature "Admin meeting display" do
         click_link_or_button "False"
       end
       expect(current_path).to eq("/admin/meetings/#{id}/edit")
-      fill_in "meeting_group_name", with: "Patterns on whiteboards"
+      fill_in "group_name", with: "Patterns on whiteboards"
       click_link_or_button "Update Meeting"
       expect(page).to have_content("Patterns on whiteboards")
       expect(page).to_not have_content(group_name)

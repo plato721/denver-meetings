@@ -30,22 +30,7 @@ RSpec.configure do |config|
   WebMock.stub_request(:get, "http://maps.googleapis.com/maps/api/geocode/json?address=3355%20S.%20Wadsworth%20Bl.%20%23H-127,%20Lakewood,%20CO&language=en&sensor=false")
 
   def login(user)
-    OmniAuth.config.test_mode = true
-    OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new({
-      "uid"         => user.uid,
-      "info"        => {nickname: user.nickname,
-                        email: user.email,
-                        name: user.name,
-                        image: user.image},
-      "credentials" => {token: user.token}
-    })
-  end
-
-  def failed_login
-    OmniAuth.config.test_mode = true
-    OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new ({
-      "uid" => nil
-    })
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
   end
 
   def no_geocoding

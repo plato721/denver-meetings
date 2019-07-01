@@ -1,6 +1,6 @@
 class Address < ApplicationRecord
   has_many :meetings
-  validate :address_unique
+  validate :address_unique, on: :create
 
   geocoded_by :geocoding_string, :latitude => :lat, :longitude => :lng
 

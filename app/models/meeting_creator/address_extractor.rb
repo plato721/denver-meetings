@@ -17,8 +17,9 @@ class MeetingCreator::AddressExtractor < MeetingCreator::BuildAttributes
   end
 
   def attempt_geocoding?(address)
-    # TODO - consider adding in more sophsticated logic... like has geocoding been
-    # attempting? or just get rid of this method and use #geocoded? only
+    # TODO - consider adding in more sophsticated logic... like has geocoding
+    # been attempted already so we shouldn't try again? but if no need for
+    # more logic, just delete this method and use `.geocoded?`
     !address.geocoded?
   end
 

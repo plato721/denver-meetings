@@ -2,8 +2,8 @@ require 'rails_helper'
 
 describe Meeting::ExtractPhone do
   it 'extracts a trailing phone number' do
-    address = FactoryBot.create :address,
-      address_1: "8250 W. 80th Ave. Unit 12, 303-420-6560"
+    address_1 = "8250 W. 80th Ave. Unit 12, 303-420-6560"
+    address = FactoryBot.build(:address, address_1: address_1)
     meeting = FactoryBot.create :meeting, address: address
 
     described_class.extract! meeting
@@ -14,8 +14,8 @@ describe Meeting::ExtractPhone do
   end
 
   it 'extracts a seven digit phone number' do
-    address = FactoryBot.create :address,
-      address_1: "3355 S. Wadsworth #H125, 989-2816"
+    address_1 = "3355 S. Wadsworth #H125, 989-2816"
+    address = FactoryBot.build(:address, address_1: address_1)
     meeting = FactoryBot.create :meeting, address: address
 
     described_class.extract! meeting

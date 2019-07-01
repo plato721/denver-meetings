@@ -5,26 +5,23 @@ ruby '2.6.0'
 gem 'rails', '5.2.2'
 gem 'haml'
 gem 'sass-rails'
-gem 'uglifier'
 gem 'coffee-rails'
+gem 'uglifier'
 gem 'jquery-rails'
-gem 'turbolinks'
 gem 'jbuilder'
-gem 'sdoc', group: :doc
 gem 'omniauth-github'
 gem 'puma'
 gem 'pg', '~> 0.18'
 gem "bootstrap-sass", "~> 3.4.1"
 gem 'bootswatch-rails'
 gem 'ffaker'
-gem 'hurley'
 gem 'nokogiri'
-gem 'rest-client'
 gem 'figaro'
 gem 'geocoder'
 gem 'bootstrap_form'
 gem 'skylight'
 gem 'lodash-rails'
+gem 'bcrypt', '~> 3.1.7'
 
 group :production do
   gem 'rails_12factor'
@@ -53,6 +50,6 @@ group :test do
   gem 'selenium-webdriver'
 end
 
-group :development do
-  gem 'web-console', '~> 2.0'
-end
+# group :development do
+#   gem 'web-console', '~> 2.0'
+# end
