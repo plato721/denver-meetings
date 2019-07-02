@@ -84,6 +84,16 @@ class ScrubAddresses070219 < ActiveRecord::Migration[5.2]
       address_1: '1050 Wadsworth Blvd'
     )
 
-    
+    Address.where('address_1 LIKE ?', '1100 Fil%').update_all(
+      address_1: '1100 Fillmore St',
+      lat: 39.7337996,
+      lng: -104.9547234,
+      zip: 80206,
+      district: 13
+    )
+
+    Address.where('address_1 LIKE ?', '23 Inv%').update_all(
+      
+    )
   end
 end
