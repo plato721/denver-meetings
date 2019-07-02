@@ -93,7 +93,12 @@ class ScrubAddresses070219 < ActiveRecord::Migration[5.2]
     )
 
     Address.where('address_1 LIKE ?', '23 Inv%').update_all(
-      
+      address_1: '23 Inverness Way East',
+      address_2: '#150',
+      lat: 39.5667036,
+      lng: -104.8621585,
+      zip: 80012,
+      district: 16
     )
   end
 end
