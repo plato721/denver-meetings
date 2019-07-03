@@ -20,3 +20,6 @@
 server.*
 
 .idea/*
+
+.ruby-gemset
+
