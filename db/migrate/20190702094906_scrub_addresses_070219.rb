@@ -100,5 +100,18 @@ class ScrubAddresses070219 < ActiveRecord::Migration[5.2]
       zip: 80012,
       district: 16
     )
+
+    # fix 'Bl.' -- some are already fixed, but get the rest
+    Address.where('address_1 LIKE ?', '%Bl.%').each do |address|
+      current_address_1 = address.address_1
+      new_address_1 = current_address_1.gsub('Bl.', 'Blvd.')
+      puts "Replacing #{current_address_1} with #{new_address_1}"
+
+      address.address_1 = new_address_1
+      address.save
+      address.geocode_with_reverse
+      sleep 0.5
+    end
+
   end
 end
